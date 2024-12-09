@@ -2,14 +2,14 @@
 
     <x-dashboard.headline :title="trans('sidebar.blogs')" />
 
-    <x-dashboard.tables.table1 :createAction="route('blogs.create')" :columns="['image', 'title (Englich)', 'title (Arabic)']">
+    <x-dashboard.tables.table1 :createAction="route('blogs.create')" :columns="['image', 'title']">
 
         @forelse ($members as $item)
         <tr wire:loading.class="opacity-50">
             <td>{{ $item->id }}</td>
             <td><img src="{{ asset($item->thumbnail) }}" alt="image" width="40" height="40" class="rounded-circle"></td>
-            <td>{{ $item->title_en	 ?? '-' }}</td>
-            <td>{{ $item->title_ar	 ?? '-' }}</td>
+            <td>{{ $item->title	 ?? '-' }}</td>
+            {{-- <td>{{ $item->title_ar	 ?? '-' }}</td> --}}
             {{-- <td>{{ $item->linkedin }} - {{ $item->twitter }}</td> --}}
             <td>
                 <x-dashboard.actions.container>
