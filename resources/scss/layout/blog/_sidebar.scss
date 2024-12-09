@@ -1,0 +1,224 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  5.3 Sidebar css
+/*----------------------------------------*/
+
+.#{$theme-prefix}-sidebar{
+    $self : &;
+    &-wrapper{
+        position: sticky;
+        top: 180px;
+    }
+    &-widget{
+        &-title{
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 35px;
+            letter-spacing: -0.2px;
+            line-height: 1;
+            &-2{
+                font-size: 22px;
+                font-weight: 700;
+                display: inline-block;
+                margin-bottom: 0;
+                margin-right: 10px;
+            }
+        }
+        & ul{
+            & li{
+                list-style: none;
+                &:not(:last-of-type){
+                    margin-bottom: 20px;
+                }
+                & a{
+                    position: relative;
+                    font-size: 16px;
+                    color: #565969;
+                    transition: all 0.3s 0s ease-out;
+                    line-height: 1;
+                    font-weight: 400;
+                    &.active{
+                        color: var(--tp-theme-primary);
+                    }
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        bottom: 0;
+                        left: 0;
+                        height: 1px;
+                        width: 100%;
+                        opacity: 0;
+                        transform: translateY(1px);
+                        transition: 0.15s all cubic-bezier(0.39, 0.575, 0.565, 1);
+                        background: var(--tp-theme-primary);
+                    }
+                    &:hover{
+                        color: var(--tp-theme-primary);
+                        &::after{
+                            opacity: 1;
+                            transform: translateY(0px) translateZ(5px);
+                        }
+                    }
+                }
+            }
+        }
+        &-gellary{
+            display: grid;
+            grid: auto auto/auto auto auto;
+            column-gap: 10px;
+            row-gap: 10px;
+            @media #{$md,$sm} {
+                width: 330px;
+            }
+            @media #{$lg,$xs} {
+                width: 300px;
+            }
+            &-item{
+                position: relative;
+            }
+            &-thumb{
+                position: relative;
+                display: inline-block;
+                & img{
+                    @media #{$lg,$xs} {
+                        max-width: 100%;
+                    }
+                }
+                &::after{
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    transform: scale(0);
+                    transition: all 0.3s 0s ease-out;
+                    background: rgba($color: #00235a, $alpha: 0.8);
+                }
+                &:hover{
+                    &::after{
+                        transform: scale(1);
+                    }
+                    & .tp-sidebar-widget-gellary-icon{
+                        opacity: 1;
+                    }
+                }
+            }
+            &-icon{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 1;
+                opacity: 0;
+                @include transition();
+                transform: translate(-50%, -50%);
+                & i{
+                    color: var(--tp-common-white);
+                }
+            }
+        }
+        &-about{
+            &-thumb{
+                margin-bottom: 15px;
+            }
+            &-title{
+                font-size: 22px;
+                font-weight: 700;
+                letter-spacing: -0.2px;
+                margin-bottom: 15px;
+                color: var(--tp-theme-secondary);
+            }
+        }
+    }
+    &-search{
+        &-input{
+            position: relative;
+            & input{
+                font-size: 16px;
+                color: #565969;
+                padding-right: 60px;
+                height: 42px;
+                border: 1px solid rgb(223, 223, 223);
+                &::placeholder{
+                    font-size: 16px;
+                    color: #565969;
+                }
+                &:focus{
+                    border: 1px solid var(--tp-theme-primary);
+                }
+            }
+            & button{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-weight: 900;
+                color: var(--tp-theme-secondary);
+                right: 30px;
+            }
+        }
+    }
+    &-gellary{
+        &-thumb{
+            margin-bottom: 20px;
+        }
+        &-name{
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--tp-theme-secondary);
+        }
+    }
+    &-work{
+        background: var(--tp-theme-primary);
+        padding: 40px 60px;
+        @media #{$lg} {
+            padding: 40px 50px;
+        }
+        &-title{
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        &-content{
+            & p{
+                margin-bottom: 30px;
+            }
+        }
+        &-call{
+            &-icon{
+                & i{
+                    font-size: 24px;
+                    font-weight: 900;
+                    transform: translateY(12px);
+                }
+            }
+            &-content{
+                & span{
+                    display: block;
+                    text-align: start;
+                }
+            }
+        }
+    }
+}
+
+
+
+// tag cloud
+.tagcloud{
+    & a{
+        font-size: 16px;
+        color: #565969;
+        padding: 10px 21px;
+        display: inline-block;
+        background: #f5f5f8;
+        margin-bottom: 12px;
+        margin-right: 10px;
+        line-height: 1;
+        &:hover{
+            background-color: var(--tp-theme-primary);
+            border-color: var(--tp-theme-primary);
+            color: var(--tp-common-white);
+        }
+    }
+}

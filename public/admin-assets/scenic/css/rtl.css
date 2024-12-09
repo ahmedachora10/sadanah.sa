@@ -1,0 +1,14 @@
+.rtl body {
+    text-align: right;
+}
+
+.rtl .site-navbar .site-logo {
+    text-align:  inherit !important;
+}
+.rtl .text-right {
+    text-align: left !important;
+}
+
+.rtl .row {
+    flex-direction: row-reverse !important;
+}

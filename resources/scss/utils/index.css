@@ -1,0 +1,32 @@
+/* transform */
+:root {
+  /**
+  @font family declaration
+  */
+  --tp-ff-body: 'Plus Jakarta Sans', sans-serif;
+  --tp-ff-heading: 'Plus Jakarta Sans', sans-serif;
+  --tp-ff-p: 'DM Sans', sans-serif;
+  --tp-ff-fontawesome: "Font Awesome 6 Pro";
+  /**
+  @color declaration
+  */
+  --tp-common-white: #ffffff;
+  --tp-common-black: #000;
+  --tp-common-gray: #FEF3DF;
+  --tp-theme-primary: #bfb29a;
+  --tp-theme-secondary: #6d6e71;
+  --tp-theme-1: rgb(10, 18, 41);
+  --tp-theme-2: #F94D1C;
+  --tp-theme-3: #1B2335;
+  --tp-theme-4: #eb003d;
+  --tp-heading-primary: #6d6e71;
+  --tp-heading-secondary: #bfb29a;
+  --tp-heading-1: #2B2B5E;
+  --tp-heading-2: #010d14;
+  --tp-text-body: rgb(86, 89, 105);
+  --tp-text-1: #E3E3E3;
+  --tp-text-2: #f8f8f8;
+  --tp-border-primary: #FEF3DF;
+  --tp-border-secondary: #F0F2F4;
+  --tp-border-1: #e6ebf0;
+}/*# sourceMappingURL=index.css.map */

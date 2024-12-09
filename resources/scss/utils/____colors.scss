@@ -1,0 +1,36 @@
+$colors: (
+    'common': (
+        'white': #ffffff,
+        'black': #000,
+        'gray': #FEF3DF,
+    ),
+    'theme': (
+        'primary': rgb(255, 94, 20),
+        'secondary': rgb(0, 35, 90),
+        '1': rgb(10, 18, 41),
+        '2': #F94D1C,
+        '3': #1B2335,
+        '4': #eb003d,
+    ),
+    'heading': (
+        'primary': rgb(0, 35, 90),
+        'secondary': rgb(255, 94, 20),
+        '1': #2B2B5E,
+        '2': #010d14,
+        ),
+    'text': (
+        'body':rgb(86, 89, 105),
+        '1': #E3E3E3,
+        '2': #f8f8f8,
+        ),
+    'border': (
+        'primary': #FEF3DF,
+        'secondary': #F0F2F4,
+        '1': #e6ebf0,
+        )
+);
+
+$white : #fff;
+$black : #020B18;
+$theme-primary : rgb(255, 94, 20);
+$border-primary : #EAEBED;

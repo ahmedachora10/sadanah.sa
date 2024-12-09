@@ -1,0 +1,287 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.7 Company Css
+/*----------------------------------------*/
+
+.#{$theme-prefix}-company{
+  &-thumb{
+    padding-top: 120px;
+    @media #{$lg,$md,$sm,$xs} {
+      padding-top: 0;
+      padding-bottom: 30px;
+    }
+    & img{
+      @media #{$lg,$md,$sm,$xs} {
+        width: 100%;
+      }
+    }
+    & .shape{
+      &-1{
+        position: absolute;
+        top: 0;
+        left: 150px;
+        z-index: 0;
+        @media #{$xxl} {
+          left: 40px;
+        }
+        @media #{$xl} {
+          left: 20px;
+        }
+        @media #{$lg,$md,$sm,$xs} {
+          display: none;
+        }
+      }
+      &-2{
+        position: absolute;
+        top: 100px;
+        left: 31%;
+        z-index: -2;
+        @media #{$xl,$lg,$md,$sm,$xs} {
+          display: none;
+        }
+      }
+    }
+  }
+  &-title{
+    @media #{$lg,$md,$sm,$xs} {
+      margin-bottom: 30px;
+    }
+  }
+  &-progress{
+    &-item{
+      margin-bottom: 35px;
+      & span{
+        position: absolute;
+        top: 0;
+        right: 20%;
+        color: #565969;
+        &.pursent{
+          &-2{
+            right: 30%;
+          }
+          &-3{
+            right: 10%;
+          }
+        }
+      }
+      & .progress{
+        height: 6px;
+        border-radius: 0;
+        background: #f2f3f5;
+        &-bar{
+          background: var(--tp-theme-primary);
+        }
+        &.progress-5{
+          height: 2px;
+        }
+      }
+    }
+    &-title{
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--tp-theme-secondary);
+    }
+  }
+  &-wrapper{
+    padding-left: 60px;
+    @media #{$xxl} {
+      padding-left: 40px;
+    }
+    @media #{$xl,$lg,$md,$sm,$xs} {
+      padding-left: 0;
+    }
+  }
+}
+
+
+.#{$theme-prefix}-company-5{
+  &-shape{
+    position: absolute;
+    top: 0;
+    left: 5%;
+    @media #{$x4l,$x3l,$xxl,$xl,$lg,$md,$sm,$xs} {
+      display: none;
+    }
+  }
+  &-thumb{
+    @media #{$lg} {
+      padding-left: 50px;
+    }
+    @media #{$md,$sm,$xs} {
+      padding-left: 0;
+    }
+    & .shape{
+      &-2{
+        position: absolute;
+        bottom: -32%;
+        left: 50px;
+        z-index: 2;
+        animation: updown-two 2.6s linear 0s infinite alternate;
+        @media #{$lg} {
+          left: 0;
+        }
+        @media #{$md,$sm,$xs} {
+          position: static;
+        }
+        @media #{$xs} {
+          width: 100%;
+        }
+      }
+    }
+    &-sm{
+      &.shape-1{
+        position: absolute;
+        top: 170px;
+        left: 0;
+        @media #{$lg} {
+          top: 110px;
+        }
+        @media #{$sm,$xs} {
+          display: none;
+        }
+      }
+    }
+    &-box{
+      @media #{$md,$sm,$xs} {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &-wrapper{
+    @media #{$lg,$md,$sm,$xs} {
+      padding-left: 0;
+    }
+  }
+}
+
+
+.#{$theme-prefix}-company-6{
+  &-wrapper{
+    @media #{$lg,$md,$sm,$xs} {
+      padding-right: 0;
+    }
+    & b{
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--tp-heading-2);
+      margin-bottom: 45px;
+      display: inline-block;
+    }
+  }
+  &-title{
+    @media #{$xl,$md,$sm,$xs} {
+      margin-bottom: 30px;
+    }
+    & p{
+      color: #767676;
+    }
+  }
+  &-icon{
+    padding: 30px 40px 18px 28px;
+    @include transition();
+    @media #{$lg} {
+      padding: 20px;
+    }
+    &:not(:last-of-type){
+      margin-right: 30px;
+      @media #{$lg} {
+        margin-right: 10px;
+      }
+    }
+    &:hover{
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.04);
+    }
+    & i{
+      font-size: 60px;
+      color: var(--tp-theme-4);
+      margin-right: 25px;
+      @media #{$lg} {
+        margin-right: 10px;
+      }
+    }
+    &-box{
+      margin-bottom: 60px;
+      @media #{$xl,$md} {
+        margin-bottom: 30px;
+      }
+      @media #{$sm,$xs} {
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+      }
+    }
+    &-title{
+      font-size: 22px;
+      font-weight: 700;
+      margin: 0;
+      @media #{$xl} {
+        font-size: 20px;
+      }
+    }
+  }
+  &-thumb{
+    padding-top: 65px;
+    margin-right: -100px;
+    @media #{$xl,lg,md,$sm,$xs} {
+      margin-right: 0;
+    }
+    @media #{$sm,$xs} {
+      padding-top: 30px;
+    }
+    & .shape{
+      &-1{
+        position: absolute;
+        top: 10px;
+        left: 0;
+        z-index: 2;
+        @media #{$xl} {
+          left: -30px;
+        }
+        @media #{$md} {
+          left: 205px;
+        }
+        @media #{$sm,$xs} {
+          display: none;
+        }
+      }
+      &-2{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        @media #{$xs} {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &-btn{
+    @media #{$sm,$xs} {
+      margin-bottom: 20px;
+    }
+    &-wrapper{
+      @media #{$md,$sm,$xs} {
+        margin-bottom: 30px;
+      }
+      @media #{$sm,$xs} {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+
+
+.#{$theme-prefix}-map{
+  &-content{
+    width: 100%;
+    height: 540px;
+    & iframe{
+      width: 100%;
+      height: 100%;
+      filter: saturate(0);
+    }
+  }
+}
+

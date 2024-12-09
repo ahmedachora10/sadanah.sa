@@ -1,0 +1,109 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.3 Buttons
+/*----------------------------------------*/
+
+.#{$theme-prefix}-btn{
+	position: relative;
+	display: inline-block;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 18px 44px;
+  color: var(--tp-common-white);
+  background-color: var(--tp-theme-primary);
+	@include transition();
+	& span{
+		display: inline-block;
+		font-weight: 700;
+		margin-left: 1px;
+		@include transition();
+	}
+	&:hover{
+		color: var(--tp-common-white);
+		background: var(--tp-theme-secondary);
+	}
+	&:focus{
+		color: var(--tp-common-white);
+	}
+	&.pink{
+		background: var(--tp-theme-4);
+	}
+}
+
+/* hamburger btn */
+.#{$theme-prefix}-hamburger{
+	&-btn{
+		height: 16px;
+		width: 22px;
+		line-height: 16px;
+		cursor: pointer;
+		position: relative;
+		display: inline-block;
+		& span{
+			background: var(--tp-common-black);
+			border-radius: 3px;
+			content: '';
+			position: absolute;
+			width: 22px;
+			height: 2px;         
+			left: 0;
+			-webkit-transition: .3s ease-in-out;
+			-moz-transition: .3s ease-in-out;
+			-o-transition: .3s ease-in-out;
+			transition: .3s ease-in-out;
+			&::before,
+			&::after{
+				background: var(--tp-common-black);
+				border-radius: 3px;
+				content: '';
+				position: absolute;
+				width: 10px;
+				height: 2px;         
+				margin-top: 13px; 
+				left: 0;
+				-webkit-transition: .3s ease-in-out;
+				-moz-transition: .3s ease-in-out;
+				-o-transition: .3s ease-in-out;
+				transition: .3s ease-in-out;
+			}
+			&::before{
+				margin-top:-7px;
+			}
+			&::after{
+				margin-top: 7px;
+				width: 13px;
+			}
+		}
+		&.active{
+			& span{
+				background: transparent;
+	
+				&::before{
+					margin-top: 0;
+					-webkit-transform: rotate(45deg);
+					-moz-transform: rotate(45deg);
+					-o-transform: rotate(45deg);
+					transform: rotate(45deg);
+				}
+				&::after{
+					margin-top: 0;
+					-webkit-transform: rotate(-45deg);
+					-moz-transform: rotate(-45deg);
+					-o-transform: rotate(-45deg);
+					transform: rotate(-45deg);
+				}
+			}
+		}
+		&-white{
+			& span{
+				background-color: var(--tp-common-white);
+	
+				&::after,
+				&::before{
+					background-color: var(--tp-common-white);
+				}
+			}
+		}
+	}
+}

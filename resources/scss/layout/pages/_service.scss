@@ -1,0 +1,354 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  8.7 Service Css
+/*----------------------------------------*/
+
+.#{$theme-prefix}-service-3 {
+  &-item {
+    padding: 30px;
+    background-color: rgb(248, 248, 248);
+
+    &:hover {
+      & .tp-service-3 {
+        &-btn {
+          & a {
+            color: var(--tp-common-white);
+            background: var(--tp-theme-primary);
+          }
+        }
+      }
+
+      &::after {
+        opacity: 1;
+        width: 135px;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      height: 215px;
+      width: 100px;
+      top: 0;
+      right: 0px;
+      opacity: 0;
+      @include transition();
+      clip-path: polygon(50% 0%, 100% 100%, 100% 0);
+      background: rgba($color: #00235a, $alpha: 0.1);
+    }
+  }
+  &-icon {
+    margin-bottom: 25px;
+    & span{
+      font-size: 55px;
+      color: var(--tp-theme-primary);
+    }
+  }
+  &-content {
+    & p {
+      color: #565969;
+      margin-bottom: 30px;
+    }
+  }
+  &-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--tp-theme-secondary);
+
+    &:hover {
+      color: var(--tp-theme-primary);
+    }
+  }
+  &-btn {
+    position: absolute;
+    bottom: -20px;
+    left: 30px;
+
+    & a {
+      display: inline-block;
+      height: 48px;
+      width: 48px;
+      line-height: 48px;
+      text-align: center;
+      font-size: 20px;
+      @include transition();
+      color: var(--tp-theme-primary);
+      background: var(--tp-common-white);
+
+      & i {
+        @include transition();
+        transform: translateY(0px);
+      }
+
+      &:hover {
+        & i {
+          animation: tfLeftToRight 0.5s forwards;
+        }
+      }
+    }
+  }
+}
+
+
+.#{$theme-prefix}-service-5 {
+  &-box {
+    padding-left: 160px;
+    padding-right: 160px;
+    @media #{$xl,$lg} {
+      padding-right: 120px;
+      padding-left: 120px;
+    }
+
+    @media #{$md,$sm,$xs} {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &-shape{
+    &-bg{
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 0;
+    }
+  }
+  &-item {
+    &:hover {
+      & .tp-service-5 {
+        &-thumb{
+          & img{
+            transform: scale(1.2);
+          }
+        }
+        &-content {
+          padding: 40px 40px 35px 40px;
+          bottom: 0;
+          background: var(--tp-theme-primary);
+        }
+        &-shape {
+          opacity: 1;
+        }
+        &-icon {
+          & span {
+            color: var(--tp-common-white);
+          }
+        }
+        &-title {
+          color: var(--tp-common-white);
+        }
+        &-btn {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &-icon {
+    & span {
+      font-size: 50px;
+      margin-bottom: 15px;
+      display: block;
+      color: var(--tp-theme-primary);
+      @include transition();
+    }
+  }
+  &-thumb {
+    & img {
+      @include transition;
+      @media #{$sm,$md,$lg} {
+        width: 100%;
+      }
+    }
+  }
+  &-content {
+    position: absolute;
+    left: 0;
+    right: 40px;
+    bottom: -15px;
+    @include transition();
+    padding: 40px 40px 0px 40px;
+    background-color: rgb(255, 255, 255);
+    @media #{$md,$sm,$xs} {
+      bottom: -30px;
+    }
+  }
+  &-shape {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    z-index: 0;
+    @include transition();
+  }
+  &-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    transition: .2s ease-in;
+  }
+  &-btn {
+    opacity: 0;
+    @include transition();
+    transform: translateY(0px);
+    & .tp-icon-style {
+      color: var(--tp-common-white);
+    }
+  }
+}
+
+
+
+.#{$theme-prefix}-service-details {
+  &-box {
+    & ul {
+      & li {
+        list-style: none;
+
+        &:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
+
+        & a {
+          font-size: 16px;
+          font-weight: 500;
+          padding: 18px 30px;
+          display: block;
+          color: var(--tp-theme-secondary);
+          background: var(--tp-text-2);
+          @include transition();
+
+          &:hover {
+            color: var(--tp-theme-primary);
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 6px 20px 0px rgba(35, 35, 49, 0.08);
+          }
+
+          & span {
+            float: right;
+          }
+
+          &.active {
+            color: var(--tp-theme-primary);
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 6px 20px 0px rgba(35, 35, 49, 0.08);
+          }
+        }
+      }
+    }
+
+    &-title {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--tp-theme-secondary);
+    }
+  }
+
+  &-price {
+    padding: 30px 0px 0px 30px;
+    background: var(--tp-text-2);
+  }
+
+  &-month {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--tp-theme-primary);
+  }
+
+  &-thumb {
+    & img {
+      @media #{$lg,$md,$sm,$xs} {
+        width: 100%;
+      }
+    }
+  }
+
+  &-wrapper {
+    & p {
+      margin-bottom: 50px;
+    }
+  }
+
+  &-title {
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--tp-theme-secondary);
+
+    @media #{$lg,$md,$sm,$xs} {
+      font-size: 36px;
+    }
+
+    &-2 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+
+  &-point {
+    & span {
+      display: inline-block;
+      flex: 0 0 auto;
+      font-size: 20px;
+      height: 48px;
+      width: 48px;
+      line-height: 48px;
+      text-align: center;
+      border-radius: 50%;
+      color: var(--tp-theme-primary);
+      background: var(--tp-text-2);
+      margin-right: 30px;
+    }
+
+    &-title {
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 0;
+      color: var(--tp-theme-secondary);
+    }
+
+    &-2 {
+      padding: 40px;
+      background: var(--tp-theme-secondary);
+
+      @media #{$lg,$sm,$xs} {
+        padding: 30px;
+      }
+
+      & span {
+        display: inline-block;
+        flex: 0 0 auto;
+        font-size: 45px;
+        height: 80px;
+        width: 80px;
+        line-height: 85px;
+        text-align: center;
+        border-radius: 50%;
+        color: var(--tp-theme-primary);
+        background: var(--tp-common-white);
+        margin-right: 30px;
+
+        @media #{$lg,$md,$sm,$xs} {
+          margin-right: 15px;
+        }
+      }
+
+      &-content {
+        & h4 {
+          font-size: 18px;
+          font-weight: 600;
+          color: var(--tp-common-white);
+        }
+
+        & p {
+          font-size: 16px;
+          font-weight: 400;
+          margin: 0;
+          color: var(--tp-common-white);
+        }
+      }
+    }
+  }
+}

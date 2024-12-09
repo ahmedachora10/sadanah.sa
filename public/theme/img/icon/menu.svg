@@ -1,0 +1,12 @@
+<svg id="menu.svg" xmlns="http://www.w3.org/2000/svg" width="14" height="26" viewBox="0 0 14 26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #00235a;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" y="5" width="2" height="16"/>
+  <rect id="Rectangle_1_copy" data-name="Rectangle 1 copy" class="cls-1" x="12" y="5" width="2" height="16"/>
+  <rect id="Rectangle_1_copy_2" data-name="Rectangle 1 copy 2" class="cls-1" x="6" width="2" height="26"/>
+</svg>

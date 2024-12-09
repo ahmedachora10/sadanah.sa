@@ -1,0 +1,31 @@
+<?php
+
+return [
+    'dashboard' => 'Dashboard',
+    'general settings' => 'General Settings',
+    'settings' => 'Settings',
+    'users' => 'Users',
+    'images' => 'Images',
+    'roles' => 'Roles',
+    'services' => 'Services',
+    'visions' => 'Visions',
+    'contact us' => 'Contact Us',
+    'cities' => 'Cities',
+    'headlines' => 'Headlines',
+    'Statistics' => 'statistics',
+    'sliders' => 'Sliders',
+    'our clients' => 'Our Clients',
+    'statistics' => 'Statistics',
+    'our services' => 'Our Services',
+    'faq' => 'Faq',
+    'team' => 'influencers',
+    'about us' => 'About Us',
+    'our works' => 'Our Works',
+    'our team' => 'Our team',
+    'jobs' => 'Jobs',
+    'why us' => 'Why Us',
+    'sections' => 'Sections',
+    'reviews' => 'Reviews',
+    'job requests' => 'Job Requests,',
+    'service requests' => 'Service Requests'
+];

@@ -1,0 +1,579 @@
+@include('site.header')
+
+      <!-- ==================== End Navbar ==================== -->
+
+      <div id="smooth-content">
+        <main class="main-bg">
+          <!-- ==================== Start Slider ==================== -->
+
+          <header
+            class="page-header bg-img section-padding"
+            data-background="assets/imgs/header/bg1.jpg"
+            data-overlay-dark="9"
+          >
+            <div class="container pt-100">
+              <div class="text-center">
+                <h1 data-i18n="jobs"></h1>
+                <div class="mt-15">
+                  <a href="{{route('home')}}">{{__('front.home')}}</a>
+                  <span class="padding-rl-20">|</span>
+                  <span
+                    style="color: var(--primary-color)"
+                    data-i18n="jobs"
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </header>
+
+          <!-- ==================== End Slider ==================== -->
+
+          <!-- ==================== Start Blog ==================== -->
+
+          <section class="blog section-padding">
+            <div class="container">
+              <div class="row xlg-marg">
+                <div class="col-lg-4 p-0">
+                  <!-- Sidebar -->
+                  <div class="sidebar">
+                    {{-- <div class="search-box">
+                      <input
+                        type="text"
+                        name="search-post"
+                        placeholder="Search"
+                      />
+                      <span class="icon pe-7s-search"></span>
+                    </div> --}}
+                    {{-- <div id="job-list">
+                      <!-- First Job Card -->
+                      <div
+                        class="card_job chance job-details chance-detai"
+                        onclick="showContent(1)"
+                      >
+                        <div class="widget catogry">
+                          <h6 class="title-widget mb-2 pb-2">{{__('front.Available opportunities')}}</h6>
+                          <div>
+                            <ul class="media_planning">
+                              <li>
+                                <span> {{__('front.Work location')}} : </span> <span>الرياض</span>
+                              </li>
+                              <li>
+                                <span>{{__('front.Job Type')}} : </span>
+                                <span>دوام كامل</span>
+                              </li>
+                              <li>
+                                <span>Job Number{{__('front.Job Type')}}  : </span> <span>HR14</span>
+                              </li>
+                            </ul>
+                            <ul class="summary">
+                              <h6 class="title-widget mb-2 pb-2">
+                                الفرص المتاحة
+                              </h6>
+                              <li class="responsibility">
+                                المسؤوليات الخاصة بالوظيفة هنا
+                              </li>
+                            </ul>
+                            <div class="job-icon d-flex align-items-center">
+                              <div>
+                                <i class="fas fa-briefcase"></i>
+                                <span>---</span>
+                              </div>
+                              <div>
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>نوفمبر 18, 2024</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Second Job Card -->
+                      <div
+                        class="card_job ob-details mange-detail"
+                        onclick="showContent(2)"
+                      >
+                        <div class="widget catogry">
+                          <h6 class="title-widget mb-2 pb-2">
+                            مدير فني / Art Director
+                          </h6>
+                          <div>
+                            <ul class="media_planning">
+                              <li>
+                                <span>موقع العمل : </span>
+                                <span>المكتب الرئيسي</span>
+                              </li>
+                              <li>
+                                <span>نوع التوظيف : </span>
+                                <span>دوام كامل</span>
+                              </li>
+                              <li>
+                                <span>الرقم الوظيفي : </span> <span>HR14</span>
+                              </li>
+                            </ul>
+                            <ul class="summary">
+                              <h6 class="title-widget mb-2 pb-2">
+                                الفرص المتاحة
+                              </h6>
+                              <li class="responsibility">
+                                المسؤوليات الخاصة بالوظيفة هنا
+                              </li>
+                            </ul>
+                            <div class="job-icon d-flex align-items-center">
+                              <div>
+                                <i class="fas fa-briefcase"></i>
+                                <span>---</span>
+                              </div>
+                              <div>
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>نوفمبر 18, 2024</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> --}}
+                  </div>
+                </div>
+                <div class="col-lg-8 position-relative mt-3">
+                  <!-- Dynamic Content Section -->
+                  @foreach ($jobs as $job)
+                      
+                  <div id="content-1" class="content-box">
+                    <div
+                      class="header_content d-flex align-items-center justify-content-between"
+                    >
+                      <h2 class="content_title">
+                      @if (session()->get('lang') == 'ar')
+                      {{$job->title_ar}}
+                      @else  
+                      {{$job->title_en}}
+                      @endif
+                     </h2>
+                      <a
+                        class="confirm_button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#confirmForm"
+                        >قدم الان</a
+                      >
+                    </div>
+
+                    <div class="content_info">
+                      <h6 class="">{{__('front.Basic information')}}</h6>
+                      <ul
+                        class="prime_info d-flex align-items-center justify-content-between"
+                      >
+                        <li><span> {{__('front.Work location')}} : </span> <span>الرياض</span></li>
+                        <li>
+                          <span> {{__('front.Job Type')}} : </span> <span>
+                            @if (session()->get('lang') == 'ar')
+                            {{$job->type_ar}}
+                            @else  
+                            {{$job->type_en}}
+                            @endif
+                           </span>
+                        </li>
+                        <li><span> {{__('front.Job Number')}} : </span> <span>
+                          {{$job->job_number}}
+                         
+                        </span></li>
+                      </ul>
+                    </div>
+                    <div class="res_content">
+                      <h3 class="res-title">{{__('front.responsibility')}}</h3>
+                      <div>
+                        @if (session()->get('lang') == 'ar')
+                        {{$job->responsibilities_ar}}
+                        @else  
+                        {{$job->responsibilities_en}}
+                        @endif
+                      </div>
+                    </div>
+                    <div class="res_content">
+                      <h3 class="res-title"> {{__('front.requirements')}}:</h3>
+                      <div>
+                        @if (session()->get('lang') == 'ar')
+                          {{$job->responsibilities_ar}}
+                          @else  
+                          {{$job->responsibilities_en}}
+                          @endif
+                      </div>
+                    </div>
+                    <div class="res_content">
+                      <h3 class="res-title">  {{__('front.experience')}}:</h3>
+                      <div>
+                        @if (session()->get('lang') == 'ar')
+                        {{$job->experience_ar}}
+                        @else  
+                        {{$job->experience_en}}
+                        @endif
+                      </div>
+                    </div>
+                    <div class="res_content">
+                      <h3 class="res-title">{{__('front.education_level')}} :</h3>
+                      <div>
+                        @if (session()->get('lang') == 'ar')
+                        {{$job->education_ar}}
+                        @else  
+                        {{$job->education_en}}
+                        @endif
+                      </div>
+                    </div>
+                  </div>
+                  @endforeach
+
+                  {{-- <div id="content-2" class="content-box">
+                    <div
+                      class="header_content d-flex align-items-center justify-content-between"
+                    >
+                      <h2 class="content_title">مدير فني / Art Director</h2>
+                      <a
+                        class="confirm_button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#confirmForm"
+                        >قدم الان</a
+                      >
+                    </div>
+
+                    <div class="content_info">
+                      <h6 class="">المعلومات الاساسية</h6>
+                      <ul
+                        class="prime_info d-flex align-items-center justify-content-between"
+                      >
+                        <li>
+                          <span>موقع العمل : </span> <span>مكتب الرئيسي</span>
+                        </li>
+                        <li>
+                          <span>نوع التوظيف : </span> <span>دوام كامل</span>
+                        </li>
+                        <li><span>الرقم الوظيفي : </span> <span>HR14</span></li>
+                      </ul>
+                    </div>
+                    <div class="res_content">
+                      <h3 class="res-title">المسؤوليات</h3>
+                      <div>
+                        قيادة فريق الإبداع وتوجيهه نحو تحقيق الأهداف الإبداعية
+                        والإبتكار. تطوير أفكار إبداعية وحلول فنية لتلبية أهداف
+                        العلامة التجارية. مراجعة وتقييم المحتوى الإبداعي لضمان
+                        التوافق مع رؤية العلامة التجارية. التعاون مع فرق التسويق
+                        والتصميم لضمان التكامل بين الجوانب الإبداعية والتسويقية.
+                        تحفيز وتطوير مهارات أعضاء الفريق الإبداعي. الاحتفاظ
+                        بالاتصال مع أحدث اتجاهات الصناعة وتكنولوجيا الإبداع
+                      </div>
+                    </div>
+                    <div class="res_content">
+                      <h3 class="res-title">متطلبات الوظيفة:</h3>
+                      <div>
+                        • مهارات تنظيم وإدارة الوقت لتنسيق المهام وضمان تسليمها
+                        في المواعيد المحددة. • قدرات تواصل كتابية وشفهية فعالة
+                        للتفاعل مع الفرق الداخلية والجمهور الخارجي. • مهارات
+                        أساسية في حل المشكلات واتخاذ القرارات بالتنسيق مع
+                        المسؤولين. • مرونة واستعداد للتكيف مع التغيرات السريعة
+                        في بيئة العمل الإعلامي. • رغبة في التعلم والتطوير الذاتي
+                        لتحسين الأداء والارتقاء بالمهارات المهنية.
+                      </div>
+                    </div>
+                    <div class="res_content">
+                      <h3 class="res-title">مستوى الخبرة والمعرفة:</h3>
+                      <div>
+                        من 2 إلى 4 سنوات في مجالات التخطيط الإعلامي، أو الاتصال
+                        المؤسسي، أو العلاقات العامة.
+                      </div>
+                    </div>
+                    <div class="res_content">
+                      <h3 class="res-title">الخلفية التعليمية:</h3>
+                      <div>
+                        دبلوم أو بكالوريوس في الإعلام، التسويق، العلاقات العامة،
+                        أو تخصص ذي صلة.
+                      </div>
+                    </div>
+                  </div> --}}
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="confirmForm"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="confirmFormLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="confirmFormLabel">قدم الان</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form class="form_modal">
+                  <div class="mb-3 row">
+                    <label
+                      for="name"
+                      class="col-sm-2 col-form-label"
+                      data-i18n="name"
+                    ></label>
+                    <div class="col-sm-10">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label
+                      for="staticEmail"
+                      class="col-sm-2 col-form-label"
+                      data-i18n="email"
+                    ></label>
+                    <div class="col-sm-10">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="staticEmail"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="phone" class="col-sm-2 col-form-label"
+                      >الهاتف</label
+                    >
+                    <div class="col-sm-10">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="phone"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="file" class="col-sm-2 col-form-label"
+                      >تحميل السيره الذاتية</label
+                    >
+                    <div class="col-sm-10">
+                      <input
+                        class="form-control"
+                        type="file"
+                        id="file"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="text-area" class="col-sm-2 col-form-label"
+                      >نبذه عنك</label
+                    >
+                    <div class="col-sm-10">
+                      <textarea
+                        class="form-control"
+                        id="text-area"
+                        rows="3"
+                        required
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="exp" class="col-sm-2 col-form-label"
+                      >اجمالى الخبره</label
+                    >
+                    <div class="col-sm-10">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="exp"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="exp" class="col-sm-2 col-form-label"
+                      >على رأس عمل</label
+                    >
+                    <div class="col-sm-10">
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="inlineCheckbox1"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1"
+                          >نعم</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="flexRadioDefault"
+                          id="inlineCheckbox2"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox2"
+                          >لا</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button class="send_button">Submit form</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{-- <section class="contact mb-3 sub-bg">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-5 valign">
+                <div class="sec-head md-mb80">
+                  <h2 class="text-u ls1 d-rotate wow">
+                    <span class="rotate-text"
+                      >Let's make your <br />
+                      brand <span class="fw-200"> brilliant!</span></span
+                    >
+                  </h2>
+                  <p class="mt-20 mb-20">
+                    If you would like to work with us or just want to get in
+                    touch, we’d love to hear from you!
+                  </p>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="morinfo mt-30">
+                        <h6 class="mb-15">Address</h6>
+                        <p>Besòs 1, 08174 Sant Cugat del Vallès, Barcelona</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="morinfo mt-30">
+                        <h6 class="mb-15">Email</h6>
+                        <p>Support@uithemez.com</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="phone fz-30 fw-600 mt-30 underline main-color">
+                    <a href="#0">+1 840 841 25 69</a>
+                  </div>
+                  <ul class="rest social-text d-flex mt-60">
+                    <li class="mr-30">
+                      <a href="#0" class="hover-this"
+                        ><span class="hover-anim">Facebook</span></a
+                      >
+                    </li>
+                    <li class="mr-30">
+                      <a href="#0" class="hover-this"
+                        ><span class="hover-anim">Twitter</span></a
+                      >
+                    </li>
+                    <li class="mr-30">
+                      <a href="#0" class="hover-this"
+                        ><span class="hover-anim">LinkedIn</span></a
+                      >
+                    </li>
+                    <li>
+                      <a href="#0" class="hover-this"
+                        ><span class="hover-anim">Instagram</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-6 offset-lg-1 valign">
+                <div class="full-width">
+                  <div class="sec-head mb-50"></div>
+                  <form id="contact-form" method="post" action="contact.php">
+                    <div class="messages"></div>
+
+                    <div class="controls row">
+                      <div class="col-lg-6">
+                        <div class="form-group mb-30">
+                          <label
+                            for="name"
+                            class="mb-1"
+                            data-i18n="name"
+                          ></label>
+                          <input
+                            id="form_name"
+                            type="text"
+                            name="name"
+                            required="required"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6">
+                        <div class="form-group mb-30">
+                          <label
+                            for="email"
+                            class="mb-1"
+                            data-i18n="email"
+                          ></label>
+
+                          <input
+                            id="form_email"
+                            type="email"
+                            name="email"
+                            required="required"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="form-group mb-30">
+                          <label
+                            for="subject"
+                            class="mb-1"
+                            data-i18n="subject"
+                          ></label>
+
+                          <input id="form_subject" type="text" name="subject" />
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label
+                            for="message"
+                            class="mb-1"
+                            data-i18n="message"
+                          ></label>
+
+                          <textarea
+                            id="form_message"
+                            name="message"
+                            rows="4"
+                            required="required"
+                          ></textarea>
+                        </div>
+                        <div class="mt-30">
+                          <button
+                            type="submit"
+                            class="butn butn-full butn-bord radius-30"
+                          >
+                            <span class="text" data-i18n="talk"
+                              >Let's Talk</span
+                            >
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> --}}
+        @include('site.footer')

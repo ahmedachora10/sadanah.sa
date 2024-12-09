@@ -1,0 +1,111 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  8.2 History Css
+/*----------------------------------------*/
+
+.#{$theme-prefix}-history{
+  &-title{
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--tp-theme-secondary);
+    &.orange{
+      color: var(--tp-theme-primary);
+    }
+  }
+  &-thumb{
+    @media #{$sm,$xs} {
+      margin-bottom: 30px;
+    }
+    & img{
+      border-radius: 50%;
+      border: 2px solid rgb(236, 240, 245);
+      padding: 12px;
+    }
+  }
+  &-text{
+    @media #{$xs} {
+      margin-bottom: 20px;
+    }
+  }
+  &-year{
+    font-size: 120px;
+    font-weight: 700;
+    color: #ecf0f5;
+  }
+  &-item{
+    &-box{
+      @media #{$md,$sm,$xs} {
+        padding-bottom: 40px;
+      }
+    }
+  }
+  &-bottom{
+    &-right{
+      &::before{
+        position: absolute;
+        content: "";
+        bottom: -70px;
+        right: 55px;
+        width: 2px;
+        height: 150px;
+        background: var(--tp-theme-secondary);
+        transform: rotate(-35deg);
+        z-index: -1;
+        @media #{$md,$sm,$xs} {
+          content: none;
+        }
+      }
+    }
+    &-left{
+      &::after{
+        position: absolute;
+        content: "";
+        bottom: -70px;
+        left: 55px;
+        width: 2px;
+        height: 150px;
+        background: var(--tp-theme-secondary);
+        transform: rotate(35deg);
+        z-index: -1;
+        @media #{$md,$sm,$xs} {
+          content: none;
+        }
+      }
+    }
+  }
+  &-top{
+    &-right{
+      &::before{
+        position: absolute;
+        content: "";
+        top: -78px;
+        right: 55px;
+        width: 2px;
+        height: 150px;
+        background: var(--tp-theme-secondary);
+        transform: rotate(35deg);
+        z-index: -1;
+        @media #{$md,$sm,$xs} {
+          content: none;
+        }
+      }
+    }
+    &-left{
+      &::after{
+        position: absolute;
+        content: "";
+        top: -78px;
+        left: 55px;
+        width: 2px;
+        height: 150px;
+        background: var(--tp-theme-secondary);
+        transform: rotate(-35deg);
+        z-index: -1;
+        @media #{$md,$sm,$xs} {
+          content: none;
+        }
+      }
+    }
+  }
+}

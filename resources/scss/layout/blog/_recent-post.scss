@@ -1,0 +1,49 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  5.2 Recent Post css
+/*----------------------------------------*/
+
+.#{$theme-prefix}-rc__post{
+    &:not(:last-of-type){
+        margin-bottom: 30px;
+    }
+    &:hover{
+        & .tp-rc__post-thumb{ 
+            & img{
+                transform: scale(1.08);
+            }
+        }
+    }
+    &-title{
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 22px;
+        margin-bottom: 15px;
+        & a{
+            &:hover{
+                color: var(--tp-theme-primary);
+            }
+        }
+    }
+    &-thumb{
+        overflow: hidden;
+        flex: 0 0 auto;
+        & img{
+            @include transition();
+        }
+    }
+    &-meta{
+        span{
+            font-size: 16px;
+            font-weight: 400;
+            color: #565969;
+            display: inline-block;
+            margin-bottom: 10px;
+            & i{
+                color: var(--tp-theme-primary);
+                margin-right: 5px;
+            }
+        }
+    }
+}

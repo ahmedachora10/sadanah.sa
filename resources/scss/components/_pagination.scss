@@ -1,0 +1,66 @@
+@use '../utils' as *;
+/*----------------------------------------*/
+/*  2.9 Pagination
+/*----------------------------------------*/
+
+.#{$theme-prefix}-pagination{
+	& ul{
+		@include flexbox();
+		
+		& li{
+			display: inline-block;
+			&:not(:last-child){
+				margin-right: 6px;
+			}
+			& a,
+			& span{
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+				line-height: 38px;
+				text-align: center;
+				border: 1px solid rgba($color: $black, $alpha: .1);
+				font-size: 16px;
+				font-weight: 500;
+				color: var(--tp-text-body);
+				&:hover,
+				&.current{
+					background: var(--tp-theme-primary);
+					border-color: var(--tp-theme-primary);
+					color: var(--tp-common-white);
+				}
+
+				& svg{
+					@extend %svg-2;
+				}
+			}
+		}
+	}
+}
+
+.tp-offer-pagination .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 120px;
+	width: auto;
+	@media #{$sm} {
+		bottom: 80px;
+	}
+	@media #{$xs} {
+		bottom: 35px;
+	}
+	& .swiper-pagination-bullet{
+			width: 12px;
+			height: 12px;
+			background: #dadada;
+			display: inline-block;
+			@include transition();
+			opacity: 1;
+			margin-right: 6px;
+			&-active{
+				transform: scale(1.2);
+				background: var(--tp-theme-secondary);
+			}
+	}
+}

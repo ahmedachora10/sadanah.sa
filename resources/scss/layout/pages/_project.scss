@@ -1,0 +1,257 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  8.6 Project Css
+/*----------------------------------------*/
+
+.#{$theme-prefix}-project {
+    &-text{
+      position: absolute;
+      top: 70px;
+      left: 30px;
+      @media #{$md,$sm,$xs} {
+        left: 0;
+      }
+    }
+    &-bottom-color{
+      &::before{
+        position: absolute;
+        content: "";
+        height: 240px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background: #f7f7f7;
+        z-index: -1;
+      }
+    }
+    &-item{
+      z-index: 1;
+      &:hover{
+        & .tp-project{
+          &-item{
+            &-content{
+              bottom: 0;
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+          &-thumb{
+            & img{
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+      &-content{
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+        padding: 30px 40px;
+        @include transition();
+        background: var(--tp-theme-secondary);
+        @media #{$lg} {
+          padding: 30px;
+        }
+        & span{
+          display: inline-block;
+          font-size: 16px;
+          font-weight: 600;
+          margin-bottom: 7px;
+          color: var(--tp-common-white);
+        }
+      }
+      &-title{
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--tp-common-white);
+        letter-spacing: 0.02px;
+        margin: 0;
+        &:hover{
+          color: var(--tp-theme-primary);
+        }
+      }
+      &-btn{
+        position: absolute;
+        right: 40px;
+        top: -30px;
+        &:hover{
+          & span{
+            color: var(--tp-theme-primary);
+            background: var(--tp-common-white);
+          }
+        }
+        & span{
+          display: inline-block;
+          font-size: 20px;
+          width: 48px;
+          height: 48px;
+          line-height: 46px;
+          text-align: center;
+          color: var(--tp-common-white);
+          @include transition();
+          background: var(--tp-theme-primary);
+        }
+      }
+    }
+    &-thumb{
+      & img{
+        @include transition();
+        @media #{$sm,$xs} {
+          width: 100%;
+        }
+      }
+    }
+    &-title{
+      &-wrapper{
+        @media #{$md,$sm,$xs} {
+          margin-bottom: 30px;
+        }
+      }
+    }
+    &-tab-button{
+      @media #{$md,$sm,$xs} {
+        margin-bottom: 20px;
+      }
+      & button{
+        position: relative;
+        border-radius: 0;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 5px 14px;
+        margin-bottom: 0px;
+        z-index: 1;
+        color: var(--tp-theme-secondary);
+        background-color: rgb(248, 248, 248);
+        &:not(:last-of-type){
+           margin-right: 10px;
+          }
+          @media #{$lg,$md,$sm,$xs} {
+           margin-bottom: 20px;
+          }
+        &::after{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 0%;
+            background-color: var(--tp-theme-primary);
+            left: 0;
+            bottom: 0;
+            @extend %transition;
+        }
+        & span{
+          position: relative;
+          z-index: 1;
+        }
+        &.active{
+          color: var(--tp-common-white);
+          &::after{
+              height: 100%;
+              z-index: 0;
+          }
+        }
+      }
+    }
+    &-2{
+      &-shape{
+        position: absolute;
+        bottom: 240px;
+        left: 0;
+        z-index: 2;
+      }
+    }
+}
+
+
+.#{$theme-prefix}-project-6{
+  &-plr{
+    padding-left: 170px;
+    padding-right: 170px;
+    @media #{$xl,$lg} {
+      padding-right: 120px;
+      padding-left: 120px;
+    }
+
+    @media #{$md,$sm,$xs} {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &-item{
+    &:hover{
+      & .tp-project-6{
+        &-thumb{
+          &::after{
+            height: 100%;
+          }
+        }
+        &-content{
+          bottom: 20px;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+  &-thumb{
+    position: relative;
+    & img{
+      width: 100%;
+    }
+    &::after{
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      height: 0;
+      width: 100%;
+      @include transition();
+      background-image: -moz-linear-gradient( 90deg, rgb(1,13,20) 0%, rgba(1,13,20,0.5) 32%, rgba(1,13,20,0.04) 95%, rgba(1,13,20,0) 100%);
+      background-image: -webkit-linear-gradient( 90deg, rgb(1,13,20) 0%, rgba(1,13,20,0.5) 32%, rgba(1,13,20,0.04) 95%, rgba(1,13,20,0) 100%);
+      background-image: -ms-linear-gradient( 90deg, rgb(1,13,20) 0%, rgba(1,13,20,0.5) 32%, rgba(1,13,20,0.04) 95%, rgba(1,13,20,0) 100%);
+    }
+  }
+  &-content{
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    right: 40px;
+    opacity: 0;
+    visibility: hidden;
+    @include transition();
+  }
+  &-title{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--tp-common-white);
+    & a{
+      &:hover{
+        color: var(--tp-theme-4);
+      }
+    }
+    &-wrap{
+      & span{
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--tp-common-white);
+      }
+    }
+  }
+  &-btn{
+      font-size: 30px;
+      height: 48px;
+      width: 48px;
+      line-height: 38px;
+      display: block;
+      text-align: center;
+      color: var(--tp-common-white);
+      background: var(--tp-theme-4);
+      &:hover{
+        color: var(--tp-theme-4);
+        background: var(--tp-common-white);
+      }
+  }
+}

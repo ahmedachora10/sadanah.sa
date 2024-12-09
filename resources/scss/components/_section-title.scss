@@ -1,0 +1,86 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.15 Section Title
+/*----------------------------------------*/
+
+.#{$theme-prefix}-section{
+    &-title{
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.2;
+        letter-spacing: -0.8px;
+        margin-bottom: 20px;
+        font-family: var(--tp-ff-heading);
+        color: var(--tp-heading-primary);
+        & br{
+            @media #{$sm,$xs} {
+                display: none;
+            }
+
+        }
+        @media #{$xl} {
+            font-size: 26px;
+        }
+        @media #{$lg,$md,$sm} {
+            font-size: 26px;
+        }
+        @media #{$xs} {
+            font-size: 26px;
+        }
+        &.pink{
+            color: var(--tp-heading-2);
+        }
+        &-pre{
+            position: relative;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 38px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            display: inline-block;
+            color: var(--tp-theme-primary);
+            padding-left: 15px;
+            // &::after{
+            //     position: absolute;
+            //     content: "";
+            //     height: 6px;
+            //     width: 6px;
+            //     left: 0;
+            //     top: 50%;
+            //     transform: translateY(-50%);
+            //     border: 1px solid var(--tp-theme-secondary);
+            // }
+            &-2{
+                position: relative;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 38px;
+                margin-bottom: 8px;
+                text-transform: uppercase;
+                display: inline-block;
+                color: var(--tp-theme-primary);
+                &.pink{
+                    color: var(--tp-theme-4);
+                }
+            }
+        }
+    }
+}
+
+.tp-home-2-section-text{
+    font-size: 180px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgba(0, 35, 90, 0.039);
+    @media #{$xl} {
+        font-size: 145px;
+    }
+    @media #{$lg,$md,$sm} {
+        font-size: 100px;
+    }
+    @media #{$xs} {
+        font-size: 60px;
+    }
+}
+
