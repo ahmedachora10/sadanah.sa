@@ -25,6 +25,7 @@ return [
     'jobs' => 'Jobs',
     'why us' => 'Why Us',
     'sections' => 'Sections',
+    'blogs' => 'Blogs',
     'reviews' => 'Reviews',
     'job requests' => 'Job Requests,',
     'service requests' => 'Service Requests'
