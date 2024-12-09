@@ -11,7 +11,7 @@ return [
     'pricing plans' => 'خطط الاشتراك',
     'contact us' => 'تواصل معنا',
     'send a message' => 'ابعث رسالة',
-    'about' => "نبذه عن سدنه",
+    'about' => "نبذه عنا",
     'our specials' => 'ما يميزنا',
     'services' => 'خدماتنا',
     'pages' => 'الصفحات',
@@ -43,7 +43,7 @@ return [
     'video' => 'مقطع فيديو',
 
 
-    
+
     'sadnah' => 'سدنه',
     'Influencers' => 'المؤثرين',
     'Portfolio' => 'أعمالنا',
@@ -89,7 +89,7 @@ return [
     "your brand" => "علامتك التجارية",
     "brilliant" => "مذهلة",
     "Email" => "البريد الإلكتروني",
-    "phone" => "الهاتف", 
+    "phone" => "الهاتف",
     "Let's Talk" => "اترك رسالة",
     "jobs" => "الوظائف",
     "Basic information" => "المعلومات الاساسية",
