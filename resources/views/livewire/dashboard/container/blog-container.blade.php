@@ -7,7 +7,7 @@
         @forelse ($members as $item)
         <tr wire:loading.class="opacity-50">
             <td>{{ $item->id }}</td>
-            <td><img src="{{ asset($item->image) }}" alt="image" width="40" height="40" class="rounded-circle"></td>
+            <td><img src="{{ asset($item->thumbnail) }}" alt="image" width="40" height="40" class="rounded-circle"></td>
             <td>{{ $item->title_en	 ?? '-' }}</td>
             <td>{{ $item->title_ar	 ?? '-' }}</td>
             {{-- <td>{{ $item->linkedin }} - {{ $item->twitter }}</td> --}}
