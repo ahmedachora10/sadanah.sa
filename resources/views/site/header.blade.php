@@ -41,7 +41,7 @@
     <!-- Core Style Css -->
     @if (session()->get('lang') == 'ar')
         <link  rel="stylesheet" href="{{ asset('assets/css/style-ar.css') }}">
-    @else  
+    @else
         <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     @endif
   </head>
@@ -123,7 +123,7 @@
                   role="button"
                   aria-haspopup="true"
                   aria-expanded="false"
-                  ><span>{{__('front.about')}}</span></a>
+                  ><span>{{trans('front.about')}}</span></a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -132,15 +132,15 @@
                   role="button"
                   aria-haspopup="true"
                   aria-expanded="false"
-                  ><span 
+                  ><span
                     >{{__('front.services')}}</span
                   ></a
                 >
               </li>
-             
+
               <li class="nav-item" >
                 <a class="nav-link {{ Route::currentRouteName() == 'influencers' ? 'active' : '' }}" href="{{route('influencers')}}"
-                  ><span  
+                  ><span
                     >{{__('front.Influencers')}}</span
                   ></a
                 >
@@ -152,7 +152,7 @@
                   role="button"
                   aria-haspopup="true"
                   aria-expanded="false"
-                  ><span  
+                  ><span
                     >{{__('front.Portfolio')}}</span
                   ></a
                 >
@@ -177,7 +177,7 @@
                  @else
                  <a href="/set-locale/ar" id="langSwitcher">AR</a>
                 @endif
-             
+
             </div>
             <div class="menu-icon cursor-pointer">
               <span class="icon ti-align-right"></span>
@@ -214,14 +214,14 @@
                     <div class="o-hidden">
                       <a href="{{route('about')}}">
                         <div class="link cursor-pointer dmenu">
-                          <span class="fill-text" >{{__('front.about')}}</span>
+                          <span class="fill-text" >{{trans('front.about')}}</span>
                         </div>
                       </a>
                     </div>
                     <div class="o-hidden">
                       <a href="{{route('service')}}">
                         <div class="link cursor-pointer dmenu">
-                          <span class="fill-text" 
+                          <span class="fill-text"
                             >{{__('front.services')}}</span
                           >
                         </div>
@@ -230,7 +230,7 @@
                     <div class="o-hidden">
                       <a href="{{route('influencers')}}">
                         <div class="link cursor-pointer dmenu">
-                          <span class="fill-text" 
+                          <span class="fill-text"
                             >{{__('front.Influencers')}}</span
                           >
                         </div>
@@ -239,7 +239,7 @@
                     <div class="o-hidden">
                       <a href="{{route('portfolio')}}">
                         <div class="link cursor-pointer dmenu">
-                          <span class="fill-text" 
+                          <span class="fill-text"
                             >{{__('front.Portfolio')}}</span
                           >
                         </div>
@@ -252,7 +252,7 @@
                         </div>
                       </a>
                     </div>
-                  
+
                   </li>
                 </ul>
               </div>
@@ -267,7 +267,7 @@
                     541 Street, <br />
                     Cairo
                   </h5>
-            
+
                 </div> --}}
 
                 <?php
@@ -335,7 +335,7 @@
                   <h5 class="underline mt-10">
                     <span class="text" style="direction: ltr; unicode-bidi: embed;">
                       {{$phone->val}}
-                    </span>  
+                    </span>
                   </h5>
                 </div>
               </div>
@@ -346,4 +346,3 @@
 
       <!-- ==================== End Navbar ==================== -->
 
-    
