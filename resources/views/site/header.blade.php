@@ -41,11 +41,8 @@
     <link rel="stylesheet" href="{{asset('assets/css/plugins.css')}}" />
 
     <!-- Core Style Css -->
-    @if (app()->getLocale() == 'ar')
-        <link  rel="stylesheet" href="{{ asset('assets/css/style-ar.css') }}">
-    @else
-        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    @endif
+        <link  rel="stylesheet" href="{{ asset('assets/css/style-'.$lang.'.css') }}">
+        {{-- <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"> --}}
   </head>
 
   <body>
