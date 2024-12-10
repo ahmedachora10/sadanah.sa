@@ -270,18 +270,18 @@
                 </div> --}}
 
                 <?php
-                $x = \App\Models\Setting::where('name','x')->first();
-                $instagram = \App\Models\Setting::where('name','instagram')->first();
-                $linkedin = \App\Models\Setting::where('name','linkedin')->first();
-                $telegram = \App\Models\Setting::where('name','telegram')->first();
-                $tiktok = \App\Models\Setting::where('name','tiktok')->first();
-                $snapchat = \App\Models\Setting::where('name','snapchat')->first();
-                $youtube = \App\Models\Setting::where('name','youtube')->first();
-                $footer_ar = \App\Models\Setting::where('name','footer_ar')->first();
-                $footer_en = \App\Models\Setting::where('name','footer_en')->first();
-                $phone = \App\Models\Setting::where('name','phone')->first();
-                $email = \App\Models\Setting::where('name','email')->first();
-                $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
+                $x = setting('x');
+                $instagram = setting('instagram');
+                $linkedin = setting('linkedin');
+                $telegram = setting('telegram');
+                $tiktok = setting('tiktok');
+                $snapchat = setting('snapchat');
+                $youtube = setting('youtube');
+                $footer_ar = setting('footer_ar');
+                $footer_en = setting('footer_en');
+                $phone = setting('phone');
+                $email = setting('email');
+                $fileUrl = setting('profile_file_ar');
                 ?>
 
                 <div class="item mb-50">
