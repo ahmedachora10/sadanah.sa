@@ -59,9 +59,9 @@ Route::get('/switch-langauge/{locale?}', function ($locale = 'ar') {
 
     Session::put('lang', $locale);
 
-    app()->setLocale(Session::get('lang'));
+    app()->setLocale($locale);
 
-    return back();
+    return redirect()->back();
 })->name('switch-language');
 
 Route::get('clients/reviews', function () {
