@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/plugins.css')}}" />
 
     <!-- Core Style Css -->
-        <link  rel="stylesheet" href="{{ asset('assets/css/style-'.$lang.'.css') }}">
+        <link  rel="stylesheet" href="{{ asset('assets/css/style-'.$lang.'.css') }}?v={{str()->random(5)}}">
         {{-- <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"> --}}
   </head>
 

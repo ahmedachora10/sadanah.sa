@@ -10930,7 +10930,7 @@ section.numbers .sub-title {
     overflow: hidden;
     position: relative;
     text-overflow: ellipsis;
-    
+
 }
 .services_info {
     display: -webkit-box;
@@ -11077,6 +11077,7 @@ section.numbers .sub-title {
   aspect-ratio: 4 / 4;
   object-fit: cover;
 }
+
 .img_vision {
   aspect-ratio: 4 / 3;
     object-fit: cover;
