@@ -1,3 +1,6 @@
+@php
+    $lang = app()->getLocale();
+@endphp
 <!DOCTYPE html>
 <html lang="zxx">
   <head>
@@ -16,7 +19,7 @@
     <meta name="author" content="" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Title  -->
-    <title id="pageTitle">{{__('front.sadnah')}}</title>
+    <title id="pageTitle">{{__('front.sadnah')}} - {{ setting('app_name_'.$lang) }}</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{asset('assets/imgs/logo.png')}}" />

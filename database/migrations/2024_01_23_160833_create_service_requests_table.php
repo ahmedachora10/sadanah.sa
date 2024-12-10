@@ -16,9 +16,9 @@ return new class extends Migration
             $table->foreignId('service_id')->constrained('our_services')->cascadeOnDelete();
             $table->string('name');
             $table->string('phone');
-            $table->string('location');
             $table->string('city');
-            $table->string('image');
+            // $table->string('location');
+            // $table->string('image');
             $table->text('description');
             $table->timestamps();
         });
