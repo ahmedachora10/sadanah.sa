@@ -279,12 +279,12 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
          </p>
           @else
           <p class="fz-14" >
-            {{date('Y')}}
 
             All rights reserved to the company
-             <span class="underline" style="color: var(--primary-color)">
-             Sadnah
-           </span>
+            <span class="underline" style="color: var(--primary-color)">
+                Sadnah
+            </span>
+            {{date('Y')}}
          </p>
           @endif
 
