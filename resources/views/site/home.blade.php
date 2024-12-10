@@ -148,7 +148,7 @@
                     </p>
                     <a
                       href="{{route('service.details',['id'=>$service->id])}}"
-                      class="see_more text-end"
+                      class="see_more text-{{app()->getLocale() == 'ar' ? 'start' : 'end'}}"
                       style="display: none"
                     >
                       <span>{{__('common.show more')}}</span>
