@@ -273,25 +273,17 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
           <p class="fz-14" >
             جميع الحقوق محفوظة لشركة
            <span class="underline" style="color: var(--primary-color)">
-             <img
-               src="{{asset('assets/imgs/logo-light.png')}}"
-               alt="سدنه"
-               style="height: 20px; vertical-align: middle;"
-             >
+             سدنه
            </span>
-           ©2024
+           {{date('Y')}}
          </p>
           @else
           <p class="fz-14" >
-            ©2024
+            {{date('Y')}}
 
             All rights reserved to the company
              <span class="underline" style="color: var(--primary-color)">
-             <img
-               src="{{asset('assets/imgs/logo-light.png')}}"
-               alt="سدنه"
-               style="height: 20px; vertical-align: middle;"
-             >
+             Sadnah
            </span>
          </p>
           @endif
