@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/plugins.css')}}" />
 
     <!-- Core Style Css -->
-    @if (session()->get('lang') == 'ar')
+    @if ($lang == 'ar')
         <link  rel="stylesheet" href="{{ asset('assets/css/style-ar.css') }}">
     @else
         <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
@@ -174,7 +174,7 @@
 
           <div class="topnav d-flex align-items-center justify-content-center">
             <div class="lang">
-              @if (session()->get('lang') == 'ar')
+              @if ($lang == 'ar')
                  <a href="{{route('switch-language', 'en')}}" id="langSwitcher">EN</a>
                  @else
                  <a href="{{route('switch-language', 'ar')}}" id="langSwitcher">AR</a>
