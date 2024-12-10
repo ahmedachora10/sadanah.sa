@@ -175,9 +175,9 @@
           <div class="topnav d-flex align-items-center justify-content-center">
             <div class="lang">
               @if (session()->get('lang') == 'ar')
-                 <a href="/set-locale/en" id="langSwitcher">EN</a>
+                 <a href="{{route('switch-language', 'en')}}" id="langSwitcher">EN</a>
                  @else
-                 <a href="/set-locale/ar" id="langSwitcher">AR</a>
+                 <a href="{{route('switch-language', 'ar')}}" id="langSwitcher">AR</a>
                 @endif
 
             </div>

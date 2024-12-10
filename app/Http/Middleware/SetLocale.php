@@ -12,7 +12,7 @@ class SetLocale
 {
     public function handle($request, Closure $next)
     {
-        $locale = Session::get('lang_locale', 'ar');
+        $locale = Session::get('lang', 'ar');
         App::setLocale($locale);
         return $next($request);
     }

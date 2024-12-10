@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\App;
 
 class HomeController extends Controller
 {
-    public function index() 
+    public function index()
     {
         $about = About::first();
         $clients = OurClient::get();
@@ -42,7 +42,7 @@ class HomeController extends Controller
         'slider','visions','works','statistics','infs','blogs','certificates','whyU'));
     }
 
-    public function service() 
+    public function service()
     {
         $services = OurService::get();
         $blogs = Blog::orderBy('id','desc')->limit(2)->get();
@@ -50,7 +50,7 @@ class HomeController extends Controller
         return view('site.services',compact('services','blogs'));
     }
 
-    public function service_details(Request $request) 
+    public function service_details(Request $request)
     {
         $service = OurService::where('id', $request->id)->first();
         $services = OurService::get();
@@ -58,50 +58,50 @@ class HomeController extends Controller
         return view('site.services_details',compact('service','services'));
     }
 
-    public function about() 
+    public function about()
     {
         $about = About::first();
         $our_teams = OurTeam::get();
         return view('site.about',compact('about','our_teams'));
     }
 
-    public function influencers() 
+    public function influencers()
     {
         $infs = Team::get();
         return view('site.influencers',compact('infs'));
     }
 
-    public function influencers_details(Request $request) 
+    public function influencers_details(Request $request)
     {
         $inf = Team::where('id', $request->id)->first();
         return view('site.influencers_details',compact('inf'));
     }
 
-    public function portfolio() 
+    public function portfolio()
     {
         $works = OurWork::get();
         $tags = Tag::get();
         return view('site.portfolio',compact('works','tags'));
     }
 
-    public function portfolio_details(Request $request) 
+    public function portfolio_details(Request $request)
     {
         $work = OurWork::where('id', $request->id)->first();
         $previousWork = OurWork::where('id', '<', $work->id)->orderBy('id', 'desc')->first();
         $nextWork = OurWork::where('id', '>', $work->id)->orderBy('id', 'asc')->first();
-    
+
         return view('site.portfolio_details',compact('work','previousWork','nextWork'));
     }
 
 
 
-    public function blog() 
+    public function blog()
     {
         $blogs = Blog::get();
         return view('site.blog',compact('blogs'));
     }
-    
-    public function blog_details(Request $request) 
+
+    public function blog_details(Request $request)
     {
         $blog = blog::where('id', $request->id)->first();
         $latest = Blog::orderBy('id','desc')->limit(3)->get();
@@ -125,25 +125,25 @@ class HomeController extends Controller
         return redirect()->back();
     }
 
-    public function job() 
+    public function job()
     {
         $jobs = JobPost::get();
         return view('site.jobs',compact('jobs'));
     }
 
-    public function contact() 
+    public function contact()
     {
-        
+
         return view('site.contact');
     }
 
-    public function lang ($locale)
-     {
-        App::setLocale($locale);
-        session()->put('lang',$locale);
-        return redirect()->back();
+    // public function lang ($locale)
+    //  {
+    //     App::setLocale($locale);
+    //     session()->put('lang',$locale);
+    //     return redirect()->back();
 
-    }
-    
-    
+    // }
+
+
 }

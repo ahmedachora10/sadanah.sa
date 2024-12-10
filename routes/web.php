@@ -7,7 +7,7 @@ use App\Models\OurWork;
 use App\Models\Support;
 use App\Services\InstagramService;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Session;
 
 Route::get('/template', function () {
     return view('welcome');
@@ -50,16 +50,16 @@ Route::controller(HomeController::class)
         Route::get('/blogDetails', 'blog_details')->name('blog.details');
         Route::get('/job', 'job')->name('job');
         Route::get('/contactus', 'contact')->name('contactus');
-        Route::get('/set-locale/{local}', 'lang')->name('lang');
+        // Route::get('/set-locale/{local}', 'lang')->name('lang');
     });
 
 Route::get('/switch-langauge/{locale?}', function ($locale = 'ar') {
 
-    $locale = session('lang_locale') === 'ar' ? 'en' : 'ar';
+    $locale = Session::get('lang') === 'ar' ? 'en' : 'ar';
 
-    session()->put('lang_locale', $locale);
+    Session::put('lang', $locale);
 
-    app()->setLocale(session('lang_locale'));
+    app()->setLocale(Session::get('lang'));
 
     return back();
 })->name('switch-language');
@@ -98,4 +98,3 @@ Route::get('services/request/{service}', function (OurService $service) {
 require __DIR__ . '/auth.php';
 
 require __DIR__ . '/_dashboard.php';
-
