@@ -975,6 +975,7 @@ figure {
   fill: none;
 }
 
+
 .progress-wrap svg.progress-circle path {
   stroke: #ccc;
   stroke-width: 4;
@@ -10997,7 +10998,7 @@ ul {
   overflow: hidden;
   position: relative;
   text-overflow: ellipsis;
-  
+
 }
 .services_info {
   display: -webkit-box;
