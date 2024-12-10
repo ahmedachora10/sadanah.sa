@@ -79,22 +79,19 @@
               <div class="row">
                 <div class="col-lg-8 bord-thin-right rest">
                   <div class="row justify-content-end rest">
-                    <div class="col-md-5 rest">
-                      <div class="cont">
+                  <div class="col-md-5 rest">
+                      <div class="cont bord-thin-left">
                         <div class="mb-40">
                           <h2 class="fz-100 numb-font">1.</h2>
                         </div>
-                        <h4>
-                              
-                          رسالتنا
-                        </h4>
+                        <h4>رؤيتنا</h4>
                         <div class="text mt-30">
                           <p>
-                            بناء جسور عظيمة من الثّقة والأمان والإبداع ليحظى شريكنا بخطوات آمنة في سيره إلى القمّة.                       
+                            نعتزم تحقيق رؤانا الخاصّة التي تتمثّل بجعل سدنه شركة رائدة مبتكِرة ومنافسة في مجالها والوجهة الأولى لكلّ منشأة تبحث عن سادنٍ لها، ونعتزم تحقيق رؤية مملكتنا العظيمة ٢٠٣٠ بدعم وتطوير القطاع التجاري وزيادة نموّه وازدهاره.
                           </p>
-                        </div>
 
                           </div>
+                      </div>
                     </div>
                     <div class="col-md-5 rest">
                       <div class="img fit-img bord-thin-left">
@@ -108,20 +105,25 @@
                         <img src="assets/imgs/intro/03.jpg" alt="" />
                       </div>
                     </div>
-                    <div class="col-md-5 rest">
-                      <div class="cont bord-thin-left">
+                  
+                      <div class="col-md-5 rest">
+                      <div class="cont">
                         <div class="mb-40">
                           <h2 class="fz-100 numb-font">2.</h2>
                         </div>
-                        <h4>رؤيتنا</h4>
+                        <h4>
+                              
+                          رسالتنا
+                        </h4>
                         <div class="text mt-30">
                           <p>
-                            نعتزم تحقيق رؤانا الخاصّة التي تتمثّل بجعل سدنة شركة رائدة مبتكِرة ومنافسة في مجالها والوجهة الأولى لكلّ منشأة تبحث عن سادنٍ لها، ونعتزم تحقيق رؤية مملكتنا العظيمة ٢٠٣٠ بدعم وتطوير القطاع التجاري وزيادة نموّه وازدهاره.
+                            بناء جسور عظيمة من الثّقة والأمان والإبداع ليحظى شريكنا بخطوات آمنة في سيره إلى القمّة.                       
                           </p>
+                        </div>
 
                           </div>
-                      </div>
                     </div>
+
                   </div>
                 </div>
                 <div class="col-lg-4 rest">
@@ -160,10 +162,47 @@
               <div class="row">
                 <div class="col-lg-8 bord-thin-right rest">
                   <div class="row justify-content-end rest">
-                    <div class="col-md-5 rest">
-                      <div class="cont">
+
+
+
+
+                
+                  <div class="col-md-5 rest">
+                      <div class="cont bord-thin-left">
                         <div class="mb-40">
                           <h2 class="fz-100 numb-font">1.</h2>
+                        </div>
+                        <h4>Our Vision</h4>
+                        <div class="text mt-30">
+                          <p>
+                            We are determined to achieve our own vision, which is to make the stewards of the company a leading, innovative, and competitive entity in its field, and the first choice for every organization seeking a steward. We are also committed to realizing the great vision of our Kingdom, 2030, by supporting and developing the commercial sector, increasing its growth and prosperity.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    <div class="col-md-5 rest">
+                      <div class="img fit-img bord-thin-left">
+                        <img src="assets/imgs/intro/02.jpg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row justify-content-end bord-thin-top rest">
+                    <div class="col-md-5 rest">
+                      <div class="img fit-img">
+                        <img src="assets/imgs/intro/03.jpg" alt="" />
+                      </div>
+                    </div>
+
+
+
+
+                      <div class="col-md-5 rest">
+                      <div class="cont">
+                        <div class="mb-40">
+                          <h2 class="fz-100 numb-font">2.</h2>
                         </div>
                         <h4>
                               
@@ -177,31 +216,9 @@
                           </div>
                       </div>
                     </div>
-                    <div class="col-md-5 rest">
-                      <div class="img fit-img bord-thin-left">
-                        <img src="assets/imgs/intro/02.jpg" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row justify-content-end bord-thin-top rest">
-                    <div class="col-md-5 rest">
-                      <div class="img fit-img">
-                        <img src="assets/imgs/intro/03.jpg" alt="" />
-                      </div>
-                    </div>
-                    <div class="col-md-5 rest">
-                      <div class="cont bord-thin-left">
-                        <div class="mb-40">
-                          <h2 class="fz-100 numb-font">2.</h2>
-                        </div>
-                        <h4>Our Vision</h4>
-                        <div class="text mt-30">
-                          <p>
-                            We are determined to achieve our own vision, which is to make the stewards of the company a leading, innovative, and competitive entity in its field, and the first choice for every organization seeking a steward. We are also committed to realizing the great vision of our Kingdom, 2030, by supporting and developing the commercial sector, increasing its growth and prosperity.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+
+
+
                   </div>
                 </div>
                 <div class="col-lg-4 rest">
@@ -243,7 +260,7 @@
                 <h6 class="sub-title main-color mb-25">{{__('front.Our Team')}}</h6>
                 <div class="bord pt-25 bord-thin-top d-flex align-items-center">
                   <h2 class="fw-600" data-i18n="ourTeam">
-                    {{__('front.Meet our')}} <span class="fw-200"></span>
+                    {{__('front.meet team')}}  <span class="fw-200"></span>
                   </h2>
                 </div>
               </div>

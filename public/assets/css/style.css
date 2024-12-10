@@ -3321,7 +3321,7 @@ body.loaded {
 .navbar .navbar-nav .nav-link {
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   color: #1a1a1a;
   padding: 20px 10px 15px 10px;
@@ -10504,9 +10504,10 @@ footer.clean-footer.crev:before {
 }
 .clients-inner p {
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 2rem;
   color: #000;
-  text-align: center;
+  text-align: start;
+  font-weight: 400  ;
 }
 .nav-item:hover .nav-link {
   color: var(--primary-color) !important;
@@ -10578,6 +10579,7 @@ footer.clean-footer.crev:before {
 }
 
 .caption {
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -10991,8 +10993,11 @@ ul {
 }
 .services_title {
   max-height: 50px;
+  min-height: 50px;
   overflow: hidden;
   position: relative;
+  text-overflow: ellipsis;
+  
 }
 .services_info {
   display: -webkit-box;
@@ -11135,4 +11140,25 @@ ul {
   height: 100%;
   object-fit: scale-down;
 }
+.img_icon_services {
+  width: 100%;
+  aspect-ratio: 4 / 4;
+  object-fit: cover;
+}
+.img_vision {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  width: 100%;
+}
+.social_footer {
+  margin-inline-end: 1rem;
+}
+.footer_title {
+  font-size: 1rem;
+}
+.blog_cerv_title  {
+  position: relative;
+  height: 65px;
+  overflow: hidden;
+ }
 /* Last Update */

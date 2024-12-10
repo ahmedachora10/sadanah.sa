@@ -1,6 +1,6 @@
 @include('site.header')
       <div id="smooth-content">
-        <main class="main-bg">
+        <main class="main-bg ">
           <!-- ==================== Start Team ==================== -->
 
           <section class="team-single">
@@ -126,3 +126,13 @@
        
         
         @include('site.footer')
+          <style>
+     
+          main {
+            margin-top: 60px;
+          }
+                  .navbar {
+                    background: #1a1a1a;
+                  }
+                
+          </style>

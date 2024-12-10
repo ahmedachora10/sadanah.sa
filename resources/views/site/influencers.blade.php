@@ -13,11 +13,11 @@
                     data-overlay-dark="9">
                     <div class="container pt-100">
                         <div class="text-center">
-                            <h1 class="fz-100 text-u" data-i18n="Team">{{__('front.Influencers')}}</h1>
+                            <h1 class="fz-100 text-u" >{{__('front.Influencers')}}</h1>
                             <div class="mt-15">
-                                <a href="{{route('home')}}" data-i18n="home">{{__('front.home')}}</a>
+                                <a href="{{route('home')}}">{{__('front.home')}}</a>
                                 <span class="padding-rl-20">|</span>
-                                <span style="color: var(--primary-color);" data-i18n="team"></span>
+                                <span style="color: var(--primary-color);">{{__('front.Influencers')}}</span>
                             </div>
                         </div>
                     </div>

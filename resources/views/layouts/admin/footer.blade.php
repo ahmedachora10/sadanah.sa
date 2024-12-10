@@ -7,7 +7,7 @@
             ©{{ date('Y') }} --}}
 
             مصمم بـ ♥ بواسطة <a href="https://www.sadnah.sa" class="text-primary fw-bold" target="_blank">شركة
-                سدنة</a>، جميع
+                سدنه</a>، جميع
             الحقوق محفوظة لشركة
             دشن التجارية {{ date('Y') }}
         </div>

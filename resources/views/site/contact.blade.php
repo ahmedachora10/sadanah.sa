@@ -25,11 +25,11 @@
           >
             <div class="container pt-100">
               <div class="text-center">
-                <h1 class="fz-100 text-u" data-i18n="Contact">{{__('front.Contact Us')}}</h1>
+                <h1 class="fz-100 text-u" >{{__('front.Contact Us')}}</h1>
                 <div class="mt-15">
-                  <a href="sadnah.html" data-i18n="home"> {{__('front.home')}}</a>
+                  <a href="{{route('home')}}"> {{__('front.home')}}</a>
                   <span class="padding-rl-20">|</span>
-                  <span style="color: var(--primary-color)" data-i18n="contact"
+                  <span style="color: var(--primary-color)" 
                     >{{__('front.Contact Us')}}</span
                   >
                 </div>
@@ -41,7 +41,7 @@
 
           <!-- ==================== Start Contact ==================== -->
 
-          <section class="contact section-padding sub-bg">
+          <section class="contact section-padding sub-bg overflow-hidden">
             <div class="container">
               <div class="row">
                 <div class="col-lg-5 valign">
@@ -76,45 +76,48 @@
                       
                     </div>
                     
-                    <ul class="rest social-text" style="display: flex; gap: 10px; list-style: none; padding: 0; margin: 0;">
-                      <li class="cursor-pointer ml-50">
+             <div class="row">
+              <div class="col-12">
+              <ul class="justify-content-lg-start" style="display: flex; gap: 2rem; list-style: none; padding: 0; margin: 0; flex-wrap: wrap; align-items: center; justify-content: center;">
+                      <li class="cursor-pointer ">
                         <a href="{{$x->val}}" target="_blank" class="hover-anim social-icon">
                           <i class="fa-brands fa-x-twitter"></i>
                         </a>
                       </li>
-                      <li class="cursor-pointer ml-50">
+                      <li class="cursor-pointer ">
                         <a href="{{$linkedin->val}}" target="_blank" class="hover-anim social-icon">
                           <i class="fab fa-linkedin mr-10"></i>
                         </a>
                       </li>
-                      <li class="cursor-pointer ml-50">
+                      <li class="cursor-pointer ">
                         <a href="{{$tiktok->val}}" target="_blank" class="hover-anim social-icon">
                           <i class="fab fa-tiktok mr-10"></i>
                         </a>
                       </li>
-                      <li class="cursor-pointer ml-50">
+                      <li class="cursor-pointer ">
                         <a href="{{$youtube->val}}" target="_blank" class="hover-anim social-icon">
                           <i class="fab fa-youtube mr-10"></i>
                         </a>
                       </li>
-                      <li class="cursor-pointer ml-50">
+                      <li class="cursor-pointer ">
                         <a href="{{$snapchat->val}}" target="_blank" class="hover-anim social-icon">
                           <i class="fab fa-snapchat mr-10"></i>
                         </a>
                       </li>
-                      <li class="cursor-pointer ml-50">
+                      <li class="cursor-pointer ">
                         <a href="{{$telegram->val}}" target="_blank" class="hover-anim social-icon">
                           <i class="fab fa-telegram mr-10"></i>
                         </a>
                       </li>
-                      <li class="cursor-pointer ml-50">
+                      <li class="cursor-pointer ">
                         <a href="{{$instagram->val}}" target="_blank" class="hover-anim social-icon">
                           <i class="fab fa-instagram mr-10"></i>
                         </a>
                       </li>
                     </ul>
+              </div>
+             </div>
                     
-
                   </div>
                 </div>
                 <div class="col-lg-6 offset-lg-1 valign">
@@ -129,66 +132,65 @@
                       <div class="controls row">
                         <div class="col-lg-6">
                           <div class="form-group mb-30">
-                            <label
-                              for="name"
-                              class="mb-1"
-                              data-i18n="name"
-                            ></label>
+                          
                             <input
                               id="form_name"
                               type="text"
                               name="name"
                               required="required"
+                              placeholder="{{__('front.first name')}}"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-group mb-30">
+                       
+                            <input
+                              id="form_name"
+                              type="text"
+                              name="name"
+                              required="required"
+                              placeholder="{{__('front.second name')}}"
                             />
                           </div>
                         </div>
 
                         <div class="col-lg-6">
                           <div class="form-group mb-30">
-                            <label
-                              for="email"
-                              class="mb-1"
-                              data-i18n="email"
-                            ></label>
 
                             <input
                               id="form_email"
                               type="email"
                               name="email"
                               required="required"
+                              placeholder="{{__('front.email')}}"
                             />
                           </div>
                         </div>
 
-                        <div class="col-12">
+                        <div class="col-lg-6">
                           <div class="form-group mb-30">
-                            <label
-                              for="subject"
-                              class="mb-1"
-                              data-i18n="subject"
-                            ></label>
+                       
 
                             <input
-                              id="form_subject"
+                              id="form_phone"
                               type="text"
-                              name="subject"
+                              name="phone"
+                              placeholder="{{__('front.phone number')}}"
                             />
                           </div>
                         </div>
 
                         <div class="col-12">
                           <div class="form-group">
-                            <label
-                              for="message"
-                              class="mb-1"
-                              data-i18n="message"
-                            ></label>
+                         
 
                             <textarea
                               id="form_message"
                               name="message"
                               rows="4"
                               required="required"
+                              placeholder="{{__('front.message')}}"
                             ></textarea>
                           </div>
                           <div class="mt-30">

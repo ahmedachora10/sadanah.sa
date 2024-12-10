@@ -24,7 +24,7 @@ return [
     'cities' => 'المدن',
     'reviews' => 'التقييمات',
     'services' => 'الخدمات',
-    'our works' => 'أعمالنا',
+    'our works' => 'اعمالنا',
     'our team' => 'فريقنا',
     'support' => 'الدعم الفني',
     'service requests' => 'طلبات الخدمات',

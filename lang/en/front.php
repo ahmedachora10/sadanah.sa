@@ -13,7 +13,7 @@ return [
     'contact us' => 'Contact Us',
     'send a message' => 'Send a Message',
     'about' => 'About Us',
-    'our specials' => '',
+    'our specials' => 'WHAT SPICAL US',
     'services' => 'Services',
     'pages' => 'Pages',
     'statistics' => 'Statistics',
@@ -35,11 +35,22 @@ return [
     'job request' => 'Job Request',
     'vision' => 'Vision',
     'team' => 'Our Team',
+    'meet team' => 'Meet Our Team',
     'faq' => 'Faq',
     'work' => 'Our Works',
     'service' => 'Services',
     'why us ' => 'Why Us',
     'video' => 'Video',
+    'about sadnah' => 'About Sadnah',
+    'featured project' => 'FEATURED PROJECTS',
+    'head about' => 'Our pursuit at Sadnah, unique transitions.',
+    'first name' => 'First Name',
+    'second name' => 'Second Name',
+    'email' => 'Email',
+    'phone number' => 'Phone Number',
+    'subject' => 'Subject',
+    
+
 
 
 
@@ -85,7 +96,7 @@ return [
     "Leave a comment" => "Leave a comment",
     "Post Comment" => "Post Comment",
     "send a" => "Send a",
-    "message" => "message",
+    "message" => "Message",
     "Let's make" => "Let's make",
     "your brand" => "your brand",
     "brilliant" => "brilliant",

@@ -1598,7 +1598,7 @@ document.addEventListener("DOMContentLoaded", () => {
       home: "الرئيسية",
       about: "نبذة عنا",
       services: "خدماتنا",
-      portfolio: "أعمالنا",
+      portfolio: "اعمالنا",
       blogs: "المدونة",
       influencers: "المؤثرين",
       contact: "تواصل معنا",
@@ -1620,7 +1620,7 @@ document.addEventListener("DOMContentLoaded", () => {
       teamMembers: "أعضاء الفريق",
       customersS: "العملاء",
       customersSati: "رضا",
-      ourPortfolio: "أعمالنا",
+      ourPortfolio: "اعمالنا",
       featuredProject: "المشاريع المميزة",
       feProject: "المشاريع",
       clientSay: "ماذا يقول الناس؟",
@@ -1637,7 +1637,7 @@ document.addEventListener("DOMContentLoaded", () => {
       viewPosts: "عرض جميع المنشورات",
       postedBy: "تم النشر بواسطة",
       useflLinks: "روابط مفيدة",
-      downloadProfile: "تحميل بروفايل سدنة",
+      downloadProfile: "تحميل بروفايل سدنه",
       copyRight: "© 2024 سدنه، فخورون بتقديمه ",
       goToWork: "لنبدأ العمل.",
       ourServices: "خدماتنا.",
@@ -1690,7 +1690,7 @@ document.addEventListener("DOMContentLoaded", () => {
       Services: "خدماتنا",
       Team: "المؤثرين",
       team: "المؤثرين",
-      Portfolio: "أعمالنا.",
+      Portfolio: "اعمالنا.",
       Faq: "الأسئلة المتكررة",
       anouInP:
         "خطوات بسيطة من حلم مطلع 2018 رسمنا فكرة واقعية وبخطى ثابتة عبرنا الطريق لتكون نجمةً مضيئة بأرواح سعودية شابة وطموحة.",
@@ -1730,36 +1730,36 @@ document.addEventListener("DOMContentLoaded", () => {
   // });
 });
 // Bnner Brand
-document.addEventListener("DOMContentLoaded", function () {
-  const clientsImages = document.querySelector(".clients-images");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const clientsImages = document.querySelector(".clients-images");
 
-  const clientItems = document.querySelectorAll(".client-item");
+//   const clientItems = document.querySelectorAll(".client-item");
 
-  clientItems.forEach((item) => {
-    const clone = item.cloneNode(true);
-    clientsImages.appendChild(clone);
-  });
-  const allBanner = document.querySelectorAll(".client-item");
-  allBanner.forEach((slide) => {
-    slide.addEventListener("mouseenter", () => {
-      clientsImages.style.animationPlayState = "paused";
-    });
+//   clientItems.forEach((item) => {
+//     const clone = item.cloneNode(true);
+//     clientsImages.appendChild(clone);
+//   });
+//   const allBanner = document.querySelectorAll(".client-item");
+//   allBanner.forEach((slide) => {
+//     slide.addEventListener("mouseenter", () => {
+//       clientsImages.style.animationPlayState = "paused";
+//     });
 
-    slide.addEventListener("mouseleave", () => {
-      clientsImages.style.animationPlayState = "running";
-    });
-  });
-});
+//     slide.addEventListener("mouseleave", () => {
+//       clientsImages.style.animationPlayState = "running";
+//     });
+//   });
+// });
 
 // Bnner Team
 document.addEventListener("DOMContentLoaded", function () {
   const teamSlider = document.querySelector(".team-slider");
   const contSlides = document.querySelectorAll(".cont-slide");
 
-  contSlides.forEach((item) => {
-    const clone = item.cloneNode(true);
-    teamSlider.appendChild(clone);
-  });
+  // contSlides.forEach((item) => {
+  //   const clone = item.cloneNode(true);
+  //   teamSlider.appendChild(clone);
+  // });
 
   const allSlides = document.querySelectorAll(".cont-slide");
   allSlides.forEach((slide) => {

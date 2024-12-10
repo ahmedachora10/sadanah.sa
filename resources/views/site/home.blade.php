@@ -68,7 +68,7 @@
                 <div
                   class="bord pt-25 bord-thin-top d-flex align-items- justify-content-center"
                 >
-                  <h2 class="fw-600 text-u"> {{__('front.We Provide')}}</h2>
+                  <h2 class="fw-600 text-u"> {{__('front.about sadnah')}}</h2>
                 </div>
                 <p class="text-center mt-2">
                   @if (session()->get('lang') == 'ar')
@@ -80,9 +80,9 @@
               </div>
               <div class="row row-cols-1 row-cols-md-3 g-4 g-y-4 cont-cards">
                 @foreach ($visions as $vision)
-                <div class="col">
+                <div class="col mb-3 mb-lg-0">
                   <div class="card about-intro h-100">
-                      <img src="{{asset('storage/'.$vision->image)}}" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+                      <img src="{{asset('storage/'.$vision->image)}}" class="card-img-top img_vision" alt="about sadnah"/>
                       <div class="card-body">
                       <h5 class="card-title">
                         @if (session()->get('lang') == 'ar')
@@ -119,18 +119,17 @@
                 <h6 class="sub-title main-color mb-25" >
                   {{__('front.services')}}
                 </h6>
+                
                 <div class="bord pt-25 bord-thin-top d-flex align-items-center">
-                  {{-- <h2 class="fw-600 text-u ls1" data-i18n="weProvide">
-                    What We
-                  </h2> --}}
-                </div>
+                <h2 class="fw-600 text-u"> {{__('front.We Provide')}}</h2>  
+              </div>
               </div>
               <div class="row row-cols-2 row-cols-md-4 row-cols-lg-5 g-3 g-y-3">
                 @foreach ($services as $service)
                 <div class="col">
                   <div class="item-box2 mb-30">
                     <div class="icon mb-2">
-                       <img src="{{asset('storage/'.$service->image)}}" alt=""> 
+                       <img class="img_icon_services" src="{{asset('storage/'.$service->image)}}" alt=""> 
                       {{-- <i class="services-icon fab fa-digital-ocean"></i> --}}
                     </div>
                     <h6 class="services_title">
@@ -152,7 +151,7 @@
                       class="see_more"
                       style="display: none"
                     >
-                      <span>{{__('front.View all')}}</span>
+                      <span>{{__('common.show more')}}</span>
                     </a>
                     <a href="{{route('service.details',['id'=>$service->id])}}" class="rmore">
                       <div class="arrow">
@@ -191,11 +190,9 @@
                 </h6>
                 <div class="bord pt-25 bord-thin-top d-flex align-items-center">
                   <h2 class="fw-600 text-u ls1" data-i18n="featuredProject">
-                    
+                  {{__('front.Portfolio')}}
                   </h2>
-                  {{-- <h2 class="fw-200 text-u ls1" data-i18n="feProject"> --}}
-                    
-                  {{-- </h2> --}}
+             
                   <div class="ml-auto">
                     <div class="swiper-arrow-control">
                       <div class="swiper-button-prev">
@@ -260,7 +257,7 @@
                   href="{{route('portfolio')}}"
                   class="go-more go-more-services go-fullbg"
                 >
-                  <span class="text" data-i18n="viewProject"
+                  <span class="text" 
                     >{{__('front.View all')}}</span
                   >
                   <span class="icon ti-arrow-top-right"></span>
@@ -313,15 +310,15 @@
                 <div class="col-lg-6">
                   <div class="left-block mt-100 md-mb50">
                     <div class="d-flex align-items-center">
-                      <div>
-                        {{-- <div class="info">
+                      <!-- <div>
+                         <div class="info">
                           <h6>
                             Sam <br />
                             Peterson
                           </h6>
                           <p class="nowrap">Ceo Manager</p>
-                        </div> --}}
-                      </div>
+                        </div>
+                      </div> -->
                       <div>
                         <div class="img fit-img radius-30">
                           <img
@@ -355,11 +352,14 @@
                 </div>
                 <div class="col-lg-6 valign m-0">
                   <div class="content full-width">
-                    <div class="sec-head mb-30">
+                  <div class="sec-head mb-30">
                       <h6
                         class="sub-title mb-15 main-color"
-                        data-i18n="ourSkill">
+                       
+                      >
+                      {{__('front.our specials')}}
                       </h6>
+                      <h2 >{{__('front.head about')}}</h2>
                     </div>
                     <div class="">
                       <div class="">
@@ -501,15 +501,15 @@
             class="team team_banner_desktop section-padding d-none d-lg-block">
             <div class="">
               <div class="sec-head mb-80 container">
-                <h6 class="sub-title main-color mb-25" data-i18n="influencers">
-                  Our Team
+                <h6 class="sub-title main-color mb-25" >
+                {{__('front.Influencers')}}
                 </h6>
                 <div class="bord pt-25 bord-thin-top d-flex align-items-center">
                   <h2
                     class="fw-600"
-                    data-i18n="team"
+                  
                     style="text-transform: uppercase"
-                  ></h2>
+                  >{{__('front.Influencers')}}</h2>
                 </div>
               </div>
               <div class="team-slider-wrapper">
@@ -564,16 +564,16 @@
 
           <!-- ==================== End Team For Desktop ==================== -->
 
-          <!-- ==================== Start Team For Desktop ==================== -->
+          <!-- ==================== Start Team For Mobile ==================== -->
 
           <section class="team team_mobile overflow-hidden d-lg-none">
             <div class="container">
               <div class="sec-head mb-80">
-                <h6 class="sub-title main-color mb-25" data-i18n="influencers">
+                <h6 class="sub-title main-color mb-25" >
                   {{__('front.Influencers')}}
                 </h6>
                 <div class="bord pt-25 bord-thin-top d-flex align-items-center">
-                  <h2 class="fw-600" data-i18n="influencers">Meet our</h2>
+                  <h2 class="fw-600" >{{__('front.Influencers')}}</h2>
                   <h2
                     class="fw-200"
                     data-i18n="meetOurLeg"
@@ -660,7 +660,7 @@
                   {{__('front.Blogs')}}
                 </h6>
                 <div class="bord pt-25 bord-thin-top d-flex align-items-center">
-                  <h2 class="fw-600" data-i18n="readLatestNews">{{__('front.Read Latest')}}</h2>
+                  <h2 class="fw-600" data-i18n="readLatestNews">{{__('front.Blogs')}}</h2>
                   <h2
                     class="fw-200"
                     style="margin-inline-start: 0.5rem">
@@ -723,7 +723,7 @@
               <div class="container">
                 <div class="row justify-content-center">
                   <div
-                    class="col-lg-3 col-12 clients-inner mb-3s text-center d-flex align-items-center justify-content-center"
+                    class="col-lg-3 col-12 clients-inner mb-3s text-center d-flex align-items-center justify-content-start"
                   >
                     <p class="" data-i18n="clientsWorked">
                       {{__('front.our clients')}}
