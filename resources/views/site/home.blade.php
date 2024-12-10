@@ -8,22 +8,22 @@
       <div class="video-container">
         <div class="video-overlay"></div>
         <video autoplay muted loop class="background-video">
-             @if (session()->get('lang') == 'ar')
+             @if ($lang == 'ar')
                <source src="{{asset('storage/'.$slider->image_ar)}}" type="video/mp4" />
                <source src="{{asset('storage/'.$slider->image_ar)}}" type="video/ogg" />
                <source src="{{asset('storage/'.$slider->image_ar)}}" type="video/webm" />
-             @else  
+             @else
                <source src="{{asset('storage/'.$slider->image_en)}}" type="video/mp4" />
                <source src="{{asset('storage/'.$slider->image_en)}}" type="video/ogg" />
                <source src="{{asset('storage/'.$slider->image_en)}}" type="video/webm" />
              @endif
-        
+
         </video>
-        @if (session()->get('lang') == 'ar')
+        @if ($lang == 'ar')
         <div class="container">
           <div class="caption text-center">
             <h2 class="" data-swiper-parallax="-2000">
-              
+
                 {{$slider->styles['top']}}
             </h2>
             <h1>
@@ -36,7 +36,7 @@
             </p>
           </div>
         </div>
-        @else  
+        @else
         <div class="container">
           <div class="caption text-center">
             <h2 class="" data-swiper-parallax="-2000">
@@ -71,9 +71,9 @@
                   <h2 class="fw-600 text-u"> {{__('front.about sadnah')}}</h2>
                 </div>
                 <p class="text-center mt-2">
-                  @if (session()->get('lang') == 'ar')
+                  @if ($lang == 'ar')
                   {{$about->description_ar}}
-                  @else  
+                  @else
                   {{$about->description_en}}
                   @endif
                 </p>
@@ -85,16 +85,16 @@
                       <img src="{{asset('storage/'.$vision->image)}}" class="card-img-top img_vision" alt="about sadnah"/>
                       <div class="card-body">
                       <h5 class="card-title">
-                        @if (session()->get('lang') == 'ar')
+                        @if ($lang == 'ar')
                         {{$vision->title_ar}}
-                        @else  
+                        @else
                         {{$vision->title_en}}
                         @endif
                       </h5>
                       <p class="card-text">
-                        @if (session()->get('lang') == 'ar')
+                        @if ($lang == 'ar')
                         {{$vision->description_ar}}
-                        @else  
+                        @else
                         {{$vision->description_en}}
                         @endif
                       </p>
@@ -103,7 +103,7 @@
                 </div>
                 @endforeach
 
-                
+
                 </div>
               </div>
             </div>
@@ -119,9 +119,9 @@
                 <h6 class="sub-title main-color mb-25" >
                   {{__('front.services')}}
                 </h6>
-                
+
                 <div class="bord pt-25 bord-thin-top d-flex align-items-center">
-                <h2 class="fw-600 text-u"> {{__('front.We Provide')}}</h2>  
+                <h2 class="fw-600 text-u"> {{__('front.We Provide')}}</h2>
               </div>
               </div>
               <div class="row row-cols-2 row-cols-md-4 row-cols-lg-5 g-3 g-y-3">
@@ -129,20 +129,20 @@
                 <div class="col">
                   <div class="item-box2 mb-30">
                     <div class="icon mb-2">
-                       <img class="img_icon_services" src="{{asset('storage/'.$service->image)}}" alt=""> 
+                       <img class="img_icon_services" src="{{asset('storage/'.$service->image)}}" alt="">
                       {{-- <i class="services-icon fab fa-digital-ocean"></i> --}}
                     </div>
                     <h6 class="services_title">
-                      @if (session()->get('lang') == 'ar')
+                      @if ($lang == 'ar')
                       {{$service->title_ar}}
-                      @else  
+                      @else
                       {{$service->title_en}}
                       @endif
                     </h6>
                     <p class="services_info">
-                      @if (session()->get('lang') == 'ar')
+                      @if ($lang == 'ar')
                       {{$service->description_ar}}
-                      @else  
+                      @else
                       {{$service->description_en}}
                       @endif
                     </p>
@@ -192,7 +192,7 @@
                   <h2 class="fw-600 text-u ls1" data-i18n="featuredProject">
                   {{__('front.Portfolio')}}
                   </h2>
-             
+
                   <div class="ml-auto">
                     <div class="swiper-arrow-control">
                       <div class="swiper-button-prev">
@@ -226,16 +226,16 @@
                               <img src="{{$work->thumbnail}}" alt="work"/>
                               <div class="cont">
                                 <span class="mb-5">
-                                  @if (session()->get('lang') == 'ar')
+                                  @if ($lang == 'ar')
                                   {{$work->tag->name_ar}}
-                                  @else  
+                                  @else
                                   {{$work->tag->name_en}}
                                   @endif
                                 </span>
                                 <h6 class="fz-18">
-                                  @if (session()->get('lang') == 'ar')
+                                  @if ($lang == 'ar')
                                   {{$work->client_name_ar}}
-                                  @else  
+                                  @else
                                   {{$work->client_name_en}}
                                   @endif
                                 </h6>
@@ -257,7 +257,7 @@
                   href="{{route('portfolio')}}"
                   class="go-more go-more-services go-fullbg"
                 >
-                  <span class="text" 
+                  <span class="text"
                     >{{__('front.View all')}}</span
                   >
                   <span class="icon ti-arrow-top-right"></span>
@@ -286,9 +286,9 @@
                     <h2 class="fz-80 line-height-1" data-number="{{$statistic->count}}">0</h2>
                     <div class="d-flex flex-column">
                       <span class="sub-title opacity-7 ml-30 d-block">
-                        @if (session()->get('lang') == 'ar')
+                        @if ($lang == 'ar')
                         {{$statistic->title_ar}}
-                        @else  
+                        @else
                         {{$statistic->title_en}}
                         @endif
                       </span>
@@ -355,7 +355,7 @@
                   <div class="sec-head mb-30">
                       <h6
                         class="sub-title mb-15 main-color"
-                       
+
                       >
                       {{__('front.our specials')}}
                       </h6>
@@ -365,9 +365,9 @@
                       <div class="">
                         <div class="text">
                           <p class="skill-info">
-                            @if (session()->get('lang') == 'ar')
+                            @if ($lang == 'ar')
                             {{$whyU->properties_ar}}
-                            @else  
+                            @else
                             {{$whyU->properties_en}}
                             @endif
                           </p>
@@ -379,9 +379,9 @@
                               class="item-skill d-flex align-items-start justify-content-start">
                               <i class="far fa-check-circle"></i>
                               <p class="item-info" >
-                                @if (session()->get('lang') == 'ar')
+                                @if ($lang == 'ar')
                                 {{$certificate->title_ar}}
-                                @else  
+                                @else
                                 {{$certificate->title_en}}
                                 @endif
                               </p>
@@ -409,7 +409,7 @@
                 ></path>
               </svg>
             </div>
-          </section> 
+          </section>
 
           <!-- ==================== End about ==================== -->
 
@@ -507,7 +507,7 @@
                 <div class="bord pt-25 bord-thin-top d-flex align-items-center">
                   <h2
                     class="fw-600"
-                  
+
                     style="text-transform: uppercase"
                   >{{__('front.Influencers')}}</h2>
                 </div>
@@ -515,7 +515,7 @@
               <div class="team-slider-wrapper">
                 <div class="row team-slider">
                   @foreach ($infs as $inf)
-                      
+
                   <div class="col-lg-3 cont-slide">
                     <div class="item md-mb50 for_home">
                       <div class="img">
@@ -527,16 +527,16 @@
                           />
                           <div class="info">
                             <span class="fz-12">
-                              @if (session()->get('lang') == 'ar')
+                              @if ($lang == 'ar')
                               {{$inf->job_name_ar}}
-                              @else  
+                              @else
                               {{$inf->job_name_en}}
                               @endif
                             </span>
                             <h6 class="fz-18">
-                              @if (session()->get('lang') == 'ar')
+                              @if ($lang == 'ar')
                               {{$inf->name_ar}}
-                              @else  
+                              @else
                               {{$inf->name_en}}
                               @endif
                             </h6>
@@ -555,7 +555,7 @@
                   </div>
                   @endforeach
 
-      
+
 
                 </div>
               </div>
@@ -601,16 +601,16 @@
                             <a href="{{route('influencers.details',['id'=>$inf->id])}}">
                               <div class="info">
                                 <span class="fz-12">
-                                  @if (session()->get('lang') == 'ar')
+                                  @if ($lang == 'ar')
                                   {{$inf->job_name_ar}}
-                                  @else  
+                                  @else
                                   {{$inf->job_name_en}}
                                   @endif
                                 </span>
                                 <h6 class="fz-18">
-                                  @if (session()->get('lang') == 'ar')
+                                  @if ($lang == 'ar')
                                   {{$inf->name_ar}}
-                                  @else  
+                                  @else
                                   {{$inf->name_en}}
                                   @endif
                                 </h6>
@@ -685,9 +685,9 @@
                         <div class="full-width">
                           <h5>
                             <a href="{{route('blog.details',['id'=>$blog->id])}}">
-                              @if (session()->get('lang') == 'ar')
+                              @if ($lang == 'ar')
                               {{$blog->title_ar}}
-                              @else  
+                              @else
                               {{$blog->title_en}}
                               @endif
                             </a>
@@ -700,9 +700,9 @@
                     </div>
                   </div>
                 </div>
-              
+
                 @endforeach
-             
+
               </div>
               <div
                 class="ml-auto d-flex align-items-center justify-content-center mt-4"
@@ -737,7 +737,7 @@
                         <div class="client-item">
                           <a target="_blank" href="{{$client->link}}">
                             <img
-                            
+
                               class="img-item"
                               src="{{asset('storage/'.$client->image)}}"
                               alt="client"
@@ -745,9 +745,9 @@
                           </a>
                         </div>
                         @endforeach
-                     
 
-                       
+
+
                       </div>
                     </div>
                   </div>

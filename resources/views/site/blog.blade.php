@@ -31,12 +31,12 @@
               <div class="row">
 
                 @foreach ($blogs as $blog)
-                    
+
                 <div class="col-lg-4 col-12">
                   <div class="item sub-bg mb-40">
                     <div class="img">
                       <img src="{{asset('storage/'.$blog->image)}}" alt="blog" />
-              
+
                     </div>
                     <div class="cont">
                       <div class="date fz-13 text-u ls1 mb-10 opacity-7">
@@ -44,9 +44,9 @@
                       </div>
                       <h5 class="blog_cerv_title">
                         <!-- <a href="{{route('blog.details',['id'=>$blog->id])}}">
-                          @if (session()->get('lang') == 'ar')
+                          @if ($lang == 'ar')
                           {{$blog->title_ar}}
-                          @else  
+                          @else
                           {{$blog->title_en}}
                           @endif
                           </a> -->
@@ -65,7 +65,7 @@
                 </div>
                 @endforeach
 
-                  
+
                 </div>
               </div>
             </div>

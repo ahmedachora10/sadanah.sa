@@ -24,7 +24,7 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
           </div>
           <div class="col-lg-5 d-flex align-items-center justify-content-start">
             <h6 class="footer_title">
-              @if (session()->get('lang') == 'ar')
+              @if ($lang == 'ar')
               الشريك الذي لا يخون، والرقي والصون الذي يمتلك الإحساس والعقل والقوة الكامنة ليكون عونك على النجاح.
               @else
               The partner that never betrays, a preserves and holds the power that works in the sense of ascending passion to give you the success you need.
@@ -78,10 +78,10 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
             <div class="call-action">
               <h4 class="d-slideup wow ">
                 <span class="sideup-text">
-                  <span class="up-text"> 
-                    @if (session()->get('lang') == 'ar')
+                  <span class="up-text">
+                    @if ($lang == 'ar')
                     {{$footer_ar->val}}
-                    @else  
+                    @else
                     {{$footer_en->val}}
                     @endif
                    </span>
@@ -113,7 +113,7 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
                     class="butn butn-md butn-bord-thin radius-30 w-100 text-center">
                   <span class="text" style="direction: ltr; unicode-bidi: embed;">
                     {{$phone->val}}
-                  </span>  
+                  </span>
                    </a>
                 </div>
               </div>
@@ -172,18 +172,18 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
                       >
                     </li>
                     <li class="mb-15 col">
-                      <a href="{{route('influencers')}}" 
+                      <a href="{{route('influencers')}}"
                         >{{__('front.Influencers')}}</a
                       >
                     </li>
                     <li class="mb-15 col">
                       <a
                         href="{{route('portfolio')}}"
-                        
+
                         >{{__('front.Portfolio')}}</a
                       >
                     </li>
-                   
+
                     <li class="mb-15 col">
                       <a href="{{route('contactus')}}"
                         >{{__('front.Contact Us')}}</a
@@ -269,35 +269,35 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
           </div>
         </div>
         <div class="text-center pt-30 pb-30 sub-bg mt-80">
-          @if (session()->get('lang') == 'ar')
+          @if ($lang == 'ar')
           <p class="fz-14" >
             جميع الحقوق محفوظة لشركة
            <span class="underline" style="color: var(--primary-color)">
-             <img 
-               src="{{asset('assets/imgs/logo-light.png')}}" 
-               alt="سدنه" 
+             <img
+               src="{{asset('assets/imgs/logo-light.png')}}"
+               alt="سدنه"
                style="height: 20px; vertical-align: middle;"
              >
            </span>
            ©2024
          </p>
-          @else 
+          @else
           <p class="fz-14" >
             ©2024
 
-            All rights reserved to the company  
+            All rights reserved to the company
              <span class="underline" style="color: var(--primary-color)">
-             <img 
-               src="{{asset('assets/imgs/logo-light.png')}}" 
-               alt="سدنه" 
+             <img
+               src="{{asset('assets/imgs/logo-light.png')}}"
+               alt="سدنه"
                style="height: 20px; vertical-align: middle;"
              >
            </span>
          </p>
           @endif
-         
+
         </div>
-        
+
       </div>
     </div>
   </footer>

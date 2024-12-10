@@ -14,9 +14,9 @@
                 <div class="col-12">
                   <div class="caption">
                     <h1>
-                      @if (session()->get('lang') == 'ar')
+                      @if ($lang == 'ar')
                       {{$work->client_name_ar}}
-                      @else  
+                      @else
                       {{$work->client_name_en}}
                       @endif
                     </h1>
@@ -38,9 +38,9 @@
                     <div class="item mb-30">
                       <span class="opacity-8 mb-5">{{__('front.Category')}} :</span>
                       <h6>
-                        @if (session()->get('lang') == 'ar')
+                        @if ($lang == 'ar')
                         {{$work->tag->name_ar}}
-                        @else  
+                        @else
                         {{$work->tag->name_en}}
                         @endif
                       </h6>
@@ -50,9 +50,9 @@
                     <div class="item mb-30">
                       <span class="opacity-8 mb-5">{{__('front.Client')}} :</span>
                       <h6>
-                        @if (session()->get('lang') == 'ar')
+                        @if ($lang == 'ar')
                         {{$work->client_name_ar}}
-                        @else  
+                        @else
                         {{$work->client_name_en}}
                         @endif
                       </h6>
@@ -81,16 +81,16 @@
                     <div class="col-12">
                       <div class="text">
                         <h5 class="mb-30 fw-400 line-height-40">
-                          @if (session()->get('lang') == 'ar')
+                          @if ($lang == 'ar')
                           {{$work->description_ar}}
-                          @else  
+                          @else
                           {{$work->description_en}}
                           @endif
                         </h5>
                         <p class="fz-18">
-                          @if (session()->get('lang') == 'ar')
+                          @if ($lang == 'ar')
                           {{$work->content_ar}}
-                          @else  
+                          @else
                           {{$work->content_en}}
                           @endif
                         </p>
@@ -105,7 +105,7 @@
           <!-- ==================== End section ==================== -->
 
           <!-- ==================== Start section ==================== -->
-       
+
           <div class="img-column">
             <div class="container">
               <div class="row">
@@ -119,7 +119,7 @@
                 </div>
                 @endforeach
             @endif
-               
+
               </div>
             </div>
           </div>
@@ -190,9 +190,9 @@
                             {{__('front.Prev Project')}}
                         </h6>
                         <a href="{{route('portfolio.details',['id'=>$previousWork->id])}}" class="fz-40 fw-600 stroke">
-                          @if (session()->get('lang') == 'ar')
+                          @if ($lang == 'ar')
                           {{$previousWork->client_name_ar}}
-                          @else  
+                          @else
                           {{$previousWork->client_name_en}}
                           @endif
                         </a>
@@ -216,9 +216,9 @@
                             {{__('front.Next Project')}}
                           </h6>
                           <a href="{{route('portfolio.details',['id'=>$nextWork->id])}}" class="fz-40 fw-600 stroke">
-                            @if (session()->get('lang') == 'ar')
+                            @if ($lang == 'ar')
                             {{$nextWork->client_name_ar}}
-                            @else  
+                            @else
                             {{$nextWork->client_name_en}}
                             @endif</a>
                         </div>
@@ -230,7 +230,7 @@
                   </div>
                 </div>
                 @endif
-             
+
               </div>
             </div>
             <div>

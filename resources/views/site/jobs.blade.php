@@ -137,15 +137,15 @@
                 <div class="col-lg-8 position-relative mt-3">
                   <!-- Dynamic Content Section -->
                   @foreach ($jobs as $job)
-                      
+
                   <div id="content-1" class="content-box">
                     <div
                       class="header_content d-flex align-items-center justify-content-between"
                     >
                       <h2 class="content_title">
-                      @if (session()->get('lang') == 'ar')
+                      @if ($lang == 'ar')
                       {{$job->title_ar}}
-                      @else  
+                      @else
                       {{$job->title_en}}
                       @endif
                      </h2>
@@ -165,25 +165,25 @@
                         <li><span> {{__('front.Work location')}} : </span> <span>الرياض</span></li>
                         <li>
                           <span> {{__('front.Job Type')}} : </span> <span>
-                            @if (session()->get('lang') == 'ar')
+                            @if ($lang == 'ar')
                             {{$job->type_ar}}
-                            @else  
+                            @else
                             {{$job->type_en}}
                             @endif
                            </span>
                         </li>
                         <li><span> {{__('front.Job Number')}} : </span> <span>
                           {{$job->job_number}}
-                         
+
                         </span></li>
                       </ul>
                     </div>
                     <div class="res_content">
                       <h3 class="res-title">{{__('front.responsibility')}}</h3>
                       <div>
-                        @if (session()->get('lang') == 'ar')
+                        @if ($lang == 'ar')
                         {{$job->responsibilities_ar}}
-                        @else  
+                        @else
                         {{$job->responsibilities_en}}
                         @endif
                       </div>
@@ -191,9 +191,9 @@
                     <div class="res_content">
                       <h3 class="res-title"> {{__('front.requirements')}}:</h3>
                       <div>
-                        @if (session()->get('lang') == 'ar')
+                        @if ($lang == 'ar')
                           {{$job->responsibilities_ar}}
-                          @else  
+                          @else
                           {{$job->responsibilities_en}}
                           @endif
                       </div>
@@ -201,9 +201,9 @@
                     <div class="res_content">
                       <h3 class="res-title">  {{__('front.experience')}}:</h3>
                       <div>
-                        @if (session()->get('lang') == 'ar')
+                        @if ($lang == 'ar')
                         {{$job->experience_ar}}
-                        @else  
+                        @else
                         {{$job->experience_en}}
                         @endif
                       </div>
@@ -211,9 +211,9 @@
                     <div class="res_content">
                       <h3 class="res-title">{{__('front.education_level')}} :</h3>
                       <div>
-                        @if (session()->get('lang') == 'ar')
+                        @if ($lang == 'ar')
                         {{$job->education_ar}}
-                        @else  
+                        @else
                         {{$job->education_en}}
                         @endif
                       </div>

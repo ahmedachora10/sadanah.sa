@@ -11,9 +11,9 @@
             <div class="container pt-100">
               <div class="text-center">
                 <h1>
-                  @if (session()->get('lang') == 'ar')
+                  @if ($lang == 'ar')
                   {{$service->title_ar}}
-                  @else  
+                  @else
                   {{$service->title_en}}
                   @endif
                 </h1>
@@ -25,9 +25,9 @@
                   >
                   <span class="padding-rl-20">|</span>
                   <span style="color: var(--primary-color)">
-                    @if (session()->get('lang') == 'ar')
+                    @if ($lang == 'ar')
                     {{$service->title_ar}}
-                    @else  
+                    @else
                     {{$service->title_en}}
                     @endif
                   </span>
@@ -50,9 +50,9 @@
                         Web and Mobile Development
                       </h6> --}}
                       <h4>
-                        @if (session()->get('lang') == 'ar')
+                        @if ($lang == 'ar')
                         {{$service->title_ar}}
-                        @else  
+                        @else
                         {{$service->title_en}}
                         @endif
                       </h4>
@@ -61,7 +61,7 @@
                 </div>
               </div>
               <div class="row serv-imgs mt-80">
-                
+
                 <div class="col-lg-8">
                   <div class="img o-hidden radius-15">
                     <img
@@ -78,16 +78,16 @@
                 <div class="col-lg-12">
                   <div class="text md-mb50">
                     <p>
-                      @if (session()->get('lang') == 'ar')
+                      @if ($lang == 'ar')
                       {{$service->description_ar}}
-                      @else  
+                      @else
                       {{$service->description_en}}
                       @endif
                     </p>
                   </div>
                 </div>
 
-              
+
                 {{-- <div class="col-lg-8">
                   <div class="row">
                     <div class="col-md-6">
@@ -481,16 +481,16 @@
                       <img src="{{asset('storage/'.$service->image)}}" alt="" />
                     </div>
                     <h5 class="mb-15">
-                      @if (session()->get('lang') == 'ar')
+                      @if ($lang == 'ar')
                       {{$service->title_ar}}
-                      @else  
+                      @else
                       {{$service->title_en}}
                       @endif
                     </h5>
                     <p>
-                      @if (session()->get('lang') == 'ar')
+                      @if ($lang == 'ar')
                       {{$service->description_ar}}
-                      @else  
+                      @else
                       {{$service->description_en}}
                       @endif
                     </p>

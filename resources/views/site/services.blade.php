@@ -44,16 +44,16 @@
                       <img src="{{asset('storage/'.$service->image)}}" alt="service" />
                     </div>
                     <h5 class="mb-15 text-u">
-                      @if (session()->get('lang') == 'ar')
+                      @if ($lang == 'ar')
                      {{$service->title_ar}}
-                     @else  
+                     @else
                      {{$service->title_en}}
                      @endif
                     </h5>
                     <p>
-                      @if (session()->get('lang') == 'ar')
+                      @if ($lang == 'ar')
                       {{$service->description_ar}}
-                      @else  
+                      @else
                       {{$service->description_en}}
                       @endif
                     </p>
@@ -304,10 +304,10 @@
                             <a href="blog-list.html">Marketing</a>
                           </div> --}}
                           <h5>
-                            <a href="{{route('blog.details',['id'=>$blog->id])}}"> 
-                              @if (session()->get('lang') == 'ar')
+                            <a href="{{route('blog.details',['id'=>$blog->id])}}">
+                              @if ($lang == 'ar')
                               {{$blog->title_ar}}
-                              @else  
+                              @else
                               {{$blog->title_en}}
                               @endif</a
                             >
@@ -320,7 +320,7 @@
                     </div>
                   </div>
                 </div>
-              
+
                 @endforeach
 
               </div>
@@ -329,7 +329,7 @@
 
           <!-- ==================== End Blog ==================== -->
 
-          <!-- 
+          <!--
                 <section class="portfolio-tab crev section-padding">
                     <div class="container">
                         <div class="sec-head mb-80">
@@ -423,7 +423,7 @@
 
 
 
-              
+
 
                 <section class="main-feat section-padding bg-img" data-background="{{asset('assets/imgs/header/bg-4.png')}}" data-overlay-dark="9">
                     <div class="container">
@@ -494,7 +494,7 @@
                     </div>
                 </section>
 
-          
+
 
                 <section class="testimonials-crev section-padding pb-0 bg-img"
                     data-background="{{asset('assets/imgs/background/2.jpg')}}">
@@ -639,7 +639,7 @@
                                 <div class="sec-head nocurve">
                                     <div class="ontop">
                                         <h6 class="sub-title main-color mb-15" data-i18n="specialThanks">Special Thanks To</h6>
-                                        <h3 class="fw-600 text-u ls1" data-i18n="allOur">All our 
+                                        <h3 class="fw-600 text-u ls1" data-i18n="allOur">All our
                                         </h3> <h3 style="margin-inline-start: .5rem;"><span class="fw-200" data-i18n="partners">partners</span></h3>
                                     </div>
                                 </div>

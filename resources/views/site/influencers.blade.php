@@ -35,22 +35,22 @@
                             @foreach ($infs as $inf)
                             <div class="col-lg-4">
                                 <div class="item mb-80">
-                                    
+
                                     <div class="img">
                                         <img class="img_team_page" src="{{asset('storage/'.$inf->image)}}" alt="">
                                         <a href="{{route('influencers.details',['id'=>$inf->id])}}">
                                         <div class="info">
                                             <span class="fz-12">
-                                                @if (session()->get('lang') == 'ar')
+                                                @if ($lang == 'ar')
                                                 {{$inf->job_name_ar}}
-                                                @else  
+                                                @else
                                                 {{$inf->job_name_en}}
                                                 @endif
                                             </span>
                                             <h6 class="fz-18">
-                                                @if (session()->get('lang') == 'ar')
+                                                @if ($lang == 'ar')
                                                 {{$inf->name_ar}}
-                                                @else  
+                                                @else
                                                 {{$inf->name_en}}
                                                 @endif
                                             </h6>
@@ -72,14 +72,14 @@
                                             <a href="{{$inf->tiktok}}" target="_blank">
                                                 <i class="fab fa-tiktok"></i>
                                             </a>
-                                           
+
                                         </div>
                                     </div>
                                 </div>
-                            </div>  
+                            </div>
                             @endforeach
-                         
-                  
+
+
                             </div>
                         </div>
                     </div>

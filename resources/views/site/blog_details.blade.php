@@ -14,9 +14,9 @@
             <div class="container pt-100">
               <div class="text-center">
                 <h1>
-                  @if (session()->get('lang') == 'ar')
+                  @if ($lang == 'ar')
                   {{$blog->title_ar}}
-                  @else  
+                  @else
                   {{$blog->title_en}}
                   @endif
                 </h1>
@@ -49,9 +49,9 @@
                         </div> --}}
                         <div class="text mt-20">
                           <p>
-                            @if (session()->get('lang') == 'ar')
+                            @if ($lang == 'ar')
                           {{$blog->content_ar}}
-                          @else  
+                          @else
                           {{$blog->content_en}}
                           @endif
                           </p>
@@ -205,19 +205,19 @@
                           >
                           <h6>
                             <a href="{{route('blog.details',['id'=>$item->id])}}">
-                              @if (session()->get('lang') == 'ar')
+                              @if ($lang == 'ar')
                               {{$item->title_ar}}
-                              @else  
+                              @else
                               {{$item->title_en}}
                               @endif
                             </a
                             >
                           </h6>
                         </div>
-                      </div>  
+                      </div>
                       @endforeach
-                    
-                 
+
+
                     </div>
                     {{-- <div class="widget tags">
                       <h6 class="title-widget" data-i18n="tags">Tags</h6>

@@ -41,9 +41,9 @@
                       >{{__('front.View all')}}</span>
                       @foreach ($tags as $tag)
                       <span data-filter=".{{$tag->id}}">
-                        @if (session()->get('lang') == 'ar')
+                        @if ($lang == 'ar')
                         {{$tag->name_ar}}
-                        @else  
+                        @else
                         {{$tag->name_en}}
                         @endif
                       </span>
@@ -52,9 +52,9 @@
                 </div>
               </div>
               <div class="gallery row stand-marg">
-      
+
                 @foreach ($works as $work)
-                    
+
                 <div class="col-lg-4 col-md-6 items {{$work->tag_id}}">
                   <div class="item mt-40">
                     <div class="img">
@@ -63,17 +63,17 @@
                     <div class="cont mt-20">
                       <h5 class="fz-22">
                         <a href="{{route('portfolio.details',['id'=>$work->id])}}">
-                          @if (session()->get('lang') == 'ar')
+                          @if ($lang == 'ar')
                           {{$work->client_name_ar}}
-                          @else  
+                          @else
                           {{$work->client_name_en}}
                           @endif
                         </a>
                       </h5>
                       <p>
-                        @if (session()->get('lang') == 'ar')
+                        @if ($lang == 'ar')
                           {{$work->tag->name_ar}}
-                          @else  
+                          @else
                           {{$work->tag->name_en}}
                           @endif
                       </p>
@@ -82,7 +82,7 @@
                 </div>
                 @endforeach
 
-              
+
               </div>
             </div>
           </section>

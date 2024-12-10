@@ -44,9 +44,9 @@
                 <div class="col-lg-7">
                   <div class="text">
                     <h4>
-                      @if (session()->get('lang') == 'ar')
+                      @if ($lang == 'ar')
                       {{$about->description_ar}}
-                     @else  
+                     @else
                      {{$about->description_en}}
 
                      @endif
@@ -71,7 +71,7 @@
           </section>
 
           <!-- ==================== End intro ==================== -->
-          @if (session()->get('lang') == 'ar')
+          @if ($lang == 'ar')
           <!-- ==================== Start intro ==================== -->
 
           <section class="page-intro-cerv section-padding">
@@ -105,19 +105,19 @@
                         <img src="assets/imgs/intro/03.jpg" alt="" />
                       </div>
                     </div>
-                  
+
                       <div class="col-md-5 rest">
                       <div class="cont">
                         <div class="mb-40">
                           <h2 class="fz-100 numb-font">2.</h2>
                         </div>
                         <h4>
-                              
+
                           رسالتنا
                         </h4>
                         <div class="text mt-30">
                           <p>
-                            بناء جسور عظيمة من الثّقة والأمان والإبداع ليحظى شريكنا بخطوات آمنة في سيره إلى القمّة.                       
+                            بناء جسور عظيمة من الثّقة والأمان والإبداع ليحظى شريكنا بخطوات آمنة في سيره إلى القمّة.
                           </p>
                         </div>
 
@@ -166,7 +166,7 @@
 
 
 
-                
+
                   <div class="col-md-5 rest">
                       <div class="cont bord-thin-left">
                         <div class="mb-40">
@@ -205,7 +205,7 @@
                           <h2 class="fz-100 numb-font">2.</h2>
                         </div>
                         <h4>
-                              
+
                           Our Message
                         </h4>
                         <div class="text mt-30">
@@ -266,23 +266,23 @@
               </div>
               <div class="row">
                 @foreach ($our_teams as $team)
-                    
+
                 <div class="col-lg-4">
                   <div class="item md-mb50 about_team_">
                     <div class="img">
                       <img src="{{asset('storage/'.$team->image)}}" alt="" />
                       <div class="info">
                         <span class="fz-12">
-                          @if (session()->get('lang') == 'ar')
+                          @if ($lang == 'ar')
                           {{$team->job_name_ar}}
-                          @else  
+                          @else
                           {{$team->job_name_en}}
                           @endif
                         </span>
                         <h6 class="fz-18">
-                          @if (session()->get('lang') == 'ar')
+                          @if ($lang == 'ar')
                           {{$team->name_ar}}
-                          @else  
+                          @else
                           {{$team->name_en}}
                           @endif
                         </h6>
