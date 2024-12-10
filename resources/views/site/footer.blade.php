@@ -34,37 +34,37 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
           <div class="col-lg-5">
             <div class="social-media d-flex justify-content-end">
               <ul class="rest d-flex align-items-center fz-14">
-                <li class="cursor-pointer social_footer">
+                <li class="cursor-pointer social_footer mx-1">
                   <a href="{{$x->val}}" target="_blank" class="hover-anim social-icon"
                     ><i class="fa-brands fa-x-twitter"></i>
                   </a>
                 </li>
-                <li class="cursor-pointer social_footer">
+                <li class="cursor-pointer social_footer mx-1">
                   <a href="{{$linkedin->val}}" target="_blank" class="hover-anim social-icon"
                     ><i class="fab fa-linkedin mr-10"></i>
                   </a>
                 </li>
-                <li class="cursor-pointer social_footer ">
+                <li class="cursor-pointer social_footer mx-1 ">
                   <a href="{{$tiktok->val}}" target="_blank" class="hover-anim social-icon"
                     ><i class="fab fa-tiktok mr-10"></i>
                   </a>
                 </li>
-                <li class="cursor-pointer social_footer ">
+                <li class="cursor-pointer social_footer mx-1 ">
                   <a href="{{$youtube->val}}" target="_blank" class="hover-anim social-icon"
                     ><i class="fab fa-youtube mr-10"></i>
                   </a>
                 </li>
-                <li class="cursor-pointer social_footer ">
+                <li class="cursor-pointer social_footer mx-1 ">
                   <a href="{{$snapchat->val}}" target="_blank" class="hover-anim social-icon"
                     ><i class="fab fa-snapchat mr-10"></i>
                   </a>
                 </li>
-                <li class="=cursor-pointer social_footer">
+                <li class="=cursor-pointer social_footer mx-1">
                   <a href="{{$telegram->val}}" target="_blank" class="hover-anim social-icon"
                     ><i class="fab fa-telegram mr-10"></i>
                   </a>
                 </li>
-                <li class="cursor-pointer social_footer">
+                <li class="cursor-pointer social_footer mx-1">
                   <a href="{{$instagram->val}}" target="_blank" class="hover-anim social-icon"
                     ><i class="fab fa-instagram mr-10"></i>
                   </a>
