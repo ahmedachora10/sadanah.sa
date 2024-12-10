@@ -44,14 +44,14 @@
                       <img src="{{asset('storage/'.$service->image)}}" alt="service" />
                     </div>
                     <h5 class="mb-15 text-u">
-                      @if ($lang == 'ar')
+                      @if (app()->getLocale() == 'ar')
                      {{$service->title_ar}}
                      @else
                      {{$service->title_en}}
                      @endif
                     </h5>
                     <p>
-                      @if ($lang == 'ar')
+                      @if (app()->getLocale() == 'ar')
                       {{$service->description_ar}}
                       @else
                       {{$service->description_en}}
@@ -305,7 +305,7 @@
                           </div> --}}
                           <h5>
                             <a href="{{route('blog.details',['id'=>$blog->id])}}">
-                              @if ($lang == 'ar')
+                              @if (app()->getLocale() == 'ar')
                               {{$blog->title_ar}}
                               @else
                               {{$blog->title_en}}

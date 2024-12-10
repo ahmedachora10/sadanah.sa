@@ -24,7 +24,7 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
           </div>
           <div class="col-lg-5 d-flex align-items-center justify-content-start">
             <h6 class="footer_title">
-              @if ($lang == 'ar')
+              @if (app()->getLocale() == 'ar')
               الشريك الذي لا يخون، والرقي والصون الذي يمتلك الإحساس والعقل والقوة الكامنة ليكون عونك على النجاح.
               @else
               The partner that never betrays, a preserves and holds the power that works in the sense of ascending passion to give you the success you need.
@@ -79,7 +79,7 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
               <h4 class="d-slideup wow ">
                 <span class="sideup-text">
                   <span class="up-text">
-                    @if ($lang == 'ar')
+                    @if (app()->getLocale() == 'ar')
                     {{$footer_ar->val}}
                     @else
                     {{$footer_en->val}}
@@ -269,7 +269,7 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
           </div>
         </div>
         <div class="text-center pt-30 pb-30 sub-bg mt-80">
-          @if ($lang == 'ar')
+          @if (app()->getLocale() == 'ar')
           <p class="fz-14" >
             جميع الحقوق محفوظة لشركة
            <span class="underline" style="color: var(--primary-color)">

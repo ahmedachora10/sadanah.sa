@@ -143,7 +143,7 @@
                       class="header_content d-flex align-items-center justify-content-between"
                     >
                       <h2 class="content_title">
-                      @if ($lang == 'ar')
+                      @if (app()->getLocale() == 'ar')
                       {{$job->title_ar}}
                       @else
                       {{$job->title_en}}
@@ -165,7 +165,7 @@
                         <li><span> {{__('front.Work location')}} : </span> <span>الرياض</span></li>
                         <li>
                           <span> {{__('front.Job Type')}} : </span> <span>
-                            @if ($lang == 'ar')
+                            @if (app()->getLocale() == 'ar')
                             {{$job->type_ar}}
                             @else
                             {{$job->type_en}}
@@ -181,7 +181,7 @@
                     <div class="res_content">
                       <h3 class="res-title">{{__('front.responsibility')}}</h3>
                       <div>
-                        @if ($lang == 'ar')
+                        @if (app()->getLocale() == 'ar')
                         {{$job->responsibilities_ar}}
                         @else
                         {{$job->responsibilities_en}}
@@ -191,7 +191,7 @@
                     <div class="res_content">
                       <h3 class="res-title"> {{__('front.requirements')}}:</h3>
                       <div>
-                        @if ($lang == 'ar')
+                        @if (app()->getLocale() == 'ar')
                           {{$job->responsibilities_ar}}
                           @else
                           {{$job->responsibilities_en}}
@@ -201,7 +201,7 @@
                     <div class="res_content">
                       <h3 class="res-title">  {{__('front.experience')}}:</h3>
                       <div>
-                        @if ($lang == 'ar')
+                        @if (app()->getLocale() == 'ar')
                         {{$job->experience_ar}}
                         @else
                         {{$job->experience_en}}
@@ -211,7 +211,7 @@
                     <div class="res_content">
                       <h3 class="res-title">{{__('front.education_level')}} :</h3>
                       <div>
-                        @if ($lang == 'ar')
+                        @if (app()->getLocale() == 'ar')
                         {{$job->education_ar}}
                         @else
                         {{$job->education_en}}

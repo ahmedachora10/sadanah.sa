@@ -14,7 +14,7 @@
             <div class="container pt-100">
               <div class="text-center">
                 <h1>
-                  @if ($lang == 'ar')
+                  @if (app()->getLocale() == 'ar')
                   {{$blog->title_ar}}
                   @else
                   {{$blog->title_en}}
@@ -49,7 +49,7 @@
                         </div> --}}
                         <div class="text mt-20">
                           <p>
-                            @if ($lang == 'ar')
+                            @if (app()->getLocale() == 'ar')
                           {{$blog->content_ar}}
                           @else
                           {{$blog->content_en}}
@@ -205,7 +205,7 @@
                           >
                           <h6>
                             <a href="{{route('blog.details',['id'=>$item->id])}}">
-                              @if ($lang == 'ar')
+                              @if (app()->getLocale() == 'ar')
                               {{$item->title_ar}}
                               @else
                               {{$item->title_en}}

@@ -44,7 +44,7 @@
                       </div>
                       <h5 class="blog_cerv_title">
                         <!-- <a href="{{route('blog.details',['id'=>$blog->id])}}">
-                          @if ($lang == 'ar')
+                          @if (app()->getLocale() == 'ar')
                           {{$blog->title_ar}}
                           @else
                           {{$blog->title_en}}

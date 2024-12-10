@@ -41,14 +41,14 @@
                                         <a href="{{route('influencers.details',['id'=>$inf->id])}}">
                                         <div class="info">
                                             <span class="fz-12">
-                                                @if ($lang == 'ar')
+                                                @if (app()->getLocale() == 'ar')
                                                 {{$inf->job_name_ar}}
                                                 @else
                                                 {{$inf->job_name_en}}
                                                 @endif
                                             </span>
                                             <h6 class="fz-18">
-                                                @if ($lang == 'ar')
+                                                @if (app()->getLocale() == 'ar')
                                                 {{$inf->name_ar}}
                                                 @else
                                                 {{$inf->name_en}}

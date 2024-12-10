@@ -14,7 +14,7 @@
                 <div class="col-12">
                   <div class="caption">
                     <h1>
-                      @if ($lang == 'ar')
+                      @if (app()->getLocale() == 'ar')
                       {{$work->client_name_ar}}
                       @else
                       {{$work->client_name_en}}
@@ -38,7 +38,7 @@
                     <div class="item mb-30">
                       <span class="opacity-8 mb-5">{{__('front.Category')}} :</span>
                       <h6>
-                        @if ($lang == 'ar')
+                        @if (app()->getLocale() == 'ar')
                         {{$work->tag->name_ar}}
                         @else
                         {{$work->tag->name_en}}
@@ -50,7 +50,7 @@
                     <div class="item mb-30">
                       <span class="opacity-8 mb-5">{{__('front.Client')}} :</span>
                       <h6>
-                        @if ($lang == 'ar')
+                        @if (app()->getLocale() == 'ar')
                         {{$work->client_name_ar}}
                         @else
                         {{$work->client_name_en}}
@@ -81,14 +81,14 @@
                     <div class="col-12">
                       <div class="text">
                         <h5 class="mb-30 fw-400 line-height-40">
-                          @if ($lang == 'ar')
+                          @if (app()->getLocale() == 'ar')
                           {{$work->description_ar}}
                           @else
                           {{$work->description_en}}
                           @endif
                         </h5>
                         <p class="fz-18">
-                          @if ($lang == 'ar')
+                          @if (app()->getLocale() == 'ar')
                           {{$work->content_ar}}
                           @else
                           {{$work->content_en}}
@@ -190,7 +190,7 @@
                             {{__('front.Prev Project')}}
                         </h6>
                         <a href="{{route('portfolio.details',['id'=>$previousWork->id])}}" class="fz-40 fw-600 stroke">
-                          @if ($lang == 'ar')
+                          @if (app()->getLocale() == 'ar')
                           {{$previousWork->client_name_ar}}
                           @else
                           {{$previousWork->client_name_en}}
@@ -216,7 +216,7 @@
                             {{__('front.Next Project')}}
                           </h6>
                           <a href="{{route('portfolio.details',['id'=>$nextWork->id])}}" class="fz-40 fw-600 stroke">
-                            @if ($lang == 'ar')
+                            @if (app()->getLocale() == 'ar')
                             {{$nextWork->client_name_ar}}
                             @else
                             {{$nextWork->client_name_en}}

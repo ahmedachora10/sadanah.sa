@@ -44,7 +44,7 @@
                 <div class="col-lg-7">
                   <div class="text">
                     <h4>
-                      @if ($lang == 'ar')
+                      @if (app()->getLocale() == 'ar')
                       {{$about->description_ar}}
                      @else
                      {{$about->description_en}}
@@ -71,7 +71,7 @@
           </section>
 
           <!-- ==================== End intro ==================== -->
-          @if ($lang == 'ar')
+          @if (app()->getLocale() == 'ar')
           <!-- ==================== Start intro ==================== -->
 
           <section class="page-intro-cerv section-padding">
@@ -273,14 +273,14 @@
                       <img src="{{asset('storage/'.$team->image)}}" alt="" />
                       <div class="info">
                         <span class="fz-12">
-                          @if ($lang == 'ar')
+                          @if (app()->getLocale() == 'ar')
                           {{$team->job_name_ar}}
                           @else
                           {{$team->job_name_en}}
                           @endif
                         </span>
                         <h6 class="fz-18">
-                          @if ($lang == 'ar')
+                          @if (app()->getLocale() == 'ar')
                           {{$team->name_ar}}
                           @else
                           {{$team->name_en}}

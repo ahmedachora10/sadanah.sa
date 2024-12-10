@@ -11,7 +11,7 @@
             <div class="container pt-100">
               <div class="text-center">
                 <h1>
-                  @if ($lang == 'ar')
+                  @if (app()->getLocale() == 'ar')
                   {{$service->title_ar}}
                   @else
                   {{$service->title_en}}
@@ -25,7 +25,7 @@
                   >
                   <span class="padding-rl-20">|</span>
                   <span style="color: var(--primary-color)">
-                    @if ($lang == 'ar')
+                    @if (app()->getLocale() == 'ar')
                     {{$service->title_ar}}
                     @else
                     {{$service->title_en}}
@@ -50,7 +50,7 @@
                         Web and Mobile Development
                       </h6> --}}
                       <h4>
-                        @if ($lang == 'ar')
+                        @if (app()->getLocale() == 'ar')
                         {{$service->title_ar}}
                         @else
                         {{$service->title_en}}
@@ -78,7 +78,7 @@
                 <div class="col-lg-12">
                   <div class="text md-mb50">
                     <p>
-                      @if ($lang == 'ar')
+                      @if (app()->getLocale() == 'ar')
                       {{$service->description_ar}}
                       @else
                       {{$service->description_en}}
@@ -481,14 +481,14 @@
                       <img src="{{asset('storage/'.$service->image)}}" alt="" />
                     </div>
                     <h5 class="mb-15">
-                      @if ($lang == 'ar')
+                      @if (app()->getLocale() == 'ar')
                       {{$service->title_ar}}
                       @else
                       {{$service->title_en}}
                       @endif
                     </h5>
                     <p>
-                      @if ($lang == 'ar')
+                      @if (app()->getLocale() == 'ar')
                       {{$service->description_ar}}
                       @else
                       {{$service->description_en}}

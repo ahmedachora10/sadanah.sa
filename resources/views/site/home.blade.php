@@ -8,7 +8,7 @@
       <div class="video-container">
         <div class="video-overlay"></div>
         <video autoplay muted loop class="background-video">
-             @if ($lang == 'ar')
+             @if (app()->getLocale() == 'ar')
                <source src="{{asset('storage/'.$slider->image_ar)}}" type="video/mp4" />
                <source src="{{asset('storage/'.$slider->image_ar)}}" type="video/ogg" />
                <source src="{{asset('storage/'.$slider->image_ar)}}" type="video/webm" />
@@ -19,7 +19,7 @@
              @endif
 
         </video>
-        @if ($lang == 'ar')
+        @if (app()->getLocale() == 'ar')
         <div class="container">
           <div class="caption text-center">
             <h2 class="" data-swiper-parallax="-2000">
@@ -71,7 +71,7 @@
                   <h2 class="fw-600 text-u"> {{__('front.about sadnah')}}</h2>
                 </div>
                 <p class="text-center mt-2">
-                  @if ($lang == 'ar')
+                  @if (app()->getLocale() == 'ar')
                   {{$about->description_ar}}
                   @else
                   {{$about->description_en}}
@@ -85,14 +85,14 @@
                       <img src="{{asset('storage/'.$vision->image)}}" class="card-img-top img_vision" alt="about sadnah"/>
                       <div class="card-body">
                       <h5 class="card-title">
-                        @if ($lang == 'ar')
+                        @if (app()->getLocale() == 'ar')
                         {{$vision->title_ar}}
                         @else
                         {{$vision->title_en}}
                         @endif
                       </h5>
                       <p class="card-text">
-                        @if ($lang == 'ar')
+                        @if (app()->getLocale() == 'ar')
                         {{$vision->description_ar}}
                         @else
                         {{$vision->description_en}}
@@ -133,14 +133,14 @@
                       {{-- <i class="services-icon fab fa-digital-ocean"></i> --}}
                     </div>
                     <h6 class="services_title">
-                      @if ($lang == 'ar')
+                      @if (app()->getLocale() == 'ar')
                       {{$service->title_ar}}
                       @else
                       {{$service->title_en}}
                       @endif
                     </h6>
                     <p class="services_info">
-                      @if ($lang == 'ar')
+                      @if (app()->getLocale() == 'ar')
                       {{$service->description_ar}}
                       @else
                       {{$service->description_en}}
@@ -226,14 +226,14 @@
                               <img src="{{$work->thumbnail}}" alt="work"/>
                               <div class="cont">
                                 <span class="mb-5">
-                                  @if ($lang == 'ar')
+                                  @if (app()->getLocale() == 'ar')
                                   {{$work->tag->name_ar}}
                                   @else
                                   {{$work->tag->name_en}}
                                   @endif
                                 </span>
                                 <h6 class="fz-18">
-                                  @if ($lang == 'ar')
+                                  @if (app()->getLocale() == 'ar')
                                   {{$work->client_name_ar}}
                                   @else
                                   {{$work->client_name_en}}
@@ -286,7 +286,7 @@
                     <h2 class="fz-80 line-height-1" data-number="{{$statistic->count}}">0</h2>
                     <div class="d-flex flex-column">
                       <span class="sub-title opacity-7 ml-30 d-block">
-                        @if ($lang == 'ar')
+                        @if (app()->getLocale() == 'ar')
                         {{$statistic->title_ar}}
                         @else
                         {{$statistic->title_en}}
@@ -365,7 +365,7 @@
                       <div class="">
                         <div class="text">
                           <p class="skill-info">
-                            @if ($lang == 'ar')
+                            @if (app()->getLocale() == 'ar')
                             {{$whyU->properties_ar}}
                             @else
                             {{$whyU->properties_en}}
@@ -379,7 +379,7 @@
                               class="item-skill d-flex align-items-start justify-content-start">
                               <i class="far fa-check-circle"></i>
                               <p class="item-info" >
-                                @if ($lang == 'ar')
+                                @if (app()->getLocale() == 'ar')
                                 {{$certificate->title_ar}}
                                 @else
                                 {{$certificate->title_en}}
@@ -527,14 +527,14 @@
                           />
                           <div class="info">
                             <span class="fz-12">
-                              @if ($lang == 'ar')
+                              @if (app()->getLocale() == 'ar')
                               {{$inf->job_name_ar}}
                               @else
                               {{$inf->job_name_en}}
                               @endif
                             </span>
                             <h6 class="fz-18">
-                              @if ($lang == 'ar')
+                              @if (app()->getLocale() == 'ar')
                               {{$inf->name_ar}}
                               @else
                               {{$inf->name_en}}
@@ -601,14 +601,14 @@
                             <a href="{{route('influencers.details',['id'=>$inf->id])}}">
                               <div class="info">
                                 <span class="fz-12">
-                                  @if ($lang == 'ar')
+                                  @if (app()->getLocale() == 'ar')
                                   {{$inf->job_name_ar}}
                                   @else
                                   {{$inf->job_name_en}}
                                   @endif
                                 </span>
                                 <h6 class="fz-18">
-                                  @if ($lang == 'ar')
+                                  @if (app()->getLocale() == 'ar')
                                   {{$inf->name_ar}}
                                   @else
                                   {{$inf->name_en}}
@@ -685,7 +685,7 @@
                         <div class="full-width">
                           <h5>
                             <a href="{{route('blog.details',['id'=>$blog->id])}}">
-                              @if ($lang == 'ar')
+                              @if (app()->getLocale() == 'ar')
                               {{$blog->title_ar}}
                               @else
                               {{$blog->title_en}}

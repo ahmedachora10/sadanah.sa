@@ -41,7 +41,7 @@
                       >{{__('front.View all')}}</span>
                       @foreach ($tags as $tag)
                       <span data-filter=".{{$tag->id}}">
-                        @if ($lang == 'ar')
+                        @if (app()->getLocale() == 'ar')
                         {{$tag->name_ar}}
                         @else
                         {{$tag->name_en}}
@@ -63,7 +63,7 @@
                     <div class="cont mt-20">
                       <h5 class="fz-22">
                         <a href="{{route('portfolio.details',['id'=>$work->id])}}">
-                          @if ($lang == 'ar')
+                          @if (app()->getLocale() == 'ar')
                           {{$work->client_name_ar}}
                           @else
                           {{$work->client_name_en}}
@@ -71,7 +71,7 @@
                         </a>
                       </h5>
                       <p>
-                        @if ($lang == 'ar')
+                        @if (app()->getLocale() == 'ar')
                           {{$work->tag->name_ar}}
                           @else
                           {{$work->tag->name_en}}
