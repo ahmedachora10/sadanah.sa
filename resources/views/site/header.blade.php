@@ -290,37 +290,37 @@
                   </h6>
                   <ul class="rest social-text">
                     <li class="cursor-pointer ml-50">
-                      <a href="{{$x->val}}" target="_blank" class="hover-anim social-icon"
+                      <a href="{{$x}}" target="_blank" class="hover-anim social-icon"
                         ><i class="fa-brands fa-x-twitter"></i>
                       </a>
                     </li>
                     <li class="cursor-pointer ml-50">
-                      <a href="{{$linkedin->val}}" target="_blank" class="hover-anim social-icon"
+                      <a href="{{$linkedin}}" target="_blank" class="hover-anim social-icon"
                         ><i class="fab fa-linkedin mr-10"></i>
                       </a>
                     </li>
                     <li class="cursor-pointer ml-50">
-                      <a href="{{$tiktok->val}}" target="_blank" class="hover-anim social-icon"
+                      <a href="{{$tiktok}}" target="_blank" class="hover-anim social-icon"
                         ><i class="fab fa-tiktok mr-10"></i>
                       </a>
                     </li>
                     <li class="cursor-pointer ml-50">
-                      <a href="{{$youtube->val}}" target="_blank" class="hover-anim social-icon"
+                      <a href="{{$youtube}}" target="_blank" class="hover-anim social-icon"
                         ><i class="fab fa-youtube mr-10"></i>
                       </a>
                     </li>
                     <li class="cursor-pointer ml-50">
-                      <a href="{{$snapchat->val}}" target="_blank" class="hover-anim social-icon"
+                      <a href="{{$snapchat}}" target="_blank" class="hover-anim social-icon"
                         ><i class="fab fa-snapchat mr-10"></i>
                       </a>
                     </li>
                     <li class="=cursor-pointer ml-50">
-                      <a href="{{$telegram->val}}" target="_blank" class="hover-anim social-icon"
+                      <a href="{{$telegram}}" target="_blank" class="hover-anim social-icon"
                         ><i class="fab fa-telegram mr-10"></i>
                       </a>
                     </li>
                     <li class="cursor-pointer ml-50">
-                      <a href="{{$instagram->val}}" target="_blank" class="hover-anim social-icon"
+                      <a href="{{$instagram}}" target="_blank" class="hover-anim social-icon"
                         ><i class="fab fa-instagram mr-10"></i>
                       </a>
                     </li>
@@ -330,10 +330,10 @@
                   <h6 class="sub-title mb-15 opacity-7">
                    {{__('front.Contact Us')}}
                   </h6>
-                  <h5>{{$email->val}}</h5>
+                  <h5>{{$email}}</h5>
                   <h5 class="underline mt-10">
                     <span class="text" style="direction: ltr; unicode-bidi: embed;">
-                      {{$phone->val}}
+                      {{$phone}}
                     </span>
                   </h5>
                 </div>
