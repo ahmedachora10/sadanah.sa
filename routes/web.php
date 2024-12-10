@@ -2,10 +2,12 @@
 
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\HomeController;
+use App\Http\Middleware\SetLocale;
 use App\Models\OurService;
 use App\Models\OurWork;
 use App\Models\Support;
 use App\Services\InstagramService;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
 
@@ -59,10 +61,10 @@ Route::get('/switch-langauge/{locale?}', function ($locale = 'ar') {
 
     Session::put('lang', $locale);
 
-    app()->setLocale($locale);
+    App::setLocale($locale);
 
     return redirect()->back();
-})->name('switch-language');
+})->withoutMiddleware(SetLocale::class)->name('switch-language');
 
 Route::get('clients/reviews', function () {
     return view('reviews');
