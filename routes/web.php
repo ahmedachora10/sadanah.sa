@@ -57,7 +57,7 @@ Route::controller(HomeController::class)
 
 Route::get('/switch-langauge/{locale?}', function ($locale = 'ar') {
 
-    $locale = Session::get('lang') === 'ar' ? 'en' : 'ar';
+    // $locale = Session::get('lang') === 'ar' ? 'en' : 'ar';
 
     Session::put('lang', $locale);
 
