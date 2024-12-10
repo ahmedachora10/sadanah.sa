@@ -148,7 +148,7 @@
                     </p>
                     <a
                       href="{{route('service.details',['id'=>$service->id])}}"
-                      class="see_more"
+                      class="see_more text-end"
                       style="display: none"
                     >
                       <span>{{__('common.show more')}}</span>
