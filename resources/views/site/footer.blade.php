@@ -34,7 +34,7 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
           <div class="col-lg-5">
             <div class="social-media d-flex justify-content-end">
               <ul class="rest d-flex align-items-center fz-14">
-                <li class="cursor-pointer social_footer mx-1">
+                <li class="cursor-pointer social_footer mx-2">
                   <a href="{{$x->val}}" target="_blank" class="hover-anim social-icon"
                     ><i class="fa-brands fa-x-twitter"></i>
                   </a>
@@ -59,7 +59,7 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
                     ><i class="fab fa-snapchat mr-10"></i>
                   </a>
                 </li>
-                <li class="=cursor-pointer social_footer mx-1">
+                <li class="cursor-pointer social_footer mx-1">
                   <a href="{{$telegram->val}}" target="_blank" class="hover-anim social-icon"
                     ><i class="fab fa-telegram mr-10"></i>
                   </a>
