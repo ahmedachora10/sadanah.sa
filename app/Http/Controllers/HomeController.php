@@ -101,7 +101,7 @@ class HomeController extends Controller
 
     public function blog_details(Blog $blog)
     {
-        $latest = Blog::where('id', '<>', $blog)
+        $latest = Blog::where('id', '<>', $blog->id)
                     ->orderBy('id','desc')
                     ->limit(3)
                     ->get();
