@@ -57,7 +57,7 @@
                       {{$service->description_en}}
                       @endif
                     </p>
-                    <a href="{{route('service.details',['id'=>$service->id])}}" class="rmore mt-30">
+                    <a href="{{route('service.details',$service)}}" class="rmore mt-30">
                       <span class="sub-title">{{__('common.order now')}}</span>
                       <img
                         src="{{asset('assets/imgs/arrow-right.png')}}"
@@ -304,7 +304,7 @@
                             <a href="blog-list.html">Marketing</a>
                           </div> --}}
                           <h5>
-                            <a href="{{route('blog.details',['id'=>$blog->id])}}">
+                            <a href="{{route('blog.details',$blog)}}">
                               @if (app()->getLocale() == 'ar')
                               {{$blog->title_ar}}
                               @else

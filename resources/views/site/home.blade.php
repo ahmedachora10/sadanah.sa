@@ -147,13 +147,13 @@
                       @endif
                     </p>
                     <a
-                      href="{{route('service.details',['id'=>$service->id])}}"
+                      href="{{route('service.details',$service)}}"
                       class="see_more text-{{app()->getLocale() == 'ar' ? 'start' : 'end'}}"
                       style="display: none"
                     >
                       <span>{{__('common.show more')}}</span>
                     </a>
-                    <a href="{{route('service.details',['id'=>$service->id])}}" class="rmore">
+                    <a href="{{route('service.details',$service)}}" class="rmore">
                       <div class="arrow">
                         <img
                           src="{{asset('assets/imgs/arrow-right.png')}}"
@@ -695,7 +695,7 @@
                       <div class="col-lg-6 col-md-7 cont valign">
                         <div class="full-width">
                           <h5>
-                            <a href="{{route('blog.details',['id'=>$blog->id])}}">
+                            <a href="{{route('blog.details',$blog)}}">
                               @if (app()->getLocale() == 'ar')
                               {{$blog->title_ar}}
                               @else

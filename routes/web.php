@@ -41,7 +41,7 @@ Route::controller(HomeController::class)
     ->group(function () {
         Route::get('/', 'index')->name('home');
         Route::get('/service', 'service')->name('service');
-        Route::get('/serviceDetails', 'service_details')->name('service.details');
+        Route::get('/service/{service}/details', 'service_details')->name('service.details');
         Route::get('/about', 'about')->name('about');
         Route::get('/influencers', 'influencers')->name('influencers');
         Route::get('/influencers/{team}/details', 'influencers_details')->name('influencers.details');
@@ -49,7 +49,7 @@ Route::controller(HomeController::class)
         Route::get('/portfolioDetails', 'portfolio_details')->name('portfolio.details');
         Route::get('/blog', 'blog')->name('blog');
         Route::post('/addComment', 'add_comment')->name('add.comment');
-        Route::get('/blogDetails', 'blog_details')->name('blog.details');
+        Route::get('/blog/{blog}/details', 'blog_details')->name('blog.details');
         Route::get('/job', 'job')->name('job');
         Route::get('/contactus', 'contact')->name('contactus');
         // Route::get('/set-locale/{local}', 'lang')->name('lang');

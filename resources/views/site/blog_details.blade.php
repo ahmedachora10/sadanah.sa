@@ -187,7 +187,7 @@
                       <div class="item d-flex align-items-center">
                         <div>
                           <div class="img">
-                            <a href="{{route('blog.details',['id'=>$item->id])}}">
+                            <a href="{{route('blog.details',$item)}}">
                               <img src="{{asset('storage/'.$blog->image)}}" alt="" />
                               <span class="date">
                                 <span>
@@ -199,12 +199,12 @@
                         </div>
                         <div class="cont">
                           <span class="tag"
-                            ><a href="{{route('blog.details',['id'=>$item->id])}}">
+                            ><a href="{{route('blog.details',$item)}}">
                               {{ $item->created_at->format('d F Y') }}
                             </a></span
                           >
                           <h6>
-                            <a href="{{route('blog.details',['id'=>$item->id])}}">
+                            <a href="{{route('blog.details',$item)}}">
                               @if (app()->getLocale() == 'ar')
                               {{$item->title_ar}}
                               @else

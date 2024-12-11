@@ -40,10 +40,10 @@
                     </div>
                     <div class="cont">
                       <div class="date fz-13 text-u ls1 mb-10 opacity-7">
-                        <a href="{{route('blog.details',['id'=>$blog->id])}}">{{ $blog->created_at->format('d F Y') }}</a>
+                        <a href="{{route('blog.details',$blog)}}">{{ $blog->created_at->format('d F Y') }}</a>
                       </div>
                       <h5 class="blog_cerv_title">
-                        <!-- <a href="{{route('blog.details',['id'=>$blog->id])}}">
+                        <!-- <a href="{{route('blog.details',$blog)}}">
                           @if (app()->getLocale() == 'ar')
                           {{$blog->title_ar}}
                           @else
@@ -55,7 +55,7 @@
                           </a>
                       </h5>
                       <a
-                        href="{{route('blog.details',['id'=>$blog->id])}}"
+                        href="{{route('blog.details',$blog)}}"
                         class="d-flex align-items-center mt-30">
                         <span class="text mr-15" data-i18n="readMore">{{__('front.Read More')}}</span>
                         <span class="ti-arrow-top-right"></span>

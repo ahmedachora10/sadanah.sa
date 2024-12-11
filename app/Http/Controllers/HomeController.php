@@ -50,11 +50,9 @@ class HomeController extends Controller
         return view('site.services',compact('services','blogs'));
     }
 
-    public function service_details(Request $request)
+    public function service_details(OurService $service)
     {
-        $service = OurService::where('id', $request->id)->first();
         $services = OurService::get();
-
         return view('site.services_details',compact('service','services'));
     }
 
@@ -101,10 +99,12 @@ class HomeController extends Controller
         return view('site.blog',compact('blogs'));
     }
 
-    public function blog_details(Request $request)
+    public function blog_details(Blog $blog)
     {
-        $blog = blog::where('id', $request->id)->first();
-        $latest = Blog::orderBy('id','desc')->limit(3)->get();
+        $latest = Blog::where('id', '<>', $blog)
+                    ->orderBy('id','desc')
+                    ->limit(3)
+                    ->get();
         $comments = Comment::where('blog_id', $blog->id)->get();
         return view('site.blog_details',compact('blog','latest','comments'));
     }
