@@ -14,7 +14,7 @@
             @if (app()->getLocale() == 'ar')
             <p class="fz-14">
                 جميع الحقوق محفوظة لشركة
-                <span class="underline" style="color: var(--primary-color)">
+                <span class="text-primary fw-bold">
                     {{-- <img src="{{asset('assets/imgs/logo-light.png')}}" alt="سدنه" style="height: 20px; vertical-align: middle;"> --}}
                     سدنة
                 </span>
