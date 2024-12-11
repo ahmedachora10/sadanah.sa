@@ -718,7 +718,7 @@
           <!-- ==================== End Blog ==================== -->
           <!-- ==================== Start brands ==================== -->
 
-          <section class="">
+          <section class="clients-section">
             <div class="clients-carso2">
               <div class="container">
                 <div class="row justify-content-center">
@@ -730,11 +730,11 @@
                     </h2>
                   </div>
                   <div class="col-lg-9 col-12">
-                    <div class="clients-banner">
-                      <div class="clients-images">
+                    <div class="clients-banner swiper swiper-action">
+                      <div class="clients-images swiper-wrapper">
 
                         @foreach ($clients as $client)
-                        <div class="client-item">
+                        <div class="client-item swiper-slide">
                           <a target="_blank" href="{{$client->link}}">
                             <img
 

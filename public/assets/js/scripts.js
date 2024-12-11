@@ -230,7 +230,15 @@ $(function () {
   parallaxShowCase = new Swiper(
     ".full-showcase .parallax-slider",
     parallaxShowCaseOptions
-  );
+    );
+
+    const swiperAction = new Swiper(
+        ".swiper-action",
+        {
+            direction: 'vertical',
+            loop: true,
+        }
+    );
 
   /* ===============================  Carousel slider  =============================== */
 
@@ -1455,7 +1463,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
- 
+
 
   const updateTranslations = (language) => {
     const elements = document.querySelectorAll("[data-i18n]");

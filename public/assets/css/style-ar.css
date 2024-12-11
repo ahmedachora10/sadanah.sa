@@ -10966,25 +10966,24 @@ section.numbers .sub-title {
 
 .team-slider {
     display: flex;
-    animation: scroll-right 20s linear infinite;
+    /* animation: scroll-right 20s linear infinite; */
     transition: transform 0.3s ease;
-    -webkit-animation: scroll-right 20s linear infinite;
-    /* width: calc(200%); */
+    /* -webkit-animation: scroll-right 20s linear infinite; */
 }
 
 @keyframes scroll-right {
-    from {
+    0% {
         transform: translateX(0);
         -webkit-transform: translateX(0);
         -moz-transform: translateX(0);
         -ms-transform: translateX(0);
         -o-transform: translateX(0);
     }
-    /* 99.9% {
+    99.9% {
         transform: translateX(50%);
-    } */
-    to {
-        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 .cont-slide:hover .team-slider {
