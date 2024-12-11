@@ -512,11 +512,11 @@
                   >{{__('front.Influencers')}}</h2>
                 </div>
               </div>
-              <div class="team-slider-wrapper">
-                <div class="row team-slider">
+              <div class="team-slider-wrapper swiper swiper-influencers">
+                <div class="row team-slider swiper-wrapper">
                   @foreach ($infs as $inf)
 
-                  <div class="col-lg-3 cont-slide">
+                  <div class="col-lg-3 cont-slide swiper-slide">
                     <div class="item md-mb50 for_home">
                       <div class="img">
                         <a href="{{route('influencers.details',['id'=>$inf->id])}}">
@@ -730,7 +730,7 @@
                     </h2>
                   </div>
                   <div class="col-lg-9 col-12">
-                    <div class="clients-banner swiper swiper-action">
+                    <div class="clients-banner swiper swiper-clients">
                       <div class="clients-images swiper-wrapper">
 
                         @foreach ($clients as $client)

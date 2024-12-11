@@ -235,13 +235,13 @@ $(function () {
         parallaxShowCaseOptions
     );
 
-    const swiperAction = new Swiper(".swiper-action", {
+    const clientSwiper = new Swiper(".swiper-clients", {
         direction: "horizontal",
         loop: true,
         slidesPerView: 5,
         spaceBetween: 5,
         autoplay: {
-            delay: 2500,
+            delay: 500,
             disableOnInteraction: false,
         },
         breakpoints: {
@@ -263,7 +263,33 @@ $(function () {
         },
     });
 
-    console.log("swiper action", swiperAction);
+    const influencersSwiper = new Swiper(".swiper-influencers", {
+        direction: "horizontal",
+        loop: true,
+        slidesPerView: 5,
+        spaceBetween: 5,
+        autoplay: {
+            delay: 500,
+            disableOnInteraction: false,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            470: {
+                slidesPerView: 2,
+            },
+            590: {
+                slidesPerView: 3,
+            },
+            768: {
+                slidesPerView: 5,
+            },
+            // 1024: {
+            //     slidesPerView: 5,
+            // },
+        },
+    });
 
     /* ===============================  Carousel slider  =============================== */
 
