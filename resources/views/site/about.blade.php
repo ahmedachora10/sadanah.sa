@@ -295,7 +295,7 @@
               <div
                 class="my-4 d-flex align-items-center justify-content-center"
               >
-                <a href="{{route('contactus')}}" class="go-more">
+                <a href="{{route('job')}}" class="go-more">
                   <span class="text">{{__('front.Join to us')}}</span>
                   <span class="icon ti-arrow-top-right"></span>
                 </a>
