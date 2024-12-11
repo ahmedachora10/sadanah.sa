@@ -49,7 +49,9 @@ return [
     'email' => 'Email',
     'phone number' => 'Phone Number',
     'subject' => 'Subject',
-    
+
+    'follow them' => 'Follow Them',
+
 
 
 

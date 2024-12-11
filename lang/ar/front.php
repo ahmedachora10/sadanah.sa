@@ -50,6 +50,7 @@ return [
     'email' => 'البريد',
     'phone number' => 'رقم الجوال',
     'subject' => 'الوصف',
+    'follow them' => 'إنظم اليهم',
 
 
 

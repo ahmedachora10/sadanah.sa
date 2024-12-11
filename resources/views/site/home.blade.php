@@ -573,13 +573,18 @@
                 <h6 class="sub-title main-color mb-25" >
                   {{__('front.Influencers')}}
                 </h6>
-                <div class="bord pt-25 bord-thin-top d-flex align-items-center">
+                <div class="bord pt-25 bord-thin-top d-flex align-items-center justify-content-between">
                   <h2 class="fw-600" >{{__('front.Influencers')}}</h2>
                   <h2
                     class="fw-200"
                     data-i18n="meetOurLeg"
                     style="margin-inline-start: 0.5rem"
                   ></h2>
+
+                  <a href="{{route('influencers')}}" class="go-more">
+                    <span class="text">{{ trans('front.follow them') }}</span>
+                    <span class="icon ti-arrow-top-right"></span>
+                </a>
                 </div>
               </div>
             </div>

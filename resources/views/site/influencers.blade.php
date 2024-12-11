@@ -90,6 +90,12 @@
 
                             </div>
                         </div>
+                        <div class="my-4 d-flex align-items-center justify-content-center">
+                            <a href="{{route('influencers')}}" class="go-more">
+                                <span class="text">{{ trans('front.follow them') }}</span>
+                                <span class="icon ti-arrow-top-right"></span>
+                            </a>
+                        </div>
                     </div>
                 </section>
 
