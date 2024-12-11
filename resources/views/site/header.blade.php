@@ -2,7 +2,7 @@
     $lang = app()->getLocale();
 @endphp
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="{{$lang}}" dir="{{$lang == 'ar' : 'rtl' : 'ltr'}}">
   <head>
     <!-- Metas -->
     <meta charset="utf-8" />
