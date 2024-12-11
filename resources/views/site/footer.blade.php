@@ -275,7 +275,7 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
            <span class="underline" style="color: var(--primary-color)">
              <img src="{{asset('assets/imgs/logo-light.png')}}" alt="سدنه" style="height: 20px; vertical-align: middle;">
            </span>
-           {{date('Y')}}
+           ©{{date('Y')}}
          </p>
           @else
           <p class="fz-14" >
@@ -284,7 +284,7 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
             <span class="underline" style="color: var(--primary-color)">
                 SADNAH
             </span>
-            {{date('Y')}}
+            ©{{date('Y')}}
          </p>
           @endif
 

@@ -18,7 +18,7 @@
                     {{-- <img src="{{asset('assets/imgs/logo-light.png')}}" alt="سدنه" style="height: 20px; vertical-align: middle;"> --}}
                     سدنة
                 </span>
-                {{date('Y')}}
+                ©{{date('Y')}}
             </p>
             @else
             <p class="fz-14">
@@ -27,7 +27,7 @@
                 <span class="underline" style="color: var(--primary-color)">
                     SADNAH
                 </span>
-                {{date('Y')}}
+                ©{{date('Y')}}
             </p>
             @endif
         </div>
