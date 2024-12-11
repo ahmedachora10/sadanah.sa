@@ -62,6 +62,7 @@ return [
         'backgroud image' => 'Background Image',
         'city' => 'City',
         'whatsapp' => 'Whatsapp',
+        'author' => 'Author',
     ],
     'empty' => 'No Records'
 ];

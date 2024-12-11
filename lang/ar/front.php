@@ -50,7 +50,7 @@ return [
     'email' => 'البريد',
     'phone number' => 'رقم الجوال',
     'subject' => 'الوصف',
-    'follow them' => 'إنظم اليهم',
+    'follow them' => 'إنضم اليهم',
 
 
 
@@ -65,7 +65,6 @@ return [
     'We Provide' => 'ماذا نقدم',
     'View all' => 'عرض الكل',
     'Read Latest' => 'اقرأ الأحدث',
-    'click here' => 'اضغط هنا',
     'Download Profile' => "تحميل بروفايل سدنة",
     'Contact Us' => "تواصل معنا",
     'Useful Links' =>  "روابط مفيدة",
@@ -76,7 +75,7 @@ return [
     "Join to us" => "انضم إلينا",
     "WHAT WE" => "ما",
     "OFFER" => "نقدمه",
-    "Read More" => "اقرا المذيد",
+    "Read More" => "اقرا المزيد",
     "followers" => "المتابعين على",
     "Social" => "التواصل الاجتماعي",
     "X" => "اكس",

@@ -11,19 +11,22 @@
                 <x-size-notice key="team" />
             </div>
             <div class="col-md-6 col-12 mb-3">
-                <x-dashboard.input-group type="text" name="name_ar" :value="$team->name_ar" :title="trans('table.columns.name')" />
+                <x-dashboard.input-group type="text" name="title_ar" :value="$team->title_ar" :title="trans('table.columns.title')" />
             </div>
             <div class="col-md-6 col-12 mb-3">
-                <x-dashboard.input-group type="text" name="job_name_ar" :value="$team->job_name_ar" :title="trans('table.columns.job name')" />
+                <x-dashboard.input-group type="text" name="author" :value="$team->author" :title="trans('table.columns.author')" />
             </div>
-           
+            <div class="col-md-6 col-12 mb-3">
+                <x-dashboard.input-group type="text" name="content_ar" :value="$team->content_ar" :title="trans('table.columns.content')" />
+            </div>
+
         </x-slot:arForm>
         <x-slot:enForm>
             <div class="col-md-6 col-12 mb-3">
-                <x-dashboard.input-group type="text" name="name_en" :value="$team->name_en" :title="trans('table.columns.name')" />
+                <x-dashboard.input-group type="text" name="title_en" :value="$team->title_en" :title="trans('table.columns.title')" />
             </div>
             <div class="col-md-6 col-12 mb-3">
-                <x-dashboard.input-group type="text" name="job_name_en" :value="$team->job_name_en"
+                <x-dashboard.input-group type="text" name="content_en" :value="$team->content_en"
                     :title="trans('table.columns.job name')" />
             </div>
         </x-slot:enForm>
