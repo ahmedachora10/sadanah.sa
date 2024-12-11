@@ -97,6 +97,7 @@
               style="max-height: 50px; object-fit: cover; width: 100%"
               src="{{asset('assets/imgs/logo.png')}}"
               data-logo-light="{{asset('assets/imgs/logo-light.png')}}"
+              data-logo="{{asset('assets/imgs/logo.png')}}"
               alt="logo"
             />
           </a>

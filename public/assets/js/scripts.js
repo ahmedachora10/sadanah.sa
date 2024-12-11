@@ -75,7 +75,7 @@ $(function () {
             if (bodyScroll > 300) {
                 navbar.addClass("nav-scroll");
 
-                logo.attr("src", "assets/imgs/logo.png");
+                logo.attr("src", logo.attr('data-logo'));
             } else {
                 navbar.removeClass("nav-scroll");
                 logo.attr("src", logo.attr('data-logo-light'));
