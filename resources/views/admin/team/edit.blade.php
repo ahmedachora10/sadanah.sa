@@ -30,6 +30,10 @@
             </div>
 
             <div class="col-md-6 col-12 mb-3">
+                <x-dashboard.input-group type="text" name="whatsapp" :value="$team->whatsapp" :title="trans('table.columns.whatsapp')" />
+            </div>
+
+            <div class="col-md-6 col-12 mb-3">
                 <x-dashboard.input-group type="number" name="x_followers" :value="$team->x_followers" :title="trans('متابعين X')" />
             </div>
             <div class="col-md-6 col-12 mb-3">

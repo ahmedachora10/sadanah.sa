@@ -129,7 +129,8 @@ return [
         'right' => 'اليمين',
         'bottom' => 'الاسفل',
         'left' => 'اليسار',
-        'background image' => 'الصورة الخلفية'
+        'background image' => 'الصورة الخلفية',
+        'whatsapp' => 'الواتساب',
     ],
     'empty' => 'لا يوجد عناصر لعرضها',
 ];

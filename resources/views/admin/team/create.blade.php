@@ -25,6 +25,9 @@
                 <x-dashboard.input-group type="text" name="instagram" :title="trans('رابط انستجرام')" />
             </div>
             <div class="col-md-6 col-12 mb-3">
+                <x-dashboard.input-group type="text" name="whatsapp" :title="trans('table.columns.whatsapp')" />
+            </div>
+            <div class="col-md-6 col-12 mb-3">
                 <x-dashboard.input-group type="number" value="0" name="x_followers" :title="trans('متابعين X')" />
             </div>
             <div class="col-md-6 col-12 mb-3">
