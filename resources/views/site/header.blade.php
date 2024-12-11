@@ -35,6 +35,7 @@
     />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <!-- Font -->
+    <link rel="stylesheet" href="{{asset('assets/css/plugins/bootstrap-'.$lang.'.min.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/css/satoshi.css')}}" />
 
     <!-- Plugins -->
