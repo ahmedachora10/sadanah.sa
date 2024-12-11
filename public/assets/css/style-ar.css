@@ -10969,7 +10969,7 @@ section.numbers .sub-title {
     animation: scroll-right 20s linear infinite;
     transition: transform 0.3s ease;
     -webkit-animation: scroll-right 20s linear infinite;
-    width: calc(200%);
+    /* width: calc(200%); */
 }
 
 @keyframes scroll-right {
