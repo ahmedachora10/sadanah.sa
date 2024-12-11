@@ -1,6 +1,6 @@
 <x-app-layout>
 
-    <x-theme.tab-list :route="route('our-team.update', $blog)">
+    <x-theme.tab-list :route="route('blogs.update', $blog)">
         <x-slot:arForm>
             @method('PUT')
             <div class="col-12 mb-3">
