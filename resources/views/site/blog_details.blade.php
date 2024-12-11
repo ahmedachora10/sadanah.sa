@@ -92,7 +92,7 @@
                         <div class="author-img mr-30">
                           <div class="img">
                             <img
-                              src="assets/imgs/blog/author.png"
+                              src="{{asset('assets/imgs/blog/author.png')}}"
                               alt=""
                               class="circle-img"
                             />

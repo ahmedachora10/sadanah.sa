@@ -66,7 +66,7 @@ $(function () {
 
     $(document).ready(function () {
         var logo = $(".navbar .logo> img");
-        logo.attr("src", "assets/imgs/logo-light.png");
+        logo.attr("src", logo.attr('data-logo-light'));
 
         wind.on("scroll", function () {
             var bodyScroll = wind.scrollTop(),
