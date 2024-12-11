@@ -72,6 +72,10 @@ class AboutController extends Controller
 
         $aboutU->update($request->safe()->except('images'));
 
+        if(count($request->images) > 0) {
+            $aboutU->media()->delete();
+        }
+
         foreach($request->images ?? [] as $img) {
             $aboutU->addMedia($img)->toMediaCollection();
         }

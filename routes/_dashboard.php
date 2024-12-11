@@ -82,7 +82,7 @@ Route::middleware(['auth'])->group(function ()
     Route::resource('faq', FaqController::class);
     Route::resource('team', TeamController::class);
     Route::resource('our-team', OurTeamController::class);
-    Route::post('about-us/media/remove', [AboutController::class, 'removeMedia'])
+    Route::put('about-us/media/remove', [AboutController::class, 'removeMedia'])
         ->name('about-us.media.remove');
     Route::resource('about-us', AboutController::class);
     Route::resource('reviews', ReviewController::class)->except('store');
