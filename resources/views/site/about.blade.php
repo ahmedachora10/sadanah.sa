@@ -270,7 +270,7 @@
                 <div class="col-lg-4">
                   <div class="item md-mb50 about_team_">
                     <div class="img">
-                      <img src="{{asset('storage/'.$team->image)}}" alt="" />
+                      <img src="{{asset($team->thumbnail)}}" alt="" />
                       <div class="info">
                         <span class="fz-12">
                           @if (app()->getLocale() == 'ar')
