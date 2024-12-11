@@ -10556,8 +10556,8 @@ footer.clean-footer.crev:before {
 
 .clients-images {
     display: flex;
-    animation: scrollBanner 20s linear infinite;
-    -webkit-animation: scrollBanner 20s linear infinite;
+    /* animation: scrollBanner 20s linear infinite; */
+    /* -webkit-animation: scrollBanner 20s linear infinite; */
     transition: transform 1s ease;
 }
 

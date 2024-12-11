@@ -734,7 +734,7 @@
                       <div class="clients-images swiper-wrapper">
 
                         @foreach ($clients as $client)
-                        <div class="client-item swiper-slide col-auto">
+                        <div class="client-item swiper-slide col-auto" style="width: auto !important">
                           <a target="_blank" href="{{$client->link}}">
                             <img
 
