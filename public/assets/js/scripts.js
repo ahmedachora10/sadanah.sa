@@ -235,7 +235,7 @@ $(function () {
     const swiperAction = new Swiper(
         ".swiper-action",
         {
-            direction: 'vertical',
+            direction: 'horizontal',
             loop: true,
         }
     );
