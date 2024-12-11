@@ -43,16 +43,16 @@
 
                       <div class="social">
                         <div class="links">
-                            <a href="{{$inf->snapchat}}" target="_blank">
+                            <a href="{{$inf->snapchat}}" target="_blank" class="mx-1">
                                 <i class="fab fa-snapchat"></i>
                             </a>
-                            <a href="{{$inf->x}}" target="_blank">
+                            <a href="{{$inf->x}}" target="_blank" class="mx-1">
                                 <i class="fa-brands fa-x-twitter"></i>
                             </a>
-                            <a href="{{$inf->instagram}}" target="_blank">
+                            <a href="{{$inf->instagram}}" target="_blank" class="mx-1">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="{{$inf->tiktok}}" target="_blank">
+                            <a href="{{$inf->tiktok}}" target="_blank" class="mx-1">
                                 <i class="fab fa-tiktok"></i>
                             </a>
 
