@@ -21,6 +21,7 @@ class Team extends Model
         'snapchat',
         'tiktok',
         'whatsapp',
+        'instagram',
         'x_followers',
         'instagram_followers',
         'snapchat_followers',
