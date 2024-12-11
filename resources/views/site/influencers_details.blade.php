@@ -89,27 +89,27 @@
 
 
                     <div class="skill-item mt-50">
-                      <h6 class="fz-16 mb-10">{{__('front.X')}}: {{$inf->x_folowers}}</h6>
+                      <h6 class="fz-16 mb-10">{{__('front.X')}}: {{$inf->x_followers}}</h6>
                       <div class="skill-progress">
-                        <div class="progres" data-value="{{$inf->x_folowers}}"></div>
+                        <div class="progres" data-value="{{$inf->x_followers}}"></div>
                       </div>
                     </div>
                     <div class="skill-item mt-30">
-                      <h6 class="fz-16 mb-10">{{__('front.snapchat')}}: {{$inf->snapchat_folowers}}</h6>
+                      <h6 class="fz-16 mb-10">{{__('front.snapchat')}}: {{$inf->snapchat_followers}}</h6>
                       <div class="skill-progress">
-                        <div class="progres" data-value="{{$inf->snapchat_folowers}}"></div>
+                        <div class="progres" data-value="{{$inf->snapchat_followers}}"></div>
                       </div>
                     </div>
                     <div class="skill-item mt-30">
-                      <h6 class="fz-16 mb-10">{{__('front.tiktok')}}: {{$inf->tiktok_folowers}}</h6>
+                      <h6 class="fz-16 mb-10">{{__('front.tiktok')}}: {{$inf->tiktok_followers}}</h6>
                       <div class="skill-progress">
-                        <div class="progres" data-value="{{$inf->tiktok_folowers}}"></div>
+                        <div class="progres" data-value="{{$inf->tiktok_followers}}"></div>
                       </div>
                     </div>
                     <div class="skill-item mt-30">
-                      <h6 class="fz-16 mb-10">{{__('front.instagram')}}: {{$inf->instagram_folowers}}</h6>
+                      <h6 class="fz-16 mb-10">{{__('front.instagram')}}: {{$inf->instagram_followers}}</h6>
                       <div class="skill-progress">
-                        <div class="progres" data-value="{{$inf->instagram_folowers}}"></div>
+                        <div class="progres" data-value="{{$inf->instagram_followers}}"></div>
                       </div>
                     </div>
 
