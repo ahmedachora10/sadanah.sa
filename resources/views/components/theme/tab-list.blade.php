@@ -16,7 +16,7 @@
         </ul>
         <div class="tab-content">
             <div class="tab-pane fade active show" id="{{$key}}-ar" role="tabpanel">
-                <div class="row g-3">
+                <div class="row g-3 align-items-end">
                     {{$arForm}}
                 </div>
                 <div class="pt-4">
@@ -26,7 +26,7 @@
             </div>
 
             <div class="tab-pane" id="{{$key}}-en" role="tabpanel">
-                <div class="row g-3">
+                <div class="row g-3 align-items-end">
                     {{$enForm}}
                 </div>
             </div>
