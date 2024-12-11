@@ -504,12 +504,17 @@
                 <h6 class="sub-title main-color mb-25" >
                 {{__('front.Influencers')}}
                 </h6>
-                <div class="bord pt-25 bord-thin-top d-flex align-items-center">
+                <div class="bord pt-25 bord-thin-top d-flex align-items-center justify-content-between">
                   <h2
                     class="fw-600"
 
                     style="text-transform: uppercase"
                   >{{__('front.Influencers')}}</h2>
+
+                <a href="{{route('influencers')}}" class="go-more">
+                    <span class="text">{{ trans('front.follow them') }}</span>
+                    <span class="icon ti-arrow-top-right"></span>
+                </a>
                 </div>
               </div>
               <div dir="{{app()->getLocale() == 'ar' ? 'rtl' : 'ltr'}}" class="team-slider-wrapper swiper swiper-influencers">
@@ -591,7 +596,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-12">
-                  <div class="team-crus swiper-container-team">
+                  <div dir="{{app()->getLocale() == 'ar' ? 'rtl' : 'ltr'}}" class="team-crus swiper-container-team swiper swiper-influencers">
                     <div class="swiper-wrapper">
                       <!-- Slide 1 -->
                       @foreach ($infs as $inf)

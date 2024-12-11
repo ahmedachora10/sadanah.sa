@@ -9961,9 +9961,9 @@ footer.clean-footer.crev:before {
     .sec-head .bord .ml-auto {
         margin-top: 15px !important;
     }
-    .sec-head .bord .d-flex {
+    /* .sec-head .bord .d-flex {
         display: block !important;
-    }
+    } */
     .sec-head h2 {
         font-size: 28px;
     }
