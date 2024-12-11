@@ -78,7 +78,7 @@ $(function () {
                 logo.attr("src", "assets/imgs/logo.png");
             } else {
                 navbar.removeClass("nav-scroll");
-                logo.attr("src", "assets/imgs/logo-light.png");
+                logo.attr("src", logo.attr('data-logo-light'));
             }
         });
     });
