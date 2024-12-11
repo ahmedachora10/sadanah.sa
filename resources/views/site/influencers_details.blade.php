@@ -56,6 +56,10 @@
                                 <i class="fab fa-tiktok"></i>
                             </a>
 
+                            <a href="{{$inf->whatsapp}}" target="_blank" class="mx-1">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+
                         </div>
                     </div>
                     </div>
