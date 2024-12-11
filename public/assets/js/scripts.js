@@ -1494,13 +1494,13 @@ document.addEventListener("DOMContentLoaded", () => {
         // }
 
         updateTranslations(isArabic ? "ar" : "en");
-        const pageTitle = document.getElementById("pageTitle");
+        // const pageTitle = document.getElementById("pageTitle");
 
-        if (isArabic) {
-            pageTitle.textContent = "سدنه";
-        } else {
-            pageTitle.textContent = "Sadnah";
-        }
+        // if (isArabic) {
+        //     pageTitle.textContent = "سدنه";
+        // } else {
+        //     pageTitle.textContent = "Sadnah";
+        // }
     };
 
     const updateTranslations = (language) => {
@@ -1772,7 +1772,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     let isArabic = localStorage.getItem("language") === "ar";
-    setLanguage(isArabic);
+    // setLanguage(isArabic);
 
     // langSwitcher.addEventListener("click", () => {
     //   isArabic = !isArabic;
