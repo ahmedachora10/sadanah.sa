@@ -80,10 +80,10 @@ Route::middleware(['auth'])->group(function ()
     Route::resource('headlines', HeadlineController::class)->only(['index', 'update']);
     Route::get('service-requests', ServiceRequestsContainer::class)->name('services.requests');
     Route::resource('faq', FaqController::class);
-    Route::resource('team', TeamController::class)->parameters(['our_team' => 'team']);
+    Route::resource('team', TeamController::class);
     Route::put('about-us/media/remove', [AboutController::class, 'removeMedia'])
         ->name('about-us.media.remove');
-    Route::resource('our-team', OurTeamController::class);
+    Route::resource('our-team', OurTeamController::class)->parameters(['our_team' => 'team']);;
     Route::resource('about-us', AboutController::class);
     Route::resource('reviews', ReviewController::class)->except('store');
     Route::resource('why-us', WhyUsController::class)->only(['index', 'update']);
