@@ -725,9 +725,9 @@
                   <div
                     class="col-lg-3 col-12 clients-inner mb-3s text-center d-flex align-items-center justify-content-start"
                   >
-                    <p class="" data-i18n="clientsWorked">
+                    <h2 class="fw-600" data-i18n="clientsWorked">
                       {{__('front.our clients')}}
-                    </p>
+                    </h2>
                   </div>
                   <div class="col-lg-9 col-12">
                     <div class="clients-banner">
