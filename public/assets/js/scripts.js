@@ -240,6 +240,9 @@ $(function () {
         }
     );
 
+    console.log(swiperAction);
+
+
   /* ===============================  Carousel slider  =============================== */
 
   var galleryText = new Swiper(
@@ -1439,10 +1442,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const setLanguage = (isArabic) => {
     localStorage.setItem("language", isArabic ? "ar" : "en");
 
-    themeStyle.setAttribute(
-      "href",
-      isArabic ? "assets/css/style-ar.css" : "assets/css/style.css"
-    );
+      if (themeStyle) {
+          themeStyle.setAttribute(
+            "href",
+            isArabic ? "assets/css/style-ar.css" : "assets/css/style-en.css"
+          );
+      }
 
     document.documentElement.setAttribute("lang", isArabic ? "ar" : "en");
     document.documentElement.setAttribute("dir", isArabic ? "rtl" : "ltr");
