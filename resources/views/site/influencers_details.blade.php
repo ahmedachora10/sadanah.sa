@@ -95,19 +95,19 @@
                       </div>
                     </div>
                     <div class="skill-item mt-30">
-                      <h6 class="fz-16 mb-10">{{__('front.snapchat')}}: {{$inf->snapchat_followers}}</h6>
+                      <h6 class="fz-16 mb-10">{{__('front.snapchat')}}: {{shorten_number($inf->snapchat_followers)}}</h6>
                       <div class="skill-progress">
-                        <div class="progres" data-value="{{$inf->snapchat_followers}}"></div>
+                        <div class="progres" data-value="{{shorten_number($inf->snapchat_followers)}}"></div>
                       </div>
                     </div>
                     <div class="skill-item mt-30">
-                      <h6 class="fz-16 mb-10">{{__('front.tiktok')}}: {{$inf->tiktok_followers}}</h6>
+                      <h6 class="fz-16 mb-10">{{__('front.tiktok')}}: {{shorten_number($inf->tiktok_followers)}}</h6>
                       <div class="skill-progress">
-                        <div class="progres" data-value="{{$inf->tiktok_followers}}"></div>
+                        <div class="progres" data-value="{{shorten_number($inf->tiktok_followers)}}"></div>
                       </div>
                     </div>
                     <div class="skill-item mt-30">
-                      <h6 class="fz-16 mb-10">{{__('front.instagram')}}: {{$inf->instagram_followers}}</h6>
+                      <h6 class="fz-16 mb-10">{{__('front.instagram')}}: {{shorten_number($inf->instagram_followers)}}</h6>
                       <div class="skill-progress">
                         <div class="progres" data-value="{{$inf->instagram_followers}}"></div>
                       </div>

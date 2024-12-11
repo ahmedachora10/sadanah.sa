@@ -22,7 +22,6 @@ if (! function_exists('setting')) {
         return is_null($value) ? value($default) : Setting::castValue($value->val, $value->type);
     }
 }
-
 if(!function_exists('ar_slug')) {
 
     function ar_slug(string $string, string $separator = '-') {
@@ -45,7 +44,6 @@ if(!function_exists('ar_slug')) {
 
 }
 
-
 if(!function_exists('short_date_name')) {
 
     function short_date_name(string $date) {
@@ -62,7 +60,6 @@ if(!function_exists('short_date_name')) {
         return str($date)->replace('منذ', '')->replace(array_keys($replacement), array_values($replacement));
     }
 }
-
 if(!function_exists('headline')) {
 
     function headline($key) {
@@ -72,5 +69,26 @@ if(!function_exists('headline')) {
             title: $headline?->title,
             subTitle: $headline?->subtitle,
         );
+    }
+}
+if (!function_exists('shorten_number')) {
+    /**
+     * Shorten a large number into a human-readable format (e.g., 1K, 1M).
+     *
+     * @param int|float $number The number to be shortened.
+     * @param int $precision The number of decimal places.
+     * @return string The shortened number with a suffix.
+     */
+    function shorten_number($number, $precision = 1)
+    {
+        if ($number < 1000) {
+            return (string)$number;
+        }
+
+        $suffixes = ['K', 'M', 'B', 'T'];
+        $index = floor(log($number, 1000)); // Find the index for suffix
+        $shortened = $number / pow(1000, $index);
+
+        return round($shortened, $precision) . $suffixes[$index - 1];
     }
 }
