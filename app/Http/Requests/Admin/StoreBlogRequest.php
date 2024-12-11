@@ -20,6 +20,7 @@ class StoreBlogRequest extends FormRequest
             'title_en' => ['nullable', 'string'],
             'content_ar' => ['required', 'string'],
             'content_en' => ['nullable', 'string'],
+            'author' => ['required', 'string'],
         ];
     }
 }
