@@ -10563,7 +10563,7 @@ footer.clean-footer.crev:before {
 
 .client-item {
     flex: 0 0 auto;
-    margin-right: 40px;
+    /* margin-right: 40px; */
     display: flex;
     align-items: center;
     justify-content: center;
