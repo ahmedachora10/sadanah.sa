@@ -5134,10 +5134,10 @@ body.loaded {
 }
 
 .clients .brand:hover .char {
-    -webkit-animation: fadeInUp 0.3s cubic-bezier(0.3, 0, 0.7, 1) both;
-    animation: fadeInUp 0.3s cubic-bezier(0.3, 0, 0.7, 1) both;
-    -webkit-animation-delay: calc(20ms * var(--char-index));
-    animation-delay: calc(20ms * var(--char-index));
+    /* -webkit-animation: fadeInUp 0.3s cubic-bezier(0.3, 0, 0.7, 1) both; */
+    /* animation: fadeInUp 0.3s cubic-bezier(0.3, 0, 0.7, 1) both; */
+    /* -webkit-animation-delay: calc(20ms * var(--char-index)); */
+    /* animation-delay: calc(20ms * var(--char-index)); */
 }
 
 .clients .brand .item {
