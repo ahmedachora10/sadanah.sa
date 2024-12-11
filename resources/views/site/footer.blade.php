@@ -273,7 +273,7 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
           <p class="fz-14" >
             جميع الحقوق محفوظة لشركة
            <span class="underline" style="color: var(--primary-color)">
-             سدنه
+             سدنة
            </span>
            {{date('Y')}}
          </p>

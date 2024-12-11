@@ -42,20 +42,20 @@ return [
     'service' => 'خدماتنا',
     'why us' =>  'لماذا نحن',
     'video' => 'مقطع فيديو',
-    'about sadnah' => 'نبذه عن سدنه',
+    'about sadnah' => 'نبذه عن سدنة',
     'featured project' => 'المشاريع المميزة',
-    'head about' => 'سعينا الدائم في سدنه التغيير والانتقالات الفريدة',
+    'head about' => 'سعينا الدائم في سدنة التغيير والانتقالات الفريدة',
     'first name' => 'الاسم الاول',
     'second name' => 'الاسم الثانى',
     'email' => 'البريد',
     'phone number' => 'رقم الجوال',
     'subject' => 'الوصف',
-    
 
 
 
 
-    'sadnah' => 'سدنه',
+
+    'sadnah' => 'سدنة',
     'Influencers' => 'المؤثرين',
     'Portfolio' => 'اعمالنا',
     'Blogs' => 'المدونة',
@@ -65,7 +65,7 @@ return [
     'View all' => 'عرض الكل',
     'Read Latest' => 'اقرأ الأحدث',
     'click here' => 'اضغط هنا',
-    'Download Profile' => "تحميل بروفايل سدنه",
+    'Download Profile' => "تحميل بروفايل سدنة",
     'Contact Us' => "تواصل معنا",
     'Useful Links' =>  "روابط مفيدة",
     "soical" => "وسائل التواصل الاجتماعي",

@@ -1523,7 +1523,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // const pageTitle = document.getElementById("pageTitle");
 
         // if (isArabic) {
-        //     pageTitle.textContent = "سدنه";
+        //     pageTitle.textContent = "سدنة";
         // } else {
         //     pageTitle.textContent = "Sadnah";
         // }
@@ -1713,8 +1713,8 @@ document.addEventListener("DOMContentLoaded", () => {
             viewPosts: "عرض جميع المنشورات",
             postedBy: "تم النشر بواسطة",
             useflLinks: "روابط مفيدة",
-            downloadProfile: "تحميل بروفايل سدنه",
-            copyRight: "© 2024 سدنه، فخورون بتقديمه ",
+            downloadProfile: "تحميل بروفايل سدنة",
+            copyRight: "© 2024 سدنة، فخورون بتقديمه ",
             goToWork: "لنبدأ العمل.",
             ourServices: "خدماتنا.",
             weOffer: "ما نقدمه",
@@ -1770,7 +1770,7 @@ document.addEventListener("DOMContentLoaded", () => {
             Faq: "الأسئلة المتكررة",
             anouInP:
                 "خطوات بسيطة من حلم مطلع 2018 رسمنا فكرة واقعية وبخطى ثابتة عبرنا الطريق لتكون نجمةً مضيئة بأرواح سعودية شابة وطموحة.",
-            aboutSadnah: "نبذه عن سدنه",
+            aboutSadnah: "نبذه عن سدنة",
             aboutMessage: "رسالتنا",
             aboutMinfo:
                 "نجسد من الرسم هوية فارقة | ومن التسويق منتج ثوري | ومن الفعالية ذكرى خالدة",
