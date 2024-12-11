@@ -155,7 +155,7 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
                       <a href="{{route('home')}}" >{{__('front.home')}}</a>
                     </li>
                     <li class="mb-15 col">
-                      <a href="{{route('job')}}">{{__('front.Blogs')}}</a>
+                      <a href="{{route('blog')}}">{{__('front.Blogs')}}</a>
                     </li>
 
                     <li class="mb-15 col">
