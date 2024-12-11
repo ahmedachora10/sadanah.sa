@@ -248,8 +248,11 @@ $(function () {
             0: {
                 slidesPerView: 1,
             },
-            640: {
+            470: {
                 slidesPerView: 2,
+            },
+            590: {
+                slidesPerView: 3,
             },
             768: {
                 slidesPerView: 5,
