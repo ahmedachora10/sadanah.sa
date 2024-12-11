@@ -24,6 +24,10 @@ class StoreTeamRequest extends FormRequest
             'snapchat' => ['nullable', 'string'],
             'tiktok' => ['nullable', 'string'],
             'instagram' => ['nullable', 'string'],
+            'x_followers' => ['nullable', 'integer'],
+            'instagram_followers' => ['nullable', 'integer'],
+            'snapchat_followers' => ['nullable', 'integer'],
+            'tiktok_followers' => ['nullable', 'integer'],
         ];
     }
 }

@@ -20,7 +20,10 @@ class Team extends Model
         'x',
         'snapchat',
         'tiktok',
-        'instagram',
+        'x_followers',
+        'instagram_followers',
+        'snapchat_followers',
+        'tiktok_followers',
     ];
 
     protected static function boot() {

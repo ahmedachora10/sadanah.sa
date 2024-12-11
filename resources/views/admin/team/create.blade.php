@@ -24,6 +24,18 @@
             <div class="col-md-6 col-12 mb-3">
                 <x-dashboard.input-group type="text" name="instagram" :title="trans('رابط انستجرام')" />
             </div>
+            <div class="col-md-6 col-12 mb-3">
+                <x-dashboard.input-group type="text" name="x_followers" :title="trans('متابعين X')" />
+            </div>
+            <div class="col-md-6 col-12 mb-3">
+                <x-dashboard.input-group type="text" name="instagram_followers" :title="trans('متابعين انستجرام')" />
+            </div>
+            <div class="col-md-6 col-12 mb-3">
+                <x-dashboard.input-group type="text" name="snapchat_followers" :title="trans('متابعين سناب شات')" />
+            </div>
+            <div class="col-md-6 col-12 mb-3">
+                <x-dashboard.input-group type="text" name="tiktok_followers" :title="trans('متابعين تيك توك')" />
+            </div>
         </x-slot:arForm>
         <x-slot:enForm>
             <div class="col-md-6 col-12 mb-3">
