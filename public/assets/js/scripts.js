@@ -240,7 +240,7 @@ $(function () {
         }
     );
 
-    console.log(swiperAction);
+    console.log('swiper action',swiperAction);
 
 
   /* ===============================  Carousel slider  =============================== */

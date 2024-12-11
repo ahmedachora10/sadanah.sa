@@ -313,6 +313,6 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
 <script src="{{asset('assets/js/hscroll.js')}}"></script>
 
 <!-- custom scripts -->
-<script src="{{asset('assets/js/scripts.js')}}"></script>
+<script src="{{asset('assets/js/scripts.js')}}?v={{str()->random(5)}}"></script>
 </body>
 </html>
