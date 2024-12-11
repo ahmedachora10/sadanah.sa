@@ -266,7 +266,7 @@ $(function () {
     const influencersSwiper = new Swiper(".swiper-influencers", {
         direction: "horizontal",
         loop: true,
-        slidesPerView: 5,
+        slidesPerView: 4,
         spaceBetween: 5,
         autoplay: {
             delay: 1800,
@@ -283,7 +283,7 @@ $(function () {
                 slidesPerView: 3,
             },
             768: {
-                slidesPerView: 5,
+                slidesPerView: 4,
             },
             // 1024: {
             //     slidesPerView: 5,
