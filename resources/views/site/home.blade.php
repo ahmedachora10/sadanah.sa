@@ -545,10 +545,11 @@
                       </div>
                       <div class="social">
                         <div class="links">
-                          <a href="{{$inf->snapchat}}" target="_blank"><i class="fab fa-snapchat"></i></a>
-                          <a href="{{$inf->x}}" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                          <a href="{{$inf->instagram}}" target="_blank"><i class="fab fa-instagram"></i></a>
-                          <a href="{{$inf->tiktok}}" target="_blank"><i class="fab fa-tiktok"></i></a>
+                          @if($inf->snapchat)<a href="{{$inf->snapchat}}" target="_blank"><i class="fab fa-snapchat"></i></a>@endif
+                          @if($inf->x)<a href="{{$inf->x}}" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>@endif
+                          @if($inf->instagram)<a href="{{$inf->instagram}}" target="_blank"><i class="fab fa-instagram"></i></a>@endif
+                          @if($inf->tiktok)<a href="{{$inf->tiktok}}" target="_blank"><i class="fab fa-tiktok"></i></a>@endif
+                          @if($inf->whatsapp)<a href="{{$inf->whatsapp}}" target="_blank"><i class="fab fa-whatsapp"></i></a>@endif
                         </div>
                       </div>
                     </div>

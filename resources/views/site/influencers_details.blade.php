@@ -43,22 +43,30 @@
 
                       <div class="social">
                         <div class="links">
+                            @if($inf->snapchat)
                             <a href="{{$inf->snapchat}}" target="_blank" class="mx-1">
                                 <i class="fab fa-snapchat"></i>
                             </a>
+                            @endif
+                            @if($inf->x)
                             <a href="{{$inf->x}}" target="_blank" class="mx-1">
                                 <i class="fa-brands fa-x-twitter"></i>
                             </a>
+                            @endif
                             <a href="{{$inf->instagram}}" target="_blank" class="mx-1">
                                 <i class="fab fa-instagram"></i>
                             </a>
+                            @if($inf->tiktok)
                             <a href="{{$inf->tiktok}}" target="_blank" class="mx-1">
                                 <i class="fab fa-tiktok"></i>
                             </a>
+                            @endif
 
+                            @if($inf->whatsapp)
                             <a href="{{$inf->whatsapp}}" target="_blank" class="mx-1">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
+                            @endif
 
                         </div>
                     </div>
@@ -101,13 +109,13 @@
                     <div class="skill-item mt-30">
                       <h6 class="fz-16 mb-10">{{__('front.snapchat')}}: {{shorten_number($inf->snapchat_followers)}}</h6>
                       <div class="skill-progress">
-                        <div class="progres" data-value="{{shorten_number($inf->snapchat_followers)}}"></div>
+                        <div class="progres" data-value="{{$inf->snapchat_followers}}"></div>
                       </div>
                     </div>
                     <div class="skill-item mt-30">
                       <h6 class="fz-16 mb-10">{{__('front.tiktok')}}: {{shorten_number($inf->tiktok_followers)}}</h6>
                       <div class="skill-progress">
-                        <div class="progres" data-value="{{shorten_number($inf->tiktok_followers)}}"></div>
+                        <div class="progres" data-value="{{$inf->tiktok_followers}}"></div>
                       </div>
                     </div>
                     <div class="skill-item mt-30">

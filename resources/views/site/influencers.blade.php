@@ -60,18 +60,26 @@
                                     </div>
                                     <div class="social">
                                         <div class="links">
+                                            @if($inf->snapchat)
                                             <a href="{{$inf->snapchat}}" target="_blank">
                                                 <i class="fab fa-snapchat"></i>
                                             </a>
+                                            @endif
+                                            @if($inf->x)
                                             <a href="{{$inf->x}}" target="_blank">
                                                 <i class="fa-brands fa-x-twitter"></i>
                                             </a>
+                                            @endif
                                             <a href="{{$inf->instagram}}" target="_blank">
                                                 <i class="fab fa-instagram"></i>
                                             </a>
+                                            @if($inf->tiktok)
                                             <a href="{{$inf->tiktok}}" target="_blank">
                                                 <i class="fab fa-tiktok"></i>
                                             </a>
+                                            @endif
+
+                                            @if($inf->whatsapp)<a href="{{$inf->whatsapp}}" target="_blank"><i class="fab fa-whatsapp"></i></a>@endif
 
                                         </div>
                                     </div>
