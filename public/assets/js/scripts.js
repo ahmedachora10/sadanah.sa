@@ -237,6 +237,24 @@ $(function () {
         {
             direction: 'horizontal',
             loop: true,
+                slidesPerView: 5,
+                spaceBetween: 20,
+                // freeMode: true,
+
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                    },
+                    640: {
+                        slidesPerView: 2,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                    },
+                },
         }
     );
 
