@@ -143,7 +143,7 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
               </div>
             </div>
           </div>
-          <div class="col-lg-4 offset-lg-1 bord-left">
+          <div class="col-lg-{{app()->getLocale() == 'ar'} ? '3' : '4'} offset-lg-1 bord-left">
             <div class="column">
               <h6 class="sub-title mb-30" >
                 {{__('front.Useful Links')}}
