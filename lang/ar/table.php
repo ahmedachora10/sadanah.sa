@@ -109,7 +109,7 @@ return [
         'age' => 'العمر',
         'specialization' => 'التخصص',
         'years of experience' => 'سنوات الخبرة',
-        'excerpt' => 'نبذة عن المتقدم',
+        'excerpt' => 'نبذة  عن المتقدم',
         'job' => 'الوظيفة',
         'job city' => 'مدينة الوظيفة',
         'cv' => 'السيرة الذاتية',
@@ -120,7 +120,7 @@ return [
         'location' => 'الموقع',
         'question' => 'سؤال',
         'answer' => 'جواب',
-        'job name' => 'نبذة',
+        'job name' => 'نبذة ',
         'social media' => 'حسابات التواصل',
 
         'client name' => 'اسم العميل',

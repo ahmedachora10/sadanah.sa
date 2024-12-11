@@ -1672,7 +1672,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         ar: {
             home: "الرئيسية",
-            about: "نبذة عنا",
+            about: "نبذة  عنا",
             services: "خدماتنا",
             portfolio: "أعمالنا",
             blogs: "المدونة",
@@ -1770,7 +1770,7 @@ document.addEventListener("DOMContentLoaded", () => {
             Faq: "الأسئلة المتكررة",
             anouInP:
                 "خطوات بسيطة من حلم مطلع 2018 رسمنا فكرة واقعية وبخطى ثابتة عبرنا الطريق لتكون نجمةً مضيئة بأرواح سعودية شابة وطموحة.",
-            aboutSadnah: "نبذه عن سدنة",
+            aboutSadnah: "نبذة عن سدنة",
             aboutMessage: "رسالتنا",
             aboutMinfo:
                 "نجسد من الرسم هوية فارقة | ومن التسويق منتج ثوري | ومن الفعالية ذكرى خالدة",
