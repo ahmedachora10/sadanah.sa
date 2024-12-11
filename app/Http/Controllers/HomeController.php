@@ -71,9 +71,9 @@ class HomeController extends Controller
         return view('site.influencers',compact('infs'));
     }
 
-    public function influencers_details(Request $request)
+    public function influencers_details(Team $team)
     {
-        $inf = Team::where('id', $request->id)->first();
+        $inf = $team;
         return view('site.influencers_details',compact('inf'));
     }
 

@@ -524,7 +524,7 @@
                   <div class="col-lg-3 cont-slide swiper-slide">
                     <div class="item md-mb50 for_home">
                       <div class="img">
-                        <a href="{{route('influencers.details',['id'=>$inf->id])}}">
+                        <a href="{{route('influencers.details',$inf)}}">
                           <img
                             class="img-team"
                             src="{{asset('storage/'.$inf->image)}}"
@@ -609,7 +609,7 @@
                               src="{{asset('storage/'.$inf->image)}}"
                               alt=""
                             />
-                            <a href="{{route('influencers.details',['id'=>$inf->id])}}">
+                            <a href="{{route('influencers.details',$inf)}}">
                               <div class="info">
                                 <span class="fz-12">
                                   @if (app()->getLocale() == 'ar')

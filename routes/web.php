@@ -44,7 +44,7 @@ Route::controller(HomeController::class)
         Route::get('/serviceDetails', 'service_details')->name('service.details');
         Route::get('/about', 'about')->name('about');
         Route::get('/influencers', 'influencers')->name('influencers');
-        Route::get('/influencersDetails', 'influencers_details')->name('influencers.details');
+        Route::get('/influencers/{team}/details', 'influencers_details')->name('influencers.details');
         Route::get('/portfolio', 'portfolio')->name('portfolio');
         Route::get('/portfolioDetails', 'portfolio_details')->name('portfolio.details');
         Route::get('/blog', 'blog')->name('blog');

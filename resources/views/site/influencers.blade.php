@@ -38,7 +38,7 @@
 
                                     <div class="img">
                                         <img class="img_team_page" src="{{asset('storage/'.$inf->image)}}" alt="">
-                                        <a href="{{route('influencers.details',['id'=>$inf->id])}}">
+                                        <a href="{{route('influencers.details',$inf)}}">
                                         <div class="info">
                                             <span class="fz-12">
                                                 @if (app()->getLocale() == 'ar')
