@@ -241,7 +241,7 @@ $(function () {
         slidesPerView: 5,
         spaceBetween: 5,
         autoplay: {
-            delay: 500,
+            delay: 1800,
             disableOnInteraction: false,
         },
         breakpoints: {
@@ -269,7 +269,7 @@ $(function () {
         slidesPerView: 5,
         spaceBetween: 5,
         autoplay: {
-            delay: 500,
+            delay: 1800,
             disableOnInteraction: false,
         },
         breakpoints: {
