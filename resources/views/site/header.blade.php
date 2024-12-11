@@ -19,7 +19,7 @@
     <meta name="author" content="" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Title  -->
-    <title id="pageTitle">{{__('front.sadnah')}} - {{ setting('app_name_'.$lang) }}</title>
+    <title id="pageTitle">{{ setting('app_name_'.$lang) ?? __('front.sadnah') }}</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{asset('assets/imgs/logo.png')}}" />
