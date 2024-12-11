@@ -101,7 +101,7 @@
 
 
                     <div class="skill-item mt-50">
-                      <h6 class="fz-16 mb-10">{{__('front.X')}}: {{$inf->x_followers}}</h6>
+                      <h6 class="fz-16 mb-10">{{__('front.X')}}: {{shorten_number($inf->x_followers)}}</h6>
                       <div class="skill-progress">
                         <div class="progres" data-value="{{$inf->x_followers}}"></div>
                       </div>
