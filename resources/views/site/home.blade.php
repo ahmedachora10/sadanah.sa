@@ -512,7 +512,7 @@
                   >{{__('front.Influencers')}}</h2>
                 </div>
               </div>
-              <div class="team-slider-wrapper swiper swiper-influencers">
+              <div dir="{{app()->getLocale() == 'ar' ? 'rtl' : 'ltr'}}" class="team-slider-wrapper swiper swiper-influencers">
                 <div class="row team-slider swiper-wrapper">
                   @foreach ($infs as $inf)
 
@@ -730,7 +730,7 @@
                     </h2>
                   </div>
                   <div class="col-lg-9 col-12">
-                    <div class="clients-banner swiper swiper-clients">
+                    <div dir="{{app()->getLocale() == 'ar' ? 'rtl' : 'ltr'}}" class="clients-banner swiper swiper-clients">
                       <div class="clients-images swiper-wrapper">
 
                         @foreach ($clients as $client)
