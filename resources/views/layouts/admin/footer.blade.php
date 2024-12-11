@@ -15,7 +15,8 @@
             <p class="fz-14">
                 جميع الحقوق محفوظة لشركة
                 <span class="underline" style="color: var(--primary-color)">
-                    <img src="{{asset('assets/imgs/logo-light.png')}}" alt="سدنه" style="height: 20px; vertical-align: middle;">
+                    {{-- <img src="{{asset('assets/imgs/logo-light.png')}}" alt="سدنه" style="height: 20px; vertical-align: middle;"> --}}
+                    سدنة
                 </span>
                 {{date('Y')}}
             </p>
@@ -24,7 +25,7 @@
 
                 All rights reserved to the company
                 <span class="underline" style="color: var(--primary-color)">
-                    Sadnah
+                    SADNAH
                 </span>
                 {{date('Y')}}
             </p>

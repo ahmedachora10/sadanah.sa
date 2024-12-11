@@ -282,7 +282,7 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
 
             All rights reserved to the company
             <span class="underline" style="color: var(--primary-color)">
-                Sadnah
+                SADNAH
             </span>
             {{date('Y')}}
          </p>
