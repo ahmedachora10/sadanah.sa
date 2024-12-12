@@ -38,7 +38,7 @@
                 <div class="row mt-3">
                 <div class="col-lg-5">
                     <div class="icon mb-40 opacity-5">
-                      <img src="{{$about->thumbnail}}" alt="service" />
+                      {{-- <img src="{{$about->thumbnail}}" alt="service" /> --}}
                     </div>
                 </div>
                 <div class="col-lg-7">
