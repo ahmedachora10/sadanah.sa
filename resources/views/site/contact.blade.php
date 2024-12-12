@@ -160,7 +160,7 @@
 
                             <input
                               id="form_email"
-                              class="text-end"
+                              class="text-start"
                               type="email"
                               name="email"
                               required="required"
