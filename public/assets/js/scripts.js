@@ -264,7 +264,7 @@ $(function () {
         },
     });
 
-    const influencersSwiper = new Swiper(".swiper-influencers", {
+    const influencersSlider = new Swiper(".swiper-influencers", {
         direction: "horizontal",
         loop: true,
         slidesPerView: 4,
@@ -292,20 +292,21 @@ $(function () {
 
     const clients = $('.swiper-clients .swiper-slide');
     const influencersContainer = $('.swiper-influencers .swiper-slide');
+    console.log(influencersContainer);
+
     clients.on('mouseenter', () => {
         clientSwiper.autoplay.stop();
-        console.log('client mouse enter');
 
     });
     clients.on('mouseleave', () => {
         clientSwiper.autoplay.start();
     });
     influencersContainer.on('mouseenter', () => {
-        influencersSwiper.autoplay.stop();
+        influencersSlider.autoplay.stop();
         console.log('influecers mouse enter');
     });
     influencersContainer.on('mouseleave', () => {
-        influencersSwiper.autoplay.start();
+        influencersSlider.autoplay.start();
     });
 
     /* ===============================  Carousel slider  =============================== */
