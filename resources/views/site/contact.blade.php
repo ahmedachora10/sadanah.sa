@@ -1,18 +1,18 @@
 @include('site.header')
       <!-- ==================== End Navbar ==================== -->
       <?php
-      $x = \App\Models\Setting::where('name','x')->first();
-      $instagram = \App\Models\Setting::where('name','instagram')->first();
-      $linkedin = \App\Models\Setting::where('name','linkedin')->first();
-      $telegram = \App\Models\Setting::where('name','telegram')->first();
-      $tiktok = \App\Models\Setting::where('name','tiktok')->first();
-      $snapchat = \App\Models\Setting::where('name','snapchat')->first();
-      $youtube = \App\Models\Setting::where('name','youtube')->first();
-      $footer_ar = \App\Models\Setting::where('name','footer_ar')->first();
-      $footer_en = \App\Models\Setting::where('name','footer_en')->first();
-      $phone = \App\Models\Setting::where('name','phone')->first();
-      $email = \App\Models\Setting::where('name','email')->first();
-      $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
+      $x = setting('x');
+      $instagram = setting('instagram');
+      $linkedin = setting('linkedin');
+      $telegram = setting('telegram');
+      $tiktok = setting('tiktok');
+      $snapchat = setting('snapchat');
+      $youtube = setting('youtube');
+      $footer_ar = setting('footer_ar');
+      $footer_en = setting('footer_en');
+      $phone = setting('phone');
+      $email = setting('email');
+      $fileUrl = setting('profile_file_ar');
       ?>
       <div id="smooth-content">
         <main class="main-bg">
@@ -29,7 +29,7 @@
                 <div class="mt-15">
                   <a href="{{route('home')}}"> {{__('front.home')}}</a>
                   <span class="padding-rl-20">|</span>
-                  <span style="color: var(--primary-color)" 
+                  <span style="color: var(--primary-color)"
                     >{{__('front.Contact Us')}}</span
                   >
                 </div>
@@ -61,63 +61,63 @@
                         <div class="morinfo mt-30">
                           <h6 class="mb-15">{{__('front.phone')}}</h6>
                           <span class="text" style="direction: ltr; unicode-bidi: embed;">
-                            {{$phone->val}}
-                          </span>  
+                            {{$phone}}
+                          </span>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="morinfo mt-30">
                           <h6 class="mb-15">{{__('front.Email')}}</h6>
-                          <p>{{$email->val}}</p>
+                          <p>{{$email}}</p>
                         </div>
                       </div>
                     </div>
                     <div class="phone fz-30 fw-600 mt-30 underline main-color">
-                      
+
                     </div>
-                    
+
              <div class="row">
               <div class="col-12">
               <ul class="justify-content-lg-start" style="display: flex; gap: 2rem; list-style: none; padding: 0; margin: 0; flex-wrap: wrap; align-items: center; justify-content: center;">
                       <li class="cursor-pointer ">
-                        <a href="{{$x->val}}" target="_blank" class="hover-anim social-icon">
+                        <a href="{{$x}}" target="_blank" class="hover-anim social-icon">
                           <i class="fa-brands fa-x-twitter"></i>
                         </a>
                       </li>
                       <li class="cursor-pointer ">
-                        <a href="{{$linkedin->val}}" target="_blank" class="hover-anim social-icon">
+                        <a href="{{$linkedin}}" target="_blank" class="hover-anim social-icon">
                           <i class="fab fa-linkedin mr-10"></i>
                         </a>
                       </li>
                       <li class="cursor-pointer ">
-                        <a href="{{$tiktok->val}}" target="_blank" class="hover-anim social-icon">
+                        <a href="{{$tiktok}}" target="_blank" class="hover-anim social-icon">
                           <i class="fab fa-tiktok mr-10"></i>
                         </a>
                       </li>
                       <li class="cursor-pointer ">
-                        <a href="{{$youtube->val}}" target="_blank" class="hover-anim social-icon">
+                        <a href="{{$youtube}}" target="_blank" class="hover-anim social-icon">
                           <i class="fab fa-youtube mr-10"></i>
                         </a>
                       </li>
                       <li class="cursor-pointer ">
-                        <a href="{{$snapchat->val}}" target="_blank" class="hover-anim social-icon">
+                        <a href="{{$snapchat}}" target="_blank" class="hover-anim social-icon">
                           <i class="fab fa-snapchat mr-10"></i>
                         </a>
                       </li>
                       <li class="cursor-pointer ">
-                        <a href="{{$telegram->val}}" target="_blank" class="hover-anim social-icon">
+                        <a href="{{$telegram}}" target="_blank" class="hover-anim social-icon">
                           <i class="fab fa-telegram mr-10"></i>
                         </a>
                       </li>
                       <li class="cursor-pointer ">
-                        <a href="{{$instagram->val}}" target="_blank" class="hover-anim social-icon">
+                        <a href="{{$instagram}}" target="_blank" class="hover-anim social-icon">
                           <i class="fab fa-instagram mr-10"></i>
                         </a>
                       </li>
                     </ul>
               </div>
              </div>
-                    
+
                   </div>
                 </div>
                 <div class="col-lg-6 offset-lg-1 valign">
@@ -132,7 +132,7 @@
                       <div class="controls row">
                         <div class="col-lg-6">
                           <div class="form-group mb-30">
-                          
+
                             <input
                               id="form_name"
                               type="text"
@@ -144,7 +144,7 @@
                         </div>
                         <div class="col-lg-6">
                           <div class="form-group mb-30">
-                       
+
                             <input
                               id="form_name"
                               type="text"
@@ -160,6 +160,7 @@
 
                             <input
                               id="form_email"
+                              class="text-end"
                               type="email"
                               name="email"
                               required="required"
@@ -170,7 +171,7 @@
 
                         <div class="col-lg-6">
                           <div class="form-group mb-30">
-                       
+
 
                             <input
                               id="form_phone"
@@ -183,7 +184,7 @@
 
                         <div class="col-12">
                           <div class="form-group">
-                         
+
 
                             <textarea
                               id="form_message"
