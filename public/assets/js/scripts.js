@@ -290,16 +290,16 @@ $(function () {
         },
     });
 
-    const clients = document.querySelectorAll('.swiper-clients .swiper-slide');
-    const influencers = document.querySelectorAll('.swiper-influencers .swiper-slide');
-    clients.addEventListener('mouseenter', () => {
+    const clients = $('.swiper-clients .swiper-slide');
+    const influencers = $('.swiper-influencers .swiper-slide');
+    clients.on('mouseenter', () => {
         clientSwiper.autoplay.stop();
         console.log('client mouse enter');
 
     });
-    clients.addEventListener('mouseleave', () => clientSwiper.autoplay.start());
-    influencers.addEventListener('mouseenter', () => influencersSwiper.autoplay.stop());
-    influencers.addEventListener('mouseleave', () => influencersSwiper.autoplay.start());
+    clients.on('mouseleave', () => clientSwiper.autoplay.start());
+    influencers.on('mouseenter', () => influencersSwiper.autoplay.stop());
+    influencers.on('mouseleave', () => influencersSwiper.autoplay.start());
 
     /* ===============================  Carousel slider  =============================== */
 
