@@ -290,6 +290,13 @@ $(function () {
         },
     });
 
+    const clients = document.querySelector('.swiper-clients .swiper-slide');
+    const influencers = document.querySelector('.swiper-influencers .swiper-slide');
+    clients.addEventListener('mouseenter', () => clientSwiper.autoplay.stop());
+    clients.addEventListener('mouseleave', () => clientSwiper.autoplay.start());
+    influencers.addEventListener('mouseenter', () => influencersSwiper.autoplay.stop());
+    influencers.addEventListener('mouseleave', () => influencersSwiper.autoplay.start());
+
     /* ===============================  Carousel slider  =============================== */
 
     var galleryText = new Swiper(
