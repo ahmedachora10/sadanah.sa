@@ -1,17 +1,18 @@
    <!-- ==================== Start Footer ==================== -->
 <?php
-$x = \App\Models\Setting::where('name','x')->first();
-$instagram = \App\Models\Setting::where('name','instagram')->first();
-$linkedin = \App\Models\Setting::where('name','linkedin')->first();
-$telegram = \App\Models\Setting::where('name','telegram')->first();
-$tiktok = \App\Models\Setting::where('name','tiktok')->first();
-$snapchat = \App\Models\Setting::where('name','snapchat')->first();
-$youtube = \App\Models\Setting::where('name','youtube')->first();
-$footer_ar = \App\Models\Setting::where('name','footer_ar')->first();
-$footer_en = \App\Models\Setting::where('name','footer_en')->first();
-$phone = \App\Models\Setting::where('name','phone')->first();
-$email = \App\Models\Setting::where('name','email')->first();
-$fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
+$x = setting('x');
+$instagram = setting('instagram');
+$linkedin = setting('linkedin');
+$telegram = setting('telegram');
+$tiktok = setting('tiktok');
+$snapchat = setting('snapchat');
+$whatsapp = setting('whatsapp');
+$youtube = setting('youtube');
+$footer_ar = setting('footer_ar');
+$footer_en = setting('footer_en');
+$phone = setting('phone');
+$email = setting('email');
+$fileUrl = setting('profile_file_ar');
 ?>
    <footer class="modern-footer pt-80">
     <div class="footer-container">
@@ -35,38 +36,43 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
             <div class="social-media d-flex justify-content-end">
               <ul class="rest d-flex align-items-center fz-14">
                 <li class="cursor-pointer social_footer mx-2">
-                  <a href="{{$x->val}}" target="_blank" class="hover-anim social-icon"
+                  <a href="{{$x}}" target="_blank" class="hover-anim social-icon"
                     ><i class="fa-brands fa-x-twitter"></i>
                   </a>
                 </li>
                 <li class="cursor-pointer social_footer mx-1">
-                  <a href="{{$linkedin->val}}" target="_blank" class="hover-anim social-icon"
+                  <a href="{{$linkedin}}" target="_blank" class="hover-anim social-icon"
                     ><i class="fab fa-linkedin mr-10"></i>
                   </a>
                 </li>
                 <li class="cursor-pointer social_footer mx-1 ">
-                  <a href="{{$tiktok->val}}" target="_blank" class="hover-anim social-icon"
+                  <a href="{{$tiktok}}" target="_blank" class="hover-anim social-icon"
                     ><i class="fab fa-tiktok mr-10"></i>
                   </a>
                 </li>
                 <li class="cursor-pointer social_footer mx-1 ">
-                  <a href="{{$youtube->val}}" target="_blank" class="hover-anim social-icon"
+                  <a href="{{$youtube}}" target="_blank" class="hover-anim social-icon"
                     ><i class="fab fa-youtube mr-10"></i>
                   </a>
                 </li>
                 <li class="cursor-pointer social_footer mx-1 ">
-                  <a href="{{$snapchat->val}}" target="_blank" class="hover-anim social-icon"
+                  <a href="{{$snapchat}}" target="_blank" class="hover-anim social-icon"
                     ><i class="fab fa-snapchat mr-10"></i>
                   </a>
                 </li>
                 <li class="cursor-pointer social_footer mx-1">
-                  <a href="{{$telegram->val}}" target="_blank" class="hover-anim social-icon"
+                  <a href="{{$telegram}}" target="_blank" class="hover-anim social-icon"
                     ><i class="fab fa-telegram mr-10"></i>
                   </a>
                 </li>
                 <li class="cursor-pointer social_footer mx-1">
-                  <a href="{{$instagram->val}}" target="_blank" class="hover-anim social-icon"
+                  <a href="{{$instagram}}" target="_blank" class="hover-anim social-icon"
                     ><i class="fab fa-instagram mr-10"></i>
+                  </a>
+                </li>
+                <li class="cursor-pointer social_footer mx-1">
+                  <a href="{{$whatsapp}}" target="_blank" class="hover-anim social-icon"
+                    ><i class="fab fa-whatsapp mr-10"></i>
                   </a>
                 </li>
               </ul>
@@ -80,9 +86,9 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
                 <span class="sideup-text">
                   <span class="up-text">
                     @if (app()->getLocale() == 'ar')
-                    {{$footer_ar->val}}
+                    {{$footer_ar}}
                     @else
-                    {{$footer_en->val}}
+                    {{$footer_en}}
                     @endif
                    </span>
                 </span>
@@ -103,7 +109,7 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
                     class="butn butn-md butn-bord-thin radius-30 w-100 text-center"
                   >
                     <span class="text">
-                      {{$email->val}}
+                      {{$email}}
                     </span>
                   </a>
                 </div>
@@ -112,7 +118,7 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
                     href="#0"
                     class="butn butn-md butn-bord-thin radius-30 w-100 text-center">
                   <span class="text" style="direction: ltr; unicode-bidi: embed;">
-                    {{$phone->val}}
+                    {{$phone}}
                   </span>
                    </a>
                 </div>
@@ -120,7 +126,7 @@ $fileUrl = \App\Models\Setting::where('name','profile_file_ar')->first();
               <div class="row">
                 <div class="subscribe-minimal mt-4 col-12 col-lg-6">
                   <a
-                    href="{{ asset("/"). $fileUrl->val }}"
+                    href="{{ asset("/"). $fileUrl }}"
                     class="butn butn-md butn-bord-thin radius-30 w-100 d-flex align-items-center justify-content-center"
                     download >
                     <span class="sub-title"
