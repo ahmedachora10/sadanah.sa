@@ -7,7 +7,7 @@
 
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme" data-bg-class="bg-menu-theme">
     <div class="app-brand demo d-flex align-items-center justify-content-center">
-        <img src="{{ asset('assets/imgs/logo.png') }}" alt="Logo" width="200" height="100">
+        <img src="{{ asset('assets/imgs/logo.png') }}" alt="Logo" width="120" height="auto">
 
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-xl-none">
             <i class="bx bx-chevron-left bx-sm align-middle"></i>
