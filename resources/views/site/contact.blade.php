@@ -7,6 +7,7 @@
       $telegram = setting('telegram');
       $tiktok = setting('tiktok');
       $snapchat = setting('snapchat');
+      $whatsapp = setting('whatsapp');
       $youtube = setting('youtube');
       $footer_ar = setting('footer_ar');
       $footer_en = setting('footer_en');
@@ -67,8 +68,8 @@
                       </div>
                       <div class="col-md-6">
                         <div class="morinfo mt-30">
-                          <h6 class="mb-15">{{__('front.Email')}}</h6>
-                          <p>{{$email}}</p>
+                            <h6 class="mb-15">{{__('front.Email')}}</h6>
+                            <span class="text">{{$email}}</span>
                         </div>
                       </div>
                     </div>
@@ -114,6 +115,11 @@
                           <i class="fab fa-instagram mr-10"></i>
                         </a>
                       </li>
+                      <li class="cursor-pointer ">
+                        <a href="{{$whatsapp}}" target="_blank" class="hover-anim social-icon">
+                          <i class="fab fa-whatsapp mr-10"></i>
+                        </a>
+                      </li>
                     </ul>
               </div>
              </div>
@@ -123,8 +129,8 @@
                 <div class="col-lg-6 offset-lg-1 valign">
                   <div class="full-width">
                     <div class="sec-head mb-50">
-                      <h3 class="text-u ls1" data-i18n="sendMessage">{{__('front.send a')}}</h3>
-                      <h3 class="fw-200" data-i18n="message">{{__('front.message')}}</h3>
+                      <h3 class="text-u ls1" data-i18n="sendMessage">{{__('front.send a')}} <span class="fw-200">{{__('front.message')}}</span></h3>
+                      {{-- <h3 class="fw-200" data-i18n="message"></h3> --}}
                     </div>
                     <form id="contact-form" method="post" action="{{route('contact')}}">
                       <div class="messages"></div>
