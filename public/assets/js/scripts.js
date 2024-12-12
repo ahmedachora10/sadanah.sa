@@ -297,9 +297,15 @@ $(function () {
         console.log('client mouse enter');
 
     });
-    clients.on('mouseleave', () => clientSwiper.autoplay.start());
-    influencers.on('mouseenter', () => influencersSwiper.autoplay.stop());
-    influencers.on('mouseleave', () => influencersSwiper.autoplay.start());
+    clients.on('mouseleave', () => {
+        clientSwiper.autoplay.start();
+    });
+    influencers.on('mouseenter', () => {
+        influencersSwiper.autoplay.stop()
+    });
+    influencers.on('mouseleave', () => {
+        influencersSwiper.autoplay.start()
+    });
 
     /* ===============================  Carousel slider  =============================== */
 
