@@ -242,7 +242,8 @@ $(function () {
         spaceBetween: 5,
         autoplay: {
             delay: 1800,
-            disableOnInteraction: true,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
         },
         breakpoints: {
             0: {
@@ -270,7 +271,8 @@ $(function () {
         spaceBetween: 5,
         autoplay: {
             delay: 1800,
-            disableOnInteraction: true,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
         },
         breakpoints: {
             0: {
