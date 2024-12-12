@@ -290,9 +290,13 @@ $(function () {
         },
     });
 
-    const clients = document.querySelector('.swiper-clients .swiper-slide');
-    const influencers = document.querySelector('.swiper-influencers .swiper-slide');
-    clients.addEventListener('mouseenter', () => clientSwiper.autoplay.stop());
+    const clients = document.querySelectorAll('.swiper-clients .swiper-slide');
+    const influencers = document.querySelectorAll('.swiper-influencers .swiper-slide');
+    clients.addEventListener('mouseenter', () => {
+        clientSwiper.autoplay.stop();
+        console.log('client mouse enter');
+
+    });
     clients.addEventListener('mouseleave', () => clientSwiper.autoplay.start());
     influencers.addEventListener('mouseenter', () => influencersSwiper.autoplay.stop());
     influencers.addEventListener('mouseleave', () => influencersSwiper.autoplay.start());
