@@ -16,8 +16,8 @@ class AboutController extends Controller
     public function index()
     {
         $aboutU = About::firstOrCreate([]);
-        $images = $aboutU->media;
-        return view('admin.about-us.index', compact('aboutU', 'images'));
+        // $images = $aboutU->media;
+        return view('admin.about-us.index', compact('aboutU'));
     }
 
     /**
@@ -33,14 +33,11 @@ class AboutController extends Controller
      */
     public function store(StoreAboutRequest $request)
     {
+        $newWork = About::create($request->validated());
 
-        $request->validated();
-
-        $newWork = About::create($request->safe()->except('images'));
-
-        foreach($request->images as $img) {
-            $newWork->addMedia($img)->toMediaCollection();
-        }
+        // foreach($request->images as $img) {
+        //     $newWork->addMedia($img)->toMediaCollection();
+        // }
 
         return redirect()->route('about-us.index')->with('success', trans('message.create'));
     }
@@ -58,9 +55,9 @@ class AboutController extends Controller
      */
     public function edit(About $aboutU)
     {
-        $images = $aboutU->media;
+        // $images = $aboutU->media;
 
-        return view('admin.about-us.edit', compact('aboutU', 'images'));
+        return view('admin.about-us.edit', compact('aboutU'));
     }
 
     /**
@@ -68,17 +65,15 @@ class AboutController extends Controller
      */
     public function update(StoreAboutRequest $request, About $aboutU)
     {
-        $request->validated();
+        $aboutU->update($request->validated());
 
-        $aboutU->update($request->safe()->except('images'));
+        // if(count($request->images) > 0) {
+        //     $aboutU->media()->delete();
+        // }
 
-        if(count($request->images) > 0) {
-            $aboutU->media()->delete();
-        }
-
-        foreach($request->images ?? [] as $img) {
-            $aboutU->addMedia($img)->toMediaCollection();
-        }
+        // foreach($request->images ?? [] as $img) {
+        //     $aboutU->addMedia($img)->toMediaCollection();
+        // }
 
 
         return redirect()->route('about-us.index')->with('success', trans('message.update'));
@@ -92,9 +87,5 @@ class AboutController extends Controller
         $aboutU->delete();
 
         return redirect()->route('about-us.index')->with('success', trans('message.delete'));
-    }
-
-    public function removeMedia(Request $request) {
-        return response()->json([$request->input('id'), 'test' => 'ykead']);
     }
 }
