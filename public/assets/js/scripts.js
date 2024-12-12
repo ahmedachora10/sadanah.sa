@@ -264,7 +264,7 @@ $(function () {
         },
     });
 
-    const influencersSlider = new Swiper(".swiper-influencers", {
+    const influencersSlider = new Swiper(".swiper-influencers-desktop", {
         direction: "horizontal",
         loop: true,
         slidesPerView: 4,
@@ -291,7 +291,7 @@ $(function () {
     });
 
     const clients = $('.swiper-clients .swiper-slide');
-    const influencersContainer = $('.swiper-influencers .swiper-slide');
+    const influencersContainer = $('.swiper-influencers-desktop .swiper-slide');
     console.log(influencersContainer);
 
     clients.on('mouseenter', () => {

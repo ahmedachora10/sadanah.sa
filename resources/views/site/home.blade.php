@@ -517,7 +517,7 @@
                 </a>
                 </div>
               </div>
-              <div dir="{{app()->getLocale() == 'ar' ? 'rtl' : 'ltr'}}" class="team-slider-wrapper swiper swiper-influencers">
+              <div dir="{{app()->getLocale() == 'ar' ? 'rtl' : 'ltr'}}" class="team-slider-wrapper swiper swiper-influencers-desktop">
                 <div class="row team-slider swiper-wrapper">
                   @foreach ($infs as $inf)
 
