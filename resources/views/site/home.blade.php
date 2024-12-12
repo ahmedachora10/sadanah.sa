@@ -240,7 +240,7 @@
                                   @endif
                                 </h6>
                               </div>
-                              <a href="{{route('portfolio.details',['id'=>$work->id])}}" class="plink"></a>
+                              <a href="{{route('portfolio.details',$work)}}" class="plink"></a>
                             </div>
                           </div>
                         </div>

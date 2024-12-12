@@ -62,7 +62,7 @@
                     </div>
                     <div class="cont mt-20">
                       <h5 class="fz-22">
-                        <a href="{{route('portfolio.details',['id'=>$work->id])}}">
+                        <a href="{{route('portfolio.details',$work)}}">
                           @if (app()->getLocale() == 'ar')
                           {{$work->client_name_ar}}
                           @else

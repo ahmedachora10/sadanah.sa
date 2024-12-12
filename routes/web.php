@@ -46,7 +46,7 @@ Route::controller(HomeController::class)
         Route::get('/influencers', 'influencers')->name('influencers');
         Route::get('/influencers/{team}/details', 'influencers_details')->name('influencers.details');
         Route::get('/portfolio', 'portfolio')->name('portfolio');
-        Route::get('/portfolioDetails', 'portfolio_details')->name('portfolio.details');
+        Route::get('/portfolio/{work}/details', 'portfolio_details')->name('portfolio.details');
         Route::get('/blog', 'blog')->name('blog');
         Route::post('/addComment', 'add_comment')->name('add.comment');
         Route::get('/blog/{blog}/details', 'blog_details')->name('blog.details');

@@ -189,7 +189,7 @@
                           data-i18n="prevProject">
                             {{__('front.Prev Project')}}
                         </h6>
-                        <a href="{{route('portfolio.details',['id'=>$previousWork->id])}}" class="fz-40 fw-600 stroke">
+                        <a href="{{route('portfolio.details',$previousWork)}}" class="fz-40 fw-600 stroke">
                           @if (app()->getLocale() == 'ar')
                           {{$previousWork->client_name_ar}}
                           @else
@@ -215,7 +215,7 @@
                           >
                             {{__('front.Next Project')}}
                           </h6>
-                          <a href="{{route('portfolio.details',['id'=>$nextWork->id])}}" class="fz-40 fw-600 stroke">
+                          <a href="{{route('portfolio.details',$nextWork)}}" class="fz-40 fw-600 stroke">
                             @if (app()->getLocale() == 'ar')
                             {{$nextWork->client_name_ar}}
                             @else

@@ -82,9 +82,8 @@ class HomeController extends Controller
         return view('site.portfolio',compact('works','tags'));
     }
 
-    public function portfolio_details(Request $request)
+    public function portfolio_details(OurWork $work)
     {
-        $work = OurWork::where('id', $request->id)->first();
         $previousWork = OurWork::where('id', '<', $work->id)->orderBy('id', 'desc')->first();
         $nextWork = OurWork::where('id', '>', $work->id)->orderBy('id', 'asc')->first();
 
