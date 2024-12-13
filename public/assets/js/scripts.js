@@ -240,9 +240,9 @@ $(function () {
         loop: true,
         slidesPerView: 5,
         spaceBetween: 5,
-        effect: 'slide',
-        speed: 3000,
+        speed: 6000,
         freeMode: true,
+        allowTouchMove: false,
         autoplay: {
             delay: 0,
             disableOnInteraction: false,
@@ -273,7 +273,7 @@ $(function () {
         spaceBetween: 5,
         speed: 6000,
         freeMode: true,
-        // allowTouchMove: false,
+        allowTouchMove: false,
         autoplay: {
             delay: 0,
             disableOnInteraction: false,
