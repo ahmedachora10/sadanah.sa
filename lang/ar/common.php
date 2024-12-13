@@ -115,4 +115,6 @@ return [
     'task management' => 'إدارة المهام',
     'activity management' => 'إدارة سجل العمليات',
     'client management' => 'إدارة العملاء',
+    'influencer management' => 'إدارة المؤثرين',
+    'blog management' => 'إدارة المدونة',
 ];

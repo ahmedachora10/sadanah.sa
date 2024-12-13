@@ -70,4 +70,6 @@ return [
     'task management' => 'Tasks Management',
     'activity management' => 'Activities Management',
     'client management' => 'Clients Management',
+    'influencer management' => 'influencers Management',
+    'blog management' => 'blogs Management',
 ];
