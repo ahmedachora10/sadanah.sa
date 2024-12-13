@@ -568,12 +568,6 @@
             </div>
           </section>
 
-          <style>
-            .swiper-slide{
-                transition-timing-function: linear !important;
-            }
-          </style>
-
           <!-- ==================== End Team For Desktop ==================== -->
 
           <!-- ==================== Start Team For Mobile ==================== -->

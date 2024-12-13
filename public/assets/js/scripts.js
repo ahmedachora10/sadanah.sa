@@ -269,6 +269,7 @@ $(function () {
         loop: true,
         slidesPerView: 4,
         spaceBetween: 5,
+        effect: 'slide',
         autoplay: {
             delay: 1800,
             disableOnInteraction: false,
@@ -288,12 +289,6 @@ $(function () {
             },
         },
 
-    //     on: {
-    //     autoplayTimeLeft(s, time, progress) {
-    //       progressCircle.style.setProperty("--progress", 1 - progress);
-    //       progressContent.textContent = `${Math.ceil(time / 1000)}s`;
-    //     }
-    //   }
     });
 
     const clients = $('.swiper-clients .swiper-slide');
