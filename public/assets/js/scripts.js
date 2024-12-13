@@ -307,7 +307,7 @@ $(function () {
         swiper.autoplay.stop();
     }
     const startAutoplay = (swiper) => {
-        swiper.slideTo(swiper.activeIndex, 6000, false);
+        swiper.slideTo(swiper.activeIndex, 4000, false);
         swiper.autoplay.start();
     }
 
