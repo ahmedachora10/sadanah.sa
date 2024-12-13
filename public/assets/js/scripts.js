@@ -297,22 +297,24 @@ $(function () {
 
     const clients = $('.swiper-clients .swiper-slide');
     const influencersContainer = $('.swiper-influencers-desktop .swiper-slide');
-    console.log(influencersContainer);
 
-    clients.on('mouseenter', () => {
-        clientSwiper.autoplay.stop();
 
-    });
-    clients.on('mouseleave', () => {
-        clientSwiper.autoplay.start();
-    });
-    influencersContainer.on('mouseenter', () => {
-        influencersSlider.autoplay.stop();
-        console.log('influecers mouse enter');
-    });
-    influencersContainer.on('mouseleave', () => {
-        influencersSlider.autoplay.start();
-    });
+    const stopAutoplay = (swiper) => {
+        const swpTranslate = swiper.getTranslate();
+
+        swiper.setTranslate(swpTranslate);
+
+        swiper.autoplay.stop();
+    }
+    const startAutoplay = (swiper) => {
+        swiper.slideTo(swiper.activeIndex, 3000, false);
+        swiper.autoplay.start();
+    }
+
+    clients.on('mouseenter', stopAutoplay(clientSwiper));
+    clients.on('mouseleave', startAutoplay(clientSwiper));
+    influencersContainer.on('mouseenter', stopAutoplay(influencersSlider));
+    influencersContainer.on('mouseleave', startAutoplay(influencersSlider));
 
     /* ===============================  Carousel slider  =============================== */
 
