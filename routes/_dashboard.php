@@ -47,7 +47,10 @@ Route::middleware(['auth'])->group(function ()
         return view('admin.dashboard');
     })->middleware('verified')->name('dashboard');
 
-    Route::resource('users', UserController::class);
+    Route::resource('users', UserController::class)->middleware([
+        'store' => 'permission:user-create',
+        'destroy' => 'permission:user-delete',
+    ]);
 
     Route::resource('visions', VisionController::class);
 
