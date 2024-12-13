@@ -568,6 +568,12 @@
             </div>
           </section>
 
+          <style>
+            .swiper-slide{
+                transition-timing-function: ease-in-out !important;
+            }
+          </style>
+
           <!-- ==================== End Team For Desktop ==================== -->
 
           <!-- ==================== Start Team For Mobile ==================== -->

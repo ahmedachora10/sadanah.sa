@@ -239,7 +239,6 @@ $(function () {
         direction: "horizontal",
         loop: true,
         slidesPerView: 5,
-        speed: 500,
         spaceBetween: 5,
         autoplay: {
             delay: 1800,
@@ -269,12 +268,10 @@ $(function () {
         direction: "horizontal",
         loop: true,
         slidesPerView: 4,
-        speed: 50,
         spaceBetween: 5,
         autoplay: {
             delay: 1800,
             disableOnInteraction: false,
-            pauseOnMouseEnter: true,
         },
         breakpoints: {
             0: {
