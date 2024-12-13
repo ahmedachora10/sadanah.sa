@@ -270,7 +270,9 @@ $(function () {
         slidesPerView: 4,
         spaceBetween: 5,
         effect: 'slide',
-        speed: 5000,
+        speed: 3000,
+        freeMode: true, // Allow continuous movement without snapping
+      freeModeMomentum: false,
         autoplay: {
             delay: 0,
             disableOnInteraction: false,
