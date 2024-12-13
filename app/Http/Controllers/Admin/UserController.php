@@ -28,7 +28,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('admin.users.create');
+        $roles = Role::all();
+        return view('admin.users.create', compact('roles'));
     }
 
     /**
@@ -45,6 +46,8 @@ class UserController extends Controller
                 'images/users'), 'password' => Hash::make($request->input('password'))
             ]
         );
+
+        $user->addRoles($request->input('roles'));
 
         return redirect()->route('users.index')->with('success', trans('message.create'));
     }
@@ -81,7 +84,7 @@ class UserController extends Controller
                 ]
         );
 
-        // $user->syncRoles($request->input('roles'));
+        $user->syncRoles($request->input('roles'));
 
         return redirect()->route('users.index')->with('success', trans('message.update'));
     }

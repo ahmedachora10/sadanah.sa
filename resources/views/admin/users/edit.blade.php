@@ -32,12 +32,12 @@
 
                 <hr class="col-12 my-5">
 
-                {{-- @foreach ($roles as $role)
+                @foreach ($roles as $role)
                     <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-2">
                         <x-dashboard.options.option1 :title="$role->display_name" :value="$role->id" name="roles[]"
                             :checked="in_array($role->id, $user->roles->pluck('id')->toArray())" />
                     </div>
-                @endforeach --}}
+                @endforeach
             </div>
 
 
