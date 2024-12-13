@@ -270,7 +270,7 @@ $(function () {
         slidesPerView: 4,
         spaceBetween: 5,
         effect: 'slide',
-        speed: 1000,
+        speed: 4000,
         autoplay: {
             delay: 0,
             disableOnInteraction: false,
