@@ -369,6 +369,7 @@ return [
 
     'default_permissions' => [
         'user' => ['create', 'edit', 'delete', 'show'],
+        'dashboard' => ['show'],
         'setting' => ['create', 'show'],
         'role' => ['create', 'edit', 'delete', 'show'],
         'notification' => ['create', 'edit', 'delete', 'show'],

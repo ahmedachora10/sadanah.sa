@@ -45,7 +45,7 @@ Route::middleware(['auth'])->group(function ()
 
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
-    })->middleware('verified')->name('dashboard');
+    })->middleware(['verified', 'permission:dashboard-show'])->name('dashboard');
 
     Route::resource('users', UserController::class);
 
