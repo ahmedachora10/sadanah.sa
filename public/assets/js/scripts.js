@@ -312,9 +312,9 @@ $(function () {
     }
 
     clients.on('mouseenter', () => {stopAutoplay(clientSwiper)});
-    clients.on('mouseleave', () => startAutoplay(clientSwiper));
+    clients.on('mouseleave', () => {startAutoplay(clientSwiper)});
     influencersContainer.on('mouseenter', () => {stopAutoplay(influencersSlider)});
-    influencersContainer.on('mouseleave', () => startAutoplay(influencersSlider));
+    influencersContainer.on('mouseleave', () => {startAutoplay(influencersSlider)});
 
     /* ===============================  Carousel slider  =============================== */
 

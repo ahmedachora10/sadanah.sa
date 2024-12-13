@@ -143,11 +143,7 @@
                       class="header_content d-flex align-items-center justify-content-between"
                     >
                       <h2 class="content_title">
-                      @if (app()->getLocale() == 'ar')
-                      {{$job->title_ar}}
-                      @else
-                      {{$job->title_en}}
-                      @endif
+                      {{$job->title}}
                      </h2>
                       <a
                         class="confirm_button"
@@ -165,11 +161,7 @@
                         <li><span> {{__('front.Work location')}} : </span> <span>الرياض</span></li>
                         <li>
                           <span> {{__('front.Job Type')}} : </span> <span>
-                            @if (app()->getLocale() == 'ar')
-                            {{$job->type_ar}}
-                            @else
-                            {{$job->type_en}}
-                            @endif
+                            {{$job->type}}
                            </span>
                         </li>
                         <li><span> {{__('front.Job Number')}} : </span> <span>
@@ -181,112 +173,30 @@
                     <div class="res_content">
                       <h3 class="res-title">{{__('front.responsibility')}}</h3>
                       <div>
-                        @if (app()->getLocale() == 'ar')
-                        {{$job->responsibilities_ar}}
-                        @else
-                        {{$job->responsibilities_en}}
-                        @endif
+                        {{$job->responsibilities}}
                       </div>
                     </div>
                     <div class="res_content">
                       <h3 class="res-title"> {{__('front.requirements')}}:</h3>
                       <div>
-                        @if (app()->getLocale() == 'ar')
-                          {{$job->responsibilities_ar}}
-                          @else
-                          {{$job->responsibilities_en}}
-                          @endif
+                          {{$job->responsibilities}}
+
                       </div>
                     </div>
                     <div class="res_content">
                       <h3 class="res-title">  {{__('front.experience')}}:</h3>
                       <div>
-                        @if (app()->getLocale() == 'ar')
-                        {{$job->experience_ar}}
-                        @else
-                        {{$job->experience_en}}
-                        @endif
-                      </div>
+                        {{$job->experience}}
+                        </div>
                     </div>
                     <div class="res_content">
                       <h3 class="res-title">{{__('front.education_level')}} :</h3>
                       <div>
-                        @if (app()->getLocale() == 'ar')
-                        {{$job->education_ar}}
-                        @else
-                        {{$job->education_en}}
-                        @endif
+                        {{$job->education}}
                       </div>
                     </div>
                   </div>
                   @endforeach
-
-                  {{-- <div id="content-2" class="content-box">
-                    <div
-                      class="header_content d-flex align-items-center justify-content-between"
-                    >
-                      <h2 class="content_title">مدير فني / Art Director</h2>
-                      <a
-                        class="confirm_button"
-                        data-bs-toggle="modal"
-                        data-bs-target="#confirmForm"
-                        >قدم الان</a
-                      >
-                    </div>
-
-                    <div class="content_info">
-                      <h6 class="">المعلومات الاساسية</h6>
-                      <ul
-                        class="prime_info d-flex align-items-center justify-content-between"
-                      >
-                        <li>
-                          <span>موقع العمل : </span> <span>مكتب الرئيسي</span>
-                        </li>
-                        <li>
-                          <span>نوع التوظيف : </span> <span>دوام كامل</span>
-                        </li>
-                        <li><span>الرقم الوظيفي : </span> <span>HR14</span></li>
-                      </ul>
-                    </div>
-                    <div class="res_content">
-                      <h3 class="res-title">المسؤوليات</h3>
-                      <div>
-                        قيادة فريق الإبداع وتوجيهه نحو تحقيق الأهداف الإبداعية
-                        والإبتكار. تطوير أفكار إبداعية وحلول فنية لتلبية أهداف
-                        العلامة التجارية. مراجعة وتقييم المحتوى الإبداعي لضمان
-                        التوافق مع رؤية العلامة التجارية. التعاون مع فرق التسويق
-                        والتصميم لضمان التكامل بين الجوانب الإبداعية والتسويقية.
-                        تحفيز وتطوير مهارات أعضاء الفريق الإبداعي. الاحتفاظ
-                        بالاتصال مع أحدث اتجاهات الصناعة وتكنولوجيا الإبداع
-                      </div>
-                    </div>
-                    <div class="res_content">
-                      <h3 class="res-title">متطلبات الوظيفة:</h3>
-                      <div>
-                        • مهارات تنظيم وإدارة الوقت لتنسيق المهام وضمان تسليمها
-                        في المواعيد المحددة. • قدرات تواصل كتابية وشفهية فعالة
-                        للتفاعل مع الفرق الداخلية والجمهور الخارجي. • مهارات
-                        أساسية في حل المشكلات واتخاذ القرارات بالتنسيق مع
-                        المسؤولين. • مرونة واستعداد للتكيف مع التغيرات السريعة
-                        في بيئة العمل الإعلامي. • رغبة في التعلم والتطوير الذاتي
-                        لتحسين الأداء والارتقاء بالمهارات المهنية.
-                      </div>
-                    </div>
-                    <div class="res_content">
-                      <h3 class="res-title">مستوى الخبرة والمعرفة:</h3>
-                      <div>
-                        من 2 إلى 4 سنوات في مجالات التخطيط الإعلامي، أو الاتصال
-                        المؤسسي، أو العلاقات العامة.
-                      </div>
-                    </div>
-                    <div class="res_content">
-                      <h3 class="res-title">الخلفية التعليمية:</h3>
-                      <div>
-                        دبلوم أو بكالوريوس في الإعلام، التسويق، العلاقات العامة،
-                        أو تخصص ذي صلة.
-                      </div>
-                    </div>
-                  </div> --}}
                 </div>
               </div>
             </div>
