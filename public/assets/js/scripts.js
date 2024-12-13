@@ -270,7 +270,7 @@ $(function () {
         loop: true,
         slidesPerView: 4,
         speed: 500,
-        longSwipes: false,
+        longSwipesMs: 100,
         spaceBetween: 5,
         autoplay: {
             delay: 1800,
