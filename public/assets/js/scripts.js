@@ -273,6 +273,7 @@ $(function () {
         spaceBetween: 5,
         speed: 6000,
         freeMode: true,
+        allowTouchMove: false,
         autoplay: {
             delay: 0,
             disableOnInteraction: false,
