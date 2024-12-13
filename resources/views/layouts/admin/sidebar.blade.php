@@ -18,38 +18,50 @@
 
     <ul class="menu-inner py-1 ps ps--active-y">
 
-        {{-- @hasPermission('dashboard.show') --}}
+        @hasPermission('dashboard-show')
         <x-dashboard.sidebar.link :title="trans('sidebar.dashboard')" icon="home-circle" :link="route('dashboard')" />
-        {{-- @endhasPermission --}}
+        @endhasPermission
 
-        {{-- @hasPermission('user.show|setting.show') --}}
+        @hasPermission('user-show|setting-show')
         <x-dashboard.sidebar.link-head>
             <span>{{ trans('sidebar.all settings') }}</span>
         </x-dashboard.sidebar.link-head>
-        {{-- @endhasPermission --}}
+        @endhasPermission
 
-        {{-- @hasPermission('user.show|role.show|setting.show') --}}
+        @hasPermission('user-show|role-show|setting-show')
         <x-dashboard.sidebar.link :title="trans('sidebar.settings')" icon="cog" link="#" :hasSubMenu="true">
+            @hasPermission('user-show')
             <x-dashboard.sidebar.link :title="trans('sidebar.users')" :link="route('users.index')" />
+            @endhasPermission
 
-            {{-- @hasPermission('role.show') --}}
-                    <x-dashboard.sidebar.link :title="trans('sidebar.roles')" :link="route('roles.index')" />
-                {{-- @endhasPermission --}}
+            @hasPermission('role-show')
+            <x-dashboard.sidebar.link :title="trans('sidebar.roles')" :link="route('roles.index')" />
+            @endhasPermission
+
+            @hasPermission('setting-show')
             <x-dashboard.sidebar.link :title="trans('sidebar.general settings')" :link="route('settings.index')" />
+            @endhasPermission
 
+            @hasPermission('slider-show')
             <x-dashboard.sidebar.link :title="trans('sidebar.sliders')" :link="route('sliders.edit',1)" />
+            @endhasPermission
             <x-dashboard.sidebar.link :title="trans('sidebar.our clients')" :link="route('our-clients.index')" />
             <x-dashboard.sidebar.link :title="trans('sidebar.statistics')" :link="route('statistics.index')" />
             {{-- <x-dashboard.sidebar.link :title="trans('sidebar.headlines')" :link="route('headlines.index')" /> --}}
         </x-dashboard.sidebar.link>
 
-
+        @hasPermission('job-show|job_request-show')
         <x-dashboard.sidebar.link :title="trans('sidebar.jobs')" icon="server" link="#" :hasSubMenu="true"
-            :notification="$jobsRequestsCount">
+        :notification="$jobsRequestsCount">
+            @hasPermission('job_request-show')
             <x-dashboard.sidebar.link :title="trans('sidebar.job requests')" :link="route('job-requests.index')" :notification="$jobsRequestsCount" />
+            @endhasPermission
+            @hasPermission('job-show')
             <x-dashboard.sidebar.link :title="trans('sidebar.jobs')" :link="route('jobs.index')" />
+            @endhasPermission
             <x-dashboard.sidebar.link :title="trans('sidebar.cities')" :link="route('job-cities.index')" />
         </x-dashboard.sidebar.link>
+        @endhasPermission
 
         {{-- <x-dashboard.sidebar.link :title="trans('sidebar.subscribers')" icon="user" :link="route('subscribers.index')" /> --}}
         {{-- <x-dashboard.sidebar.link :title="trans('sidebar.services')" icon="server" :link="route('services.index')" /> --}}
@@ -62,11 +74,15 @@
         <x-dashboard.sidebar.link :title="trans('sidebar.contact us')" icon="user-pin" :link="route('contact-us.index')" :notification="$contactsCount" />
         <x-dashboard.sidebar.link :title="trans('sidebar.visions')" icon="user-pin" :link="route('visions.index')" />
         <x-dashboard.sidebar.link :title="trans('sidebar.faq')" icon="user-pin" :link="route('faq.index')" />
+        @hasPermission('influencer-show')
         <x-dashboard.sidebar.link :title="trans('sidebar.team')" icon="user-pin" :link="route('team.index')" />
+        @endhasPermission
         <x-dashboard.sidebar.link :title="trans('sidebar.about us')" icon="user-pin" :link="route('about-us.index')" />
         <x-dashboard.sidebar.link :title="trans('sidebar.reviews')" icon="star" :link="route('reviews.index')" />
         <x-dashboard.sidebar.link :title="trans('sidebar.why us')" icon="star" :link="route('why-us.index')" />
-        <x-dashboard.sidebar.link :title="trans('sidebar.blogs')" icon="star" :link="route('blogs.index')" />
+        @hasPermission('blog-show')
+            <x-dashboard.sidebar.link :title="trans('sidebar.blogs')" icon="star" :link="route('blogs.index')" />
+        @endhasPermission
 
         <!-- Misc -->
         {{-- <li class="menu-item">

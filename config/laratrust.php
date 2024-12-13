@@ -383,7 +383,7 @@ return [
         'service' => ['create', 'edit', 'delete', 'show'],
         'slider' => ['create', 'edit', 'delete', 'show'],
         'activity' => ['show'],
-        'client' => ['create', 'edit', 'show', 'delete', 'wallet'],
+        'client' => ['create', 'edit', 'show', 'delete'],
         'influencer' => ['create', 'edit', 'show', 'delete'],
         'blog' => ['create', 'edit', 'show', 'delete'],
     ]
