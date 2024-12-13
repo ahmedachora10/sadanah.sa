@@ -384,7 +384,7 @@ return [
         'slider' => ['create', 'edit', 'delete', 'show'],
         'activity' => ['show'],
         'client' => ['create', 'edit', 'show', 'delete', 'wallet'],
-        'influencers' => ['create', 'edit', 'show', 'delete'],
-        'blogs' => ['create', 'edit', 'show', 'delete'],
+        'influencer' => ['create', 'edit', 'show', 'delete'],
+        'blog' => ['create', 'edit', 'show', 'delete'],
     ]
 ];
