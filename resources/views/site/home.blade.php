@@ -521,7 +521,7 @@
                 <div class="row team-slider swiper-wrapper">
                   @foreach ($infs as $inf)
 
-                  <div class="col-lg-3 cont-slide swiper-slide" data-swiper-autoplay="500">
+                  <div class="col-lg-3 cont-slide swiper-slide">
                     <div class="item md-mb50 for_home">
                       <div class="img">
                         <a href="{{route('influencers.details',$inf)}}">
