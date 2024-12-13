@@ -267,7 +267,7 @@ $(function () {
     const influencersSlider = new Swiper(".swiper-influencers-desktop", {
         direction: "horizontal",
         loop: true,
-        slidesPerView: 4,
+        slidesPerView: 'auto',
         spaceBetween: 5,
         effect: 'slide',
         speed: 3000,
