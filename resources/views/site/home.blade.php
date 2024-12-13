@@ -570,7 +570,7 @@
 
           <style>
             .swiper-slide{
-                transition-timing-function: ease-in-out !important;
+                transition-timing-function: linear !important;
             }
           </style>
 
