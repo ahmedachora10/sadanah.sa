@@ -271,8 +271,7 @@ $(function () {
         loop: true,
         slidesPerView: 'auto',
         spaceBetween: 5,
-        effect: 'slide',
-        speed: 4000,
+        speed: 5000,
         freeMode: true,
         autoplay: {
             delay: 0,
