@@ -240,10 +240,12 @@ $(function () {
         loop: true,
         slidesPerView: 5,
         spaceBetween: 5,
+        effect: 'slide',
+        speed: 3000,
+        freeModeMomentum: false,
         autoplay: {
-            delay: 1800,
+            delay: 0,
             disableOnInteraction: false,
-            pauseOnMouseEnter: true,
         },
         breakpoints: {
             0: {
@@ -271,8 +273,7 @@ $(function () {
         spaceBetween: 5,
         effect: 'slide',
         speed: 3000,
-        freeMode: true, // Allow continuous movement without snapping
-      freeModeMomentum: false,
+        freeModeMomentum: false,
         autoplay: {
             delay: 0,
             disableOnInteraction: false,

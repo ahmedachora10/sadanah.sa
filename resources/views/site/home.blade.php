@@ -568,6 +568,11 @@
             </div>
           </section>
 
+          <style>
+            .swiper-wrapper{
+                transition-timing-function: linear !important;
+            }
+          </style>
 
           <!-- ==================== End Team For Desktop ==================== -->
 
