@@ -48,6 +48,7 @@ Route::middleware(['auth'])->group(function ()
     })->middleware('verified')->name('dashboard');
 
     Route::resource('users', UserController::class)->middleware([
+        'index' => 'permission:user-show',
         'store' => 'permission:user-create',
         'destroy' => 'permission:user-delete',
     ]);
