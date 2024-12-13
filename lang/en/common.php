@@ -50,4 +50,24 @@ return [
     'sign in' => 'Sign in',
 
     'order now' => 'Order Now',
+
+
+    'user management' => 'User Management',
+    'setting management' => 'Setting Management',
+    'dashboard management' => 'Dashboard Management',
+    'notification management' => 'Management notification ',
+    'job management' => 'Management job ',
+    'job_request management' => 'Jobs Requests Management',
+    'package management' => 'package Management',
+    'package_request management' => 'Management Packages Requests',
+    'subscriber management' => 'Subscribers Management',
+    'city management' => 'Cities Management',
+    'contact management' => 'Contacts  Management',
+    'review management' => 'Reviews Management',
+    'service management' => 'Services Management',
+    'entity management' => 'Entities Management',
+    'slider management' => 'Sliders Management',
+    'task management' => 'Tasks Management',
+    'activity management' => 'Activities Management',
+    'client management' => 'Clients Management',
 ];
