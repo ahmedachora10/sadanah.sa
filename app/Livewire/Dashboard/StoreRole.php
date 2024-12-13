@@ -54,7 +54,7 @@ class StoreRole extends Component
     private function handlePermissions($permissions) {
         $data = [];
         foreach ($permissions as $permission) {
-            $model = explode('.', $permission->name)[0];
+            $model = explode('-', $permission->name)[0];
             $data[$model][] = $permission;
         }
 
