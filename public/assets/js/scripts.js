@@ -269,9 +269,7 @@ $(function () {
         direction: "horizontal",
         loop: true,
         slidesPerView: 4,
-        speed: 500,
-        // longSwipesMs: 100,
-        resistance: false,
+        speed: 0,
         spaceBetween: 5,
         autoplay: {
             delay: 1800,
