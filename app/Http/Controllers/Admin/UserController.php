@@ -13,7 +13,12 @@ use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
 
-    public function __construct(protected UploadFileService $fileService) {}
+    public function __construct(protected UploadFileService $fileService) {
+        $this->middleware('permission:user-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:user-edit',   ['only' => ['edit', 'update']]);
+        $this->middleware('permission:user-show',   ['only' => ['show', 'index']]);
+        $this->middleware('permission:user-delete',   ['only' => ['destroy']]);
+    }
 
     /**
      * Display a listing of the resource.
