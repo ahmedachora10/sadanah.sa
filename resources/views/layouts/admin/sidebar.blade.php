@@ -32,9 +32,9 @@
         <x-dashboard.sidebar.link :title="trans('sidebar.settings')" icon="cog" link="#" :hasSubMenu="true">
             <x-dashboard.sidebar.link :title="trans('sidebar.users')" :link="route('users.index')" />
 
-            {{-- @hasPermission('role.show')
+            {{-- @hasPermission('role.show') --}}
                     <x-dashboard.sidebar.link :title="trans('sidebar.roles')" :link="route('roles.index')" />
-                @endhasPermission --}}
+                {{-- @endhasPermission --}}
             <x-dashboard.sidebar.link :title="trans('sidebar.general settings')" :link="route('settings.index')" />
 
             <x-dashboard.sidebar.link :title="trans('sidebar.sliders')" :link="route('sliders.edit',1)" />
