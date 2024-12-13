@@ -242,7 +242,7 @@ $(function () {
         spaceBetween: 5,
         effect: 'slide',
         speed: 3000,
-        freeModeMomentum: false,
+        freeMode: true,
         autoplay: {
             delay: 0,
             disableOnInteraction: false,
@@ -272,8 +272,8 @@ $(function () {
         slidesPerView: 'auto',
         spaceBetween: 5,
         effect: 'slide',
-        speed: 3000,
-        freeModeMomentum: false,
+        speed: 4000,
+        freeMode: true,
         autoplay: {
             delay: 0,
             disableOnInteraction: false,
