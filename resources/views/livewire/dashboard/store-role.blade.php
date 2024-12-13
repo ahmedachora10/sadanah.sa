@@ -41,7 +41,7 @@
 
                     @foreach ($allPermissions as $key => $permission)
                         <tr>
-                            <td class="text-nowrap fw-medium">{{ trans('common.' . str($key)->after('-')->value() . ' management') }}</td>
+                            <td class="text-nowrap fw-medium">{{ trans('common.' . str($key)->before('-')->value() . ' management') }}</td>
                             <td>
                                 <div class="d-flex">
                                     @foreach ($permission as $item)
