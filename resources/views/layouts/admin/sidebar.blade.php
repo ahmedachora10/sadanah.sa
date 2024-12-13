@@ -49,6 +49,7 @@
             <x-dashboard.sidebar.link :title="trans('sidebar.statistics')" :link="route('statistics.index')" />
             {{-- <x-dashboard.sidebar.link :title="trans('sidebar.headlines')" :link="route('headlines.index')" /> --}}
         </x-dashboard.sidebar.link>
+        @endhasPermission
 
         @hasPermission('job-show|job_request-show')
         <x-dashboard.sidebar.link :title="trans('sidebar.jobs')" icon="server" link="#" :hasSubMenu="true"
