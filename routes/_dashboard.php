@@ -41,7 +41,7 @@ Route::middleware(['auth'])->group(function ()
     {
         Route::get('/', 'index')->name('index');
         Route::post('/', 'store')->name('store');
-    });
+    })->middleware('permission:setting-create|setting-show');
 
     Route::get('/dashboard', function () {
         return view('admin.dashboard');

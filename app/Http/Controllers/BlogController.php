@@ -9,7 +9,12 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
-    public function __construct(protected UploadFileService $uploadFileService) {}
+    public function __construct(protected UploadFileService $uploadFileService) {
+        $this->middleware('permission:blog-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:blog-edit',   ['only' => ['edit', 'update']]);
+        $this->middleware('permission:blog-show',   ['only' => ['show', 'index']]);
+        $this->middleware('permission:blog-delete',   ['only' => ['destroy']]);
+    }
     /**
      * Display a listing of the resource.
      */
