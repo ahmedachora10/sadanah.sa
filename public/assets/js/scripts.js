@@ -311,10 +311,10 @@ $(function () {
         swiper.autoplay.start();
     }
 
-    clients.on('mouseenter', stopAutoplay(clientSwiper));
-    clients.on('mouseleave', startAutoplay(clientSwiper));
-    influencersContainer.on('mouseenter', stopAutoplay(influencersSlider));
-    influencersContainer.on('mouseleave', startAutoplay(influencersSlider));
+    clients.on('mouseenter', () => {stopAutoplay(clientSwiper)});
+    clients.on('mouseleave', () => startAutoplay(clientSwiper));
+    influencersContainer.on('mouseenter', () => {stopAutoplay(influencersSlider)});
+    influencersContainer.on('mouseleave', () => startAutoplay(influencersSlider));
 
     /* ===============================  Carousel slider  =============================== */
 
