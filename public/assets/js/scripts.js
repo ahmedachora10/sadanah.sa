@@ -270,8 +270,9 @@ $(function () {
         slidesPerView: 4,
         spaceBetween: 5,
         effect: 'slide',
+        speed: 2000,
         autoplay: {
-            delay: 1800,
+            delay: 0,
             disableOnInteraction: false,
         },
         breakpoints: {
