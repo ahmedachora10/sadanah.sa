@@ -35,6 +35,8 @@ class InfluencerJoinRequest extends Component
             ];
         }
 
+        dd($this->form->all());
+
         $request = ModelsInfluencerJoinRequest::create([
             'username' => $this->form->username,
             'phone' => $this->form->phone,
@@ -43,7 +45,7 @@ class InfluencerJoinRequest extends Component
             'interests' => $this->form->interests,
         ] + $data);
 
-        if($this->form->attachments !== null)
+        if($this->form->attachments != null)
             $request->addMedia($this->form->attachments);
 
         User::first()->notify(new UserActionNotification([
@@ -52,7 +54,8 @@ class InfluencerJoinRequest extends Component
             'type' => ModelsInfluencerJoinRequest::class,
         ]));
 
-        $this->dispatch('toast-message', message: trans('message.create'));
+        session()->put('success', '');
+        $this->dispatch('refresh-alert');
 
         $this->form->reset();
 
