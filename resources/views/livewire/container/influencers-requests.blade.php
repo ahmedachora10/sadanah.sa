@@ -57,6 +57,13 @@
                 </li>
                 @endif
                 @endforeach
+                <li class="d-flex align-items-center mb-4">
+                    <i class="bx bx-check"></i>
+                    <span class="fw-medium mx-2">{{trans('table.columns.attachments')}}:</span>
+                    <a href="{{$request?->thumbnail}}">
+                        <i class="bx bx-file text-primary"></i>
+                    </a>
+                </li>
             </ul>
         </div>
     </x-dashboard.modals.modal1>

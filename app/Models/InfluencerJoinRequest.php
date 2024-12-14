@@ -31,4 +31,8 @@ class InfluencerJoinRequest extends Model implements HasMedia
         'x' => 'json',
         'youtube' => 'json',
     ];
+
+    public function getThumbnailAttribute() {
+        return $this->getFirstMedia()?->getUrl() ?? '';
+    }
 }
