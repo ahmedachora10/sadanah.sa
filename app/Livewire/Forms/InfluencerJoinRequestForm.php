@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Forms;
 
+use Illuminate\Http\UploadedFile;
 use Livewire\Attributes\Validate;
 use Livewire\Form;
 
@@ -68,7 +69,6 @@ class InfluencerJoinRequestForm extends Form
     #[Validate('required|integer|min:0')]
     public int $snapchat_followers = 0;
 
-
     #[Validate('nullable|file')]
-    public string $attachments = '';
+    public ?UploadedFile $attachments = null;
 }

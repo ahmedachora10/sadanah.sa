@@ -31,4 +31,6 @@
         </div>
     </section>
 
+    <livewire:toast />
+
 </x-front-layout>

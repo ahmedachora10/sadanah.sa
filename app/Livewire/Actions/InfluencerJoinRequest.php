@@ -5,9 +5,11 @@ namespace App\Livewire\Actions;
 use App\Livewire\Forms\InfluencerJoinRequestForm;
 use App\Models\InfluencerJoinRequest as ModelsInfluencerJoinRequest;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class InfluencerJoinRequest extends Component
 {
+    use WithFileUploads;
     public InfluencerJoinRequestForm $form;
     public array $socialMediaPlatforms = [
         'instagram',
@@ -31,13 +33,16 @@ class InfluencerJoinRequest extends Component
             ];
         }
 
-        ModelsInfluencerJoinRequest::create([
+        $request = ModelsInfluencerJoinRequest::create([
             'username' => $this->form->username,
             'phone' => $this->form->phone,
             'email' => $this->form->email,
             'content_provided' => $this->form->content_provided,
             'interests' => $this->form->interests,
         ] + $data);
+
+        if($this->form->attachments !== null)
+            $request->addMedia($this->form->attachments);
 
         $this->dispatch('toast-message', message: trans('message.create'));
 
