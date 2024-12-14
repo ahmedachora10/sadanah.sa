@@ -25,9 +25,9 @@ class InfluencerJoinRequest extends Component
 
         foreach($this->socialMediaPlatforms as $item) {
             $data[$item] = [
-                $item . '_username' => $this->form->${$item . '_username'},
-                $item . '_link' => $this->form->${$item . '_link'},
-                $item . '_followers' => $this->form->${$item . '_followers'},
+                'username' => $this->form->{$item . '_username'},
+                'link' => $this->form->{$item . '_link'},
+                'followers' => $this->form->{$item . '_followers'},
             ];
         }
 
