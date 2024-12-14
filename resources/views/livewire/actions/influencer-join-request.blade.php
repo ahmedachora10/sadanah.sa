@@ -45,7 +45,7 @@
             <x-dashboard.input-group type="file" name="attachments" wire:model.defer="form.attachments"
                 :title="trans('table.columns.attachments')" />
         </div>
-        <div class="col-12">
+        <div class="col-12 form_modal">
             <button class="send_button w-auto">{{ trans('common.save') }}</button>
         </div>
     </div>
