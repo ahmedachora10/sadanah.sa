@@ -6,6 +6,7 @@ use App\Livewire\Forms\InfluencerJoinRequestForm;
 use App\Models\InfluencerJoinRequest as ModelsInfluencerJoinRequest;
 use App\Models\User;
 use App\Notifications\UserActionNotification;
+use App\Services\UploadFileService;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
@@ -45,8 +46,10 @@ class InfluencerJoinRequest extends Component
             'interests' => $this->form->interests,
         ] + $data);
 
-        if($this->form->attachments != null)
-            $request->addFromMediaLibraryRequest([$this->form->attachments]);
+        if($this->form->attachments != null) {
+            $filePath = (new UploadFileService)->store($this->form->attachments, 'docs/influencers');
+            $request->addMediaFromDisk($filePath, 'public');
+        }
 
         User::first()->notify(new UserActionNotification([
             'title' => trans('new message'),
