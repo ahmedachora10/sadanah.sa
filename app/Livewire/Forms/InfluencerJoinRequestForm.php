@@ -10,7 +10,7 @@ class InfluencerJoinRequestForm extends Form
     #[Validate('required|min:2|string')]
     public string $username = '';
 
-    #[Validate('required|numirec')]
+    #[Validate('required|numeric')]
     public string $phone = '';
 
     #[Validate('required|string|email')]
