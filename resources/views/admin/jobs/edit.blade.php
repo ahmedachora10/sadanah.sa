@@ -19,7 +19,7 @@
             </div>
 
             <div class="col-md-6 col-12 mb-3">
-                <x-dashboard.input-group type="text" name="number" :value="$job->number" :title="trans('table.columns.number')" />
+                <x-dashboard.input-group type="text" name="number" :value="$job->number" :title="trans('table.columns.job number')" />
             </div>
 
             <div class="col-md-6 col-12 mb-3">
