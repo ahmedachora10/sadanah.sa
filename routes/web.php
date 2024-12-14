@@ -51,7 +51,7 @@ Route::controller(HomeController::class)
         Route::get('/contactus', 'contact')->name('contactus');
     });
 
-Route::view('influencers/join-request','influencer-join-request')->name('influencers.join-request');
+Route::view('influencers/join-request','site.influencer-join-request')->name('influencers.join-request');
 
 Route::get('/switch-langauge/{locale?}', function ($locale = 'ar') {
     Session::put('lang', $locale);
