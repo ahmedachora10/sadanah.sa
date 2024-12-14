@@ -1,6 +1,6 @@
 <div class="col-md-8 col-sm-10 col-12 mx-auto">
     <x-dashboard.alert />
-    <div class="row align-content-end">
+    <form wire:submit="save" class="row align-content-end">
         <div class="col-md-4 col-12 mb-3">
             <x-dashboard.input-group type="text" name="form.username" wire:model.defer="form.username"
                 :title="trans('table.columns.name')" />
@@ -47,7 +47,7 @@
                 :title="trans('table.columns.attachments')" />
         </div>
         <div class="col-12 form_modal">
-            <button class="send_button w-auto" wire:click="save">{{ trans('common.save') }}</button>
+            <button class="send_button w-auto" type="submit">{{ trans('common.save') }}</button>
         </div>
-    </div>
+    </form>
 </div>
