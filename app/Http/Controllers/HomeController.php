@@ -126,7 +126,7 @@ class HomeController extends Controller
 
     public function job()
     {
-        $jobs = JobPost::get();
+        $jobs = JobPost::all();
         return view('site.jobs',compact('jobs'));
     }
 
