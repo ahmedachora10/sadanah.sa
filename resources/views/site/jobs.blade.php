@@ -36,109 +36,13 @@
                 <div class="col-lg-4 p-0">
                   <!-- Sidebar -->
                   <div class="sidebar">
-                    {{-- <div class="search-box">
-                      <input
-                        type="text"
-                        name="search-post"
-                        placeholder="Search"
-                      />
-                      <span class="icon pe-7s-search"></span>
-                    </div> --}}
-                    {{-- <div id="job-list">
-                      <!-- First Job Card -->
-                      <div
-                        class="card_job chance job-details chance-detai"
-                        onclick="showContent(1)"
-                      >
-                        <div class="widget catogry">
-                          <h6 class="title-widget mb-2 pb-2">{{__('front.Available opportunities')}}</h6>
-                          <div>
-                            <ul class="media_planning">
-                              <li>
-                                <span> {{__('front.Work location')}} : </span> <span>الرياض</span>
-                              </li>
-                              <li>
-                                <span>{{__('front.Job Type')}} : </span>
-                                <span>دوام كامل</span>
-                              </li>
-                              <li>
-                                <span>Job Number{{__('front.Job Type')}}  : </span> <span>HR14</span>
-                              </li>
-                            </ul>
-                            <ul class="summary">
-                              <h6 class="title-widget mb-2 pb-2">
-                                الفرص المتاحة
-                              </h6>
-                              <li class="responsibility">
-                                المسؤوليات الخاصة بالوظيفة هنا
-                              </li>
-                            </ul>
-                            <div class="job-icon d-flex align-items-center">
-                              <div>
-                                <i class="fas fa-briefcase"></i>
-                                <span>---</span>
-                              </div>
-                              <div>
-                                <i class="fas fa-calendar-alt"></i>
-                                <span>نوفمبر 18, 2024</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- Second Job Card -->
-                      <div
-                        class="card_job ob-details mange-detail"
-                        onclick="showContent(2)"
-                      >
-                        <div class="widget catogry">
-                          <h6 class="title-widget mb-2 pb-2">
-                            مدير فني / Art Director
-                          </h6>
-                          <div>
-                            <ul class="media_planning">
-                              <li>
-                                <span>موقع العمل : </span>
-                                <span>المكتب الرئيسي</span>
-                              </li>
-                              <li>
-                                <span>نوع التوظيف : </span>
-                                <span>دوام كامل</span>
-                              </li>
-                              <li>
-                                <span>الرقم الوظيفي : </span> <span>HR14</span>
-                              </li>
-                            </ul>
-                            <ul class="summary">
-                              <h6 class="title-widget mb-2 pb-2">
-                                الفرص المتاحة
-                              </h6>
-                              <li class="responsibility">
-                                المسؤوليات الخاصة بالوظيفة هنا
-                              </li>
-                            </ul>
-                            <div class="job-icon d-flex align-items-center">
-                              <div>
-                                <i class="fas fa-briefcase"></i>
-                                <span>---</span>
-                              </div>
-                              <div>
-                                <i class="fas fa-calendar-alt"></i>
-                                <span>نوفمبر 18, 2024</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div> --}}
                   </div>
                 </div>
                 <div class="col-lg-8 position-relative mt-3">
                   <!-- Dynamic Content Section -->
                   @foreach ($jobs as $job)
 
-                  <div id="content-1" class="content-box">
+                  <div id="content-{{$job->id}}" class="content-box">
                     <div
                       class="header_content d-flex align-items-center justify-content-between"
                     >
