@@ -9,9 +9,6 @@
         <x-dashboard.input-group type="email" name="email" wire:model.defer="form.email" :title="trans('table.columns.email')" />
     </div>
     <div class="col-12">
-        <x-dashboard.input-group type="text" name="interests" wire:model.defer="form.interests" :title="trans('table.columns.interests')" />
-    </div>
-    <div class="col-12">
         <x-dashboard.text-area type="text" name="content_provided" wire:model.defer="form.content_provided" :title="trans('table.columns.content provided')" />
     </div>
 
@@ -28,6 +25,12 @@
             <x-dashboard.input-group type="text" name="{{$item}}_link" wire:model.defer="form.{{$item}}_link"
                 :title="trans('table.columns.link')" />
         </div>
+
+        <div class="col-md-6 col-12">
+            <x-dashboard.input-group type="text" name="interests" wire:model.defer="form.interests"
+                :title="trans('table.columns.interests')" />
+        </div>
+
         <div class="col-md-4 col-12">
             <x-dashboard.input-group type="number" name="{{$item}}_followers" wire:model.defer="form.{{$item}}_followers"
                 :title="trans('table.columns.followers')" />
@@ -35,7 +38,7 @@
 
     @endforeach
 
-    <div class="col-12">
+    <div class="col-md-6 col-12">
         <x-dashboard.input-group type="file" name="attachments" wire:model.defer="form.attachments"
             :title="trans('table.columns.attachments')" />
     </div>
