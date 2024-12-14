@@ -17,13 +17,13 @@ return new class extends Migration
             $table->string('phone');
             $table->string('email');
             $table->longText('content_provided');
-            $table->mediumText('interests');
+            $table->string('interests');
 
-            $table->json('snapchat')->default([]);
-            $table->json('instagram')->default([]);
-            $table->json('tiktok')->default([]);
-            $table->json('x')->default([]);
-            $table->json('youtube')->default([]);
+            $table->json('snapchat')->nullable();
+            $table->json('instagram')->nullable();
+            $table->json('tiktok')->nullable();
+            $table->json('x')->nullable();
+            $table->json('youtube')->nullable();
             $table->timestamps();
         });
     }
