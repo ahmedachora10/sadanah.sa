@@ -41,7 +41,7 @@
             <ul class="list-unstyled my-3 py-1">
                 @foreach ($request?->getFillable() ?? [] as $item)
                 @if(in_array($item, ['instagram','snapchat','tiktok','youtube','x']))
-                    <li class="mt-3 mb-2"><h5 class="text-muted fw-bold">{{ trans('table.columns.'.$item) }}</h5></li>
+                    <li class="mt-3 mb-2"><h5 class="text-muted fw-bold">{{ trans('front.'.$item) }}</h5></li>
                     @foreach ($request->$item ?? [] as $key => $inf)
                         <li class="d-flex align-items-center mb-4">
                             <i class="bx bx-check"></i>

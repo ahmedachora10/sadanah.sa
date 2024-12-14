@@ -143,6 +143,8 @@ return [
 
         'interests' => 'الإهتمامات',
         'content provided' => 'تفاصيل عن المحتوى المقدم',
+        'username' => 'اسم المستخدم',
+        'content_provider' => 'المحتوى'
     ],
     'empty' => 'لا يوجد عناصر لعرضها',
 ];
