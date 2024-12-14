@@ -28,5 +28,6 @@ return [
     'blogs' => 'Blogs',
     'reviews' => 'Reviews',
     'job requests' => 'Job Requests,',
-    'service requests' => 'Service Requests'
+    'service requests' => 'Service Requests',
+    'join requests' => 'Join Requests',
 ];

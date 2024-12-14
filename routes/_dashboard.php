@@ -25,6 +25,7 @@ use App\Http\Controllers\Admin\VisionController;
 use App\Http\Controllers\Admin\WhyUsController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProfileController;
+use App\Livewire\Container\InfluencersRequests;
 use App\Livewire\Dashboard\Container\ContactUsContainer;
 use App\Livewire\Dashboard\Container\JobRequestsContainer;
 use App\Livewire\Dashboard\Container\ServiceRequestsContainer;
@@ -80,6 +81,7 @@ Route::middleware(['auth'])->group(function ()
     Route::resource('headlines', HeadlineController::class)->only(['index', 'update']);
     Route::get('service-requests', ServiceRequestsContainer::class)->name('services.requests');
     Route::resource('faq', FaqController::class);
+    Route::get('team/requests',InfluencersRequests::class)->name('team.requests');
     Route::resource('team', TeamController::class);
     Route::put('about-us/media/remove', [AboutController::class, 'removeMedia'])
         ->name('about-us.media.remove');

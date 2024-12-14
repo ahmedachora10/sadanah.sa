@@ -35,4 +35,5 @@ return [
     'why us' => 'ما يميزنا',
     'sections' => 'الاقسام',
     'blogs' => 'المدونة',
+    'join requests' => 'طلبات الانضمام',
 ];

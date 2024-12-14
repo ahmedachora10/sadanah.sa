@@ -4,6 +4,8 @@ namespace App\Livewire\Actions;
 
 use App\Livewire\Forms\InfluencerJoinRequestForm;
 use App\Models\InfluencerJoinRequest as ModelsInfluencerJoinRequest;
+use App\Models\User;
+use App\Notifications\UserActionNotification;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
@@ -43,6 +45,12 @@ class InfluencerJoinRequest extends Component
 
         if($this->form->attachments !== null)
             $request->addMedia($this->form->attachments);
+
+        User::first()->notify(new UserActionNotification([
+            'title' => trans('new message'),
+            'message' => $request->username,
+            'type' => ModelsInfluencerJoinRequest::class,
+        ]));
 
         $this->dispatch('toast-message', message: trans('message.create'));
 
