@@ -41,7 +41,7 @@
             <ul class="list-unstyled my-3 py-1">
                 @foreach ($request?->getFillable() ?? [] as $item)
                 @if(in_array($item, ['instagram','snapchat','tiktok','youtube','x']))
-                    @foreach ($request->{$item} ?? [] as $inf)
+                    @foreach ($request->$item ?? [] as $inf)
                         <li class="d-flex align-items-center mb-4">
                             <i class="bx bx-check"></i>
                             <span class="fw-medium mx-2">{{trans('table.columns.'.$item.'_'.$inf)}}:</span>
@@ -52,7 +52,7 @@
                 <li class="d-flex align-items-center mb-4">
                     <i class="bx bx-check"></i>
                     <span class="fw-medium mx-2">{{trans('table.columns.'.$item)}}:</span>
-                    <span>{{$request?->{$item}}}</span>
+                    <span>{{$request?->$item}}</span>
                 </li>
                 @endif
                 @endforeach
