@@ -13,6 +13,7 @@ class JobPost extends Model
     use HasFactory, HasTranslation;
 
     public $fillable = [
+        'job_city_id',
         'title_ar',
         'title_en',
         'number',
