@@ -1,4 +1,4 @@
-<div class="toast align-items-center bg-{{$type}} {{$message != '' ? 'show' : 'hide'}} " role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast align-items-center {{$message != '' ? 'show' : 'hide'}} " role="alert" aria-live="assertive" aria-atomic="true">
     <div class="d-flex">
         <div class="toast-body">
             {{$message}}
