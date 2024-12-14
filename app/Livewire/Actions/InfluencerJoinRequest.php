@@ -25,7 +25,7 @@ class InfluencerJoinRequest extends Component
             $rules["form.{$platform}_followers"] = 'required|integer|min:0';
         }
 
-        $this->validate($rules);
+        $this->validate($rules + $this->form->getRules());
 
     }
 
