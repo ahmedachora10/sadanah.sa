@@ -77,9 +77,9 @@
         <x-dashboard.sidebar.link :title="trans('sidebar.visions')" icon="user-pin" :link="route('visions.index')" />
         <x-dashboard.sidebar.link :title="trans('sidebar.faq')" icon="user-pin" :link="route('faq.index')" />
         @hasPermission('influencer-show')
-        <x-dashboard.sidebar.link :title="trans('sidebar.jobs')" icon="server" link="#" :hasSubMenu="true"
+        <x-dashboard.sidebar.link :title="trans('sidebar.team')" icon="server" link="#" :hasSubMenu="true"
             :notification="$influencersRequestsCount">
-            <x-dashboard.sidebar.link :title="trans('sidebar.team')" icon="user-pin" :link="route('team.index')" />
+            <x-dashboard.sidebar.link :title="trans('sidebar.team')" :link="route('team.index')" />
             <x-dashboard.sidebar.link :title="trans('sidebar.join requests')" icon="user-pin" :link="route('team.requests')" />
         </x-dashboard.sidebar.link>
         @endhasPermission
