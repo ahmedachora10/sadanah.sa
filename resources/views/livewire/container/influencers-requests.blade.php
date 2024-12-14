@@ -57,7 +57,7 @@
                 </li>
                 @endif
                 @endforeach
-                @if($request?->thumbnail !== '')
+                @if($request?->thumbnail != '')
                 <li class="d-flex align-items-center mb-4">
                     <i class="bx bx-check"></i>
                     <span class="fw-medium mx-2">{{trans('table.columns.attachments')}}:</span>
