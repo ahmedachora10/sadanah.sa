@@ -41,6 +41,6 @@ class JobPost extends Model
     }
 
     public function city() : BelongsTo {
-        return $this->belongsTo(JobCity::class);
+        return $this->belongsTo(JobCity::class, 'job_city_id');
     }
 }
