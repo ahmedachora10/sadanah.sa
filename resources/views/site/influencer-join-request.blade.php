@@ -26,7 +26,7 @@
     <section class="blog section-padding">
         <div class="container">
             <div class="row xlg-marg">
-                <livewire:container.influencer-join-request />
+                <livewire:actions.influencer-join-request />
             </div>
         </div>
     </section>
