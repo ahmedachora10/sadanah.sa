@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Enums\JobType;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\StoreJobPostRequest;
 use App\Models\JobCity;
@@ -24,7 +25,8 @@ class JobPostController extends Controller
     public function create()
     {
         $jobCities = JobCity::all();
-        return view('admin.jobs.create', compact('jobCities'));
+        $jobTypes = JobType::cases();
+        return view('admin.jobs.create', compact('jobCities', 'jobTypes'));
     }
 
     /**
@@ -50,7 +52,8 @@ class JobPostController extends Controller
     public function edit(JobPost $job)
     {
         $jobCities = JobCity::all();
-        return view('admin.jobs.edit', compact('job', 'jobCities'));
+        $jobTypes = JobType::cases();
+        return view('admin.jobs.edit', compact('job', 'jobCities', 'jobTypes'));
     }
 
     /**

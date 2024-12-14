@@ -63,6 +63,12 @@ return [
         'city' => 'City',
         'whatsapp' => 'Whatsapp',
         'author' => 'Author',
+        'responsibilities' => 'Responsibilities',
+        'requirements' => 'Requirements',
+        'experience' => 'Experience',
+        'education' => 'Education',
+        'job type' => 'Job Type',
+        'job number' => 'Job Number',
     ],
     'empty' => 'No Records'
 ];

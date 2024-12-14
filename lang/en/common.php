@@ -72,4 +72,7 @@ return [
     'client management' => 'Clients Management',
     'influencer management' => 'influencers Management',
     'blog management' => 'blogs Management',
+
+    'full time' => 'Full Time',
+    'part time' => 'Part Time',
 ];

@@ -117,4 +117,7 @@ return [
     'client management' => 'إدارة العملاء',
     'influencer management' => 'إدارة المؤثرين',
     'blog management' => 'إدارة المدونة',
+
+    'full time' => 'دوام كامل',
+    'part time' => 'دوام جزئي',
 ];

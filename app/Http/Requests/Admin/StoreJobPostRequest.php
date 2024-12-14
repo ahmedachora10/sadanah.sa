@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests\Admin;
 
+use App\Enums\JobType;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rules\Enum;
 
 class StoreJobPostRequest extends FormRequest
 {
@@ -18,8 +20,7 @@ class StoreJobPostRequest extends FormRequest
             'title_ar' => 'nullable|string',
             'title_en' => 'nullable|string',
             'number' => 'nullable|string',
-            'type_ar' => 'nullable|string',
-            'type_en' => 'nullable|string',
+            'type' => ['required', new Enum(JobType::class)],
             'responsibilities_ar' => 'nullable|string',
             'responsibilities_en' => 'nullable|string',
             'requirements_ar' => 'nullable|string',

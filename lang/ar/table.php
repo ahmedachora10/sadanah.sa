@@ -132,6 +132,12 @@ return [
         'background image' => 'الصورة الخلفية',
         'whatsapp' => 'رابط الواتساب',
         'author' => 'الكاتب',
+        'responsibilities' => 'المسئوليات',
+        'requirements' => 'المتطلبات',
+        'experience' => 'الخبرة',
+        'education' => 'التعليم',
+        'job type' => 'نوع الوظيفة',
+        'job number' => 'الرقم الوظيفي',
     ],
     'empty' => 'لا يوجد عناصر لعرضها',
 ];

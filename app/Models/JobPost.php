@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\JobType;
 use App\Traits\HasTranslation;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -14,11 +15,10 @@ class JobPost extends Model
 
     public $fillable = [
         'job_city_id',
+        'number',
+        'type',
         'title_ar',
         'title_en',
-        'number',
-        'type_ar',
-        'type_en',
         'responsibilities_ar',
         'responsibilities_en',
         'requirements_ar',
@@ -27,6 +27,10 @@ class JobPost extends Model
         'experience_en',
         'education_ar',
         'education_en',
+    ];
+
+    protected $casts = [
+        'type' => JobType::class
     ];
 
     protected static function boot()

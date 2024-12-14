@@ -15,11 +15,10 @@ return new class extends Migration
         Schema::create('job_posts', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(JobCity::class)->nullable();
+            $table->enum('type', [1,2])->nullable();
             $table->string('title_ar')->nullable();
             $table->string('title_en')->nullable();
             $table->string('number')->nullable();
-            $table->string('type_ar')->nullable();
-            $table->string('type_en')->nullable();
             $table->longText('responsibilities_ar')->nullable();
             $table->longText('responsibilities_en')->nullable();
             $table->longText('requirements_ar')->nullable();
