@@ -1,19 +1,19 @@
 <div class="col-md-8 col-sm-10 col-12 mx-auto">
     <div class="row align-content-end">
         <div class="col-md-4 col-12 mb-3">
-            <x-dashboard.input-group type="text" name="form.username" wire:model.defer="form.username"
+            <x-dashboard.input-group type="text" name="username" wire:model.defer="username"
                 :title="trans('table.columns.name')" />
         </div>
         <div class="col-md-4 col-12 mb-3">
-            <x-dashboard.input-group type="text" name="form.phone" wire:model.defer="form.phone"
+            <x-dashboard.input-group type="text" name="phone" wire:model.defer="phone"
                 :title="trans('table.columns.phone')" />
         </div>
         <div class="col-md-4 col-12 mb-3">
-            <x-dashboard.input-group type="email" name="form.email" wire:model.defer="form.email"
+            <x-dashboard.input-group type="email" name="email" wire:model.defer="email"
                 :title="trans('table.columns.email')" />
         </div>
         <div class="col-12 mb-3">
-            <x-dashboard.text-area type="text" name="form.content_provided" wire:model.defer="form.content_provided"
+            <x-dashboard.text-area type="text" name="content_provided" wire:model.defer="content_provided"
                 :title="trans('table.columns.content provided')" />
         </div>
 
@@ -23,16 +23,16 @@
         </div>
 
         <div class="col-md-4 col-12 mb-3">
-            <x-dashboard.input-group type="text" name="form.{{ $item }}_username" wire:model.defer="form.{{ $item }}_username"
+            <x-dashboard.input-group type="text" name="{{ $item }}_username" wire:model.defer="{{ $item }}_username"
                 :title="trans('table.columns.account')" />
         </div>
         <div class="col-md-4 col-12 mb-3">
-            <x-dashboard.input-group type="text" name="form.{{ $item }}_link" wire:model.defer="form.{{ $item }}_link"
+            <x-dashboard.input-group type="text" name="{{ $item }}_link" wire:model.defer="{{ $item }}_link"
                 :title="trans('table.columns.link')" />
         </div>
         <div class="col-md-4 col-12 mb-3">
-            <x-dashboard.input-group type="number" name="form.{{ $item }}_followers"
-                wire:model.defer="form.{{ $item }}_followers" :title="trans('table.columns.followers')" />
+            <x-dashboard.input-group type="number" name="{{ $item }}_followers"
+                wire:model.defer="{{ $item }}_followers" :title="trans('table.columns.followers')" />
         </div>
         @endforeach
 

@@ -20,12 +20,12 @@ class InfluencerJoinRequest extends Component
         $rules = [];
 
         foreach ($this->socialMediaPlatforms as $platform) {
-            $rules["form.{$platform}_username"] = 'required|string|max:255';
-            $rules["form.{$platform}_link"] = 'required|url|max:500';
-            $rules["form.{$platform}_followers"] = 'required|integer|min:0';
+            $rules["{$platform}_username"] = 'required|string|max:255';
+            $rules["{$platform}_link"] = 'required|url|max:500';
+            $rules["{$platform}_followers"] = 'required|integer|min:0';
         }
 
-        dd($this->form->getRules());
+        $rules = $rules + $this->form->getRules();
 
         $this->validate($rules);
 
