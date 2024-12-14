@@ -17,17 +17,16 @@ class InfluencerJoinRequest extends Component
     ];
 
     public function save() {
-        $rules = [];
 
         foreach ($this->socialMediaPlatforms as $platform) {
-            $rules["{$platform}_username"] = 'required|string|max:255';
-            $rules["{$platform}_link"] = 'required|url|max:500';
-            $rules["{$platform}_followers"] = 'required|integer|min:0';
+            $this->rules["form.{$platform}_username"] = 'required|string|max:255';
+            $this->rules["form.{$platform}_link"] = 'required|url|max:500';
+            $this->rules["form.{$platform}_followers"] = 'required|integer|min:0';
         }
 
-        $rules = $rules + $this->form->getRules();
+        // $rules = $rules + $this->form->getRules();
 
-        $this->validate($rules);
+        $this->validate();
 
     }
 
