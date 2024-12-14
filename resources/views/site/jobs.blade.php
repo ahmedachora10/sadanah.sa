@@ -161,7 +161,7 @@
                         <li><span> {{__('front.Work location')}} : </span> <span>{{ $job->city?->name ?? '-' }}</span></li>
                         <li>
                           <span> {{__('front.Job Type')}} : </span> <span>
-                            {{$job->type}}
+                            {{$job->type?->name() ?? '-'}}
                            </span>
                         </li>
                         <li><span> {{__('front.Job Number')}} : </span> <span>
