@@ -46,7 +46,7 @@ class InfluencerJoinRequest extends Component
         ] + $data);
 
         if($this->form->attachments != null)
-            $request->addMedia($this->form->attachments);
+            $request->addFromMediaLibraryRequest($this->form->attachments);
 
         User::first()->notify(new UserActionNotification([
             'title' => trans('new message'),
