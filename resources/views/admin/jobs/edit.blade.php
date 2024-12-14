@@ -9,7 +9,7 @@
                 <x-dashboard.input-group type="text" name="number" :value="$job->number" :title="trans('table.columns.number')" />
             </div>
             <div class="col-md-4 col-12 mb-3">
-                <select name="job_city" id="job_city" class="form-select">
+                <select name="job_city_id" id="job_city" class="form-select">
                     <option value="" disabled>
                         {{ trans('table.columns.job city') }}
                     </option>
@@ -17,7 +17,7 @@
                         <option value="{{ $city->id }}" @selected($city->id == $job->job_city_id)>{{ $city->name }}</option>
                     @endforeach
                 </select>
-                <x-dashboard.error field="job_city" />
+                <x-dashboard.error field="job_city_id" />
             </div>
             <div class="col-12 mb-3">
                 <x-dashboard.text-area type="text" name="responsibilities_ar" :value="$job->responsibilities_ar" :title="trans('table.columns.responsibilities')" />

@@ -14,6 +14,7 @@ class StoreJobPostRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'job_city_id' => 'required|integer|exists:job_cities,id',
             'title_ar' => 'nullable|string',
             'title_en' => 'nullable|string',
             'number' => 'nullable|string',
