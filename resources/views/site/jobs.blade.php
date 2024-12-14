@@ -165,8 +165,7 @@
                            </span>
                         </li>
                         <li><span> {{__('front.Job Number')}} : </span> <span>
-                          {{$job->job_number}}
-
+                          {{$job->number}}
                         </span></li>
                       </ul>
                     </div>

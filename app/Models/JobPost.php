@@ -11,7 +11,21 @@ class JobPost extends Model
 {
     use HasFactory, HasTranslation;
 
-    public $fillable = ['title_ar', 'title_en'];
+    public $fillable = [
+        'title_ar',
+        'title_en',
+        'number',
+        'type_ar',
+        'type_en',
+        'responsibilities_ar',
+        'responsibilities_en',
+        'requirements_ar',
+        'requirements_en',
+        'experience_ar',
+        'experience_en',
+        'education_ar',
+        'education_en',
+    ];
 
     protected static function boot()
     {

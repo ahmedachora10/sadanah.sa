@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\StoreJobPostRequest;
+use App\Models\JobCity;
 use App\Models\JobPost;
 use Illuminate\Http\Request;
 
@@ -22,7 +23,8 @@ class JobPostController extends Controller
      */
     public function create()
     {
-        return view('admin.jobs.create');
+        $jobCities = JobCity::all();
+        return view('admin.jobs.create', compact('jobCities'));
     }
 
     /**
@@ -47,7 +49,8 @@ class JobPostController extends Controller
      */
     public function edit(JobPost $job)
     {
-        return view('admin.jobs.edit', compact('job'));
+        $jobCities = JobCity::all();
+        return view('admin.jobs.edit', compact('job', 'jobCities'));
     }
 
     /**

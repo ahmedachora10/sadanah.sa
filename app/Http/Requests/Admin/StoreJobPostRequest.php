@@ -16,6 +16,17 @@ class StoreJobPostRequest extends FormRequest
         return [
             'title_ar' => 'nullable|string',
             'title_en' => 'nullable|string',
+            'number' => 'nullable|string',
+            'type_ar' => 'nullable|string',
+            'type_en' => 'nullable|string',
+            'responsibilities_ar' => 'nullable|string',
+            'responsibilities_en' => 'nullable|string',
+            'requirements_ar' => 'nullable|string',
+            'requirements_en' => 'nullable|string',
+            'experience_ar' => 'nullable|string',
+            'experience_en' => 'nullable|string',
+            'education_ar' => 'nullable|string',
+            'education_en' => 'nullable|string',
         ];
     }
 }
