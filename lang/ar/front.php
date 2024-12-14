@@ -82,6 +82,8 @@ return [
     "snapchat" => "سناب شات",
     "tiktok" => "تيك توك",
     "instagram" => "انستاجرام",
+    "youtube" => "اليوتوب",
+    "x" => "الاكس",
     "filter" => "تصفية حسب:",
     "Category" => "القسم",
     "Client" => "العميل",

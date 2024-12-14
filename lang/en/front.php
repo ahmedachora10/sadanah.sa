@@ -84,6 +84,8 @@ return [
     "snapchat" => "snapchat",
     "tiktok" => "tiktok",
     "instagram" => "instagram",
+    "youtube" => "Youtube",
+    "x" => "X",
     "filter" => "FILTER BY :",
     "Category" => "Category",
     "Client" => "Client",
