@@ -69,6 +69,13 @@ return [
         'education' => 'Education',
         'job type' => 'Job Type',
         'job number' => 'Job Number',
+
+        'interests' => 'Interests',
+        'content provided' => 'Details Of The Content Provided',
+
+
+        'followers' => 'Followers Count',
+        'account' => 'Username',
     ],
     'empty' => 'No Records'
 ];

@@ -67,7 +67,6 @@ return [
     'View all' => 'View all',
     'Read Latest' => 'Read Latest',
     'Clients I’ve Worked With' => 'Clients I’ve Worked With',
-    'click here' => 'click here',
     'Download Profile' => 'Download Profile',
     'Contact Us' =>  "Contact Us",
     'Useful Links' =>  "Useful Links",
@@ -105,7 +104,7 @@ return [
     "Email" => "Email",
     "phone" => "phone",
     "Let's Talk" => "Let's Talk",
-    "jobs" => "jobs",
+    "join" => "Request to join",
     "reserved" => "All rights reserved to the company",
 
 

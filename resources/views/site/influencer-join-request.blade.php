@@ -10,7 +10,9 @@
                 <div class="mt-15">
                     <a href="{{route('home')}}">{{__('front.home')}}</a>
                     <span class="padding-rl-20">|</span>
-                    <span style="color: var(--primary-color)" data-i18n="jobs">{{ trans('front.influencers')
+                    <a href="{{route('influencers')}}">{{__('front.Influencers')}}</a>
+                    <span class="padding-rl-20">|</span>
+                    <span style="color: var(--primary-color)" data-i18n="join">{{ trans('front.join')
                         }}</span>
                 </div>
             </div>
