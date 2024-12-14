@@ -5,6 +5,7 @@
                 <x-dashboard.input-group type="text" name="title_ar" :title="trans('table.columns.title')" />
             </div>
             <div class="col-md-6 col-12 mb-3">
+                <x-dashboard.label>{{ trans('table.columns.job type') }}</x-dashboard.label>
                 <select name="type" id="type" class="form-select">
                     <option value="" disabled>
                         {{ trans('table.columns.job type') }}
@@ -19,6 +20,7 @@
                 <x-dashboard.input-group type="text" name="number" :title="trans('table.columns.job number')" />
             </div>
             <div class="col-md-6 col-12 mb-3">
+                <x-dashboard.label>{{ trans('table.columns.job city') }}</x-dashboard.label>
                     <select name="job_city_id" id="job_city" class="form-select">
                         <option value="" disabled>
                             {{ trans('table.columns.job city') }}
