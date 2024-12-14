@@ -511,7 +511,7 @@
                     style="text-transform: uppercase"
                   >{{__('front.Influencers')}}</h2>
 
-                <a href="{{route('influencers')}}" class="go-more">
+                <a href="{{route('influencers.join-request')}}" class="go-more">
                     <span class="text">{{ trans('front.follow them') }}</span>
                     <span class="icon ti-arrow-top-right"></span>
                 </a>

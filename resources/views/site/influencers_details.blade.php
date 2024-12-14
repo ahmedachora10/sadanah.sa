@@ -19,25 +19,13 @@
                 <div class="col-lg-6 valign mt-5">
                   <div class="cont">
                     <h1>
-                      @if (app()->getLocale() == 'ar')
-                      {{$inf->name_ar}}
-                      @else
-                      {{$inf->name_en}}
-                      @endif
+                      {{$inf->name}}
                     </h1>
                     <h6 class="text-u ls1 opacity-8">
-                      @if (app()->getLocale() == 'ar')
-                      {{$inf->job_name_ar}}
-                      @else
-                      {{$inf->job_name_en}}
-                      @endif
+                      {{$inf->job_name}}
                     </h6>
                     <div class="mt-4">
-                      @if (app()->getLocale() == 'ar')
-                      {{$inf->description_ar}}
-                      @else
-                      {{$inf->description_en}}
-                      @endif
+                      {{$inf->description}}
                     </div>
                     <div class="text main-bg">
 
@@ -92,11 +80,7 @@
                     <h3>{{__('front.Social')}} <span class="fw-300">{{__('front.followers')}}</span></h3>
                     @endif
                     <p class="fz-13 mt-15">
-                      @if (app()->getLocale() == 'ar')
-                      {{$inf->social_followers_text_ar}}
-                      @else
-                      {{$inf->social_followers_text_en}}
-                      @endif
+                      {{$inf->social_followers_text}}
                     </p>
 
 
@@ -124,7 +108,6 @@
                         <div class="progres" data-value="{{$inf->instagram_followers}}"></div>
                       </div>
                     </div>
-
 
                   </div>
                 </div>

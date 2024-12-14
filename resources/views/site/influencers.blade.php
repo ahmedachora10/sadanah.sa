@@ -41,18 +41,10 @@
                                         <a href="{{route('influencers.details',$inf)}}">
                                         <div class="info">
                                             <span class="fz-12">
-                                                @if (app()->getLocale() == 'ar')
-                                                {{$inf->job_name_ar}}
-                                                @else
-                                                {{$inf->job_name_en}}
-                                                @endif
+                                                {{$inf->job_name}}
                                             </span>
                                             <h6 class="fz-18">
-                                                @if (app()->getLocale() == 'ar')
-                                                {{$inf->name_ar}}
-                                                @else
-                                                {{$inf->name_en}}
-                                                @endif
+                                                {{$inf->name}}
                                             </h6>
                                         </div>
                                     </a>
@@ -91,7 +83,7 @@
                             </div>
                         </div>
                         <div class="my-4 d-flex align-items-center justify-content-center">
-                            <a href="{{route('influencers')}}" class="go-more">
+                            <a href="{{route('influencers.join-request')}}" class="go-more">
                                 <span class="text">{{ trans('front.follow them') }}</span>
                                 <span class="icon ti-arrow-top-right"></span>
                             </a>

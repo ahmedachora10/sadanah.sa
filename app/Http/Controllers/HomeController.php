@@ -132,17 +132,7 @@ class HomeController extends Controller
 
     public function contact()
     {
-
         return view('site.contact');
     }
-
-    // public function lang ($locale)
-    //  {
-    //     App::setLocale($locale);
-    //     session()->put('lang',$locale);
-    //     return redirect()->back();
-
-    // }
-
 
 }

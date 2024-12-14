@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\HomeController;
 use App\Http\Middleware\SetLocale;
+use App\Livewire\Container\InfluencerJoinRequest;
 use App\Models\OurService;
 use App\Models\OurWork;
 use App\Models\Support;
@@ -33,10 +34,6 @@ Route::get('switch-theme', function () {
     return redirect()->back();
 })->name('switch.theme');
 
-// Route::get('mail', function () {
-//     return view('mails.send-reminder', ['title' => '', 'corp' => Corp::first(), 'target' => '']);
-// });
-
 Route::controller(HomeController::class)
     ->group(function () {
         Route::get('/', 'index')->name('home');
@@ -52,13 +49,11 @@ Route::controller(HomeController::class)
         Route::get('/blog/{blog}/details', 'blog_details')->name('blog.details');
         Route::get('/job', 'job')->name('job');
         Route::get('/contactus', 'contact')->name('contactus');
-        // Route::get('/set-locale/{local}', 'lang')->name('lang');
     });
 
+Route::get('influencers/join-request', InfluencerJoinRequest::class)->name('influencers.join-request');
+
 Route::get('/switch-langauge/{locale?}', function ($locale = 'ar') {
-
-    // $locale = Session::get('lang') === 'ar' ? 'en' : 'ar';
-
     Session::put('lang', $locale);
 
     App::setLocale($locale);
