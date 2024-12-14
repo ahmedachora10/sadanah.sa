@@ -48,7 +48,9 @@ class InfluencerJoinRequest extends Component
 
         if($this->form->attachments != null) {
             $filePath = (new UploadFileService)->store($this->form->attachments, 'docs/influencers');
-            $request->addMedia(storage_path("app/public/$filePath"));
+
+            $request->addMedia(storage_path("app/public/$filePath"))->toMediaCollection();
+            dd(storage_path("app/public/$filePath"), "app/public/$filePath");
         }
 
         User::first()->notify(new UserActionNotification([
