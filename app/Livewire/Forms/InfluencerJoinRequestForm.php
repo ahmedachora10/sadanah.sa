@@ -22,6 +22,53 @@ class InfluencerJoinRequestForm extends Form
     #[Validate('required|string')]
     public string $interests = '';
 
+
+    #[Validate('required|string|max:255')]
+    public string $instagram_username = '';
+
+    #[Validate('required|url|max:500')]
+    public string $instagram_link = '';
+
+    #[Validate('required|integer|min:0')]
+    public int $instagram_followers = '';
+
+    #[Validate('required|string|max:255')]
+    public string $tiktok_username = '';
+
+    #[Validate('required|url|max:500')]
+    public string $tiktok_link = '';
+
+    #[Validate('required|integer|min:0')]
+    public int $tiktok_followers = '';
+
+    #[Validate('required|string|max:255')]
+    public string $x_username = '';
+
+    #[Validate('required|url|max:500')]
+    public string $x_link = '';
+
+    #[Validate('required|integer|min:0')]
+    public int $x_followers = '';
+
+    #[Validate('required|string|max:255')]
+    public string $youtube_username = '';
+
+    #[Validate('required|url|max:500')]
+    public string $youtube_link = '';
+
+    #[Validate('required|integer|min:0')]
+    public int $youtube_followers = '';
+
+    #[Validate('required|string|max:255')]
+    public string $snapchat_username = '';
+
+    #[Validate('required|url|max:500')]
+    public string $snapchat_link = '';
+
+    #[Validate('required|integer|min:0')]
+    public int $snapchat_followers = 0;
+
+
     #[Validate('nullable|file')]
     public string $attachments = '';
 }
