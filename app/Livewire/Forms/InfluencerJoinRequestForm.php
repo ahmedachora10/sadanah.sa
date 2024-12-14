@@ -30,7 +30,7 @@ class InfluencerJoinRequestForm extends Form
     public string $instagram_link = '';
 
     #[Validate('required|integer|min:0')]
-    public int $instagram_followers = '';
+    public int $instagram_followers = 0;
 
     #[Validate('required|string|max:255')]
     public string $tiktok_username = '';
@@ -39,7 +39,7 @@ class InfluencerJoinRequestForm extends Form
     public string $tiktok_link = '';
 
     #[Validate('required|integer|min:0')]
-    public int $tiktok_followers = '';
+    public int $tiktok_followers = 0;
 
     #[Validate('required|string|max:255')]
     public string $x_username = '';
@@ -48,7 +48,7 @@ class InfluencerJoinRequestForm extends Form
     public string $x_link = '';
 
     #[Validate('required|integer|min:0')]
-    public int $x_followers = '';
+    public int $x_followers = 0;
 
     #[Validate('required|string|max:255')]
     public string $youtube_username = '';
@@ -57,7 +57,7 @@ class InfluencerJoinRequestForm extends Form
     public string $youtube_link = '';
 
     #[Validate('required|integer|min:0')]
-    public int $youtube_followers = '';
+    public int $youtube_followers = 0;
 
     #[Validate('required|string|max:255')]
     public string $snapchat_username = '';
