@@ -158,7 +158,7 @@
                       <ul
                         class="prime_info d-flex align-items-center justify-content-between"
                       >
-                        <li><span> {{__('front.Work location')}} : </span> <span>الرياض</span></li>
+                        <li><span> {{__('front.Work location')}} : </span> <span>{{ $job->city?->name ?? '-' }}</span></li>
                         <li>
                           <span> {{__('front.Job Type')}} : </span> <span>
                             {{$job->type}}

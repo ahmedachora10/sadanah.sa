@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Traits\HasTranslation;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class JobPost extends Model
@@ -36,5 +37,9 @@ class JobPost extends Model
 
     public function jobs() : HasMany {
         return $this->hasMany(JobRequest::class);
+    }
+
+    public function city() : BelongsTo {
+        return $this->belongsTo(JobCity::class);
     }
 }
