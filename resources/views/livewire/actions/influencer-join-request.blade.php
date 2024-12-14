@@ -46,7 +46,7 @@
                 :title="trans('table.columns.attachments')" />
         </div>
         <div class="col-12 form_modal">
-            <button class="send_button w-auto">{{ trans('common.save') }}</button>
+            <button class="send_button w-auto" wire:click="save">{{ trans('common.save') }}</button>
         </div>
     </div>
 </div>
