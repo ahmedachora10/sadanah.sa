@@ -42,10 +42,6 @@
                 :title="trans('table.columns.interests')" />
         </div>
 
-        <div class="col-md-6 col-12 mb-3">
-            <x-dashboard.input-group type="file" name="attachments" wire:model.lazy="attachments"
-                :title="trans('table.columns.attachments')" />
-        </div>
         <div class="col-12 form_modal">
             <button class="send_button w-auto" type="submit">{{ trans('common.save') }}</button>
         </div>

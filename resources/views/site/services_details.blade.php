@@ -63,15 +63,9 @@
                   </div>
                 </div>
               </div>
-              {{-- <div class="row mt-80">
-                <div class="col-lg-12">
-                  <div class="text md-mb50">
-                    <p>
-                      {{$description}}
-                    </p>
-                  </div>
-                </div>
-              </div> --}}
+              <div>
+                <livewire:store-service-request :service="$service" />
+              </div>
             </div>
           </section>
         </main>

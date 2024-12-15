@@ -7,6 +7,7 @@ use App\Models\OurService;
 use App\Models\ServiceRequest;
 use App\Models\User;
 use App\Notifications\UserActionNotification;
+use Livewire\Attributes\Validate;
 use Livewire\Component;
 
 class StoreServiceRequest extends Component
@@ -15,10 +16,16 @@ class StoreServiceRequest extends Component
 
     public OurService $service;
 
+    #[Validate('nullable|file')]
+    public $attachments = [];
+
     public function save() {
         $this->validate();
 
-        ServiceRequest::create($this->form->all() + ['service_id' => $this->service->id]);
+        $request = ServiceRequest::create($this->form->all() + ['service_id' => $this->service->id]);
+
+        if($this->attachments != null)
+            $request->addMedia($this->attachments)->toMediaCollection();
 
         User::first()->notify(new UserActionNotification([
             'title' => '',
@@ -26,8 +33,12 @@ class StoreServiceRequest extends Component
             'type' => ServiceRequest::class,
         ]));
 
-        session()->flash('success', trans('message.create'));
+
+        session()->put('success', trans('common.request has been successfully'));
+        $this->dispatch('refresh-alert');
+
         $this->form->reset();
+        $this->reset('attachments');
     }
 
     public function render()

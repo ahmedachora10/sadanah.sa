@@ -9,9 +9,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class ServiceRequest extends Model
 {
-    use HasFactory, ThumbnailModelAttribute;
+    use HasFactory;
 
-    protected $fillable = ['service_id', 'name', 'phone', 'city', 'description'];
+    protected $fillable = ['service_id', 'name', 'phone', 'description'];
 
     public function service() : BelongsTo {
         return $this->belongsTo(OurService::class, 'service_id');
