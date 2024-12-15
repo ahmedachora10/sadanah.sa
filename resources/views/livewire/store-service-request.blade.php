@@ -1,12 +1,12 @@
 <div>
+    @if(session('success'))
     <div class="col-12">
-        @if($message = session('success'))
         <div class="messages alert alert-success alert-dismissible" role="alert">
-            {{$message}}
+            {{session('success')}}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
-        @endif
     </div>
+    @endif
     <form method="POST" wire:submit="save" class="row" style="flex-direction: row !important">
         <div class="col-md-4 col-sm-6 col-12 mb-3">
             <x-dashboard.input-group type="text" wire:model.defer="form.name" name="form.name" title="" placeholder="{{trans('table.columns.name')}}(*)" />
