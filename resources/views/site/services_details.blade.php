@@ -42,22 +42,22 @@
               <div class="sec-head text-center mb-80">
                 <div class="row justify-content-center">
                   <div class="col-lg-8">
-                    <div class="row justify-content-start align-items-center">
+                    <div class="row justify-content-center align-items-center">
                         <div class="col-auto">
                             <img class="serv_details_img" style="width: 90px !important" src="{{asset('storage/'.$service->image)}}" alt="service image" data-speed="auto" data-lag="0" />
                         </div>
-                      <div class="col-md-8 col-9 text-start">
+                      <div class="col-md-8 col-9 text-end mb-5">
                         <h4>
                             {{$title}}
                         </h4>
                       </div>
-                    </div>
-                    <div class="col-12 mt-5">
+                      <div class="col-12 mt-5">
                         <div class="text md-mb50 ">
-                            <p class="fs-6 text-start">
+                            <p class="fs-5 text-end">
                                 {{$description}}
                             </p>
                         </div>
+                    </div>
                     </div>
                   </div>
                 </div>
