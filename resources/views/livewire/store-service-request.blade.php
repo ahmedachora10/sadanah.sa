@@ -5,7 +5,7 @@
     </div>
 
     <div class="col-md-4 col-sm-6 col-12 mb-3">
-        <x-dashboard.input-group type="number" wire:model.defer="form.phone" name="form.phone" title="" placeholder="{{trans('table.columns.phone')}}(*)" />
+        <x-dashboard.input-group type="text" wire:model.defer="form.phone" name="form.phone" title="" placeholder="{{trans('table.columns.phone')}}(*)" />
     </div>
 
     <div class="col-md-4 col-12 mb-3">
