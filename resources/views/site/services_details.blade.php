@@ -1,5 +1,10 @@
 @include('site.header')
 
+    @php
+        $title = $service->{'title_'.app()->getLocale()};
+        $description = $service->{'description_'.app()->getLocale()};
+    @endphp
+
       <div id="smooth-content">
         <main class="main-bg">
           <!-- ==================== Start Header ==================== -->
@@ -11,7 +16,7 @@
             <div class="container pt-100">
               <div class="text-center">
                 <h1>
-                  {{$service->title}}
+                  {{$title}}
                 </h1>
                 <div class="mt-15">
                   <a href="{{route('home')}}" data-i18n="home">{{__('front.home')}}</a>
@@ -21,7 +26,7 @@
                   >
                   <span class="padding-rl-20">|</span>
                   <span style="color: var(--primary-color)">
-                    {{$service->title}}
+                    {{$title}}
                   </span>
                 </div>
               </div>
@@ -43,14 +48,14 @@
                         </div>
                       <div class="col-md-8 col-9">
                         <h4>
-                            {{$service->title}}
+                            {{$title}}
                         </h4>
                       </div>
                     </div>
                     <div class="col-12">
                         <div class="text md-mb50">
                             <p>
-                                {{$service->description}}
+                                {{$description}}
                             </p>
                         </div>
                     </div>
@@ -61,7 +66,7 @@
                 <div class="col-lg-12">
                   <div class="text md-mb50">
                     <p>
-                      {{$service->description}}
+                      {{$description}}
                     </p>
                   </div>
                 </div>
