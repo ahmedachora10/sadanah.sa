@@ -59,12 +59,12 @@
                             </p>
                         </div>
                     </div>
+                    <div class="col-12">
+                        <livewire:store-service-request :service="$service" />
+                    </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div>
-                <livewire:store-service-request :service="$service" />
               </div>
             </div>
           </section>

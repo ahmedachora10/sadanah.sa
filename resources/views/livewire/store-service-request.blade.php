@@ -1,11 +1,16 @@
 <form method="POST" wwire:submit="save" class="row" style="flex-direction: row !important">
 
     <div class="col-md-6 col-12 mb-3">
-        <x-theme.form.input-group type="text" wire:model.defer="form.name" name="form.name" :placeholder="trans('table.columns.name')" />
+        <x-dashboard.input-group type="text" wire:model.defer="form.name" name="form.name" :placeholder="trans('table.columns.name')" />
     </div>
 
     <div class="col-md-6 col-12 mb-3">
-        <x-theme.form.input-group type="number" wire:model.defer="form.phone" name="form.phone" :placeholder="trans('table.columns.phone')" />
+        <x-dashboard.input-group type="number" wire:model.defer="form.phone" name="form.phone" :placeholder="trans('table.columns.phone')" />
+    </div>
+
+    <div class="col-md-6 col-12 mb-3">
+        <x-dashboard.input-group type="file" name="attachments" wire:model.lazy="attachments"
+            :title="trans('table.columns.attachments')" />
     </div>
 
     <div class="col-12 mb-3">
@@ -15,15 +20,9 @@
         <x-dashboard.error field="form.description" />
     </div>
 
-    <div class="col-md-6 col-12 mb-3">
-        <x-dashboard.input-group type="file" name="attachments" wire:model.lazy="attachments"
-            :title="trans('table.columns.attachments')" />
-    </div>
-
     <div class="col-12">
-        <div class="tp-contact-btn">
-            <button class="tp-btn" type="submit">{{ trans('send') }}</button>
-            <p class="ajax-response"></p>
+        <div class="col-12 form_modal">
+            <button class="send_button w-auto" type="submit">{{ trans('common.save') }}</button>
         </div>
     </div>
 </form>
