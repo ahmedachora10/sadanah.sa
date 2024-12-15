@@ -217,11 +217,11 @@
 
 
                     dataToCopy.each(function () {
-                    $(this).click(function () {
-                    console.log($(this), $(this).attr('data-copy'));
+                        $(this).click(function () {
+                            console.log($(this), $(this).attr('data-copy'));
 
-                    copyToClipboard($(this).attr('data-copy'));
-                    });
+                            copyToClipboard($(this).attr('data-copy'));
+                        });
                     });
                 }, 1000);
     </script>
