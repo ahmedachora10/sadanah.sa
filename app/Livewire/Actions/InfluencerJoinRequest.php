@@ -55,7 +55,7 @@ class InfluencerJoinRequest extends Component
             'type' => ModelsInfluencerJoinRequest::class,
         ]));
 
-        session()->put('success', 'common.request has been successfully');
+        session()->put('success', trans('common.request has been successfully'));
         $this->dispatch('refresh-alert');
 
         $this->form->reset();
