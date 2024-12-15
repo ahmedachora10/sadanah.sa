@@ -36,8 +36,8 @@ class StoreServiceRequest extends Component
         ]));
 
 
-        session()->put('success', trans('common.request has been successfully'));
-        $this->dispatch('refresh-alert');
+        session()->flash('skey: uccess', trans('common.request has been successfully'));
+        // $this->dispatch('refresh-alert');
 
         $this->form->reset();
         $this->reset('attachments');
