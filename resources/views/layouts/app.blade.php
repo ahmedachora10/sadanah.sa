@@ -210,18 +210,20 @@
                 document.body.removeChild(textarea);
                 }
 
-                const dataToCopy = $('[data-copy]');
+                setInterval(() => {
+                    const dataToCopy = $('[data-copy]');
 
-                console.log(dataToCopy);
+                    console.log(dataToCopy);
 
 
-                dataToCopy.each(function () {
+                    dataToCopy.each(function () {
                     $(this).click(function () {
                     console.log($(this), $(this).attr('data-copy'));
 
-                        copyToClipboard($(this).attr('data-copy'));
+                    copyToClipboard($(this).attr('data-copy'));
                     });
-                });
+                    });
+                }, 1000);
     </script>
 
     @livewireScripts
