@@ -44,7 +44,7 @@
                   <div class="col-lg-8">
                     <div class="row justify-content-start align-items-center">
                         <div class="col-auto">
-                            <img class="serv_details_img" width="90px" src="{{asset('storage/'.$service->image)}}" alt="service image" data-speed="auto" data-lag="0" />
+                            <img class="serv_details_img" style="width: 90px !important" src="{{asset('storage/'.$service->image)}}" alt="service image" data-speed="auto" data-lag="0" />
                         </div>
                       <div class="col-md-8 col-9 text-start">
                         <h4>
