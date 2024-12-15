@@ -20,6 +20,6 @@ class ServiceRequest extends Model implements HasMedia
     }
 
     public function getAttachmentAttribute() {
-        return $this->getFirstMedia()?->getUrl() ?? '-';
+        return $this->getFirstMedia()?->getUrl() ?? '';
     }
 }
