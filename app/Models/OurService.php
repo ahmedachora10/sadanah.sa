@@ -27,6 +27,7 @@ class OurService extends Model
         static::created(function (OurService $model) {
             $model->update(['sort' => $model->id]);
         });
+
         static::retrieved(fn(OurService $service) => self::translation($service));
     }
 }

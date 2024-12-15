@@ -16,7 +16,7 @@
                 <div class="mt-15">
                   <a href="{{route('home')}}" data-i18n="home">{{__('front.home')}}</a>
                   <span class="padding-rl-20">|</span>
-                  <a href="{{route('services.all')}}" data-i18n="services"
+                  <a href="{{route('service')}}" data-i18n="services"
                     >{{__('front.services')}}</a
                   >
                   <span class="padding-rl-20">|</span>
