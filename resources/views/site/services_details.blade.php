@@ -52,7 +52,7 @@
                         </h4>
                       </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 mt-5">
                         <div class="text md-mb50 ">
                             <p class="fs-6 text-start">
                                 {{$description}}
