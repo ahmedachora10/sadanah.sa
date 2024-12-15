@@ -9,9 +9,11 @@ use App\Models\User;
 use App\Notifications\UserActionNotification;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class StoreServiceRequest extends Component
 {
+    use WithFileUploads;
     public ServiceRequestForm $form;
 
     public OurService $service;
