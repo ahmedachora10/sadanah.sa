@@ -1,14 +1,14 @@
 <form method="POST" wwire:submit="save" class="row" style="flex-direction: row !important">
 
-    <div class="col-md-6 col-12 mb-3">
+    <div class="col-md-4 col-sm-6 col-12 mb-3">
         <x-dashboard.input-group type="text" wire:model.defer="form.name" name="form.name" :placeholder="trans('table.columns.name')" />
     </div>
 
-    <div class="col-md-6 col-12 mb-3">
+    <div class="col-md-4 col-sm-6 col-12 mb-3">
         <x-dashboard.input-group type="number" wire:model.defer="form.phone" name="form.phone" :placeholder="trans('table.columns.phone')" />
     </div>
 
-    <div class="col-md-6 col-12 mb-3">
+    <div class="col-md-4 col-12 mb-3">
         <x-dashboard.input-group type="file" name="attachments" wire:model.lazy="attachments"
             :title="trans('table.columns.attachments')" />
     </div>
