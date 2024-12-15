@@ -43,7 +43,7 @@
         </div>
 
         <div class="col-md-6 col-12 mb-3">
-            <x-dashboard.input-group type="file" name="form.attachments" wire:model="form.attachments"
+            <x-dashboard.input-group type="file" name="form.attachments" wire:model.lazy="form.attachments"
                 :title="trans('table.columns.attachments')" />
         </div>
         <div class="col-12 form_modal">
