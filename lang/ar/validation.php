@@ -194,7 +194,7 @@ return [
         'q'                     => 'البحث',
         'link'                  => ' ',
         'slug'                  => ' ',
-        'attachments'                  => 'المرفقات',
+        'attachments'                  => 'مرفقات',
 
         'company' => 'الشركة',
         'policy' => 'البوليصة',
