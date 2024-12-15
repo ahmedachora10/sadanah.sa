@@ -212,6 +212,9 @@
 
                 const dataToCopy = $('[data-copy]');
 
+                console.log(dataToCopy);
+
+
                 dataToCopy.each(function () {
                     $(this).click(function () {
                     console.log($(this), $(this).attr('data-copy'));
