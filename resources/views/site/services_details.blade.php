@@ -37,7 +37,7 @@
               <div class="sec-head text-center mb-80">
                 <div class="row justify-content-center">
                   <div class="col-lg-8">
-                    <div class="d-flex justify-content-end">
+                    <div class="row justify-content-end">
                         <div class="col-md-4 col-3">
                             <img class="serv_details_img" src="{{asset('storage/'.$service->image)}}" alt="" data-speed="auto" data-lag="0" />
                         </div>
@@ -46,13 +46,13 @@
                             {{$service->title}}
                         </h4>
                       </div>
-                      <div class="col-12">
+                    </div>
+                    <div class="col-12">
                         <div class="text md-mb50">
                             <p>
                                 {{$service->description}}
                             </p>
                         </div>
-                      </div>
                     </div>
                   </div>
                 </div>
