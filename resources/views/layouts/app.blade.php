@@ -189,6 +189,38 @@
 
     @stack('scripts')
 
+    <script>
+        function copyToClipboard(text) {
+                // Create a temporary textarea element
+                const textarea = document.createElement('textarea');
+
+                // Set the value of the textarea to the text you want to copy
+                textarea.value = text;
+
+                // Append the textarea to the document
+                document.body.appendChild(textarea);
+
+                // Select the text in the textarea
+                textarea.select();
+
+                // Copy the selected text to the clipboard
+                document.execCommand('copy');
+
+                // Remove the textarea from the document
+                document.body.removeChild(textarea);
+                }
+
+                const dataToCopy = $('[data-copy]');
+
+                dataToCopy.each(function () {
+                    $(this).click(function () {
+                    console.log($(this), $(this).attr('data-copy'));
+
+                        copyToClipboard($(this).attr('data-copy'));
+                    });
+                });
+    </script>
+
     @livewireScripts
     <script src="{{ asset('admin-assets/js/uploader.js') }}"></script>
     <script defer>
