@@ -120,4 +120,5 @@ return [
 
     'full time' => 'دوام كامل',
     'part time' => 'دوام جزئي',
+    'request has been successfully' => 'تم ارسال الطلب بنجاح',
 ];

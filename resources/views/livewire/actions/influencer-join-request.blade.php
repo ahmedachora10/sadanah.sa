@@ -1,6 +1,6 @@
 <div class="col-md-8 col-sm-10 col-12 mx-auto">
     <x-dashboard.alert />
-    <form wire:submit="save" class="row align-content-end">
+    <form wire:submit.prevent="save" class="row align-content-end">
         <div class="col-md-4 col-12 mb-3">
             <x-dashboard.input-group type="text" name="form.username" wire:model.defer="form.username"
                 :title="trans('table.columns.name')" />

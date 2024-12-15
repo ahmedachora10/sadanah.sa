@@ -75,4 +75,6 @@ return [
 
     'full time' => 'Full Time',
     'part time' => 'Part Time',
+
+    'request has been successfully' => 'Request Has Been Successfully',
 ];

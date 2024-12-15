@@ -46,7 +46,7 @@
                         <li class="d-flex align-items-center mb-4">
                             <i class="bx bx-check"></i>
                             <span class="fw-medium mx-2">{{trans('table.columns.'.$key)}}:</span>
-                            <span>{{$inf}}</span>
+                            <span>@if($key == 'link') <i class="bx bx-clipboard link" data-link="{{$inf}}"></i> @else {{$inf}} @endif</span>
                         </li>
                     @endforeach
                 @else
@@ -70,5 +70,36 @@
         </div>
     </x-dashboard.modals.modal1>
 
+    @push('scripts')
+    <script>
+        function copyToClipboard(text) {
+        // Create a temporary textarea element
+        const textarea = document.createElement('textarea');
+
+        // Set the value of the textarea to the text you want to copy
+        textarea.value = text;
+
+        // Append the textarea to the document
+        document.body.appendChild(textarea);
+
+        // Select the text in the textarea
+        textarea.select();
+
+        // Copy the selected text to the clipboard
+        document.execCommand('copy');
+
+        // Remove the textarea from the document
+        document.body.removeChild(textarea);
+        }
+
+        const links = $('.link');
+
+        links.each(function () {
+            $(this).click(function () {
+                copyToClipboard($(this).attr('data-link'));
+            });
+        });
+    </script>
+    @endpush
 
 </section>
