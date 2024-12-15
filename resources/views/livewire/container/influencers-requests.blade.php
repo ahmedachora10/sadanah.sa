@@ -70,36 +70,38 @@
         </div>
     </x-dashboard.modals.modal1>
 
-    @push('scripts')
+    @pushOnce('scripts')
     <script>
         function copyToClipboard(text) {
-        // Create a temporary textarea element
-        const textarea = document.createElement('textarea');
+            // Create a temporary textarea element
+            const textarea = document.createElement('textarea');
 
-        // Set the value of the textarea to the text you want to copy
-        textarea.value = text;
+            // Set the value of the textarea to the text you want to copy
+            textarea.value = text;
 
-        // Append the textarea to the document
-        document.body.appendChild(textarea);
+            // Append the textarea to the document
+            document.body.appendChild(textarea);
 
-        // Select the text in the textarea
-        textarea.select();
+            // Select the text in the textarea
+            textarea.select();
 
-        // Copy the selected text to the clipboard
-        document.execCommand('copy');
+            // Copy the selected text to the clipboard
+            document.execCommand('copy');
 
-        // Remove the textarea from the document
-        document.body.removeChild(textarea);
-        }
+            // Remove the textarea from the document
+            document.body.removeChild(textarea);
+            }
 
-        const links = $('.link');
+            const links = $('.link');
 
-        links.each(function () {
-            $(this).click(function () {
-                copyToClipboard($(this).attr('data-link'));
+            links.each(function () {
+                $(this).click(function () {
+                console.log($(this), $(this).attr('data-link'));
+
+                    copyToClipboard($(this).attr('data-link'));
+                });
             });
-        });
     </script>
-    @endpush
+    @endPushOnce
 
 </section>
