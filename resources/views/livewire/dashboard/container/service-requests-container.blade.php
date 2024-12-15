@@ -44,7 +44,9 @@
                 <p class="text-wrap"><i class="bx bx-category bx-sm me-2"></i>{{ $request?->service?->title }}</p>
                 <p class="text-wrap"><i class="bx bx-user bx-sm me-2"></i>{{ $request?->name }}</p>
                 <p class="text-wrap"><i class="bx bx-phone bx-sm me-2"></i>{{ $request?->phone }}</p>
+                @if($request->attachment != '')
                 <p class="text-wrap"><i class="bx bx-file bx-sm me-2"></i><a href="{{$request?->attachment}}"><i class="bx bx-link-external bx-sm me-2"></i></a></p>
+                @endif
                 <p class="text-wrap">
                     <i class="bx bx-info-square bx-sm me-2"></i>
                     {{ $request?->description }}
