@@ -59,7 +59,7 @@
                                 </div>
                                 <div class="col-12" style="margin: 1.5rem 0"></div>
                                 <div class="col-12">
-                                    <h3 class="text-muted fs-4 mb-3">{{ trans('front.request the service now') }}</h3>
+                                    <h3 class="text-muted fs-4">{{ trans('front.request the service now') }}</h3>
                                     <livewire:store-service-request :service="$service" />
                                 </div>
                             </div>
