@@ -52,7 +52,8 @@ class HomeController extends Controller
 
     public function service_details(OurService $service)
     {
-        return view('site.services_details',compact('service'));
+        $services = OurService::get();
+        return view('site.services_details',compact('service','services'));
     }
 
     public function about()
