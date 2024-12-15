@@ -69,6 +69,4 @@ class InfluencerJoinRequestForm extends Form
     #[Validate('required|integer|min:0')]
     public int $snapchat_followers = 0;
 
-    #[Validate('nullable|file')]
-    public $attachments = null;
 }

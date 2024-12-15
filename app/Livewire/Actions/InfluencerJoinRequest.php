@@ -7,6 +7,7 @@ use App\Models\InfluencerJoinRequest as ModelsInfluencerJoinRequest;
 use App\Models\User;
 use App\Notifications\UserActionNotification;
 use App\Services\UploadFileService;
+use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
@@ -21,6 +22,9 @@ class InfluencerJoinRequest extends Component
         'youtube',
         'x',
     ];
+
+    #[Validate('nullable|file')]
+    public $attachments = null;
 
     public function save() {
 
@@ -46,8 +50,8 @@ class InfluencerJoinRequest extends Component
             'interests' => $this->form->interests,
         ] + $data);
 
-        if($this->form->attachments != null)
-            $request->addMedia($this->form->attachments)->toMediaCollection();
+        if($this->attachments != null)
+            $request->addMedia($this->attachments)->toMediaCollection();
 
         User::first()->notify(new UserActionNotification([
             'title' => trans('new message'),
@@ -59,6 +63,7 @@ class InfluencerJoinRequest extends Component
         $this->dispatch('refresh-alert');
 
         $this->form->reset();
+        $this->reset('attachments');
 
     }
 
