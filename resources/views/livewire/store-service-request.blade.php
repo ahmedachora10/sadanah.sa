@@ -1,11 +1,11 @@
 <form method="POST" wwire:submit="save" class="row" style="flex-direction: row !important">
 
     <div class="col-md-4 col-sm-6 col-12 mb-3">
-        <x-dashboard.input-group type="text" wire:model.defer="form.name" name="form.name" :placeholder="trans('table.columns.name')" />
+        <x-dashboard.input-group type="text" wire:model.defer="form.name" name="form.name" title="" :placeholder="trans('table.columns.name')" />
     </div>
 
     <div class="col-md-4 col-sm-6 col-12 mb-3">
-        <x-dashboard.input-group type="number" wire:model.defer="form.phone" name="form.phone" :placeholder="trans('table.columns.phone')" />
+        <x-dashboard.input-group type="number" wire:model.defer="form.phone" name="form.phone" title="" :placeholder="trans('table.columns.phone')" />
     </div>
 
     <div class="col-md-4 col-12 mb-3">

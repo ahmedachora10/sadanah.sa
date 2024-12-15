@@ -117,6 +117,7 @@ return [
     "education_level" => "المستوى التعليمي",
     "reserved" => "جميع الحقوق محفوظة لشركة",
 
+    'request the service now' => 'اطلب الخدمة الأن'
 
 
 ];

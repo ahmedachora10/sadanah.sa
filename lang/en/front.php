@@ -120,4 +120,5 @@ return [
     "experience" => "experience",
     "education_level" => "education level",
 
+    'request the service now' => 'Request the service now'
 ];
