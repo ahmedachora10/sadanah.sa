@@ -17,7 +17,7 @@ class StoreServiceRequest extends Component
     public OurService $service;
 
     #[Validate('nullable|file')]
-    public $attachments = [];
+    public $attachments = null;
 
     public function save() {
         $this->validate();
