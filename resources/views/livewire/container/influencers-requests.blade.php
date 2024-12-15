@@ -46,7 +46,7 @@
                         <li class="d-flex align-items-center mb-4">
                             <i class="bx bx-check"></i>
                             <span class="fw-medium mx-2">{{trans('table.columns.'.$key)}}:</span>
-                            <span>@if($key == 'link') <i class="bx bx-clipboard" data-copy="{{$inf}}"></i> @else {{$inf}} @endif</span>
+                            <span>@if($key == 'link') <a class="text-warning" href="{{$inf}}" target="_blank"><i class="bx bx-link-external"></i></a> @else {{$inf}} @endif</span>
                         </li>
                     @endforeach
                 @else

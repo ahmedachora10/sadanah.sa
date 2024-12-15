@@ -189,7 +189,7 @@
 
     @stack('scripts')
 
-    <script>
+    {{-- <script>
         function copyToClipboard(text) {
                 // Create a temporary textarea element
                 const textarea = document.createElement('textarea');
@@ -224,7 +224,7 @@
                         });
                     });
                 }, 1000);
-    </script>
+    </script> --}}
 
     @livewireScripts
     <script src="{{ asset('admin-assets/js/uploader.js') }}"></script>
