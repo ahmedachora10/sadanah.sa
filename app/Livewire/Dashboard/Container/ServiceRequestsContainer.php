@@ -34,7 +34,7 @@ class ServiceRequestsContainer extends Component
     public function render()
     {
         return view('livewire.dashboard.container.service-requests-container',[
-            'requests' => ServiceRequest::with('service')->paginate(setting('pagination') ?? 8)
+            'requests' => ServiceRequest::with(['service'])->paginate(setting('pagination') ?? 8)
         ]);
     }
 }

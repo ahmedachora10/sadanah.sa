@@ -18,4 +18,8 @@ class ServiceRequest extends Model implements HasMedia
     public function service() : BelongsTo {
         return $this->belongsTo(OurService::class, 'service_id');
     }
+
+    public function getAttachmentAttribute() {
+        return $this->getFirstMedia()?->getUrl() ?? '-';
+    }
 }
