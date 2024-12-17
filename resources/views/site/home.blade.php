@@ -752,7 +752,7 @@
 
                         @foreach ($clients as $client)
                         <div class="client-item swiper-slide col-auto" style="width: auto !important">
-                          <a target="_blank" href="{{$client->link}}">
+                          <a target="_blank" href="{{str($client->link)->startsWith('https://') ? $client->link: str($client->link)->before('https://')->value()}}">
                             <img
 
                               class="img-item"
