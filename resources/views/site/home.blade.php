@@ -22,12 +22,12 @@
         @if (app()->getLocale() == 'ar')
         <div class="container">
           <div class="caption text-center">
-            <h2 class="" data-swiper-parallax="-2000">
+            <h2 class="almarai-bold" data-swiper-parallax="-2000">
 
                 {{$slider->styles['top']}}
             </h2>
             <h1>
-              <span data-swiper-parallax="-1000">
+              <span data-swiper-parallax="-1000" class="almarai-bold">
                 {{$slider->styles['right']}}
               </span>
             </h1>
