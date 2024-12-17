@@ -39,15 +39,15 @@
         @else
         <div class="container">
           <div class="caption text-center">
-            <h2 class="" data-swiper-parallax="-2000">
+            <h2 class="almarai-bold" data-swiper-parallax="-2000">
                 {{$slider->styles_ar['top_ar']}}
             </h2>
             <h1>
-              <span data-swiper-parallax="-1000">
+              <span data-swiper-parallax="-1000" class="almarai-bold">
                 {{$slider->styles_ar['right_ar']}}
               </span>
             </h1>
-            <p class="intro-text">
+            <p class="intro-text" >
               {{$slider->styles_ar['bottom_ar']}}
             </p>
           </div>

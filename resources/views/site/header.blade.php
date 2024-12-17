@@ -34,6 +34,37 @@
       rel="stylesheet"
     />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    @if(Route::currentRouteName() == 'home')
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <style>
+        .almarai-light {
+        font-family: "Almarai", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        }
+
+        .almarai-regular {
+        font-family: "Almarai", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        .almarai-bold {
+        font-family: "Almarai", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        }
+
+        .almarai-extrabold {
+        font-family: "Almarai", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        }
+    </style>
+    @endif
     <!-- Font -->
     <link rel="stylesheet" href="{{asset('assets/css/plugins/bootstrap-'.$lang.'.min.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/css/satoshi.css')}}" />
