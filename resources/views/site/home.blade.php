@@ -31,7 +31,7 @@
                 {{$slider->styles['right']}}
               </span>
             </h1>
-            <p class="intro-text">
+            <p class="intro-text almarai-bold">
               {{$slider->styles['bottom']}}
             </p>
           </div>
@@ -47,7 +47,7 @@
                 {{$slider->styles_ar['right_ar']}}
               </span>
             </h1>
-            <p class="intro-text" >
+            <p class="intro-text almarai-bold" >
               {{$slider->styles_ar['bottom_ar']}}
             </p>
           </div>
