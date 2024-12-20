@@ -39,11 +39,10 @@ class Comment extends Model
     public function toSearchableArray()
     {
         return [
-            'name',
-            'email',
-            'message',
-            'blog.title_ar',
-            'blog.title_en'
+            'name' => $this->name,
+            'email' => $this->email,
+            'message' => $this->message,
+            'blog.title_ar' => $this->blog->title,
         ];
     }
 }
