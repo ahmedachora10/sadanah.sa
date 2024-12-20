@@ -42,7 +42,7 @@ class Comment extends Model
             'name' => $this->name,
             'email' => $this->email,
             'message' => $this->message,
-            'blog.title' => $this->blog->title,
+            // 'blog.title' => $this->blog->title,
         ];
     }
 }
