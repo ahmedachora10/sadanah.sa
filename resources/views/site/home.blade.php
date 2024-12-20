@@ -140,15 +140,11 @@
                       @endif
                     </h6>
                     <p class="services_info">
-                      @if (app()->getLocale() == 'ar')
-                      {{$service->description_ar}}
-                      @else
-                      {{$service->description_en}}
-                      @endif
+                      {{$service->description}}
                     </p>
                     <a
                       href="{{route('service.details',$service)}}"
-                      class="see_more text-{{app()->getLocale() == 'ar' ? 'start' : 'end'}}"
+                      class="see_more text-end"
                       style="display: none"
                     >
                       <span>{{__('common.show more')}}</span>
@@ -702,15 +698,11 @@
                         <div class="full-width">
                           <h5>
                             <a href="{{route('blog.details',$blog)}}">
-                              @if (app()->getLocale() == 'ar')
-                              {{$blog->title_ar}}
-                              @else
-                              {{$blog->title_en}}
-                              @endif
+                              {{$blog->title}}
                             </a>
                           </h5>
                           <span class="date fz-12 ls1 text-u opacity-7 mt-80">
-                            {{ $blog->created_at->format('d F Y') }}
+                            {{ $blog->created_at->format('Y F d') }}
                           </span>
                         </div>
                       </div>
