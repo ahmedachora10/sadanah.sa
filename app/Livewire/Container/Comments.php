@@ -6,6 +6,7 @@ use App\Enums\BLogStatus;
 use App\Models\Comment;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Illuminate\Database\Eloquent\Builder;
 
 class Comments extends Component
 {
@@ -28,8 +29,9 @@ class Comments extends Component
     public function render()
     {
         return view('livewire.container.comments', [
-            'comments' => Comment::search($this->search)
-            ->query(fn($query) => $query->with('blog'))
+            'comments' => Comment::search($this->m)
+            ->with('blog')
+            // ->query(fn(Builder $query) => $query->with('blog'))
             ->paginate(12)
         ]);
     }
