@@ -20,11 +20,11 @@ class Blog extends Model
         'author'
     ];
 
-    protected static function boot() {
-        parent::boot();
+    // protected static function boot() {
+    //     parent::boot();
 
-        static::retrieved(fn(Blog $blog) => static::translation($blog));
-    }
+    //     static::retrieved(fn(Blog $blog) => static::translation($blog));
+    // }
 
     public function getTitleAttribute() {
         return app()->getLocale() === 'ar' ? $this->title_ar : $this->title_en;
