@@ -11,7 +11,14 @@ class Blog extends Model
 {
     use HasFactory , ThumbnailModelAttribute, HasTranslation;
 
-    protected $guarded = ['id'];
+    protected $fillable = [
+        'title_ar',
+        'title_en',
+        'content_en',
+        'content_ar',
+        'image',
+        'author'
+    ];
 
     protected static function boot() {
         parent::boot();
