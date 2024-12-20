@@ -687,7 +687,7 @@
                     <div class="row rest">
                       <div class="col-lg-6 col-md-5 img rest">
                         <img
-                          src="{{asset('storage/'.$blog->image)}}"
+                          src="{{asset($blog->thumbnail)}}"
                           alt="blog"
                           class="img-post img-blog-home"
                         />

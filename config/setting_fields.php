@@ -63,17 +63,6 @@ return [
                 'value' => ''
 
             ],
-            // [
-            //     'type' => 'file',
-            //     'data' => 'string',
-            //     'name' => 'contact_img',
-            //     'label' => 'Contact Image',
-            //     'rules' => 'nullable|image',
-            //     'class' => '',
-            //     'value' => '',
-            //     'dimension' => 'contact_image',
-
-            // ],
             [
                 'type' => 'text',
                 'data' => 'string',
@@ -94,7 +83,7 @@ return [
                 'value' => ''
 
             ],
-            
+
             [
                 'type' => 'text',
                 'data' => 'string',
@@ -130,6 +119,16 @@ return [
                 'data' => 'string',
                 'name' => 'snapchat',
                 'label' => 'snapchat',
+                'rules' => 'nullable|string',
+                'class' => '',
+                'value' => ''
+
+            ],
+            [
+                'type' => 'text',
+                'data' => 'string',
+                'name' => 'whatsapp',
+                'label' => 'whatsapp',
                 'rules' => 'nullable|string',
                 'class' => '',
                 'value' => ''
