@@ -41,7 +41,7 @@
                     <div class="item pb-60">
                       <article>
                         <div class="mb-5">
-                            <img src="{{asset($blog->thumbnail)}}" width="100%" alt="{{$blog->title}}">
+                            <img src="{{asset($blog->thumbnail)}}" width="100%" height="474px" alt="{{$blog->title}}">
                             <span class="text-end text-muted fw-600 mt-3">{{ $blog->author }}</span>
                         </div>
                         <div class="title mt-30">
@@ -173,10 +173,10 @@
                         <div>
                           <div class="img">
                             <a href="{{route('blog.details',$item)}}">
-                              <img src="{{asset('storage/'.$blog->image)}}" alt="" />
+                              <img src="{{asset($item->thumbnail)}}" alt="" />
                               <span class="date">
                                 <span>
-                                  {{ $item->created_at->format('d F Y') }}
+                                  {{ $item->created_at->format('Y F d') }}
                                 </span>
                               </span>
                             </a>
@@ -185,16 +185,12 @@
                         <div class="cont">
                           <span class="tag"
                             ><a href="{{route('blog.details',$item)}}">
-                              {{ $item->created_at->format('d F Y') }}
+                              {{ $item->created_at->format('Y F d') }}
                             </a></span
                           >
                           <h6>
                             <a href="{{route('blog.details',$item)}}">
-                              @if (app()->getLocale() == 'ar')
-                              {{$item->title_ar}}
-                              @else
-                              {{$item->title_en}}
-                              @endif
+                              {{$item->title}}
                             </a
                             >
                           </h6>
