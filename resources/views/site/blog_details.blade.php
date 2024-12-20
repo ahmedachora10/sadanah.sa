@@ -40,6 +40,10 @@
                   <div class="main-post">
                     <div class="item pb-60">
                       <article>
+                        <div class="mb-5">
+                            <img src="{{asset($blog->thumbnail)}}" width="100%" alt="{{$blog->title}}">
+                            <span class="text-end text-muted fw-600 mt-3">{{ $blog->author }}</span>
+                        </div>
                         <div class="title mt-30">
                           <h4>{{$blog->title}}</h4>
                         </div>
