@@ -104,7 +104,7 @@ class HomeController extends Controller
                     ->orderBy('id','desc')
                     ->limit(3)
                     ->get();
-        $comments = Comment::where('blog_id', $blog->id)->get();
+        $comments = $blog->comments;
         return view('site.blog_details',compact('blog','latest','comments'));
     }
 

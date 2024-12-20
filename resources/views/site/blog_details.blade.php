@@ -14,11 +14,7 @@
             <div class="container pt-100">
               <div class="text-center">
                 <h1>
-                  @if (app()->getLocale() == 'ar')
-                  {{$blog->title_ar}}
-                  @else
-                  {{$blog->title_en}}
-                  @endif
+                  {{$blog->title}}
                 </h1>
                 <div class="mt-15">
                   <a href="{{route('home')}}" data-i18n="home">{{__('front.home')}}</a>
@@ -44,32 +40,17 @@
                   <div class="main-post">
                     <div class="item pb-60">
                       <article>
-                        {{-- <div class="title mt-30">
-                          <h4>What sizes do MacBook Airs come in?</h4>
-                        </div> --}}
+                        <div class="title mt-30">
+                          <h4>{{$blog->title}}</h4>
+                        </div>
                         <div class="text mt-20">
                           <p>
-                            @if (app()->getLocale() == 'ar')
-                          {{$blog->content_ar}}
-                          @else
-                          {{$blog->content_en}}
-                          @endif
+                          {{$blog->content}}
                           </p>
                         </div>
                       </article>
                     </div>
                     <div class="info-area flex pt-50 bord-thin-top">
-                      <div>
-                        {{-- <div class="tags flex">
-                          <div class="valign">
-                            <span data-i18n="tags">Tags :</span>
-                          </div>
-                          <div>
-                            <a href="#0l">Tech</a>
-                            <a href="#0">Ui-Sadnah</a>
-                          </div>
-                        </div> --}}
-                      </div>
                       <div class="ml-auto">
                         <div class="share-icon flex">
                           <div class="valign">
