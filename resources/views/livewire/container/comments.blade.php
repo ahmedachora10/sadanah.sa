@@ -4,10 +4,10 @@
 
     <x-dashboard.tables.table1 :columns="['name', 'email', 'message', 'blog', 'status']">
 
-        {{-- <x-slot:title>
+        <x-slot:title>
             <x-dashboard.input type="search" name="search" wire:model.live.debounce.250ms="search"
                 placeholder="{{ trans('table.columns.search') }}" />
-        </x-slot:title> --}}
+        </x-slot:title>
 
         @forelse ($comments as $item)
         <tr wire:loading.class="opacity-50">
@@ -21,7 +21,7 @@
                 </x-dashboard.badge>
             </td>
             <td>
-                <x-dashboard.badge wire:click="switch({{$item}})" :color="$item->status->color()">
+                <x-dashboard.badge class="cursor" wire:click="switch({{$item}})" :color="$item->status->color()">
                     {{ $item->status->name() }}
                 </x-dashboard.badge>
             </td>

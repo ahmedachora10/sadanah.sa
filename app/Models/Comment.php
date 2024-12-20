@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Enums\BLogStatus;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -26,6 +27,13 @@ class Comment extends Model
 
     public function blog(): BelongsTo {
         return $this->belongsTo(Blog::class);
+    }
+
+    public function scopePublished(Builder $builder) {
+        $builder->where('status', BLogStatus::Published->value);
+    }
+    public function scopeDraft(Builder $builder) {
+        $builder->where('status', BLogStatus::Draft->value);
     }
 
     public function toSearchableArray()

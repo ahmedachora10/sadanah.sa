@@ -140,6 +140,7 @@ return [
         'education' => 'التعليم',
         'job type' => 'نوع الوظيفة',
         'job number' => 'الرقم الوظيفي',
+        'blog' => 'المدونة',
 
         'interests' => 'الإهتمامات',
         'content provided' => 'تفاصيل عن المحتوى المقدم',

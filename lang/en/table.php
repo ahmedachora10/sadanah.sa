@@ -71,6 +71,7 @@ return [
         'job number' => 'Job Number',
 
         'interests' => 'Interests',
+        'blog' => 'Blog',
         'content provided' => 'Details Of The Content Provided',
 
 
