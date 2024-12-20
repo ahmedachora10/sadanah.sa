@@ -30,8 +30,7 @@ class Comments extends Component
     {
         return view('livewire.container.comments', [
             'comments' => Comment::search($this->search)
-            ->with('blog')
-            // ->query(fn(Builder $query) => $query->with('blog'))
+            ->query(fn(Builder $query) => $query->with('blog'))
             ->paginate(12)
         ]);
     }
