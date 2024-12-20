@@ -29,7 +29,7 @@ class Comments extends Component
     public function render()
     {
         return view('livewire.container.comments', [
-            'comments' => Comment::search($this->m)
+            'comments' => Comment::search($this->search)
             ->with('blog')
             // ->query(fn(Builder $query) => $query->with('blog'))
             ->paginate(12)
