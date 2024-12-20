@@ -17,11 +17,11 @@
             <td>{{ $item->message }}</td>
             <td>
                 <x-dashboard.badge color="primary">
-                    {{ $item->blog?->title }}
+                    {{ $item->blog?->title ?? '-' }}
                 </x-dashboard.badge>
             </td>
             <td>
-                <x-dashboard.badge class="cursor" wire:click="switch({{$item}})" :color="$item->status->color()">
+                <x-dashboard.badge class="cursor-pointer" wire:click="switch({{$item}})" :color="$item->status->color()">
                     {{ $item->status->name() }}
                 </x-dashboard.badge>
             </td>
