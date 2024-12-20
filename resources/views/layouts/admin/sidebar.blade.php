@@ -87,7 +87,10 @@
         <x-dashboard.sidebar.link :title="trans('sidebar.reviews')" icon="star" :link="route('reviews.index')" />
         <x-dashboard.sidebar.link :title="trans('sidebar.why us')" icon="star" :link="route('why-us.index')" />
         @hasPermission('blog-show')
-            <x-dashboard.sidebar.link :title="trans('sidebar.blogs')" icon="star" :link="route('blogs.index')" />
+        <x-dashboard.sidebar.link :title="trans('sidebar.blogs')" icon="server" link="#" :hasSubMenu="true">
+            <x-dashboard.sidebar.link :title="trans('sidebar.blogs')" :link="route('blogs.index')" />
+            <x-dashboard.sidebar.link :title="trans('sidebar.comments')" :link="route('comments.index')" />
+        </x-dashboard.sidebar.link>
         @endhasPermission
 
         <!-- Misc -->

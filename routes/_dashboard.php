@@ -25,6 +25,7 @@ use App\Http\Controllers\Admin\VisionController;
 use App\Http\Controllers\Admin\WhyUsController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ProfileController;
+use App\Livewire\Container\Comments;
 use App\Livewire\Container\InfluencersRequests;
 use App\Livewire\Dashboard\Container\ContactUsContainer;
 use App\Livewire\Dashboard\Container\JobRequestsContainer;
@@ -60,6 +61,7 @@ Route::middleware(['auth'])->group(function ()
 
     Route::resource('sliders', SliderController::class);
     Route::resource('blogs', BlogController::class);
+    Route::get('comments', Comments::class)->name('comments.index');
     Route::resource('our-services', OurServiceController::class);
     Route::resource('our-clients', OurClientController::class);
     Route::get('subscribers', SubscribersContainer::class)->name('subscribers.index');

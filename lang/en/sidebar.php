@@ -26,6 +26,7 @@ return [
     'why us' => 'Why Us',
     'sections' => 'Sections',
     'blogs' => 'Blogs',
+    'comments' => 'Comments',
     'reviews' => 'Reviews',
     'job requests' => 'Job Requests,',
     'service requests' => 'Service Requests',
