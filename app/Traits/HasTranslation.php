@@ -16,7 +16,7 @@ trait HasTranslation {
                 ->toArray();
 
             foreach ($translationColumns as $key) {
-                $model->{$key} = app()->getLocale() === 'ar' ? $model->{$key . '_ar'} : $model->{$key . '_en'};
+                $model->{$key} = app()->getLocale() == 'ar' ? $model->{$key . '_ar'} : $model->{$key . '_en'};
             }
         }
     }
