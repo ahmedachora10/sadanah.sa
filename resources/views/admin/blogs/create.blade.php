@@ -11,10 +11,10 @@
             </div>
 
             <div class="col-md-6 col-sm-6 col-12 mb-3">
-                <x-dashboard.input-group type="text" name="author" :title="trans('table.columns.author')" />
+                <x-dashboard.input-group type="text" name="author_ar" :title="trans('table.columns.author')" />
             </div>
             <div class="col-md-6 col-sm-6 col-12 mb-3">
-                <x-dashboard.input-group type="text" name="job_title" :title="trans('table.columns.job title')" />
+                <x-dashboard.input-group type="text" name="job_title_ar" :title="trans('table.columns.job title')" />
             </div>
 
             <div class="col-12 mb-3">
@@ -23,8 +23,14 @@
 
         </x-slot:arForm>
         <x-slot:enForm>
-            <div class="col-12 mb-3">
+            <div class="col-md-4 col-12 mb-3">
                 <x-dashboard.input-group type="text" name="title_en" :title="trans('table.columns.title')" />
+            </div>
+            <div class="col-md-4 col-sm-6 col-12 mb-3">
+                <x-dashboard.input-group type="text" name="author_en" :title="trans('table.columns.author')" />
+            </div>
+            <div class="col-md-4 col-sm-6 col-12 mb-3">
+                <x-dashboard.input-group type="text" name="job_title_en" :title="trans('table.columns.job title')" />
             </div>
             <div class="col-12 mb-3">
                 <x-dashboard.text-area name="content_en" cols="30" rows="10" :title="trans('table.columns.content')" />
