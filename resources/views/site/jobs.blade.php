@@ -42,7 +42,7 @@
                   <!-- Dynamic Content Section -->
                   @foreach ($jobs as $job)
 
-                  <div id="content-{{$job->id}}" class="content-box">
+                  <div id="content-{{$job->id}}" class="content-box show">
                     <div
                       class="header_content d-flex align-items-center justify-content-between"
                     >
