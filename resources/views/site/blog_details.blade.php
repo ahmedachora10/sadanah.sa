@@ -111,7 +111,7 @@
                               class="mb-1"
                               for="name"
                               data-i18n="name"
-                            ></label>
+                            >{{ trans('table.columns.name') }}</label>
 
                             <input
                               id="form_name"
@@ -128,7 +128,7 @@
                               class="mb-1"
                               for="email"
                               data-i18n="email"
-                            ></label>
+                            >{{ trans('table.columns.email') }}</label>
                             <input
                               id="form_email"
                               type="email"
@@ -144,7 +144,7 @@
                               class="mb-1"
                               for="message"
                               data-i18n="message"
-                            ></label>
+                            >{{ trans('table.columns.message') }}</label>
                             <textarea
                               id="form_message"
                               name="message"
