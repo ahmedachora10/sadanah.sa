@@ -35,7 +35,7 @@
                 <div class="col-lg-4 col-12">
                   <div class="item sub-bg mb-40">
                     <div class="img">
-                      <img src="{{asset('storage/'.$blog->image)}}" alt="blog" />
+                      <img src="{{asset($blog->thumbnail)}}" alt="blog" />
 
                     </div>
                     <div class="cont">
@@ -44,15 +44,11 @@
                       </div>
                       <h5 class="blog_cerv_title">
                         <!-- <a href="{{route('blog.details',$blog)}}">
-                          @if (app()->getLocale() == 'ar')
-                          {{$blog->title_ar}}
-                          @else
-                          {{$blog->title_en}}
-                          @endif
+                          {{$blog->title}}
                           </a> -->
-                          <a href="">
+                          {{-- <a href="">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dignissimos esse sint nihil necessitatibus voluptatum doloremque magnam omnis, itaque, aperiam quia veritatis quas maiores. Sapiente eligendi eaque neque velit omnis?
-                          </a>
+                          </a> --}}
                       </h5>
                       <a
                         href="{{route('blog.details',$blog)}}"
