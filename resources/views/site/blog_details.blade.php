@@ -144,7 +144,7 @@
                               class="mb-1"
                               for="message"
                               data-i18n="message"
-                            >{{ trans('table.columns.message') }}</label>
+                            >{{ trans('table.columns.comment') }}</label>
                             <textarea
                               id="form_message"
                               name="message"
