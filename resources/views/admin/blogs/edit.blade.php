@@ -31,12 +31,12 @@
                 <x-dashboard.input-group type="text" name="title_en" :value="$blog->title_en" :title="trans('table.columns.title')" />
             </div>
             <div class="col-md-4 col-sm-6 col-12 mb-3">
-                <x-dashboard.input-group type="text" name="author" :value="$blog->author_en"
+                <x-dashboard.input-group type="text" name="author_en" :value="$blog->author_en"
                     :title="trans('table.columns.author')" />
             </div>
 
             <div class="col-md-4 col-sm-6 col-12 mb-3">
-                <x-dashboard.input-group type="text" name="job_title" :value="$blog->job_title_en"
+                <x-dashboard.input-group type="text" name="job_title_en" :value="$blog->job_title_en"
                     :title="trans('table.columns.job title')" />
             </div>
             <div class="col-12 mb-3">
