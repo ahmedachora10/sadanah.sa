@@ -38,7 +38,7 @@
                   <div class="sidebar">
                     <ul class="list-unstyled">
                         @foreach ($jobs as $job)
-                        <li class="py-2 bg-white px-1 mb-1">
+                        <li class="py-2 bg-white shadow-sm px-1 mb-1">
                             <a href="#content-{{$job->id}}" data-target="#content-{{$job->id}}">{{ $job->title }}</a>
                         </li>
                         @endforeach
