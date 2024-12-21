@@ -1920,8 +1920,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function showContent(contentNumber) {
     const contents = document.querySelectorAll(".content-box");
-    contents.forEach(function (content) {
-        content.classList.remove("show");
+    contents.forEach(function (content, index) {
+        if (index != 0) {
+            content.classList.remove("show");
+        }
     });
 
     if (contentNumber === 1) {
