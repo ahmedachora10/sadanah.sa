@@ -53,9 +53,9 @@
                         </div>
                       </article>
                     </div>
-                    <div class="d-flex justify-content-end gap-2">
-                        <span class="text-muted fs-6"><i class="fas fa-user mx-1"></i>{{ $blog->job_title }}</span>
-                        <span class="text-muted fs-6"><i class="fas fa-calender mx-1"></i>{{ $blog->created_at->format('Y F d') }}</span>
+                    <div class="d-flex justify-content-end gap-4">
+                        <span class="text-muted"><i class="fas fa-user mx-2 text-secondary"></i>{{ $blog->job_title }}</span>
+                        <span class="text-muted"><i class="fas fa-calendar mx-2 fa-sm text-secondary"></i>{{ $blog->created_at->format('Y F d') }}</span>
                     </div>
                     <div class="info-area flex pt-50 bord-thin-top">
                       <div class="ml-auto">
