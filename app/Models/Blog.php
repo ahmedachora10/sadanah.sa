@@ -17,7 +17,8 @@ class Blog extends Model
         'content_en',
         'content_ar',
         'image',
-        'author'
+        'author',
+        'job_title'
     ];
 
     // protected static function boot() {

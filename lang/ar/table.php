@@ -145,7 +145,8 @@ return [
         'interests' => 'الإهتمامات',
         'content provided' => 'تفاصيل عن المحتوى المقدم',
         'username' => 'اسم المستخدم',
-        'content_provider' => 'المحتوى'
+        'content_provider' => 'المحتوى',
+        'job title' => 'المسمى الوظيفي'
     ],
     'empty' => 'لا يوجد عناصر لعرضها',
 ];

@@ -42,7 +42,6 @@
                       <article>
                         <div class="mb-5">
                             <img src="{{asset($blog->thumbnail)}}" width="100%" height="474px" alt="{{$blog->title}}">
-                            <span class="text-end text-muted fw-600 mt-3">{{ $blog->author }}</span>
                         </div>
                         <div class="title mt-30">
                           <h4>{{$blog->title}}</h4>
@@ -53,6 +52,10 @@
                           </p>
                         </div>
                       </article>
+                    </div>
+                    <div class="d-flex justify-content-end gap-2">
+                        <span class="text-muted">{{ $blog->job_title }}</span>
+                        <span class="text-muted">{{ $blog->created_at->format(Y F d') }}</span>
                     </div>
                     <div class="info-area flex pt-50 bord-thin-top">
                       <div class="ml-auto">

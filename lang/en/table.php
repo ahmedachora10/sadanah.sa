@@ -77,6 +77,7 @@ return [
 
         'followers' => 'Followers Count',
         'account' => 'Username',
+        'job title' => 'Job Title'
     ],
     'empty' => 'No Records'
 ];

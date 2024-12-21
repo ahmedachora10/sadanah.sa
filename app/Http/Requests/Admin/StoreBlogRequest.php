@@ -21,6 +21,7 @@ class StoreBlogRequest extends FormRequest
             'content_ar' => ['required', 'string'],
             'content_en' => ['nullable', 'string'],
             'author' => ['required', 'string'],
+            'job_title' => ['required', 'string'],
         ];
     }
 }
