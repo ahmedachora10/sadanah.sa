@@ -1926,13 +1926,7 @@ function showContent(contentNumber) {
         }
     });
 
-    if (contentNumber === 1) {
-        document.getElementById("content-1").classList.add("show");
-    } else if (contentNumber === 2) {
-        document.getElementById("content-2").classList.add("show");
-    } else if (contentNumber === 3) {
-        document.getElementById("content-3").classList.add("show");
-    }
+     document.getElementById("content-"+contentNumber).classList.add("show");
 }
 
 // Arrow See More

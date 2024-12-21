@@ -20,7 +20,7 @@
                   <span
                     style="color: var(--primary-color)"
                     data-i18n="jobs"
-                  ></span>
+                  >{{ trans('front.jobs') }}</span>
                 </div>
               </div>
             </div>
