@@ -1,7 +1,7 @@
 <div class="form-group mb-3 col-md-6 {{ $errors->has($field['name'] ?? null) ? ' has-error' : '' }}">
     @if (setting($field['name']))
         @if (str(\setting($field['name'] ?? ''))->afterLast('.') == 'pdf')
-            <a href="{{asset(str_replace('public/', 'storage/', \setting($field['name'] ?? '')))}}" target="_blank">
+            <a href="{{asset(setting($field['name'] ?? ''))}}" target="_blank">
                 <i class="bx bx-file my-2 d-block text-primary" style="font-size: 2rem"></i>
             </a>
         @else
