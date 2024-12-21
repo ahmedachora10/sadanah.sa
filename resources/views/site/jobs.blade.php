@@ -36,6 +36,14 @@
                 <div class="col-lg-4 p-0">
                   <!-- Sidebar -->
                   <div class="sidebar">
+                    <ul class="list-unstyled">
+                        @foreach ($jobs as $job)
+                        <li class="py-2">
+                            <a href="#" data-bs-target="#content-{{$job->id}}">{{ $job->title }}</a>
+                        </li>
+                        @endforeach
+
+                    </ul>
                   </div>
                 </div>
                 <div class="col-lg-8 position-relative mt-3">
