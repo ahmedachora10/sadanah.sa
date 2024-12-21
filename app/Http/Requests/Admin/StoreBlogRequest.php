@@ -17,9 +17,9 @@ class StoreBlogRequest extends FormRequest
         return [
             'image' => [strtolower($this->method()) === 'put' ? 'nullable' : 'required', 'image'],
             'title_ar' => ['required', 'string'],
-            'title_en' => ['nullable', 'string'],
+            'title_en' => ['required', 'string'],
             'content_ar' => ['required', 'string'],
-            'content_en' => ['nullable', 'string'],
+            'content_en' => ['required', 'string'],
             'author' => ['required', 'string'],
             'job_title' => ['required', 'string'],
         ];
