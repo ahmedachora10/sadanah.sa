@@ -54,10 +54,10 @@
                       </article>
                     </div>
                     <div class="d-flex justify-content-end gap-4">
-                        <div>
-                            <span class="text">{{ $blog->author }}</span>
-                            <span class="text">{{ $blog->job_title }}</span>
-                            <span class="text">{{ $blog->created_at->format('Y F d') }}</span>
+                        <div style="font-size:15px">
+                            <span class="text-muted d-block">{{ $blog->author }}</span>
+                            <span class="text-muted d-block">{{ $blog->job_title }}</span>
+                            <span class="text-muted d-block">{{ $blog->created_at->format('Y F d') }}</span>
                         </div>
                     </div>
                     <div class="info-area flex pt-50 bord-thin-top">
