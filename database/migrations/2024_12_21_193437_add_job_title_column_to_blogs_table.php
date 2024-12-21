@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('blogs', function (Blueprint $table) {
-            $table->string('job_title_ar')->nullable()->after('author');
-            $table->string('job_title_en')->nullable()->after('author');
+            $table->string('job_title_ar')->nullable()->after('image');
+            $table->string('job_title_en')->nullable()->after('image');
             $table->renameColumn('author', 'author_ar');
-            $table->string('author_en')->nullable()->after('author_ar');
+            $table->string('author_en')->nullable()->after('image');
         });
     }
 
