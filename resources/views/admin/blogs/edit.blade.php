@@ -14,11 +14,11 @@
                 <x-dashboard.input-group type="text" name="title_ar" :value="$blog->title_ar" :title="trans('table.columns.title')" />
             </div>
             <div class="col-md-6 col-sm-6 col-12 mb-3">
-                <x-dashboard.input-group type="text" name="author" :value="$blog->author_ar" :title="trans('table.columns.author')" />
+                <x-dashboard.input-group type="text" name="author_ar" :value="$blog->author_ar" :title="trans('table.columns.author')" />
             </div>
 
             <div class="col-md-6 col-sm-6 col-12 mb-3">
-                <x-dashboard.input-group type="text" name="job_title" :value="$blog->job_title_ar" :title="trans('table.columns.job title')" />
+                <x-dashboard.input-group type="text" name="job_title_ar" :value="$blog->job_title_ar" :title="trans('table.columns.job title')" />
             </div>
 
             <div class="col-12 mb-3">
