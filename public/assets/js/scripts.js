@@ -1916,7 +1916,19 @@ document.addEventListener("DOMContentLoaded", function () {
 //  Jobs Page
 document.addEventListener("DOMContentLoaded", function () {
     showContent(1);
+
+    $('a[data-target]').each(function () {
+        $(this).click(function () {
+            const target = $(this).attr('data-target');
+
+            $('.content-box').removeClass('show');
+
+            $(target).addClass('show');
+        });
+    });
 });
+
+
 
 function showContent(contentNumber) {
     const contents = document.querySelectorAll(".content-box");
@@ -1925,8 +1937,6 @@ function showContent(contentNumber) {
             content.classList.remove("show");
         }
     });
-
-     document.getElementById("content-"+contentNumber).classList.add("show");
 }
 
 // Arrow See More

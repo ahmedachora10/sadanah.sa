@@ -39,7 +39,7 @@
                     <ul class="list-unstyled">
                         @foreach ($jobs as $job)
                         <li class="py-2">
-                            <a href="#" data-bs-target="#content-{{$job->id}}">{{ $job->title }}</a>
+                            <a href="#" data-target="#content-{{$job->id}}">{{ $job->title }}</a>
                         </li>
                         @endforeach
 
