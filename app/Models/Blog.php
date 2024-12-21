@@ -17,8 +17,10 @@ class Blog extends Model
         'content_en',
         'content_ar',
         'image',
-        'author',
-        'job_title'
+        'author_ar',
+        'author_en',
+        'job_title_ar',
+        'job_title_en'
     ];
 
     // protected static function boot() {
@@ -32,6 +34,12 @@ class Blog extends Model
     }
     public function getContentAttribute() {
         return app()->getLocale() === 'ar' ? $this->content_ar : $this->content_en;
+    }
+    public function getAuthorAttribute() {
+        return app()->getLocale() === 'ar' ? $this->author_ar : $this->author_en;
+    }
+    public function getJobTitleAttribute() {
+        return app()->getLocale() === 'ar' ? $this->job_title_ar : $this->job_title_en;
     }
 
     public function comments(): HasMany {

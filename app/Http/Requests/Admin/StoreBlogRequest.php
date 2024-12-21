@@ -20,8 +20,10 @@ class StoreBlogRequest extends FormRequest
             'title_en' => ['required', 'string'],
             'content_ar' => ['required', 'string'],
             'content_en' => ['required', 'string'],
-            'author' => ['required', 'string'],
-            'job_title' => ['required', 'string'],
+            'author_ar' => ['required', 'string'],
+            'author_en' => ['required', 'string'],
+            'job_title_ar' => ['required', 'string'],
+            'job_title_en' => ['required', 'string'],
         ];
     }
 }
