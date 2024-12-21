@@ -40,15 +40,15 @@
                     </div>
                     <div class="cont">
                       <div class="date fz-13 text-u ls1 mb-10 opacity-7">
-                        <a href="{{route('blog.details',$blog)}}">{{ $blog->created_at->format('d F Y') }}</a>
+                        <a href="{{route('blog.details',$blog)}}">{{ $blog->created_at->format('Y F d') }}</a>
                       </div>
                       <h5 class="blog_cerv_title">
                         <!-- <a href="{{route('blog.details',$blog)}}">
                           {{$blog->title}}
                           </a> -->
-                          {{-- <a href="">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dignissimos esse sint nihil necessitatibus voluptatum doloremque magnam omnis, itaque, aperiam quia veritatis quas maiores. Sapiente eligendi eaque neque velit omnis?
-                          </a> --}}
+                          <a href="{{route('blog.details',$blog)}}">
+                            {{$blog->title}}
+                          </a>
                       </h5>
                       <a
                         href="{{route('blog.details',$blog)}}"
