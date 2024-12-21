@@ -54,7 +54,7 @@
                       </article>
                     </div>
                     <div class="d-flex justify-content-end gap-4">
-                        <div style="font-size:15px">
+                        <div style="font-size:15px" class="text-center">
                             <span class="text-muted d-block">{{ $blog->author }}</span>
                             <span class="text-muted d-block">{{ $blog->job_title }}</span>
                             <span class="text-muted d-block">{{ $blog->created_at->format('Y F d') }}</span>
