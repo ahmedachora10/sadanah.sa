@@ -12,7 +12,7 @@ $footer_ar = setting('footer_ar');
 $footer_en = setting('footer_en');
 $phone = setting('phone');
 $email = setting('email');
-$fileUrl = setting('profile_file_ar');
+$profileFile = setting('profile_file_'.app()->getLocale());
 ?>
    <footer class="modern-footer pt-80">
     <div class="footer-container">
@@ -126,7 +126,7 @@ $fileUrl = setting('profile_file_ar');
               <div class="row">
                 <div class="subscribe-minimal mt-4 col-12 col-lg-6">
                   <a
-                    href="{{ asset("/"). $fileUrl }}"
+                    href="{{ asset($profileFile) }}"
                     class="butn butn-md butn-bord-thin radius-30 w-100 d-flex align-items-center justify-content-center"
                     download >
                     <span class="sub-title"
