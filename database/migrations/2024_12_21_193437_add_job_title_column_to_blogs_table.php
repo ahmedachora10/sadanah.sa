@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::table('blogs', function (Blueprint $table) {
             $table->string('job_title_ar')->nullable()->after('image');
             $table->string('job_title_en')->nullable()->after('image');
-            $table->renameColumn('author', 'author_ar');
+            $table->string('author_ar')->nullable()->after('image');
             $table->string('author_en')->nullable()->after('image');
         });
     }
