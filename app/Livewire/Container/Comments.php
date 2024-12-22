@@ -4,6 +4,7 @@ namespace App\Livewire\Container;
 
 use App\Enums\BLogStatus;
 use App\Models\Comment;
+use App\Models\User;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Illuminate\Database\Eloquent\Builder;
@@ -13,6 +14,10 @@ class Comments extends Component
     use WithPagination;
 
     public string $search = '';
+
+    public function mount() {
+        User::first()->unreadnotifications()->whereJsonContains('data->type', Comment::class)?->update(['read_at' => now()]);
+    }
 
     public function switch(Comment $comment) {
         $comment->update(['status' => $comment->status === BLogStatus::Draft ? BLogStatus::Published : BLogStatus::Draft]);
