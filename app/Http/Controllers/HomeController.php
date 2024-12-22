@@ -130,7 +130,7 @@ class HomeController extends Controller
             'type' => Comment::class,
         ]));
 
-        return redirect()->back()->with('success', trans('message.create'));
+        return redirect()->back()->with('success', str(trans('message.create'))->replace(['العنصر', 'element'], ['التعليق', 'Comment'])->value());
     }
 
     public function job()
