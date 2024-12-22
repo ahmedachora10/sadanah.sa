@@ -5,7 +5,7 @@ namespace App\Services;
 use Dymantic\InstagramFeed\InstagramFeed;
 
 class InstagramService {
-    const PROFILE_NAME = 'dashan';
+    const PROFILE_NAME = 'sadnah';
 
     public static function auth() {
         return \Dymantic\InstagramFeed\Profile::new(self::PROFILE_NAME)->getInstagramAuthUrl();
