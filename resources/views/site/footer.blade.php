@@ -204,73 +204,7 @@ $profileFile = setting('profile_file_'.app()->getLocale());
             </div>
             <div class="column mt-4 insta_footer">
               <h6 class="sub-title mb-30" data-i18n="insta"></h6>
-              <div class="row">
-                <div class="col-4">
-                  <a href="" target="_blank">
-                    <div class="image-insta">
-                      <img
-                        src="https://images.pexels.com/photos/9368777/pexels-photo-9368777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt=""
-                      />
-                      <div class="icon-insta">
-                        <i class="fab fa-instagram"></i>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-4">
-                  <a href="">
-                    <div class="image-insta">
-                      <img
-                        src="https://images.pexels.com/photos/11911058/pexels-photo-11911058.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt=""
-                      />
-                      <div class="icon-insta">
-                        <i class="fab fa-instagram"></i>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-4">
-                  <a href="">
-                    <div class="image-insta">
-                      <img
-                        src="https://images.pexels.com/photos/9368777/pexels-photo-9368777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt=""
-                      />
-                      <div class="icon-insta">
-                        <i class="fab fa-instagram"></i>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-4">
-                  <a href="">
-                    <div class="image-insta">
-                      <img
-                        src="https://images.pexels.com/photos/1933239/pexels-photo-1933239.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt=""
-                      />
-                      <div class="icon-insta">
-                        <i class="fab fa-instagram"></i>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="col-4">
-                  <a href="#0">
-                    <div class="image-insta">
-                      <img
-                        src="https://images.pexels.com/photos/9368777/pexels-photo-9368777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                        alt=""
-                      />
-                      <div class="icon-insta">
-                        <i class="fab fa-instagram"></i>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
+                <x-theme.instagram-feeds />
             </div>
           </div>
         </div>
