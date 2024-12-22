@@ -37,6 +37,7 @@
             <div class="container">
               <div class="row xlg-marg">
                 <div class="col-lg-8">
+                    <x-dashboard.alert color='success' />
                   <div class="main-post">
                     <div class="item pb-60">
                       <article>

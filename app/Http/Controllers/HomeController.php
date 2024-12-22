@@ -16,8 +16,10 @@ use App\Models\Slider;
 use App\Models\Statistic;
 use App\Models\Tag;
 use App\Models\Team;
+use App\Models\User;
 use App\Models\Vision;
 use App\Models\WhyUs;
+use App\Notifications\UserActionNotification;
 use App\Services\InstagramService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -121,7 +123,14 @@ class HomeController extends Controller
         $comment->message = $request->message;
         $comment->blog_id = $request->blog_id;
         $comment->save();
-        return redirect()->back();
+
+        User::first()->notify(new UserActionNotification([
+            'title' => __('New Comment'),
+            'message' =>  'من طرف ' . $comment->name,
+            'type' => Comment::class,
+        ]));
+
+        return redirect()->back()->with('success', trans('message.create'));
     }
 
     public function job()
