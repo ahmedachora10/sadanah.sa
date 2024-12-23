@@ -6,7 +6,7 @@ $title = $job->{'title_' . app()->getLocale()};
     <main class="main-bg">
         <!-- ==================== Start Header ==================== -->
 
-        <header class="page-header-cerv bg-img section-padding" data-background="{{asset('assets/imgs/header/job-posting-hiring.jpg')}}"
+        <header class="page-header-cerv bg-img section-padding" data-background="{{asset('assets/imgs/header/job-posting-hiring_.jpg')}}"
             data-overlay-dark="4">
             <div class="container pt-100 ontop">
                 <div class="text-center">
