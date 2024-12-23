@@ -252,6 +252,7 @@ $profileFile = setting('profile_file_'.app()->getLocale());
 <script src="{{asset('assets/js/hscroll.js')}}"></script>
 <script src="{{asset('assets/js/hscroll.js')}}"></script>
 
+@livewireScripts
 <!-- custom scripts -->
 <script src="{{asset('assets/js/scripts.js')}}?v={{str()->random(5)}}"></script>
 </body>
