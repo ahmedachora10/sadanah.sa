@@ -72,6 +72,6 @@
     </div>
 
     <div class="col-12">
-        <button class="confirm_button" type="button" wire:click="save">{{ trans('send') }}</button>
+        <button class="btn confirm_button" type="button" wire:click="save">{{ trans('send') }}</button>
     </div>
 </div>
