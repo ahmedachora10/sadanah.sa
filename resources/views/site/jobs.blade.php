@@ -56,10 +56,10 @@
                         <h2 class="content_title">
                         {{$job->title}}
                         </h2>
-                        <a
+                        <a wire:click="$dispatch('add-job-request', {jobPost: {{$job}}})"
                             class="confirm_button"
-                            data-bs-toggle="modal"
-                            data-bs-target="#confirmForm"
+                            {{-- data-bs-toggle="modal"
+                            data-bs-target="#confirmForm" --}}
                             >قدم الان</a
                         >
                         </div>

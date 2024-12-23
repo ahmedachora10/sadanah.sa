@@ -10,6 +10,7 @@ use App\Models\User;
 use App\Notifications\UserActionNotification;
 use App\Services\UploadFileService;
 use Illuminate\Support\Facades\DB;
+use Livewire\Attributes\On;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Livewire\Features\SupportFileUploads\WithFileUploads;
@@ -39,6 +40,7 @@ class StoreJobRequest extends Component
         $this->jobs = JobPost::all();
         $this->jobCities = JobCity::all();
     }
+    #[On('add-job-request')]
     public function setJobRequest(JobPost $jobPost) {
         $this->jobPost = $jobPost;
         $this->dispatch('open-modal', taraget: "#confirmForm");
