@@ -33,7 +33,7 @@ class StoreJobRequest extends Component
     ])]
     public $attachments = [];
 
-    #[Validate('required|file')]
+    #[Validate('nullable|file')]
     public $cv = null;
 
     public function mount() {
