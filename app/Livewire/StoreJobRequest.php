@@ -67,7 +67,7 @@ class StoreJobRequest extends Component
 
             session()->flash('success', str(trans('message.create'))->replace(['العنصر', 'element'], ['الطلب "' .$generateKey. '"', 'Request "'.$generateKey.'"'])->value());
             $this->form->reset();
-            $this->reset('attachments');
+            $this->reset('attachments', 'cv');
         });
 
     }
