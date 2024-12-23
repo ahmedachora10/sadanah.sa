@@ -10,7 +10,7 @@ trait HasTranslation {
     public static function translation(Model $model)
     {
         if (strtolower(request()->method()) !== 'put') {
-            $translationColumns = collect(Cache::remember($model->getTable(), now()->week(), fn() => Schema::getColumnListing($model->getTable())))
+            $translationColumns = collect(Cache::remember($model->getTable(), now()->hours(2), fn() => Schema::getColumnListing($model->getTable())))
                 ->filter(fn($item) => str($item)->endsWith('_ar'))
                 ->map(fn($item) => str($item)->replaceEnd('_ar', ''))
                 ->toArray();
