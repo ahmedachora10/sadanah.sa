@@ -46,14 +46,15 @@
                     <option value="{{ $job->id }}" @selected($job->id == $jobPost->id)>{{ $job->title }}</option>
                 @endforeach
             </select> --}}
-            <x-dashboard.input-group type="text" wire:model.defer="form.job" name="form.job"
-                :title="trans('table.columns.years of experience')" />
+            <x-dashboard.input-group type="text" wire:model.defer="form.job" name="form.job" disabled
+                :title="trans('table.columns.job')" :palceholder="$jobPost->title" />
             <x-dashboard.error field="form.job" />
         </div>
     </div>
 
     <div class="col-xl-6 col-lg-6 mb-3">
         <div class="country-select">
+            <x-dashboard.label>{{ trans('table.columns.job city') }}</x-dashboard.label>
             <select class="form-select" name="job_city" id="job_city" wire:model.defer="form.job_city">
                 <option value=""><x-dashboard.label>{{ trans('table.columns.job city') }}</x-dashboard.label></option>
                 @foreach ($jobCities as $city)
