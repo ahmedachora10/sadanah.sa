@@ -7,45 +7,47 @@
     @endif
 
     <div class="col-xl-6 col-lg-6 mb-3">
-        <x-dashboard.input-group type="text" wire:model.defer="form.name" name="form.name" title="" :placeholder="trans('table.columns.name')" />
+        <x-dashboard.input-group type="text" wire:model.defer="form.name" name="form.name" title="" :title="trans('table.columns.name')" />
     </div>
 
     <div class="col-xl-6 col-lg-6 mb-3">
-        <x-dashboard.input-group type="text" wire:model.defer="form.email" name="form.email" title="" :placeholder="trans('table.columns.email')" />
+        <x-dashboard.input-group type="text" wire:model.defer="form.email" name="form.email" title="" :title="trans('table.columns.email')" />
     </div>
 
     <div class="col-xl-6 col-lg-6 mb-3">
-        <x-dashboard.input-group class="text-start" type="number" wire:model.defer="form.phone" name="form.phone" title="" :placeholder="trans('table.columns.phone')" />
+        <x-dashboard.input-group class="text-start" type="number" wire:model.defer="form.phone" name="form.phone" title="" :title="trans('table.columns.phone')" />
     </div>
 
     <div class="col-xl-6 col-lg-6 mb-3">
-        <x-dashboard.input-group class="text-start" type="number" wire:model.defer="form.age" name="form.age" title="" :placeholder="trans('table.columns.age')" />
+        <x-dashboard.input-group class="text-start" type="number" wire:model.defer="form.age" name="form.age" title="" :title="trans('table.columns.age')" />
     </div>
 
     <div class="col-xl-6 col-lg-6 mb-3">
         <x-dashboard.input-group type="text" wire:model.defer="form.specialization" name="form.specialization"
-            title="" :placeholder="trans('table.columns.specialization')" />
+            title="" :title="trans('table.columns.specialization')" />
     </div>
 
     <div class="col-xl-6 col-lg-6 mb-3">
         <x-dashboard.input-group type="text" wire:model.defer="form.years_of_experience"
-            name="form.years_of_experience" title="" :placeholder="trans('table.columns.years of experience')" />
+            name="form.years_of_experience" title="" :title="trans('table.columns.years of experience')" />
     </div>
 
     <div class="col-12 mb-3">
-        <x-dashboard.text-area wire:model.defer="form.excerpt" title="" :placeholder="trans('table.columns.excerpt')" name="form.excerpt" cols="10" rows="6">
+        <x-dashboard.text-area wire:model.defer="form.excerpt" title="" :title="trans('table.columns.excerpt')" name="form.excerpt" cols="10" rows="6">
             <x-dashboard.error field="form.excerpt" />
         </x-dashboard.text-area>
     </div>
 
     <div class="col-xl-6 col-lg-6 mb-3">
         <div class="country-select">
-            <select class="form-select" name="job" id="job" wire:model.defer="form.job">
+            {{-- <select class="form-select" name="job" id="job" wire:model.defer="form.job">
                 <option value=""><x-dashboard.label>{{ trans('table.columns.job') }}</x-dashboard.label></option>
                 @foreach ($jobs as $job)
-                    <option value="{{ $job->id }}" @selected($job->id == $jobPost?->id)>{{ $job->title }}</option>
+                    <option value="{{ $job->id }}" @selected($job->id == $jobPost->id)>{{ $job->title }}</option>
                 @endforeach
-            </select>
+            </select> --}}
+            <x-dashboard.input-group type="text" wire:model.defer="form.job" name="form.job"
+                :title="trans('table.columns.years of experience')" />
             <x-dashboard.error field="form.job" />
         </div>
     </div>

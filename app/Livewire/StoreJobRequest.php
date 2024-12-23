@@ -39,6 +39,7 @@ class StoreJobRequest extends Component
         $this->uploadFileService = new UploadFileService;
         $this->jobs = JobPost::all();
         $this->jobCities = JobCity::all();
+        $this->form->job = $this->jobPost->id;
     }
 
     public function save() {
