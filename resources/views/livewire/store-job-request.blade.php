@@ -63,7 +63,7 @@
     </div>
 
     <div class="col-xl-6 col-lg-6 mb-3">
-        <x-theme.form.input-group type="file" wire:model.defer="form.cv" name="form.cv" :title="trans('table.columns.cv')" />
+        <x-theme.form.input-group type="file" wire:model.defer="cv" name="cv" :title="trans('table.columns.cv')" />
     </div>
 
     <div class="col-xl-6 col-lg-6 mb-3">
@@ -72,9 +72,6 @@
     </div>
 
     <div class="col-12">
-        <div class="tp-contact-btn">
-            <button class="tp-btn" type="button" wire:click="save">{{ trans('send') }}</button>
-            <p class="ajax-response"></p>
-        </div>
+        <button class="send_button" type="button" wire:click="save">{{ trans('send') }}</button>
     </div>
 </div>

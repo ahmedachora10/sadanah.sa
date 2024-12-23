@@ -49,64 +49,63 @@
                 <div class="col-lg-8 position-relative mt-3">
                   <!-- Dynamic Content Section -->
                   @foreach ($jobs as $job)
+                    <div id="content-{{$job->id}}" class="content-box show">
+                        <div
+                        class="header_content d-flex align-items-center justify-content-between"
+                        >
+                        <h2 class="content_title">
+                        {{$job->title}}
+                        </h2>
+                        <a
+                            class="confirm_button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#confirmForm"
+                            >قدم الان</a
+                        >
+                        </div>
 
-                  <div id="content-{{$job->id}}" class="content-box show">
-                    <div
-                      class="header_content d-flex align-items-center justify-content-between"
-                    >
-                      <h2 class="content_title">
-                      {{$job->title}}
-                     </h2>
-                      <a
-                        class="confirm_button"
-                        data-bs-toggle="modal"
-                        data-bs-target="#confirmForm"
-                        >قدم الان</a
-                      >
-                    </div>
+                        <div class="content_info">
+                        <h6 class="">{{__('front.Basic information')}}</h6>
+                        <ul
+                            class="prime_info d-flex align-items-center justify-content-between"
+                        >
+                            <li><span> {{__('front.Work location')}} : </span> <span>{{ $job->city?->name ?? '-' }}</span></li>
+                            <li>
+                            <span> {{__('front.Job Type')}} : </span> <span>
+                                {{$job->type?->name() ?? '-'}}
+                            </span>
+                            </li>
+                            <li><span> {{__('front.Job Number')}} : </span> <span>
+                            {{$job->number}}
+                            </span></li>
+                        </ul>
+                        </div>
+                        <div class="res_content">
+                        <h3 class="res-title">{{__('front.responsibility')}}</h3>
+                        <div>
+                            {{$job->responsibilities}}
+                        </div>
+                        </div>
+                        <div class="res_content">
+                        <h3 class="res-title"> {{__('front.requirements')}}:</h3>
+                        <div>
+                            {{$job->responsibilities}}
 
-                    <div class="content_info">
-                      <h6 class="">{{__('front.Basic information')}}</h6>
-                      <ul
-                        class="prime_info d-flex align-items-center justify-content-between"
-                      >
-                        <li><span> {{__('front.Work location')}} : </span> <span>{{ $job->city?->name ?? '-' }}</span></li>
-                        <li>
-                          <span> {{__('front.Job Type')}} : </span> <span>
-                            {{$job->type?->name() ?? '-'}}
-                           </span>
-                        </li>
-                        <li><span> {{__('front.Job Number')}} : </span> <span>
-                          {{$job->number}}
-                        </span></li>
-                      </ul>
-                    </div>
-                    <div class="res_content">
-                      <h3 class="res-title">{{__('front.responsibility')}}</h3>
-                      <div>
-                        {{$job->responsibilities}}
-                      </div>
-                    </div>
-                    <div class="res_content">
-                      <h3 class="res-title"> {{__('front.requirements')}}:</h3>
-                      <div>
-                          {{$job->responsibilities}}
-
-                      </div>
-                    </div>
-                    <div class="res_content">
-                      <h3 class="res-title">  {{__('front.experience')}}:</h3>
-                      <div>
-                        {{$job->experience}}
+                        </div>
+                        </div>
+                        <div class="res_content">
+                        <h3 class="res-title">  {{__('front.experience')}}:</h3>
+                        <div>
+                            {{$job->experience}}
+                            </div>
+                        </div>
+                        <div class="res_content">
+                        <h3 class="res-title">{{__('front.education_level')}} :</h3>
+                        <div>
+                            {{$job->education}}
+                        </div>
                         </div>
                     </div>
-                    <div class="res_content">
-                      <h3 class="res-title">{{__('front.education_level')}} :</h3>
-                      <div>
-                        {{$job->education}}
-                      </div>
-                    </div>
-                  </div>
                   @endforeach
                 </div>
               </div>
@@ -136,7 +135,7 @@
                 ></button>
               </div>
               <div class="modal-body">
-                <form class="form_modal">
+                {{-- <form class="form_modal">
                   <div class="mb-3 row">
                     <label
                       for="name"
@@ -251,7 +250,8 @@
                   <div class="col-12">
                     <button class="send_button">Submit form</button>
                   </div>
-                </form>
+                </form> --}}
+                    <livewire:store-job-request />
               </div>
             </div>
           </div>

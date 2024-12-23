@@ -21,19 +21,27 @@ class StoreJobRequest extends Component
     protected ?UploadFileService $uploadFileService;
 
     public JobRequestForm $form;
+    public ?JobPost $jobPost = null;
 
     public $jobs = [];
     public $jobCities = [];
 
     #[Validate([
-        'attachments.*' => 'file',
+        'attachments.*' => 'nullable|file',
     ])]
     public $attachments = [];
+
+    #[Validate('required|file')]
+    public $cv = null;
 
     public function mount() {
         $this->uploadFileService = new UploadFileService;
         $this->jobs = JobPost::all();
         $this->jobCities = JobCity::all();
+    }
+    public function setJobRequest(JobPost $jobPost) {
+        $this->jobPost = $jobPost;
+        $this->dispatch('open-modal', taraget: "#confirmForm");
     }
 
     public function save() {
@@ -42,7 +50,7 @@ class StoreJobRequest extends Component
         $this->uploadFileService = new UploadFileService;
 
         DB::transaction(function () {
-            $jobRequest = JobRequest::create($this->form->except('cv') + ['cv' => $this->uploadFileService->store($this->form->cv, 'jobs/cv')]);
+            $jobRequest = JobRequest::create($this->form->all() + ['cv' => $this->uploadFileService->store($this->cv, 'jobs/cv')]);
 
             if(count($this->attachments) > 0) {
                 foreach ($this->attachments as $attachment) {
@@ -61,7 +69,7 @@ class StoreJobRequest extends Component
             $this->reset('attachments');
         });
 
-        $this->dispatch('close-modal', target:'#jobsForm');
+        $this->dispatch('close-modal', target:'#confirmForm');
 
     }
 
