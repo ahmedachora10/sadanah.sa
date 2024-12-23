@@ -14,6 +14,7 @@ use Livewire\Attributes\On;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Livewire\Features\SupportFileUploads\WithFileUploads;
+use Str;
 
 class StoreJobRequest extends Component
 {
@@ -62,7 +63,9 @@ class StoreJobRequest extends Component
                 'type' => JobRequest::class,
             ]));
 
-            session()->flash('success', trans('message.create'));
+            $generateKey = str()->uuid();
+
+            session()->flash('success', str(trans('message.create'))->replace(['العنصر', 'element'], ['', '']));
             $this->form->reset();
             $this->reset('attachments');
         });
