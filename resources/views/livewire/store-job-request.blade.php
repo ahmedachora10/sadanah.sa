@@ -15,11 +15,11 @@
     </div>
 
     <div class="col-xl-6 col-lg-6 mb-3">
-        <x-dashboard.input-group type="number" wire:model.defer="form.phone" name="form.phone" title="" :placeholder="trans('table.columns.phone')" />
+        <x-dashboard.input-group class="text-start" type="number" wire:model.defer="form.phone" name="form.phone" title="" :placeholder="trans('table.columns.phone')" />
     </div>
 
     <div class="col-xl-6 col-lg-6 mb-3">
-        <x-dashboard.input-group type="number" wire:model.defer="form.age" name="form.age" title="" :placeholder="trans('table.columns.age')" />
+        <x-dashboard.input-group class="text-start" type="number" wire:model.defer="form.age" name="form.age" title="" :placeholder="trans('table.columns.age')" />
     </div>
 
     <div class="col-xl-6 col-lg-6 mb-3">
@@ -72,6 +72,6 @@
     </div>
 
     <div class="col-12">
-        <button class="btn confirm_button" type="button" wire:click="save">{{ trans('send') }}</button>
+        <button class="btn btn-warning" type="button" wire:click="save">{{ trans('send') }}</button>
     </div>
 </div>
