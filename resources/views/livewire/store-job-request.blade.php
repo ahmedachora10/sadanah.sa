@@ -7,8 +7,7 @@
     @endif
 
     <div class="col-xl-6 col-lg-6 mb-3">
-        <x-dashboard.input-group type="hidden" wire:model.defer="form.job" name="form.job" disabled
-            :title="trans('table.columns.job')" :palceholder="$jobPost->title" />
+        <input type="hidden" wire:model.defer="form.job" name="form.job" disabled />
         <x-dashboard.input-group type="text" wire:model.defer="form.name" name="form.name" title="" :title="trans('table.columns.name')" />
     </div>
 
