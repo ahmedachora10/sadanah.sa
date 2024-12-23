@@ -11,25 +11,25 @@ class InstagramService {
         return \Dymantic\InstagramFeed\Profile::new(self::PROFILE_NAME)->getInstagramAuthUrl();
     }
 
-    // private function getProfile() {
-    //     return InstagramFeed::for(self::PROFILE_NAME, 6);
-    // }
+    private function getProfile() {
+        return InstagramFeed::for(self::PROFILE_NAME, 6);
+    }
 
-    // public function getImages() : array  {
-    //     $feeds = $this->getProfile();
+    public function getImages() : array  {
+        $feeds = $this->getProfile();
 
-    //     $images = [];
-    //     foreach($feeds as $index => $feed) {
-    //         if (!strtolower($feed?->type) == 'image')
-    //             continue;
+        $images = [];
+        foreach($feeds as $index => $feed) {
+            if (!strtolower($feed?->type) == 'image')
+                continue;
 
-    //         if ($index > 5)
-    //             break;
+            if ($index > 5)
+                break;
 
-    //         $images[$index]['image'] = $feed->thumbnail_url != '' ? $feed->thumbnail_url : $feed->url;
-    //         $images[$index]['permalink'] = $feed->permalink;
-    //     }
+            $images[$index]['image'] = $feed->thumbnail_url != '' ? $feed->thumbnail_url : $feed->url;
+            $images[$index]['permalink'] = $feed->permalink;
+        }
 
-    //     return $images;
-    // }
+        return $images;
+    }
 }
