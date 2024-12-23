@@ -1,24 +1,38 @@
-<x-front-layout>
-    <x-theme.sections.breadcrumb image="theme/img/breadcrumb/bradcrumb-14.jpg" title="front.job request" />
+@include('site.header')
+<div id="smooth-content">
+    <main class="main-bg">
+        <!-- ==================== Start Header ==================== -->
 
-    <section class="tp-contact-area ">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="tp-contact-wrapper mb-120">
-                        <h3 class="tp-contact-title">{{ ucwords(trans('new job request'))}}</h3>
-                        <div class="tp-contact-input-form">
-                            <div class="row">
-                                <livewire:store-job-request />
-                            </div>
+        <header class="page-header-cerv bg-img section-padding" data-background="{{asset('assets/imgs/header/2.jpg')}}"
+            data-overlay-dark="4">
+            <div class="container pt-100 ontop">
+                <div class="text-center">
+                    <h1 class="fz-100" data-i18n="Services">{{__('front.services')}}</h1>
+                    <div class="mt-15">
+                        <a href="{{route('home')}}" data-i18n="home">{{__('front.home')}}</a>
+                        <span class="padding-rl-20">|</span>
+                        <a href="{{route('home')}}" data-i18n="jobs">{{__('front.jobs')}}</a>
+                        <span class="padding-rl-20">|</span>
+                        <span style="color: var(--primary-color)" data-i18n="job-title">{{$job->title}}</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <section class="services-details section-padding">
+            <div class="container">
+                <div class="sec-head mb-80">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <livewire:store-job-request :jobPost="$job" />
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    @push('component-styles')
-        <link rel="stylesheet" href="{{asset('theme/css/nice-select.css')}}">
-    @endpush
-</x-front-layout>
+
+    </main>
+
+    @include('site.footer')

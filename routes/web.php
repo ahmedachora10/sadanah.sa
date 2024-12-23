@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\HomeController;
 use App\Http\Middleware\SetLocale;
 use App\Livewire\Container\InfluencerJoinRequest;
+use App\Models\JobPost;
 use App\Models\OurService;
 use App\Models\OurWork;
 use App\Models\Support;
@@ -67,8 +68,8 @@ Route::get('clients/reviews', function () {
 
 Route::resource('reviews', ReviewController::class)->only('store');
 
-Route::get('/jobs', function () {
-    return view('job');
+Route::get('/jobs/{job}', function (JobPost $job) {
+    return view('job', $job);
 })->name('jobs.request');
 
 Route::get('contact', function () {

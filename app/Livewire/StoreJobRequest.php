@@ -40,11 +40,6 @@ class StoreJobRequest extends Component
         $this->jobs = JobPost::all();
         $this->jobCities = JobCity::all();
     }
-    #[On('add-job-request')]
-    public function setJobRequest(JobPost $jobPost) {
-        $this->jobPost = $jobPost;
-        $this->dispatch('open-modal', taraget: "#confirmForm");
-    }
 
     public function save() {
         $this->validate();
@@ -70,8 +65,6 @@ class StoreJobRequest extends Component
             $this->form->reset();
             $this->reset('attachments');
         });
-
-        $this->dispatch('close-modal', target:'#confirmForm');
 
     }
 
