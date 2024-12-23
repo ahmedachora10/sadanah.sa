@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" wire:loading.class="opacity-25">
 
     @if (session('success'))
         <div class="col-12 mb-3">
