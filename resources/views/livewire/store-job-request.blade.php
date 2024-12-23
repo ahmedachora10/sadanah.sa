@@ -1,4 +1,4 @@
-<div class="row text-end">
+<div class="row">
 
     @if (session('success'))
         <div class="col-12 mb-3">
