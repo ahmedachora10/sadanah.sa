@@ -69,11 +69,11 @@
         </div>
 
     <div class="col-xl-6 col-lg-6 mb-3">
-        <x-dashboard.input-group type="file" wire:model.defer="cv" name="cv" :title="trans('table.columns.cv')" />
+        <x-dashboard.input-group type="file" wire:model.lazy="cv" name="cv" :title="trans('table.columns.cv')" />
     </div>
 
     <div class="col-xl-6 col-lg-6 mb-3">
-        <x-dashboard.input-group type="file" wire:model.defer="attachments" name="attachments" :title="trans('table.columns.attachments')"
+        <x-dashboard.input-group type="file" wire:model.lazy="attachments" name="attachments" :title="trans('table.columns.attachments')"
             multiple />
     </div>
 

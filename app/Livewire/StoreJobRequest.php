@@ -63,9 +63,9 @@ class StoreJobRequest extends Component
                 'type' => JobRequest::class,
             ]));
 
-            $generateKey = str()->uuid();
+            $generateKey = str(str()->uuid())->substr(0, 8)->value();
 
-            session()->flash('success', str(trans('message.create'))->replace(['العنصر', 'element'], ['', '']));
+            session()->flash('success', str(trans('message.create'))->replace(['العنصر', 'element'], ['الطلب "' .$generateKey. '"', 'Request "'.$generateKey.'"'])->value());
             $this->form->reset();
             $this->reset('attachments');
         });
