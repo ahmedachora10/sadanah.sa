@@ -43,7 +43,7 @@
             <select class="form-select" name="job" id="job" wire:model.defer="form.job">
                 <option value=""><x-dashboard.label>{{ trans('table.columns.job') }}</x-dashboard.label></option>
                 @foreach ($jobs as $job)
-                    <option value="{{ $job->id }}">{{ $job->title }}</option>
+                    <option value="{{ $job->id }}" @selected($job->id == $jobPost?->id)>{{ $job->title }}</option>
                 @endforeach
             </select>
             <x-dashboard.error field="form.job" />
