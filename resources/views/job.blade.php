@@ -1,4 +1,7 @@
 @include('site.header')
+@php
+$title = $job->{'title_' . app()->getLocale()};
+@endphp
 <div id="smooth-content">
     <main class="main-bg">
         <!-- ==================== Start Header ==================== -->
@@ -13,7 +16,7 @@
                         <span class="padding-rl-20">|</span>
                         <a href="{{route('job')}}" data-i18n="jobs">{{__('front.jobs')}}</a>
                         <span class="padding-rl-20">|</span>
-                        <span style="color: var(--primary-color)" data-i18n="job-title">{{$job->title}}</span>
+                        <span style="color: var(--primary-color)" data-i18n="job-title">{{$title}}</span>
                     </div>
                 </div>
             </div>
