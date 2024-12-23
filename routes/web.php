@@ -69,7 +69,7 @@ Route::get('clients/reviews', function () {
 Route::resource('reviews', ReviewController::class)->only('store');
 
 Route::get('/jobs/{job}', function (JobPost $job) {
-    return view('job', $job);
+    return view('job', compact('job'));
 })->name('jobs.request');
 
 Route::get('contact', function () {
