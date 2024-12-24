@@ -17,7 +17,7 @@ Route::get('/template', function () {
     return view('welcome');
 });
 
-Route::get('instagram/auth', fn() => redirect()->to(app(InstagramService::class)->auth()));
+Route::get('instagram/auth', fn() => app(InstagramService::class)->auth());
 Route::get('instagram/feeds', fn() => dd(app(InstagramService::class)->getImages()));
 Route::get('terms', fn() => 'Terms');
 Route::get('instagram-auth-failure', fn() => dd(request()));
