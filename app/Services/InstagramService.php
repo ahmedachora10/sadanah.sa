@@ -33,10 +33,18 @@ class InstagramService {
                 'access_token' => setting('instagram_token')
             ]);
 
-            return collect($response->json()['data'])->filter(fn($item) => strtolower($item['media_type']) === 'image')->take(5)->map(fn($item) => [
-                'image' => $item['thumbnail_url'] ?? $item['media_url'],
-                'permalink' => $item['permalink'],
-            ])->toArray();
+            return collect($response->json()['data'] ?? [])
+            ->filter(
+                callback: fn($item) => strtolower($item['media_type']) === 'image'
+            )
+            ->take(limit: setting('instagram_posts_count') ?? 6)
+            ->map(
+                callback: fn($item) => [
+                    'image' => $item['thumbnail_url'] ?? $item['media_url'],
+                    'permalink' => $item['permalink'],
+                ]
+            )
+            ->toArray();
         } catch(Exception $e)
         {
             logger($e->getMessage());

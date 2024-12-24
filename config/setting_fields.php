@@ -52,6 +52,15 @@ return [
                 'class' => '', // any class for input
                 'value' => '' // default value if you want
             ],
+            [
+                'type' => 'text', // input fields type
+                'data' => 'int', // data type, string, int, boolean
+                'name' => 'instagram_posts_count', // unique name for field
+                'label' => 'Instagram Posts Count', // you know what label it is
+                'rules' => 'nullable|min:2', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => 6 // default value if you want
+            ],
         ]
     ],
 
