@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -27,6 +28,11 @@ class AppServiceProvider extends ServiceProvider
 
         app()->singleton('headlines', fn() => collect(Headline::all() ?? []));
         app()->singleton('settings', fn() => Setting::getAllSettings());
+
+
+        Event::listen(function (\SocialiteProviders\Manager\SocialiteWasCalled $event) {
+            $event->extendSocialite('instagram', \SocialiteProviders\Instagram\Provider::class);
+        });
 
         Blade::if('hasPermission', function (string $expression) {
 

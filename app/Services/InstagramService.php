@@ -3,16 +3,20 @@
 namespace App\Services;
 
 use Dymantic\InstagramFeed\InstagramFeed;
+use Laravel\Socialite\Facades\Socialite;
 
 class InstagramService {
-    const PROFILE_NAME = 'sadnahco-IG';
-
-    public static function auth() {
-        return \Dymantic\InstagramFeed\Profile::new(self::PROFILE_NAME)->getInstagramAuthUrl();
+    public function __construct(
+        private Socialite $socialite
+    ) {}
+    public function auth() {
+        return $this->socialite::driver('instagram')
+            ->setScopes(['instagram_business_basic'])
+            ->redirect();
     }
 
     private function getProfile() {
-        return InstagramFeed::for(self::PROFILE_NAME, 6);
+        return $this->socialite::driver('instagram')->user();
     }
 
     public function getImages() : array  {

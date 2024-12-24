@@ -17,11 +17,11 @@ Route::get('/template', function () {
     return view('welcome');
 });
 
-Route::get('instagram/auth', fn() => redirect()->to(InstagramService::auth()));
-Route::get('instagram/feeds', fn() => dd((new InstagramService)->getImages()));
+Route::get('instagram/auth', fn() => redirect()->to(app(InstagramService::class)->auth()));
+Route::get('instagram/feeds', fn() => dd(app(InstagramService::class)->getImages()));
 Route::get('terms', fn() => 'Terms');
 Route::get('instagram-auth-failure', fn() => dd(request()));
-Route::get('instagram-auth-success', fn() => 'success');
+Route::get('instagram-auth-success', fn() => dd(app(InstagramService::class)->getProfile()));
 
 Route::get('switch-theme', function () {
     $theme = request()->session()->get('theme', 'light');
