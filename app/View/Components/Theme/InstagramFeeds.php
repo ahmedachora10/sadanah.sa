@@ -10,10 +10,10 @@ use Illuminate\View\Component;
 class InstagramFeeds extends Component
 {
     public array $feeds = [];
-    // public function __construct()
-    // {
-    //     $this->feeds = (new InstagramService)->getImages();
-    // }
+    public function __construct()
+    {
+        $this->feeds = app(InstagramService::class)->getImages();
+    }
 
     /**
      * Get the view / contents that represent the component.
