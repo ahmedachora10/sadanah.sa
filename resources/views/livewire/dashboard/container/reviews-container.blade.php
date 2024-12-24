@@ -84,12 +84,16 @@
                         if (contentToCopy) {
                             navigator.clipboard.writeText(contentToCopy).then(() => {
                                 element.classList.add('text-success');
+                                element.classList.add('check-square');
+                                element.classList.remove('bx-clipboard');
                                 element.classList.add('fs-4');
 
                                 setTimeout(() => {
                                     element.classList.remove('text-success');
                                     element.classList.remove('fs-4');
-                                }, 1500);
+                                    element.classList.remove('check-square');
+                                    element.classList.add('bx-clipboard');
+                                }, 800);
                             }).catch(err => {
                                 console.error('Could not copy text: ', err);
                             });
