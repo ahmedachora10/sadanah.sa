@@ -15,7 +15,7 @@ class InstagramService {
             ->redirect();
     }
 
-    private function getProfile() {
+    public function getProfile() {
         return $this->socialite::driver('instagram')->user();
     }
 
