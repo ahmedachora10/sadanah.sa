@@ -36,7 +36,7 @@ class InstagramService {
             return collect($response->json()['data'])->filter(fn($item) => strtolower($item['media_type']) === 'image')->take(5)->map(fn($item) => [
                 'image' => $item['thumbnail_url'] ?? $item['media_url'],
                 'permalink' => $item['permalink'],
-            ]);
+            ])->toArray();
         } catch(Exception $e)
         {
             logger($e->getMessage());
@@ -47,18 +47,9 @@ class InstagramService {
     public function getImages() : array  {
         $feeds = $this->getPosts();
 
-        $images = [];
-        foreach($feeds as $index => $feed) {
-            if (!strtolower($feed?->type) == 'image')
-                continue;
+        if (!is_array($feeds))
+            return [];
 
-            if ($index > 5)
-                break;
-
-            $images[$index]['image'] = $feed->thumbnail_url != '' ? $feed->thumbnail_url : $feed->url;
-            $images[$index]['permalink'] = $feed->permalink;
-        }
-
-        return $images;
+        return $feeds;
     }
 }
