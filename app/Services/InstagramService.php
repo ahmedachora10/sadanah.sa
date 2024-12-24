@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use Dymantic\InstagramFeed\InstagramFeed;
+use Exception;
 use Illuminate\Support\Facades\Http;
 use Laravel\Socialite\Facades\Socialite;
 
@@ -23,19 +24,28 @@ class InstagramService {
 
 
     public function getPosts() {
-        $endpoint = 'https://graph.instagram.com/me/media';
-        $fields = 'id,caption,media_type,media_url,permalink,thumbnail_url,timestamp';
+        try {
+            $endpoint = 'https://graph.instagram.com/me/media';
+            $fields = 'id,caption,media_type,media_url,permalink,thumbnail_url,timestamp';
 
-        $response = Http::get($endpoint, [
-            'fields' => $fields,
-            'access_token' => setting('instagram_token')
-        ]);
+            $response = Http::get($endpoint, [
+                'fields' => $fields,
+                'access_token' => setting('instagram_token')
+            ]);
 
-        return $response->json();
+            return collect($response->json()['data'])->filter(fn($item) => strtolower($item->media_type) === 'image')->take(5)->map(fn($item) => [
+                'image' => $item->thumbnail_url ?? $item->media_url,
+                'permalink' => $item->permalink,
+            ]);
+        } catch(Exception $e)
+        {
+            logger($e->getMessage());
+            return $e->getMessage();
+        }
     }
 
     public function getImages() : array  {
-        $feeds = $this->getProfile();
+        $feeds = $this->getPosts();
 
         $images = [];
         foreach($feeds as $index => $feed) {
