@@ -28,7 +28,7 @@ class InstagramService {
 
         $response = Http::get($endpoint, [
             'fields' => $fields,
-            'access_token' => 'AQBZCcHC1X330ZjbVxLNZ9ZP_TQeBBJakjML_J_Y_AeufCty3CQl_994RskX46Ea1vK3yeAXTWGSGeKyVkNgmSLAmP4K5XhRjk3Q5ibAgyUhq7Y36mWFMe_mZfOiV7IGk70Ds2zzr_mMbFkZl2DSCT0wkt_V0urzsIWwgqEtpfz5XUEXlFKrppXfz6SXwLhbJPcLwb5OQv92qdRODG9YHD66qAn7nEMTt04VLDHrdvqxtg#_',
+            'access_token' => setting('instagram_token')
         ]);
 
         return $response->json();
