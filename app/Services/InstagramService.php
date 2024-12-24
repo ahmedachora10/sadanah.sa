@@ -33,9 +33,9 @@ class InstagramService {
                 'access_token' => setting('instagram_token')
             ]);
 
-            return collect($response->json()['data'])->filter(fn($item) => strtolower($item->media_type) === 'image')->take(5)->map(fn($item) => [
-                'image' => $item->thumbnail_url ?? $item->media_url,
-                'permalink' => $item->permalink,
+            return collect($response->json()['data'])->filter(fn($item) => strtolower($item['media_type']) === 'image')->take(5)->map(fn($item) => [
+                'image' => $item['thumbnail_url'] ?? $item['media_url'],
+                'permalink' => $item['permalink'],
             ]);
         } catch(Exception $e)
         {
