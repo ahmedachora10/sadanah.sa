@@ -10,7 +10,7 @@
         </x-slot:title> --}}
 
         <x-slot:actions>
-            <label class="bx bx-clipboard text-gray bg-gray p-1 mx-2" data-copy="{{route('clients.reviews')}}"></label>
+            <label class="bx bx-clipboard text-gray p-1 mx-2" data-copy="{{route('clients.reviews')}}"></label>
             <label class=" badge bg-warning mx-3">
                 الاجمالي : {{ $reviews->total() }}
             </label>
@@ -83,10 +83,12 @@
                         const contentToCopy = element.getAttribute('data-copy');
                         if (contentToCopy) {
                             navigator.clipboard.writeText(contentToCopy).then(() => {
-                                element.classList.add('text-success fs-6');
+                                element.classList.add('text-success');
+                                element.classList.add('fs-6');
 
                                 setTimeout(() => {
                                     element.classList.remove('text-success');
+                                    element.classList.remove('fs-6');
                                 }, 500);
                             }).catch(err => {
                                 console.error('Could not copy text: ', err);
