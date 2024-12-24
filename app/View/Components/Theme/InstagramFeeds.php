@@ -5,6 +5,7 @@ namespace App\View\Components\Theme;
 use App\Services\InstagramService;
 use Closure;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\View\Component;
 
 class InstagramFeeds extends Component
@@ -12,7 +13,7 @@ class InstagramFeeds extends Component
     public array $feeds = [];
     public function __construct()
     {
-        $this->feeds = app(InstagramService::class)->getImages();
+        $this->feeds = Cache::remember('instagram-feeds', now()->addHour(), fn() => app(InstagramService::class)->getImages()) ;
     }
 
     /**

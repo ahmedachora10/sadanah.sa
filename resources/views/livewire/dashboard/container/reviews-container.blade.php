@@ -13,6 +13,7 @@
             <label class=" badge bg-warning mx-3">
                 الاجمالي : {{ $reviews->total() }}
             </label>
+            <label class="bx bx-clipboard text-gray" data-copy="{{route('clients.reviews')}}"></label>
         </x-slot:actions>
 
         @forelse ($reviews as $item)
@@ -75,6 +76,21 @@
                     });
                 });
             }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelectorAll('.bx.bx-clipboard').forEach(element => {
+                    element.addEventListener('click', () => {
+                        const contentToCopy = element.getAttribute('data-copy');
+                        if (contentToCopy) {
+                            navigator.clipboard.writeText(contentToCopy).then(() => {
+                                alert('Copied to clipboard: ' + contentToCopy);
+                            }).catch(err => {
+                                console.error('Could not copy text: ', err);
+                            });
+                        }
+                    });
+                });
+            });
         </script>
     @endPushOnce
 
