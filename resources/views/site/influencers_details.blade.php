@@ -1,4 +1,10 @@
 @include('site.header')
+    @php
+        $lang = app()->getLocale();
+        $name = $inf->{'name_' .$lang};
+        $jobName = $inf->{'job_name_'.$lang};
+        $description = $inf->{'description_'.$lang};
+    @endphp
       <div id="smooth-content">
         <main class="main-bg ">
           <!-- ==================== Start Team ==================== -->
@@ -19,13 +25,13 @@
                 <div class="col-lg-6 valign mt-5">
                   <div class="cont">
                     <h1>
-                      {{$inf->name}}
+                      {{$name}}
                     </h1>
                     <h6 class="text-u ls1 opacity-8">
-                      {{$inf->job_name}}
+                      {{$jobName}}
                     </h6>
                     <div class="mt-4">
-                      {{$inf->description}}
+                      {{$description}}
                     </div>
                     <div class="text main-bg">
 
