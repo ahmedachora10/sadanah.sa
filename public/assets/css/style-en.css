@@ -7480,8 +7480,8 @@ footer.clean-footer.crev:before {
 }
 
 .img-column .img {
-  height: 100vh;
-  min-height: 500px;
+  /* height: 100vh; */
+  height: 381px;
   margin-bottom: 1rem;
 }
 
