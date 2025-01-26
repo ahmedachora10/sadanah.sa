@@ -205,7 +205,7 @@
                 <div class="col-md-6 rest">
                   <div
                     class="text-right d-flex box bg-img"
-                    data-background="{{$nextWork->nextWork}}">
+                    data-background="{{$nextWork->background}}">
                     <div class="ml-auto">
                       <div class="cont d-flex align-items-center">
                         <div>
