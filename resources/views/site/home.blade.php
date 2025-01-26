@@ -353,7 +353,7 @@
                         class="sub-title mb-15 main-color"
 
                       >
-                      {{__('front.our specials')}}
+                      {{__('front.faq')}}
                       </h6>
                       <h2 >{{__('front.head about')}}</h2>
                     </div>
