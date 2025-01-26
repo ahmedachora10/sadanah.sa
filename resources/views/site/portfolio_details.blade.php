@@ -112,8 +112,8 @@
 
                 @if ($work->images)
                     @foreach ($work->images as $image)
-                        <div class="col-6">
-                            <div class="img md-mb30">
+                        <div class="col-md-6 col-12">
+                            <div class="img md-mb30 border border-4 rounded">
                                 {{$image}}
                             </div>
                         </div>
