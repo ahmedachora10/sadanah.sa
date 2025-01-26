@@ -107,12 +107,12 @@
           <!-- ==================== Start section ==================== -->
 
           <div class="img-column">
-            <div class="container">
-              <div class="row">
+            {{-- <div class="container"> --}}
+              <div class="row justify-content-between">
 
                 @if ($work->images)
                     @foreach ($work->images as $image)
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                        <div class="col-6">
                             <div class="img md-mb30">
                                 {{$image}}
                             </div>
@@ -121,7 +121,7 @@
                 @endif
 
               </div>
-            </div>
+            {{-- </div> --}}
           </div>
 
           <!-- ==================== End section ==================== -->
