@@ -178,7 +178,7 @@
                 <div class="col-md-6 rest">
                   <div
                     class="text-left box bg-img"
-                    data-background="{{$previousWork->background}}">
+                    data-background="{{$previousWork->thumbnail}}">
                     <div class="cont d-flex align-items-center">
                       <div>
                         <span class="mr-30 fz-30 ti-arrow-left"></span>
@@ -205,7 +205,7 @@
                 <div class="col-md-6 rest">
                   <div
                     class="text-right d-flex box bg-img"
-                    data-background="{{$nextWork->background}}">
+                    data-background="{{$nextWork->thumbnail}}">
                     <div class="ml-auto">
                       <div class="cont d-flex align-items-center">
                         <div>
