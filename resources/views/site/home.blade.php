@@ -222,11 +222,11 @@
                               <img src="{{$work->thumbnail}}" alt="work"/>
                               <div class="cont">
                                 <span class="mb-5">
-                                  @if (app()->getLocale() == 'ar')
+                                  {{-- @if (app()->getLocale() == 'ar')
                                   {{$work->tag->name_ar}}
                                   @else
                                   {{$work->tag->name_en}}
-                                  @endif
+                                  @endif --}}
                                 </span>
                                 <h6 class="fz-18">
                                   @if (app()->getLocale() == 'ar')
