@@ -12,6 +12,8 @@ class ContactUsForm extends Component
 {
     #[Rule('required|string')]
     public string $name;
+    #[Rule('required|string')]
+    public string $second_name;
 
     #[Rule('required|email')]
     public string $email;
@@ -20,15 +22,19 @@ class ContactUsForm extends Component
     public string $phone;
 
     #[Rule('required|string')]
-    public string $subject;
-
-    #[Rule('required|string')]
     public string $message;
 
     public string $view = 'livewire.contact-us-form';
 
     public function save() {
-        $contact = ContactUs::create($this->validate());
+        $this->validate();
+        $contact = ContactUs::create([
+            'name' => "{$this->name} {$this->second_name}",
+            'email' => $this->email,
+            'phone' => $this->phone,
+            'subject' => '',
+            'message' => $this->message,
+        ]);
         session()->flash('success', trans('message.create'));
         User::first()->notify(new UserActionNotification([
             'title' => trans('new message'),

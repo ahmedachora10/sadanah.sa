@@ -1,36 +1,51 @@
-<form wire:submit.prevent="save">
-    <div class="row g-4">
-        @if (session('success'))
-            <div class="col-12">
-                <span class="d-block mb-3 alert bg-primary text-white">{{ session('success') }}</span>
+<form wire:submit.prevent="save" method="post">
+
+    @if (session('success'))
+        <div class="messages">{{ session('success') }}</div>
+    @endif
+
+    <div class="controls row">
+        <div class="col-lg-6">
+            <div class="form-group mb-30">
+                <input id="form_name" type="text" wire:model.defer="name" name="name" required="required"
+                    placeholder="{{ __('front.first name') }}" />
+                    <x-dashboard.error field="name" />
             </div>
-        @endif
-        <div class="col-md-6">
-            <x-theme.form.input-group type="text" wire:model.defer="name" name="name" :placeholder="trans('table.columns.name')" />
         </div>
-        <div class="col-md-6">
-            <x-theme.form.input-group type="text" wire:model.defer="email" name="email" :placeholder="trans('table.columns.email')" />
+        <div class="col-lg-6">
+            <div class="form-group mb-30">
+
+                <input id="form_name" type="text" wire:model.defer="second_name" name="second_name" required="required"
+                    placeholder="{{ __('front.second name') }}" />
+                <x-dashboard.error field="second_name" />
+            </div>
         </div>
 
-        <div class="col-md-6">
-            <x-theme.form.input-group type="text" wire:model.defer="phone" name="phone" :placeholder="trans('table.columns.phone')" />
+        <div class="col-lg-6">
+            <div class="form-group mb-30">
+
+                <input id="form_email" class="text-start" type="email" wire:model.defer="email" name="email" required="required"
+                    placeholder="{{ __('front.email') }}" />
+                    <x-dashboard.error field="email" />
+            </div>
         </div>
 
-        <div class="col-md-6">
-            <x-theme.form.input-group type="text" wire:model.defer="subject" name="subject" :placeholder="trans('table.columns.subject')" />
+        <div class="col-lg-6">
+            <div class="form-group mb-30">
+                <input id="form_phone" type="text" wire:model.defer="phone" name="phone" placeholder="{{ __('front.phone number') }}" />
+                <x-dashboard.error field="phone" />
+            </div>
         </div>
 
         <div class="col-12">
-            <x-theme.form.text-area wire:model.defer="message" :placeholder="trans('table.columns.message')"
-                name="message" cols="10" rows="6">
+            <div class="form-group">
+                <textarea id="form_message" wire:model.defer="message" name="message" rows="4" required="required" placeholder="{{ __('front.message') }}"></textarea>
                 <x-dashboard.error field="message" />
-            </x-theme.form.text-area>
-        </div>
-
-        <div class="col-12">
-            <div class="tp-contact-btn">
-                <button class="tp-btn" type="button" wire:click="save">{{ trans('send') }}</button>
-                <p class="ajax-response"></p>
+            </div>
+            <div class="mt-30">
+                <button type="submit" class="butn butn-full butn-bord radius-30">
+                    <span class="text" data-i18n="talk">{{ __('front.Let\'s Talk') }}</span>
+                </button>
             </div>
         </div>
     </div>

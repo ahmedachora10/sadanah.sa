@@ -132,7 +132,7 @@
                       <h3 class="text-u ls1" data-i18n="sendMessage">{{__('front.send a')}} <span class="fw-200">{{__('front.message')}}</span></h3>
                       {{-- <h3 class="fw-200" data-i18n="message"></h3> --}}
                     </div>
-                    <form id="contact-form" method="post" action="{{route('contact')}}">
+                    {{-- <form id="contact-form" method="post" action="{{route('contact')}}">
                       <div class="messages"></div>
 
                       <div class="controls row">
@@ -212,7 +212,8 @@
                           </div>
                         </div>
                       </div>
-                    </form>
+                    </form> --}}
+                    <livewire:contact-us-form />
                   </div>
                 </div>
               </div>
