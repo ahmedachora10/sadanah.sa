@@ -62,6 +62,7 @@ class OurWorkController extends Controller
     {
         // $images = $ourWork->getMedia('works');
         $tags = Tag::all();
+        $ourWork->load('tags');
 
         return view('admin.our-works.edit', compact('ourWork', 'tags'));
     }
