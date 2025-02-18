@@ -35,8 +35,8 @@
 
             </div>
 
-            <div class="col-md-4 col-12 mb-3">
-                <x-dashboard.input-group :disabled="!platforms['{{ $item }}']" type="text" name="form.{{ $item }}_username"
+            <div class="col-md-4 col-12 mb-3" x-show="platforms['{{ $item }}']">
+                <x-dashboard.input-group type="text" name="form.{{ $item }}_username"
                     wire:model.defer="form.{{ $item }}_username" :title="trans('table.columns.account')" />
             </div>
             <div class="col-md-4 col-12 mb-3">
