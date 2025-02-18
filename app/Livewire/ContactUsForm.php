@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Models\ContactUs;
 use App\Models\User;
 use App\Notifications\UserActionNotification;
+use Illuminate\Support\Facades\Notification;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
 
@@ -36,11 +37,15 @@ class ContactUsForm extends Component
             'message' => $this->message,
         ]);
         session()->flash('success', trans('message.create'));
-        User::first()->notify(new UserActionNotification([
-            'title' => trans('new message'),
-            'message' => $contact->name . ' - ' . $contact->message,
-            'type' => ContactUs::class,
-        ]));
+
+        Notification::send(
+            notifiables: User::whereHasRole('admin')->get(),
+            notification: new UserActionNotification([
+                'title' => trans('new message'),
+                'message' => $contact->name . ' - ' . $contact->message,
+                'type' => ContactUs::class,
+            ])
+        );
         $this->resetExcept('view');
     }
 

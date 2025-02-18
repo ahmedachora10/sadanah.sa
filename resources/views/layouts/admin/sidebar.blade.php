@@ -1,5 +1,5 @@
 @php
-    $notifications = collect(App\Models\User::first()?->unreadNotifications)->pluck('data');
+    $notifications = collect(auth()->user()?->unreadNotifications)->pluck('data');
     $servicesRequestsCount = $notifications->where('type', 'App\Models\ServiceRequest')->count();
     $jobsRequestsCount = $notifications->where('type', 'App\Models\JobRequest')->count();
     $contactsCount = $notifications->where('type', 'App\Models\ContactUs')->count();
