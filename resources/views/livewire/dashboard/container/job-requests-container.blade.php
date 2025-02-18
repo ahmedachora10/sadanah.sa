@@ -22,7 +22,7 @@
 
         @forelse ($jobRequests as $item)
             <tr wire:loading.class="opacity-50">
-                <td>#{{ $item->key ?? $item->id }}</td>
+                <td>#{{ $item->key ?? $item->id }}#</td>
                 <td>{{ $item->name }}</td>
                 <td>{{ $item->email }}</td>
                 <td>{{ $item->phone }}</td>
