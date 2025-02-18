@@ -37,15 +37,15 @@
 
             <div class="col-md-4 col-12 mb-3" x-show="platforms['{{ $item }}']">
                 <x-dashboard.input-group type="text" name="form.{{ $item }}_username"
-                    wire:model.defer="form.{{ $item }}_username" :title="trans('table.columns.account')" />
+                    wire:model.defer="form.{{ $item }}_username" :title="trans('table.columns.account')" x-bind:disabled="!platforms['{{ $item }}']" />
             </div>
             <div class="col-md-4 col-12 mb-3" x-show="platforms['{{ $item }}']">
                 <x-dashboard.input-group type="text" name="form.{{ $item }}_link"
-                    wire:model.defer="form.{{ $item }}_link" :title="trans('table.columns.link')" />
+                    wire:model.defer="form.{{ $item }}_link" :title="trans('table.columns.link')" x-bind:disabled="!platforms['{{ $item }}']" />
             </div>
             <div class="col-md-4 col-12 mb-3" x-show="platforms['{{ $item }}']">
                 <x-dashboard.input-group type="number" name="form.{{ $item }}_followers"
-                    wire:model.defer="form.{{ $item }}_followers" :title="trans('table.columns.followers')" />
+                    wire:model.defer="form.{{ $item }}_followers" :title="trans('table.columns.followers')" x-bind:disabled="!platforms['{{ $item }}']" />
             </div>
         @endforeach
 
