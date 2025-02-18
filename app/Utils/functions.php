@@ -3,6 +3,7 @@
 use App\DTO\ReadHeadlineDTO;
 use App\Models\Headline;
 use App\Models\Setting;
+use App\Models\User;
 use App\Notifications\UserActionNotification;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Notification;
