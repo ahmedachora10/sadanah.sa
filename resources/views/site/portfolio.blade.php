@@ -71,11 +71,10 @@
                         </a>
                       </h5>
                       <p>
-                        @if (app()->getLocale() == 'ar')
-                          {{$work->tag->name_ar}}
-                          @else
-                          {{$work->tag->name_en}}
-                          @endif
+                        @foreach ($work->tags as $tag)
+                            {{$tag->name}}
+                            @if(!$loop->last) - @endif
+                        @endforeach
                       </p>
                     </div>
                   </div>
