@@ -1,7 +1,7 @@
 <form wire:submit.prevent="save" method="post">
 
     @if (session('success'))
-        <div class="messages">{{ session('success') }}</div>
+        <div class="messages text-success fw-bold fs-3 mb-5">{{ session('success') }}</div>
     @endif
 
     <div class="controls row">
