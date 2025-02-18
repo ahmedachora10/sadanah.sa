@@ -75,6 +75,12 @@
     <!-- Core Style Css -->
         <link  rel="stylesheet" href="{{ asset('assets/css/style-'.$lang.'.css') }}?v={{str()->random(5)}}">
         {{-- <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"> --}}
+        <style>
+            .form-check-input:checked {
+                background-color: var(--primary-color) !important;
+                border-color: var(--primary-color) !important;
+            }
+        </style>
     @livewireStyles
   </head>
 
