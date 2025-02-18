@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('work_tag', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(OurWork::class);
-            $table->foreignId(Tag::class);
+            $table->foreignIdFor(Tag::class);
             $table->timestamps();
         });
     }
