@@ -38,11 +38,10 @@
                     <div class="item mb-30">
                       <span class="opacity-8 mb-5">{{__('front.Category')}} :</span>
                       <h6>
-                        @if (app()->getLocale() == 'ar')
-                        {{$work->tag->name_ar}}
-                        @else
-                        {{$work->tag->name_en}}
-                        @endif
+                        @foreach ($work->tags as $tag)
+                            {{$tag->name}}
+                            @if(!$loop->last) - @endif
+                        @endforeach
                       </h6>
                     </div>
                   </div>
