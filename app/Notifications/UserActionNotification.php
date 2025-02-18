@@ -30,7 +30,14 @@ class UserActionNotification extends Notification
      */
     public function via(object $notifiable): array
     {
-        return ['database'];
+        return ['database', 'mail'];
+    }
+
+    public function toMail(object $notifiable): MailMessage
+    {
+        return (new MailMessage)
+            ->subject($this->data['title'])
+            ->line($this->data['message']);
     }
 
 

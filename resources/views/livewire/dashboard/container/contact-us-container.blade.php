@@ -2,7 +2,7 @@
 
     <x-dashboard.headline :title="trans('sidebar.contact us')" />
 
-    <x-dashboard.tables.table1 :columns="['name', 'email', 'phone', 'subject', 'message']">
+    <x-dashboard.tables.table1 :columns="['name', 'email', 'phone', 'message']">
 
         {{-- <x-slot:title>
             <x-dashboard.input type="search" name="search" wire:model.live.debounce.250ms="search"
@@ -15,7 +15,7 @@
                 <td>{{ $item->name }}</td>
                 <td>{{ $item->email }}</td>
                 <td>{{ $item->phone }}</td>
-                <td>{{ $item->subject }}</td>
+                {{-- <td>{{ $item->subject }}</td> --}}
                 <td><a href="#" class="btn btn-sm btn-primary" wire:click="readMore({{ $item }})">
                         <i class="bx bx-show me-1"></i>
                         {{ trans('show') }}</a></td>
