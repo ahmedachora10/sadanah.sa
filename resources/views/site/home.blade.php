@@ -222,6 +222,10 @@
                               <img src="{{$work->thumbnail}}" alt="work"/>
                               <div class="cont">
                                 <span class="mb-5">
+                                    @foreach ($work->tags as $tag)
+                                        {{$tag->name}}
+                                        @if(!$loop->last) - @endif
+                                    @endforeach
                                   {{-- @if (app()->getLocale() == 'ar')
                                   {{$work->tag->name_ar}}
                                   @else
