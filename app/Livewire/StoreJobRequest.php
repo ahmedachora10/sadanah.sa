@@ -57,13 +57,17 @@ class StoreJobRequest extends Component
                 }
             }
 
-            User::first()->notify(new UserActionNotification([
-                'title' => trans('new job request'),
-                'message' =>  '"'.$jobRequest?->jobPost?->title.'"',
-                'type' => JobRequest::class,
-            ]));
-
             $generateKey = $jobRequest->id . substr(time(), 0,3);
+
+            $jobRequest->update(['key' => $generateKey]);
+
+            notify_admins([
+                'title' => trans('new job request'),
+                'message' =>  '"'.$jobRequest?->jobPost?->title.'" - #' . $generateKey,
+                'type' => JobRequest::class,
+            ]);
+
+
 
             session()->flash('success', str(trans('message.create'))->replace(['العنصر', 'element'], ['الطلب رقم "' .$generateKey. '"', 'Request "'.$generateKey.'"'])->value());
             $this->form->reset();

@@ -23,6 +23,7 @@ class JobRequest extends Model
         'job',
         'job_city',
         'cv',
+        'key',
     ];
 
     public function attachments() : HasMany {
@@ -42,6 +43,7 @@ class JobRequest extends Model
         return [
             'id' => $this->id,
             'name' => $this->name,
+            'key' => $this->key,
             // 'email' => $this->email,
             // 'phone' => $this->phone,
             // 'age' => $this->age,

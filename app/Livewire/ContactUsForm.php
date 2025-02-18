@@ -36,16 +36,14 @@ class ContactUsForm extends Component
             'subject' => '',
             'message' => $this->message,
         ]);
+
         session()->flash('success', trans('message.create'));
 
-        Notification::send(
-            notifiables: User::whereHasRole('admin')->get(),
-            notification: new UserActionNotification([
+        notify_admins([
                 'title' => trans('new message'),
                 'message' => $contact->name . ' - ' . $contact->message,
                 'type' => ContactUs::class,
-            ])
-        );
+            ]);
         $this->resetExcept('view');
     }
 

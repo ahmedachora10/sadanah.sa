@@ -3,7 +3,9 @@
 use App\DTO\ReadHeadlineDTO;
 use App\Models\Headline;
 use App\Models\Setting;
+use App\Notifications\UserActionNotification;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Notification;
 
 if (! function_exists('setting')) {
 
@@ -90,5 +92,22 @@ if (!function_exists('shorten_number')) {
         $shortened = $number / pow(1000, $index);
 
         return round($shortened, $precision) . $suffixes[$index - 1];
+    }
+}
+
+
+if (!function_exists('notify_admins')) {
+    /**
+     * Notify all admins with a given message.
+     *
+     * @param string $message The message to be sent.
+     * @return void
+     */
+    function notify_admins(array $data)
+    {
+        $admins = Cache::remember('admins', now()->addWeek(), function () {
+            return User::whereHasRole('admin')->get();
+        });
+        Notification::send($admins, new UserActionNotification($data));
     }
 }
