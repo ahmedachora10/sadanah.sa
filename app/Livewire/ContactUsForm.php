@@ -3,9 +3,6 @@
 namespace App\Livewire;
 
 use App\Models\ContactUs;
-use App\Models\User;
-use App\Notifications\UserActionNotification;
-use Illuminate\Support\Facades\Notification;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
 

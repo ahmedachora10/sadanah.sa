@@ -4,9 +4,6 @@ namespace App\Livewire\Actions;
 
 use App\Livewire\Forms\InfluencerJoinRequestForm;
 use App\Models\InfluencerJoinRequest as ModelsInfluencerJoinRequest;
-use App\Models\User;
-use App\Notifications\UserActionNotification;
-use App\Services\UploadFileService;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -51,11 +48,11 @@ class InfluencerJoinRequest extends Component
         if($this->attachments != null)
             $request->addMedia($this->attachments)->toMediaCollection();
 
-        User::first()->notify(new UserActionNotification([
-            'title' => trans('new message'),
+        notify_admins([
+            'title' => 'طلب انضمام جديد',
             'message' => $request->username,
             'type' => ModelsInfluencerJoinRequest::class,
-        ]));
+        ]);
 
         session()->put('success', trans('common.request has been successfully'));
         $this->dispatch('refresh-alert');

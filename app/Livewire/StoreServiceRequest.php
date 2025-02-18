@@ -5,8 +5,6 @@ namespace App\Livewire;
 use App\Livewire\Forms\ServiceRequestForm;
 use App\Models\OurService;
 use App\Models\ServiceRequest;
-use App\Models\User;
-use App\Notifications\UserActionNotification;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Livewire\WithFileUploads;
@@ -29,11 +27,11 @@ class StoreServiceRequest extends Component
         if($this->attachments != null)
             $request->addMedia($this->attachments)->toMediaCollection();
 
-        User::first()->notify(new UserActionNotification([
-            'title' => '',
-            'message' => '',
+        notify_admins([
+            'title' => 'طلب خدمة جديد',
+            'message' => $request->name . ' - ' . $request->description,
             'type' => ServiceRequest::class,
-        ]));
+        ]);
 
 
         session()->flash('success', trans('common.request has been successfully'));
