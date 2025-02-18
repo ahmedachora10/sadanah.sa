@@ -226,11 +226,6 @@
                                         {{$tag->name}}
                                         @if(!$loop->last) - @endif
                                     @endforeach
-                                  {{-- @if (app()->getLocale() == 'ar')
-                                  {{$work->tag->name_ar}}
-                                  @else
-                                  {{$work->tag->name_en}}
-                                  @endif --}}
                                 </span>
                                 <h6 class="fz-18">
                                   @if (app()->getLocale() == 'ar')
