@@ -55,7 +55,7 @@
 
             <div class="col-md-6 col-12 mb-3">
                 <x-dashboard.label>{{trans('table.columns.section')}}</x-dashboard.label>
-                <select name="tags" id="tags" class="form-select" multiple>
+                <select name="tags[]" id="tags" class="form-select" multiple>
                     @foreach ($tags as $tag)
                     <option value="{{$tag->id}}" @selected($ourWork->tags->contains($tag->id))>{{ $tag->name }}</option>
                     @endforeach
