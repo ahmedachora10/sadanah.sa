@@ -38,7 +38,7 @@ class ContactUsForm extends Component
         session()->flash('success', trans('message.create'));
         User::first()->notify(new UserActionNotification([
             'title' => trans('new message'),
-            'message' => $contact->name . ' - ' . $contact->subject,
+            'message' => $contact->name . ' - ' . $contact->message,
             'type' => ContactUs::class,
         ]));
         $this->resetExcept('view');
