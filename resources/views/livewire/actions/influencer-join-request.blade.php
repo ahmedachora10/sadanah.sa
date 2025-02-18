@@ -24,14 +24,15 @@
         @foreach ($socialMediaPlatforms as $item)
             <div class="col-12 mb-3">
 
-                <div class="d-flex justify-content-start align-items-center">
+                {{-- <div class="d-flex justify-content-start align-items-center"> --}}
                     <div class="form-check form-switch">
                         <input class="form-check-input" x-model="platforms['{{ $item }}']" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                        <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox
-                            input</label>
-                    </div>
+                        <label class="form-check-label" for="flexSwitchCheckDefault">
+
                     <h6 class="fw-bold text-muted my-3 mx-2">{{ trans('front.' . $item) }}</h6>
-                </div>
+                        </label>
+                    </div>
+                {{-- </div> --}}
 
             </div>
 
@@ -39,11 +40,11 @@
                 <x-dashboard.input-group type="text" name="form.{{ $item }}_username"
                     wire:model.defer="form.{{ $item }}_username" :title="trans('table.columns.account')" />
             </div>
-            <div class="col-md-4 col-12 mb-3">
+            <div class="col-md-4 col-12 mb-3" x-show="platforms['{{ $item }}']">
                 <x-dashboard.input-group type="text" name="form.{{ $item }}_link"
                     wire:model.defer="form.{{ $item }}_link" :title="trans('table.columns.link')" />
             </div>
-            <div class="col-md-4 col-12 mb-3">
+            <div class="col-md-4 col-12 mb-3" x-show="platforms['{{ $item }}']">
                 <x-dashboard.input-group type="number" name="form.{{ $item }}_followers"
                     wire:model.defer="form.{{ $item }}_followers" :title="trans('table.columns.followers')" />
             </div>
