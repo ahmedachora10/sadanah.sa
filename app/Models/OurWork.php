@@ -6,6 +6,7 @@ use App\Traits\HasTranslation;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
@@ -15,7 +16,7 @@ class OurWork extends Model implements HasMedia
     use HasFactory, InteractsWithMedia, HasTranslation;
 
     protected $fillable = [
-        'tag_id',
+        // 'tag_id',
         'client_name_ar',
         'client_name_en',
         'transaction_start_date',
@@ -51,8 +52,8 @@ class OurWork extends Model implements HasMedia
         return $images;
     }
 
-    public function tag() : BelongsTo {
-        return $this->belongsTo(Tag::class);
+    public function tags() : BelongsToMany {
+        return $this->belongsToMany(Tag::class, 'work_tag');
     }
 
     public function registerMediaConversions(Media $media = null): void

@@ -38,12 +38,12 @@
 
             <div class="col-md-6 col-12 mb-3">
                 <x-dashboard.label>{{trans('table.columns.section')}}</x-dashboard.label>
-                <select name="tag_id" id="tag_id" class="form-select">
+                <select name="tags[]" id="tags" class="form-select" multiple>
                     @foreach ($tags as $tag)
                         <option value="{{$tag->id}}">{{ $tag->name }}</option>
                     @endforeach
                 </select>
-                <x-dashboard.error field="tag_id" />
+                <x-dashboard.error field="tags" />
             </div>
 
             <div class="col-12 mb-3">

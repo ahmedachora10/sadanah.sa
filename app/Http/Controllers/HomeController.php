@@ -30,7 +30,7 @@ class HomeController extends Controller
         $services = OurService::get();
         $slider = Slider::first();
         $visions = Vision::get();
-        $works = OurWork::get();
+        $works = OurWork::with('tags')->get();
         $statistics = Statistic::get();
         $infs = Team::get();
         $certificates = Certificate::get();

@@ -37,8 +37,9 @@ class OurWorkController extends Controller
 
         $request->validated();
 
-        $newWork = OurWork::create($request->safe()->except(['thumb', 'bg_image']));
+        $newWork = OurWork::create($request->safe()->except(['thumb', 'bg_image', 'tags']));
 
+        $newWork->tags()->sync($request->tags);
 
         $newWork->addMediaFromRequest('thumb')->toMediaCollection('works-thumb');
         $newWork->addMediaFromRequest('bg_image')->toMediaCollection('works-bg');
@@ -75,6 +76,8 @@ class OurWorkController extends Controller
 
         $ourWork->update($request->safe()->except(['thumb', 'bg_image']));
 
+        $ourWork->tags()->sync($request->tags);
+
         if($request->thumb !== null) {
             $ourWork->clearMediaCollection('works-thumb');
             $ourWork->addMediaFromRequest('thumb')->toMediaCollection('works-thumb');
@@ -94,6 +97,8 @@ class OurWorkController extends Controller
      */
     public function destroy(OurWork $ourWork)
     {
+        $ourWork->clearMediaCollection('works');
+        $ourWork->tags()->detach();
         $ourWork->delete();
 
         return redirect()->route('our-works.index')->with('success', trans('message.delete'));

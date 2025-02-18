@@ -14,7 +14,8 @@ class StoreOurWorkRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'tag_id' => 'required|integer|exists:tags,id',
+            'tags' => 'required|array',
+            'tags.*' => 'required|integer|exists:tags,id',
             // 'images' => 'array',
             'bg_image' => strtolower($this->method()) == 'put' ? 'nullable|image' : 'required|image',
             'thumb' => strtolower($this->method()) == 'put' ? 'nullable|image' : 'required|image',
