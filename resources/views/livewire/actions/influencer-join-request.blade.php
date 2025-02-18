@@ -24,15 +24,14 @@
         @foreach ($socialMediaPlatforms as $item)
             <div class="col-12 mb-3">
 
-                {{-- <div class="d-flex justify-content-start align-items-center"> --}}
+                <div class="my-3 mx-2">
                     <div class="form-check form-switch">
                         <input class="form-check-input" x-model="platforms['{{ $item }}']" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                         <label class="form-check-label" for="flexSwitchCheckDefault">
-
-                    <h6 class="fw-bold text-muted my-3 mx-2">{{ trans('front.' . $item) }}</h6>
+                            <h6 class="fw-bold text-muted">{{ trans('front.' . $item) }}</h6>
                         </label>
                     </div>
-                {{-- </div> --}}
+                </div>
 
             </div>
 
