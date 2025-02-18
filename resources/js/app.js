@@ -1,6 +1,6 @@
 import './bootstrap';
 
-import Alpine from 'alpinejs';
+import Alpine, { data } from 'alpinejs';
 
 
 
@@ -10,6 +10,7 @@ import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import '../../node_modules/photoswipe/dist/photoswipe.css';
 
 window.Alpine = Alpine;
+
 
 Alpine.start();
 

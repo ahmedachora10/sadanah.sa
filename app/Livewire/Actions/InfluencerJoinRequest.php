@@ -40,8 +40,6 @@ class InfluencerJoinRequest extends Component
             ];
         }
 
-        // dd($this->form->all());
-
         $request = ModelsInfluencerJoinRequest::create([
             'username' => $this->form->username,
             'phone' => $this->form->phone,

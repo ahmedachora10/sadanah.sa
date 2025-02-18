@@ -251,6 +251,7 @@ $profileFile = setting('profile_file_'.app()->getLocale());
 <script src="{{asset('assets/js/smoother-script.js')}}"></script>
 <script src="{{asset('assets/js/hscroll.js')}}"></script>
 <script src="{{asset('assets/js/hscroll.js')}}"></script>
+<script src="{{ asset('build/admin-assets/app2.js') }}"></script>
 
 @livewireScripts
 <!-- custom scripts -->
