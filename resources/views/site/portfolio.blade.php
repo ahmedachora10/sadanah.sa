@@ -40,7 +40,7 @@
                     <span data-filter="*" class="active" data-i18n="showAll"
                       >{{__('front.View all')}}</span>
                       @foreach ($tags as $tag)
-                      <span data-filter=".{{$tag->id}}">
+                      <span data-filter=".tag-{{$tag->id}}">
                         @if (app()->getLocale() == 'ar')
                         {{$tag->name_ar}}
                         @else
@@ -55,7 +55,7 @@
 
                 @foreach ($works as $work)
 
-                <div class="col-lg-4 col-md-6 items {{$work->tag_id}}">
+                <div class="col-lg-4 col-md-6 items {{$work->tags->pluck('id')->map(fn($id) => "tag-$id")->implode(' ')}}">
                   <div class="item mt-40">
                     <div class="img">
                       <img class="project_img" src="{{$work->thumbnail}}" alt="" />
