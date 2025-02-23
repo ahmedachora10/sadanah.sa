@@ -4,6 +4,7 @@ namespace App\Livewire\Container;
 
 use App\Models\InfluencerJoinRequest;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -16,7 +17,7 @@ class InfluencersRequests extends Component
     public ?InfluencerJoinRequest $request = null;
 
     public function mount() {
-        User::first()->unreadnotifications()->whereJsonContains('data->type', InfluencerJoinRequest::class)?->update(['read_at' => now()]);
+        Auth::user()->unreadnotifications()->whereJsonContains('data->type', InfluencerJoinRequest::class)?->update(['read_at' => now()]);
     }
 
     public function delete(InfluencerJoinRequest $influencerJoinRequest) {

@@ -4,6 +4,7 @@ namespace App\Livewire\Dashboard\Container;
 
 use App\Models\ContactUs;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -16,7 +17,7 @@ class ContactUsContainer extends Component
     public string $content = '';
 
     public function mount() {
-        User::first()->unreadnotifications()->whereJsonContains('data->type', ContactUs::class)?->update(['read_at' => now()]);
+        Auth::user()->unreadnotifications()->whereJsonContains('data->type', ContactUs::class)?->update(['read_at' => now()]);
     }
 
     public function delete(ContactUs $contact) {

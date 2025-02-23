@@ -6,6 +6,7 @@ use App\Models\JobRequest;
 use App\Models\User;
 use App\Services\UploadFileService;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -21,7 +22,7 @@ class JobRequestsContainer extends Component
     public string $search = '';
 
     public function mount() {
-        User::first()->unreadnotifications()->whereJsonContains('data->type', JobRequest::class)?->update(['read_at' => now()]);
+        Auth::user()->unreadnotifications()->whereJsonContains('data->type', JobRequest::class)?->update(['read_at' => now()]);
     }
 
     public function delete(JobRequest $jobRequest) {

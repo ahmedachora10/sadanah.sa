@@ -8,6 +8,7 @@ use App\Models\User;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Auth;
 
 class Comments extends Component
 {
@@ -16,7 +17,7 @@ class Comments extends Component
     public string $search = '';
 
     public function mount() {
-        User::first()->unreadnotifications()->whereJsonContains('data->type', Comment::class)?->update(['read_at' => now()]);
+        Auth::user()->unreadnotifications()->whereJsonContains('data->type', Comment::class)?->update(['read_at' => now()]);
     }
 
     public function switch(Comment $comment) {

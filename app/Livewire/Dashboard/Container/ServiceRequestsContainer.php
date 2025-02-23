@@ -4,6 +4,7 @@ namespace App\Livewire\Dashboard\Container;
 
 use App\Models\ServiceRequest;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -16,7 +17,7 @@ class ServiceRequestsContainer extends Component
     public ?ServiceRequest $request = null;
 
     public function mount() {
-        User::first()->unreadnotifications()->whereJsonContains('data->type',ServiceRequest::class)?->update(['read_at' => now()]);
+        Auth::user()->unreadnotifications()->whereJsonContains('data->type',ServiceRequest::class)?->update(['read_at' => now()]);
     }
 
     public function delete(ServiceRequest $serviceRequest) {
