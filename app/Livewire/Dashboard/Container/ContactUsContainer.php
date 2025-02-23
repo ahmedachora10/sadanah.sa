@@ -35,7 +35,7 @@ class ContactUsContainer extends Component
     public function render()
     {
         return view('livewire.dashboard.container.contact-us-container', [
-            'data' => ContactUs::paginate(setting('pagination') ?? 8)
+            'data' => ContactUs::latest()->paginate(setting('pagination') ?? 8)
         ]);
     }
 }
