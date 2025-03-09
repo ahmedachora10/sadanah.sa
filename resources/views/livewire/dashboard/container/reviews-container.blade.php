@@ -76,31 +76,6 @@
                     });
                 });
             }
-
-            document.addEventListener('DOMContentLoaded', () => {
-                document.querySelectorAll('.bx.bx-clipboard').forEach(element => {
-                    element.addEventListener('click', () => {
-                        const contentToCopy = element.getAttribute('data-copy');
-                        if (contentToCopy) {
-                            navigator.clipboard.writeText(contentToCopy).then(() => {
-                                element.classList.add('text-success');
-                                element.classList.add('bx-check-square');
-                                element.classList.remove('bx-clipboard');
-                                element.classList.add('fs-4');
-
-                                setTimeout(() => {
-                                    element.classList.remove('text-success');
-                                    element.classList.remove('fs-4');
-                                    element.classList.remove('bx-check-square');
-                                    element.classList.add('bx-clipboard');
-                                }, 800);
-                            }).catch(err => {
-                                console.error('Could not copy text: ', err);
-                            });
-                        }
-                    });
-                });
-            });
         </script>
     @endPushOnce
 

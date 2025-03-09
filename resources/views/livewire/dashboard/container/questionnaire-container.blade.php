@@ -4,10 +4,9 @@
 
     <x-dashboard.tables.table1 :columns="['client name', 'client nationality', 'phone number', 'email', 'new client']">
 
-        {{-- <x-slot:title>
-            <x-dashboard.input type="search" name="search" wire:model.live.debounce.250ms="search"
-                placeholder="{{ trans('table.columns.search') }}" />
-        </x-slot:title> --}}
+        <x-slot:actions>
+            <label title="انسخ رابط الاستبيان" class="bx bx-clipboard p-1 mx-4" data-copy="{{route('clients.questionnaire')}}"></label>
+        </x-slot:actions>
 
         @forelse ($items as $item)
             <tr wire:loading.class="opacity-50">
@@ -21,15 +20,15 @@
 
                 <td>
                     <x-dashboard.actions.container>
-                        <a href="javascript:void()" wire:click="show({{$item}})" class="dropdown-item">
+                        <a href="javascript:void()" wire:click="show({{ $item }})" class="dropdown-item">
                             <i class="bx bx-show"></i>
-                            {{__('show')}}
+                            {{ __('show') }}
                         </a>
-                        <a href="javascript:void()" wire:click="generatePDF({{$item}})" class="dropdown-item">
+                        <a href="javascript:void()" wire:click="generatePDF({{ $item }})" class="dropdown-item">
                             <i class="bx bx-file"></i>
-                            {{__('Export as PDF')}}
+                            {{ __('Export as PDF') }}
                         </a>
-                        <x-dashboard.actions.delete wire:click="delete({{$item}})" :livewire="true" />
+                        <x-dashboard.actions.delete wire:click="delete({{ $item }})" :livewire="true" />
                     </x-dashboard.actions.container>
                 </td>
             </tr>

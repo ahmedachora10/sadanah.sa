@@ -100,7 +100,7 @@ Route::get('services/request/{service}', function (OurService $service) {
     return view('service-request', compact('service'));
 })->name('services.request');
 
-Route::get('questionnaire-form', QuestionnaireRequestForm::class);
+Route::get('questionnaire-form', QuestionnaireRequestForm::class)->name('clients.questionnaire');
 
 require __DIR__ . '/auth.php';
 

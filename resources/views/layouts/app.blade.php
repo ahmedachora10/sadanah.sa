@@ -189,46 +189,35 @@
 
     @stack('scripts')
 
-    {{-- <script>
-        function copyToClipboard(text) {
-                // Create a temporary textarea element
-                const textarea = document.createElement('textarea');
-
-                // Set the value of the textarea to the text you want to copy
-                textarea.value = text;
-
-                // Append the textarea to the document
-                document.body.appendChild(textarea);
-
-                // Select the text in the textarea
-                textarea.select();
-
-                // Copy the selected text to the clipboard
-                document.execCommand('copy');
-
-                // Remove the textarea from the document
-                document.body.removeChild(textarea);
-                }
-
-                setInterval(() => {
-                    const dataToCopy = $('[data-copy]');
-
-                    console.log(dataToCopy);
-
-
-                    dataToCopy.each(function () {
-                        $(this).click(function () {
-                            console.log($(this), $(this).attr('data-copy'));
-
-                            copyToClipboard($(this).attr('data-copy'));
-                        });
-                    });
-                }, 1000);
-    </script> --}}
-
     @livewireScripts
     <script src="{{ asset('admin-assets/js/uploader.js') }}"></script>
     <script defer>
+
+        document.addEventListener('DOMContentLoaded', () => {
+                document.querySelectorAll('.bx.bx-clipboard').forEach(element => {
+                    element.addEventListener('click', () => {
+                        const contentToCopy = element.getAttribute('data-copy');
+                        if (contentToCopy) {
+                            navigator.clipboard.writeText(contentToCopy).then(() => {
+                                element.classList.add('text-success');
+                                element.classList.add('bx-check-square');
+                                element.classList.remove('bx-clipboard');
+                                element.classList.add('fs-4');
+
+                                setTimeout(() => {
+                                    element.classList.remove('text-success');
+                                    element.classList.remove('fs-4');
+                                    element.classList.remove('bx-check-square');
+                                    element.classList.add('bx-clipboard');
+                                }, 800);
+                            }).catch(err => {
+                                console.error('Could not copy text: ', err);
+                            });
+                        }
+                    });
+                });
+            });
+
         Livewire.on('close-modal', ({
             target
         }) => $(target ? target : '.modal').modal('hide'));
