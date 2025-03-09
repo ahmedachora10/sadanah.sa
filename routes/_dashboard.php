@@ -57,7 +57,8 @@ Route::middleware(['auth'])->group(function ()
 
     Route::get('questionnaire', QuestionnaireContainer::class)->name('questionnaire.index');
     Route::resource('logo-types', LogoTypeController::class)->parameter('logo_type','logoType');
-    Route::resource('corporate-identities', CorporateIdentityController::class)->parameter('corporate_identity','identity');
+
+    Route::resource('corporate-identities', CorporateIdentityController::class)->parameter('corporate_identity','corporateIdentity');
 
     Route::resource('roles', RoleController::class)->only('index', 'destroy');
 

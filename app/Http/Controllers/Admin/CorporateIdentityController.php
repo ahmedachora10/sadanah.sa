@@ -40,17 +40,17 @@ class CorporateIdentityController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(CorporateIdentity $identity)
+    public function edit(CorporateIdentity $corporateIdentity)
     {
-        return view('admin.corporate-identities.edit', compact('identity'));
+        return view('admin.corporate-identities.edit', compact('corporateIdentity'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(CorporateIdentityRequest $request, CorporateIdentity $identity)
+    public function update(CorporateIdentityRequest $request, CorporateIdentity $corporateIdentity)
     {
-        $identity->update($request->validated());
+        $corporateIdentity->update($request->validated());
 
         Cache::forget('corporate-identities');
 
@@ -60,9 +60,9 @@ class CorporateIdentityController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(CorporateIdentity $identity)
+    public function destroy(CorporateIdentity $corporateIdentity)
     {
-        $identity->delete();
+        $corporateIdentity->delete();
 
         Cache::forget('corporate-identities');
 
