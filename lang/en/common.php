@@ -70,8 +70,9 @@ return [
     'task management' => 'Tasks Management',
     'activity management' => 'Activities Management',
     'client management' => 'Clients Management',
-    'influencer management' => 'influencers Management',
-    'blog management' => 'blogs Management',
+    'influencer management' => 'Influencers Management',
+    'blog management' => 'Blogs Management',
+    'questionnaire management' => 'Clients Questionnaires Management',
 
     'full time' => 'Full Time',
     'part time' => 'Part Time',
