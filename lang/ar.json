@@ -20,5 +20,12 @@
     "request has been send": "تم ارسال الطلب بنجاح",
     "Published" : "منشور",
     "Draft" : "مسودة",
-    "New Comment" : "تعليق جديد"
+    "New Comment" : "تعليق جديد",
+    "Yes": "نعم",
+    "No": "لا",
+    "Project Details": "تفاصيل المشروع",
+    "Information": "المعلومات",
+    "Select Logo Type": "اختر نوع الشعار",
+    "Select Applications Logo": "اختر التطبيقات مع الشعار ",
+    "Questionnaire submitted successfully!" : "تم ارسال الاستبيان بنجاح"
 }

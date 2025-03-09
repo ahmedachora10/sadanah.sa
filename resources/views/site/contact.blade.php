@@ -1,5 +1,4 @@
-@include('site.header')
-      <!-- ==================== End Navbar ==================== -->
+<x-front-layout>
       <?php
       $x = setting('x');
       $instagram = setting('instagram');
@@ -15,9 +14,6 @@
       $email = setting('email');
       $fileUrl = setting('profile_file_ar');
       ?>
-      <div id="smooth-content">
-        <main class="main-bg">
-          <!-- ==================== Start Header ==================== -->
 
           <header
             class="page-header bg-img section-padding"
@@ -220,7 +216,4 @@
             </div>
           </section>
 
-          <!-- ==================== End Contact ==================== -->
-        </main>
-
-        @include('site.footer')
+</x-front-layout>

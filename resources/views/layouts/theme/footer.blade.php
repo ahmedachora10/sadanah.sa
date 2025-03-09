@@ -1,116 +1,235 @@
-<footer class="tp-footer-3-area tp-footer-fixed p-relative pt-130">
-    <div class="tp-footer-bg"></div>
-    <div class="tp-footer-box p-relative">
-        <div class="tp-footer-shape">
-            <img class="shape-1" src="admin-assets/img/footer/footer-shape-1.png" alt="">
-            <img class="shape-2" src="admin-assets/img/footer/footer-shape-2.png" alt="">
+   <!-- ==================== Start Footer ==================== -->
+<?php
+$x = setting('x');
+$instagram = setting('instagram');
+$linkedin = setting('linkedin');
+$telegram = setting('telegram');
+$tiktok = setting('tiktok');
+$snapchat = setting('snapchat');
+$whatsapp = setting('whatsapp');
+$youtube = setting('youtube');
+$footer_ar = setting('footer_ar');
+$footer_en = setting('footer_en');
+$phone = setting('phone');
+$email = setting('email');
+$profileFile = setting('profile_file_'.app()->getLocale());
+?>
+   <footer class="modern-footer pt-80">
+    <div class="footer-container">
+      <div class="container ontop">
+        <div class="row pb-30 bord-thin-bottom">
+          <div class="col-lg-2">
+            <div class="logo icon-img-120">
+              <img src="{{asset('assets/imgs/logo-light.png')}}" alt="" />
+            </div>
+          </div>
+          <div class="col-lg-5 d-flex align-items-center justify-content-start">
+            <h6 class="footer_title">
+              @if (app()->getLocale() == 'ar')
+              الشريك الذي لا يخون، والرقي والصون الذي يمتلك الإحساس والعقل والقوة الكامنة ليكون عونك على النجاح.
+              @else
+              The partner that never betrays, a preserves and holds the power that works in the sense of ascending passion to give you the success you need.
+              @endif
+            </h6>
+          </div>
+          <div class="col-lg-5">
+            <div class="social-media d-flex justify-content-end">
+              <ul class="rest d-flex align-items-center fz-14">
+                <li class="cursor-pointer social_footer mx-2">
+                  <a href="{{$x}}" target="_blank" class="hover-anim social-icon"
+                    ><i class="fa-brands fa-x-twitter"></i>
+                  </a>
+                </li>
+                <li class="cursor-pointer social_footer mx-1">
+                  <a href="{{$linkedin}}" target="_blank" class="hover-anim social-icon"
+                    ><i class="fab fa-linkedin mr-10"></i>
+                  </a>
+                </li>
+                <li class="cursor-pointer social_footer mx-1 ">
+                  <a href="{{$tiktok}}" target="_blank" class="hover-anim social-icon"
+                    ><i class="fab fa-tiktok mr-10"></i>
+                  </a>
+                </li>
+                <li class="cursor-pointer social_footer mx-1 ">
+                  <a href="{{$youtube}}" target="_blank" class="hover-anim social-icon"
+                    ><i class="fab fa-youtube mr-10"></i>
+                  </a>
+                </li>
+                <li class="cursor-pointer social_footer mx-1 ">
+                  <a href="{{$snapchat}}" target="_blank" class="hover-anim social-icon"
+                    ><i class="fab fa-snapchat mr-10"></i>
+                  </a>
+                </li>
+                <li class="cursor-pointer social_footer mx-1">
+                  <a href="{{$telegram}}" target="_blank" class="hover-anim social-icon"
+                    ><i class="fab fa-telegram mr-10"></i>
+                  </a>
+                </li>
+                <li class="cursor-pointer social_footer mx-1">
+                  <a href="{{$instagram}}" target="_blank" class="hover-anim social-icon"
+                    ><i class="fab fa-instagram mr-10"></i>
+                  </a>
+                </li>
+                <li class="cursor-pointer social_footer mx-1">
+                  <a href="{{$whatsapp}}" target="_blank" class="hover-anim social-icon"
+                    ><i class="fab fa-whatsapp mr-10"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="container">
-            <div class="tp-footer-main tp-footer-border pb-0">
-                <div class="row">
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-12">
-                        <div class="tp-footer-widget tp-footer-col-1 mb-50">
-                            <div class="tp-footer-logo mb-40">
-                                <a href="{{route('home')}}"> <img width="150" src="{{asset(setting('logo'))}}" alt=""></a>
-                            </div>
-                            <div class="tp-footer-widget-content">
-                                <p>{{setting('app_description_'.app()->getLocale())}}</p>
-                                <div class="tp-footer-widget-social mb-4">
-                                    @foreach ([
-                                        'facebook' => 'fab fa-facebook-f',
-                                        'instagram' => 'fa-brands fa-instagram',
-                                        'linkedin' => 'fa-brands fa-linkedin',
-                                        'twitter' => 'fa-brands fa-x-twitter',
-                                        'snapchat' => 'fab fa-snapchat'
-                                    ] as $media => $icon)
-                                        @continue(empty(setting($media)))
+        <div class="row pt-80">
+          <div class="col-lg-7">
+            <div class="call-action">
+              <h4 class="d-slideup wow ">
+                <span class="sideup-text">
+                  <span class="up-text">
+                    @if (app()->getLocale() == 'ar')
+                    {{$footer_ar}}
+                    @else
+                    {{$footer_en}}
+                    @endif
+                   </span>
+                </span>
+                <span class="sideup-text">
+                  <span class="up-text underline"
+                    ><a
+                      href="{{route('contactus')}}"
+                      class="main-color">
+                      {{__('front.click here')}}
+                    </a></span
+                  >
+                </span>
+              </h4>
+              <div class="info mt-80 d-flex align-items-center row">
+                <div class="col-lg-6 col-12">
+                  <a
+                    href="#0"
+                    class="butn butn-md butn-bord-thin radius-30 w-100 text-center"
+                  >
+                    <span class="text">
+                      {{$email}}
+                    </span>
+                  </a>
+                </div>
+                <div class="col-lg-6 col- mt-4 mt-lg-0">
+                  <a
+                    href="#0"
+                    class="butn butn-md butn-bord-thin radius-30 w-100 text-center">
+                  <span class="text" style="direction: ltr; unicode-bidi: embed;">
+                    {{$phone}}
+                  </span>
+                   </a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="subscribe-minimal mt-4 col-12 col-lg-6">
+                  <a
+                    href="{{ asset($profileFile) }}"
+                    class="butn butn-md butn-bord-thin radius-30 w-100 d-flex align-items-center justify-content-center"
+                    download >
+                    <span class="sub-title"
+                      >{{__('front.Download Profile')}}</span
+                    >
+                    <i class="fas fa-cloud-download-alt"></i>
+                  </a>
+                </div>
 
-                                        <a href="{{setting($media)}}" class="mx-0">
-                                            @if($media == 'twitter')
-                                            <x-x-twitter fill="#fff" />
-                                            @else
-                                            <i class="{{$icon}}"></i>
-                                            @endif
-                                        </a>
-                                    @endforeach
-                                </div>
-                                @if(!empty(setting('email')))
-                                <div class="offcanvas__contact-content d-flex">
-                                    <div class="offcanvas__contact-content-icon ms-2">
-                                        <i class="fa-solid fa-envelope text-white"></i>
-                                    </div>
-                                    <div class="offcanvas__contact-content-content">
-                                        <a href="mailto:{{setting('email')}}"> {{setting('email')}} </a>
-                                    </div>
-                                </div>
-                                @endif
-                                @if(!empty(setting('phone')))
-                                <div class="offcanvas__contact-content d-flex mt-2">
-                                    <div class="offcanvas__contact-content-icon ms-2">
-                                        <i class="fa-solid fa-phone text-white"></i>
-                                    </div>
-                                    <div class="offcanvas__contact-content-content">
-                                        <a href="tel:{{setting('phone')}}"> {{setting('phone')}} </a>
-                                    </div>
-                                </div>
-                                @endif
-                            </div>
-                        </div>
+                {{-- <div class="subscribe-minimal mt-4 col-lg-6">
+                  <form action="contact.php">
+                    <div class="form-group rest">
+                      <input type="email" placeholder="Type Your Email" />
+                      <button type="submit">
+                        <i class="ti-arrow-top-right"></i>
+                      </button>
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                        <div class="tp-footer-widget tp-footer-col-2 mb-50 d-flex justify-content-center">
-                            <div>
-                                <h3 class="tp-footer-widget-title">{{ucwords(trans('navigation'))}}</h3>
-                                <div class="tp-footer-widget-content">
-                                    <style>
-                                        .footer-links li a {
-                                            /* margin: 5px 8px; */
-                                            font-weight: bold;
-                                            color: white !important
-                                        }
-                                    </style>
-                                    <ul class="footer-links">
-                                        @include('layouts.theme.menu')
-                                        <li><a href="{{route('jobs.request')}}">{{trans('front.jobs')}}</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                        <x-theme.instagram-feeds />
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-12">
-                        <div class="tp-footer-widget tp-footer-col-4 mb-50">
-                            <div class="tp-footer-widget-content">
-                                <div class="tp-footer-widget-contact">
-                                    <h3 class="tp-footer-widget-title">{{ucwords(trans('profile'))}}</h3>
-                                    <p>{{ucwords(trans('to download the profile click here'))}}</p>
-                                    <div class="tp-footer-widget-content-input">
-                                        {{-- <form action="index.html"> --}}
-                                            <a href="{{asset(setting('profile_file_'.app()->getLocale()))}}" download="dashan-profile-{{date('Y-m-d')}}" class="tp-icon-style text-white bg-gradient px-3 py-2 border">
-                                                <span class="mx-2">
-                                                    <i class="fas fa-file-download"></i>
-                                                </span>
-                                                <span>{{ucwords(trans('download profile'))}}</span>
-                                            </a>
-                                        {{-- </form> --}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                  </form>
+                </div> --}}
+              </div>
             </div>
-            <div class="tp-footer-copyright">
-                <div class="row">
-                    <div class="col-md-7 col-12">
-                        <div class="tp-footer-copyright-inner">
-                            <p> {!! setting('footer_'.app()->getLocale()) !!} © {{date('Y')}}</p>
-                        </div>
-                    </div>
+          </div>
+          <div class="col-lg-{{app()->getLocale() == 'ar' ? '3' : '4'}} offset-lg-1 bord-left">
+            <div class="column">
+              <h6 class="sub-title mb-30" >
+                {{__('front.Useful Links')}}
+              </h6>
+              <div class="">
+                <div class="">
+                  <ul class="rest fz-14 row row-cols-1 row-cols-3 g-4">
+                    <li class="mb-15 col">
+                      <a href="{{route('home')}}" >{{__('front.home')}}</a>
+                    </li>
+                    <li class="mb-15 col">
+                      <a href="{{route('blog')}}">{{__('front.Blogs')}}</a>
+                    </li>
+
+                    <li class="mb-15 col">
+                      <a href="{{route('about')}}"
+                        >{{__('front.about')}}</a
+                      >
+                    </li>
+                    <li class="mb-15 col">
+                      <a href="{{route('job')}}" >{{__('front.jobs')}}</a>
+                    </li>
+                    <li class="mb-15 col">
+                      <a href="{{route('service')}}"
+                        >{{__('front.services')}}</a
+                      >
+                    </li>
+                    <li class="mb-15 col">
+                      <a href="{{route('influencers')}}"
+                        >{{__('front.Influencers')}}</a
+                      >
+                    </li>
+                    <li class="mb-15 col">
+                      <a
+                        href="{{route('portfolio')}}"
+
+                        >{{__('front.Portfolio')}}</a
+                      >
+                    </li>
+
+                    <li class="mb-15 col">
+                      <a href="{{route('contactus')}}"
+                        >{{__('front.Contact Us')}}</a
+                      >
+                    </li>
+                    {{-- <li class="col">
+                      <a href="page-FAQS.html" data-i18n="faq">FAQS</a>
+                    </li> --}}
+                  </ul>
                 </div>
+              </div>
             </div>
+            <div class="column mt-4 insta_footer">
+              <h6 class="sub-title mb-30" data-i18n="insta"></h6>
+                <x-theme.instagram-feeds />
+            </div>
+          </div>
         </div>
+        <div class="text-center pt-30 pb-30 sub-bg mt-80">
+          @if (app()->getLocale() == 'ar')
+          <p class="fz-14" >
+            جميع الحقوق محفوظة لشركة
+           <span class="underline" style="color: var(--primary-color)">
+             <img src="{{asset('assets/imgs/logo-light.png')}}" alt="سدنه" style="height: 20px; vertical-align: middle;">
+           </span>
+           ©{{date('Y')}}
+         </p>
+          @else
+          <p class="fz-14" >
+
+            All rights reserved to the company
+            <span class="underline" style="color: var(--primary-color)">
+                SADNAH
+            </span>
+            ©{{date('Y')}}
+         </p>
+          @endif
+
+        </div>
+
+      </div>
     </div>
-</footer>
+  </footer>

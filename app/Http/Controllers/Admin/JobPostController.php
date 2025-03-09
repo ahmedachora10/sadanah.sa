@@ -7,7 +7,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\StoreJobPostRequest;
 use App\Models\JobCity;
 use App\Models\JobPost;
-use Illuminate\Http\Request;
 
 class JobPostController extends Controller
 {

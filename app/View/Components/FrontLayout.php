@@ -13,7 +13,6 @@ class FrontLayout extends Component
      */
     public function __construct()
     {
-        //
     }
 
     /**
@@ -21,6 +20,6 @@ class FrontLayout extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('layouts.front-layout');
+        return view('layouts.front-layout', ['lang' => app()->getLocale()]);
     }
 }

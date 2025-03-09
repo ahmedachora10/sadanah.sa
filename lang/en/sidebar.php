@@ -31,4 +31,7 @@ return [
     'job requests' => 'Job Requests,',
     'service requests' => 'Service Requests',
     'join requests' => 'Join Requests',
+    'logo types' => 'Logo Types',
+    'corporate identities' => 'Corporate Identities',
+    'questionnaire' => 'Questionnaire',
 ];

@@ -1,12 +1,10 @@
-@include('site.header')
+<x-front-layout>
 @php
     $lang = app()->getLocale();
     $name = $inf->{'name_' . $lang};
     $jobName = $inf->{'job_name_' . $lang};
     $description = $inf->{'description_' . $lang};
 @endphp
-<div id="smooth-content">
-    <main class="main-bg ">
         <!-- ==================== Start Team ==================== -->
 
         <section class="team-single">
@@ -132,17 +130,15 @@
             </div>
         </section>
 
-        <!-- ==================== End Skills ==================== -->
-    </main>
+    @push('styles')
+        <style>
+            main {
+                margin-top: 60px;
+            }
 
-
-    @include('site.footer')
-    <style>
-        main {
-            margin-top: 60px;
-        }
-
-        .navbar {
-            background: #1a1a1a;
-        }
-    </style>
+            .navbar {
+                background: #1a1a1a;
+            }
+        </style>
+    @endpush
+</x-front-layout>

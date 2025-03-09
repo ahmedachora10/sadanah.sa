@@ -1,10 +1,4 @@
-@include('site.header')
-
-
-      <div id="smooth-content">
-        <main class="main-bg">
-          <!-- ==================== Start Header ==================== -->
-
+<x-front-layout>
           <header
             class="page-header-cerv bg-img section-padding"
             data-background="assets/imgs/header/2.jpg"
@@ -303,6 +297,4 @@
             </div>
           </section>
 
-          <!-- ==================== End Team ==================== -->
-        </main>
-        @include('site.footer')
+</x-front-layout>

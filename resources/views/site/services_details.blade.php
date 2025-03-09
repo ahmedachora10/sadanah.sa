@@ -1,12 +1,9 @@
-@include('site.header')
-
+<x-front-layout>
 @php
     $title = $service->{'title_' . app()->getLocale()};
     $description = $service->{'description_' . app()->getLocale()};
 @endphp
 
-<div id="smooth-content">
-    <main class="main-bg">
         <!-- ==================== Start Header ==================== -->
 
         <header class="page-header bg-img section-padding" data-background="assets/imgs/header/b5.jpg"
@@ -68,5 +65,5 @@
                 </div>
             </div>
         </section>
-    </main>
-    @include('site.footer')
+
+</x-front-layout>

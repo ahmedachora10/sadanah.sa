@@ -1,8 +1,4 @@
-@include('site.header')
-
-      <div id="smooth-content">
-        <main class="main-bg">
-          <!-- ==================== Start Slider ==================== -->
+<x-front-layout>
 
           <header
             class="header-project3 bg-img d-flex align-items-end"
@@ -242,6 +238,4 @@
             </div>
           </section>
 
-          <!-- ==================== End Next ==================== -->
-        </main>
-        @include('site.footer')
+</x-front-layout>

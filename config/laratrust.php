@@ -387,5 +387,6 @@ return [
         'client' => ['create', 'edit', 'show', 'delete'],
         'influencer' => ['create', 'edit', 'show', 'delete'],
         'blog' => ['create', 'edit', 'show', 'delete'],
+        'questionnaire' => ['create', 'edit', 'show', 'delete'],
     ]
 ];

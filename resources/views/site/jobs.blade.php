@@ -1,9 +1,4 @@
-@include('site.header')
-
-      <!-- ==================== End Navbar ==================== -->
-
-      <div id="smooth-content">
-        <main class="main-bg">
+<x-front-layout>
           <!-- ==================== Start Slider ==================== -->
 
           <header
@@ -111,6 +106,5 @@
               </div>
             </div>
           </section>
-        </main>
 
-        @include('site.footer')
+        </x-front-layout>

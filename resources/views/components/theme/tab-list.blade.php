@@ -16,7 +16,7 @@
         </ul>
         <div class="tab-content">
             <div class="tab-pane fade active show" id="{{$key}}-ar" role="tabpanel">
-                <div class="row g-3 align-items-end">
+                <div class="row g-3 align-items-start">
                     {{$arForm}}
                 </div>
                 <div class="pt-4">

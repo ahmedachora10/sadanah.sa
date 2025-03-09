@@ -37,4 +37,7 @@ return [
     'blogs' => 'المدونة',
     'comments' => 'التعليقات',
     'join requests' => 'طلبات الانضمام',
+    'logo types' => 'أنواع الشعارات',
+    'corporate identities' => 'هويات الشركات',
+    'questionnaire' => 'استبيان',
 ];

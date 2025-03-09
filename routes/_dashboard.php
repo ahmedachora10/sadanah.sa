@@ -1,11 +1,12 @@
 <?php
 
 use App\Http\Controllers\Admin\AboutController;
-use App\Http\Controllers\Admin\CertificateController;
+use App\Http\Controllers\Admin\CorporateIdentityController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\HeadlineController;
 use App\Http\Controllers\Admin\JobCityController;
 use App\Http\Controllers\Admin\JobPostController;
+use App\Http\Controllers\Admin\LogoTypeController;
 use App\Http\Controllers\Admin\MediaController;
 use App\Http\Controllers\Admin\OurClientController;
 use App\Http\Controllers\Admin\OurServiceController;
@@ -29,6 +30,7 @@ use App\Livewire\Container\Comments;
 use App\Livewire\Container\InfluencersRequests;
 use App\Livewire\Dashboard\Container\ContactUsContainer;
 use App\Livewire\Dashboard\Container\JobRequestsContainer;
+use App\Livewire\Dashboard\Container\QuestionnaireContainer;
 use App\Livewire\Dashboard\Container\ServiceRequestsContainer;
 use App\Livewire\Dashboard\Container\SubscribersContainer;
 use Illuminate\Support\Facades\Route;
@@ -52,6 +54,10 @@ Route::middleware(['auth'])->group(function ()
     Route::resource('users', UserController::class);
 
     Route::resource('visions', VisionController::class);
+
+    Route::get('questionnaire', QuestionnaireContainer::class)->name('questionnaire.index');
+    Route::resource('logo-types', LogoTypeController::class)->parameter('logo_type','logoType');
+    Route::resource('corporate-identities', CorporateIdentityController::class)->parameter('corporate_identity','identity');
 
     Route::resource('roles', RoleController::class)->only('index', 'destroy');
 

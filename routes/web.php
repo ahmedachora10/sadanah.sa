@@ -3,12 +3,18 @@
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\HomeController;
 use App\Http\Middleware\SetLocale;
+use App\Livewire\Actions\QuestionnaireRequestForm;
 use App\Livewire\Container\InfluencerJoinRequest;
 use App\Models\JobPost;
 use App\Models\OurService;
 use App\Models\OurWork;
+use App\Models\Permission;
+use App\Models\Questionnaire;
 use App\Models\Support;
+use App\Models\User;
 use App\Services\InstagramService;
+use Barryvdh\DomPDF\Facade\Pdf;
+use Elibyy\TCPDF\Facades\TCPDF;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
@@ -16,6 +22,7 @@ use Illuminate\Support\Facades\Session;
 Route::get('/template', function () {
     return view('welcome');
 });
+
 
 // Route::get('instagram/auth', fn() => app(InstagramService::class)->auth());
 Route::get('instagram/feeds', fn() => dd(app(InstagramService::class)->getPosts()));
@@ -92,6 +99,8 @@ Route::get('services/{service}/details', function (OurService $service) {
 Route::get('services/request/{service}', function (OurService $service) {
     return view('service-request', compact('service'));
 })->name('services.request');
+
+Route::get('questionnaire-form', QuestionnaireRequestForm::class);
 
 require __DIR__ . '/auth.php';
 

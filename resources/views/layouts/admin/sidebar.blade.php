@@ -5,6 +5,7 @@
     $contactsCount = $notifications->where('type', 'App\Models\ContactUs')->count();
     $influencersRequestsCount = $notifications->where('type', 'App\Models\InfluencerJoinRequest')->count();
     $commentsCount = $notifications->where('type', 'App\Models\Comment')->count();
+    $questionnaireCount = $notifications->where('type', 'App\Models\Questionnaire')->count();
 @endphp
 
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme" data-bg-class="bg-menu-theme">
@@ -91,6 +92,15 @@
         <x-dashboard.sidebar.link :title="trans('sidebar.blogs')" icon="server" link="#" :hasSubMenu="true" :notification="$commentsCount">
             <x-dashboard.sidebar.link :title="trans('sidebar.blogs')" :link="route('blogs.index')" />
             <x-dashboard.sidebar.link :title="trans('sidebar.comments')" :link="route('comments.index')" :notification="$commentsCount" />
+        </x-dashboard.sidebar.link>
+        @endhasPermission
+
+        @hasPermission('questionnaire-show')
+        <x-dashboard.sidebar.link :title="trans('sidebar.questionnaire')" icon="server" link="#" :hasSubMenu="true"
+            :notification="$questionnaireCount">
+            <x-dashboard.sidebar.link :title="trans('sidebar.questionnaire')" :link="route('questionnaire.index')" :notification="$questionnaireCount" />
+            <x-dashboard.sidebar.link :title="trans('sidebar.logo types')" :link="route('logo-types.index')" />
+            <x-dashboard.sidebar.link :title="trans('sidebar.corporate identities')" :link="route('corporate-identities.index')" />
         </x-dashboard.sidebar.link>
         @endhasPermission
 

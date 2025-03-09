@@ -1,11 +1,4 @@
-@include('site.header')
-
-
-        <div id="smooth-content">
-
-            <main class="main-bg">
-
-
+<x-front-layout>
 
                 <!-- ==================== Start Header ==================== -->
 
@@ -94,9 +87,4 @@
                 <!-- ==================== End Team ==================== -->
 
 
-
-            </main>
-
-
-
-            @include('site.footer')
+</x-front-layout>

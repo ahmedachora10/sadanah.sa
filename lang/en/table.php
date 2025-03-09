@@ -77,7 +77,28 @@ return [
 
         'followers' => 'Followers Count',
         'account' => 'Username',
-        'job title' => 'Job Title'
+        'job title' => 'Job Title',
+
+        'brand questionnaire'                   => 'Brand Questionnaire',
+        'logo type'                             => 'Logo Type',
+        'select corporate identity'             => 'Select Corporate Identity',
+        'new client'                           => 'New Client',
+        'current client'                       => 'Current Client',
+        'client nationality'                    => 'Client Nationality',
+        'company name'                          => 'Company Name',
+        'phone number'                          => 'Phone Number',
+        'brand name'                            => 'Brand Name',
+        'brand about'                           => 'About Brand',
+        'project type'                          => 'Project Type',
+        'target audience'                       => 'Target Audience',
+        'brand personality'                     => 'Brand Personality',
+        'competitors'                           => 'Competitors',
+        'favorite colors'                       => 'Favorite Colors',
+        'excluded colors'                       => 'Excluded Colors',
+        'notes'                                 => 'Notes',
+        'submit questionnaire'                  => 'Submit Questionnaire',
+        'project details'                       => 'Project Details',
+        'applications'                          => 'Applications With Logo',
     ],
     'empty' => 'No Records'
 ];
