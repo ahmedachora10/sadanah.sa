@@ -24,7 +24,7 @@
                     @endforelse
                 </td> --}}
 
-                <td>{{ $user->created_at->diffForHumans() }}</td>
+                <td>{{ $user->created_at?->diffForHumans() ?? '-' }}</td>
 
                 <td>
                     <x-dashboard.actions.container>
