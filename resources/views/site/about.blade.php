@@ -261,7 +261,7 @@
               <div class="row">
                 @foreach ($our_teams as $team)
 
-                <div class="col-lg-4">
+                <div class="col-lg-4 my-2">
                   <div class="item md-mb50 about_team_">
                     <div class="img">
                       <img src="{{asset($team->thumbnail)}}" alt="" />
