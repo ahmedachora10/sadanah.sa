@@ -1,11 +1,7 @@
-@include('site.header')
+<x-front-layout>
 @php
 $title = $job->{'title_' . app()->getLocale()};
 @endphp
-<div id="smooth-content">
-    <main class="main-bg">
-        <!-- ==================== Start Header ==================== -->
-
         <header class="page-header-cerv bg-img section-padding" data-background="{{asset('assets/imgs/header/job-posting-hiring_.jpg')}}"
             data-overlay-dark="4">
             <div class="container pt-100 ontop">
@@ -34,8 +30,4 @@ $title = $job->{'title_' . app()->getLocale()};
                 </div>
             </div>
         </section>
-
-
-    </main>
-
-    @include('site.footer')
+</x-front-layout>
